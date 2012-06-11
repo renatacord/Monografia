@@ -1,0 +1,5 @@
+\select@language {brazil}
+\contentsline {chapter}{\numberline {1}A Programa\IeC {\c c}\IeC {\~a}o Linear e as suas Aplica\IeC {\c c}\IeC {\~o}es}{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introdu\IeC {\c c}\IeC {\~a}o}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Descri\IeC {\c c}\IeC {\~a}o do Problema de Programa\IeC {\c c}\IeC {\~a}o Linear}{2}{section.1.2}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{4}{section.1.2}

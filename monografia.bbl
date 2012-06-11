@@ -1,0 +1,23 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.53 }
+
+\bibitem[Pamplona 2005]{Engecom}
+\abntrefinfo{Pamplona}{PAMPLONA}{2005}
+{PAMPLONA, E. de O. \emph{Engenharia Econômica II}. 2005.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.iepg\-.unifei\-.edu\-.br\-/edson\-/do%
+wnload\-/Engecon2\-/CAP5EE2PLapost\-.pdf$>$}{http://www.iepg.unifei.edu.br/eds%
+on/download/Engecon2/CAP5EE2PLapost.pdf}. Acesso em: 04/06/2012.}
+
+\bibitem[Passos 2009]{Passos}
+\abntrefinfo{Passos}{PASSOS}{2009}
+{PASSOS, A.~N.
+\emph{Estudos em Programação Linear}.
+Disserta\c{c}\~ao (Mestrado) --- Instituto de Matemática, Estatística e
+  Computação Científica, UNICAMP, 2009.}
+
+\end{thebibliography}
