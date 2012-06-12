@@ -30,22 +30,3 @@
 	year = {2006},
 	edition = {8º}
 }
-Bixby, R. E. Implementing the simplex method: The initial basis.
-on Computing, v. 4, n. 3, p. 267–284, 1992.
-ORSA Journal
-
-@Article{Todd,
-	author = {Michael J. Todd},
-	year = {2002},
-	pages = {417-436},
-	volume = {91},
-	title = {{The many facets of linear programming}},
-	journal = {Mathematical Programming}
-}@Article{Bixby,
-	author = {R. E. Bixby},
-	year = {1992},
-	pages = {267-284},
-	volume = {4},
-	title = {{Implementing the simplex method: The initial basis}},
-	journal = {ORSA Journal}
-}

@@ -5,6 +5,16 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{1.53 }
 
+\bibitem[Hillier e Lieberman 2006]{Hillier}
+\abntrefinfo{Hillier e Lieberman}{HILLIER; LIEBERMAN}{2006}
+{HILLIER, F.; LIEBERMAN, G. \emph{{Introdução à Pesquisa Operacional}}. 8º.
+  ed. [S.l.]: Mc-Graw-Hill, 2006.}
+
+\bibitem[Maculan e Fampa 2006]{MaculanPI}
+\abntrefinfo{Maculan e Fampa}{MACULAN; FAMPA}{2006}
+{MACULAN, N.; FAMPA, M. H.~C. \emph{Otimização Linear}. [S.l.]: Editora
+  Universidade de Brasília, 2006.}
+
 \bibitem[Pamplona 2005]{Engecom}
 \abntrefinfo{Pamplona}{PAMPLONA}{2005}
 {PAMPLONA, E. de O. \emph{Engenharia Econômica II}. 2005.

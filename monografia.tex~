@@ -88,6 +88,7 @@ orientação do Profº. Fermín Alfredo Tang Montané.}
 %--------------------------------- Bibliografia --------------------------------
 
 \citeoption{abnt-repeated-author-omit=yes}
+\apudoption{abnt-repeated-author-omit=yes}
 \bibliographystyle{abnt-alf}
 \bibliography{bibliografia}
 

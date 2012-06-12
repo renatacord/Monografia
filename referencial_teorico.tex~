@@ -58,7 +58,7 @@ Os método para resolução problemas de programação linear buscam a esse valo
 
 \section{Métodos de Solução}
 Entre os métodos mais famosos para a resolução de problemas de programação linear estão o método simplex  e o método de pontos interiores. 
-Depois da apresentação do método simplex,outros métodos com diferentes abordagens foram propostos (Todd, 2002, apud, Munari, 2009). Porém, dentre os métodos existentes apenas o método de pontos interiores é atualmente competitivo em relação ao método simplex (Bixby, 2002, apud, Munari, 2009).\apud{MaculanPI}{Engecom}
+Depois da apresentação do método simplex,outros métodos com diferentes abordagens foram propostos (Todd, 2002, apud, Munari, 2009). Porém, dentre os métodos existentes apenas o método de pontos interiores é atualmente competitivo em relação ao método simplex (Bixby, 2002, apud, Munari, 2009).
 A principal diferença entre esse dois métodos é o que o método simplex caminha pelos vértices da região viável, enquanto o método de pontos interiores caminha pelo interior da região viável (Maculan, 2006). Além disso, uma outra diferença é que o simplex exige muitas iterações com cálculos simples, enquanto o método de pontos interiores poucas iterações são exigidas, porém com cálculos mais elaborados.
 Apesar das vantagens do método de pontos interiores em relação ao método estudado neste trabalho, o método simplex possui melhor desempenho na resolução de problemas de pequeno porte em relação ao método de pontos interiores, tornando-se um método indispensável em ferramentas de programação linear.
 

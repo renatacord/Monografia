@@ -1,0 +1,56 @@
+% Generated with LaTeXDraw 2.0.8
+% Thu Mar 15 10:13:30 BRT 2012
+% \usepackage[usenames,dvipsnames]{pstricks}
+% \usepackage{epsfig}
+% \usepackage{pst-grad} % For gradients
+% \usepackage{pst-plot} % For axes
+\scalebox{0.7} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.64)(23.98,2.66)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.0,0.6)(1.58,0.58)
+\psframe[linewidth=0.04,dimen=outer](4.4,1.44)(1.58,-0.3)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(4.4,0.6)(5.98,0.58)
+\psframe[linewidth=0.04,dimen=outer](8.82,1.48)(6.0,-0.26)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(8.84,0.62)(10.42,0.6)
+\psframe[linewidth=0.04,dimen=outer](13.28,1.44)(10.46,-0.3)
+\usefont{T1}{ppl}{m}{n}
+\rput(0.70625,0.83){Fala}
+\usefont{T1}{ppl}{m}{n}
+\rput(2.9889061,0.91){Aquisição do}
+\usefont{T1}{ppl}{m}{n}
+\rput(2.9848437,0.33){Sinal de Voz}
+\usefont{T1}{ppl}{m}{n}
+\rput(7.382656,0.33){Processamento}
+\usefont{T1}{ppl}{m}{n}
+\rput(7.4384375,0.91){Pré-}
+\usefont{T1}{ppl}{m}{n}
+\rput(11.863438,0.85){Extração de}
+\usefont{T1}{ppl}{m}{n}
+\rput(11.867344,0.33){Informações}
+\psframe[linewidth=0.04,dimen=outer](19.54,2.66)(16.72,0.92)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(14.2,0.6)(15.12,1.82)
+\psline[linewidth=0.04cm](13.28,0.62)(14.24,0.62)
+\psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{oo-}(15.08,1.8)(16.72,1.8)
+\usefont{T1}{ppl}{m}{n}
+\rput(18.124844,2.01){Geração dos}
+\usefont{T1}{ppl}{m}{n}
+\rput(18.087343,1.49){Padrões}
+\usefont{T1}{ppl}{m}{n}
+\rput(15.470781,2.13){Treinamento}
+\psframe[linewidth=0.04,dimen=outer](19.56,-0.86)(16.74,-2.6)
+\psframe[linewidth=0.04,dimen=outer](23.98,-0.9)(21.16,-2.64)
+\usefont{T1}{ppl}{m}{n}
+\rput(18.150156,-1.73){Classificação}
+\usefont{T1}{ppl}{m}{n}
+\rput(22.46625,-1.51){Palavra}
+\usefont{T1}{ppl}{m}{n}
+\rput(22.53625,-2.09){Reconhecida}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(19.58,-1.76)(21.16,-1.78)
+\psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{oo-}(15.1,-1.76)(16.74,-1.76)
+\usefont{T1}{ppl}{m}{n}
+\rput(15.132656,-2.17){Reconhecimento}
+\psarc[linewidth=0.04,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(13.6,-0.48){2.18}{-29.890425}{74.5115}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{cc->>}(18.14,0.94)(18.14,-0.9)
+\end{pspicture} 
+}
+

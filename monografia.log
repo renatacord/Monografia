@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  11 JUN 2012 17:47
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  12 JUN 2012 18:14
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -1082,7 +1082,20 @@ Cap\'{\i }tulo 1.
 
 
 
-]) [3] (./monografia.bbl)
+]
+Underfull \hbox (badness 10000) in paragraph at lines 26--28
+
+ []
+
+[3]
+File: graficos/simplex_grafico.eps Graphic file (type eps)
+ <graficos/simplex_grafico.eps>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 52.
+See the caption package documentation for explanation.
+
+[4]) [5] (./monografia.bbl)
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
@@ -1091,7 +1104,7 @@ Cap\'{\i }tulo 1.
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 59.
 See the caption package documentation for explanation.
 
-[4
+[6
 
 
 ] (./monografia.aux (./referencial_teorico.aux))
@@ -1100,12 +1113,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 13899 strings out of 495042
- 191828 string characters out of 1181920
- 361152 words of memory out of 3000000
- 16797 multiletter control sequences out of 15000+50000
+ 13921 strings out of 495042
+ 192137 string characters out of 1181920
+ 362152 words of memory out of 3000000
+ 16816 multiletter control sequences out of 15000+50000
  12986 words of font info for 48 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
  38i,8n,49p,803b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on monografia.dvi (6 pages, 14820 bytes).
+Output written on monografia.dvi (8 pages, 25316 bytes).
