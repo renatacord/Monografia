@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  12 JUN 2012 18:14
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  14 JUN 2012 14:07
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -1095,7 +1095,24 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 52.
 See the caption package documentation for explanation.
 
-[4]) [5] (./monografia.bbl)
+[4] [5] [6]
+File: graficos/tora.eps Graphic file (type eps)
+ <graficos/tora.eps>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 96.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (339.72588pt too wide) in paragraph at lines 95--96
+ [] 
+ []
+
+[7]
+Overfull \vbox (52.65987pt too high) has occurred while \output is active []
+
+
+[8]) [9] (./monografia.bbl)
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
@@ -1104,7 +1121,7 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 59.
 See the caption package documentation for explanation.
 
-[6
+[10
 
 
 ] (./monografia.aux (./referencial_teorico.aux))
@@ -1113,12 +1130,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 13921 strings out of 495042
- 192137 string characters out of 1181920
- 362152 words of memory out of 3000000
- 16816 multiletter control sequences out of 15000+50000
- 12986 words of font info for 48 fonts, out of 3000000 for 9000
+ 13963 strings out of 495042
+ 192710 string characters out of 1181920
+ 363152 words of memory out of 3000000
+ 16857 multiletter control sequences out of 15000+50000
+ 13440 words of font info for 50 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 38i,8n,49p,803b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,8n,49p,803b,498s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on monografia.dvi (8 pages, 25316 bytes).
+Output written on monografia.dvi (12 pages, 47844 bytes).
