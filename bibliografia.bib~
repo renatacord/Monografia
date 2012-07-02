@@ -185,3 +185,10 @@ Linear Programs and Multi-Agent Assignments}}
 	journal = {Combinatorica},
 	volume = {4}
 }
+
+@Book{Dan,
+	year = {1963},
+	author = {G. Danzitg}
+	publisher = {Princeton University Press},
+	title = {{Linear Programming and Extensions}}
+}
