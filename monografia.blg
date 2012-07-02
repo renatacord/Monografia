@@ -1,5 +1,6 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: monografia.aux
+A level-1 auxiliary file: introducao.aux
 A level-1 auxiliary file: referencial_teorico.aux
 The style file: abnt-alf.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
@@ -12,44 +13,44 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 | Em caso de duvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
-You've used 24 entries,
+You've used 25 entries,
             6522 wiz_defined-function locations,
-            1306 strings with 12661 characters,
-and the built_in function-call counts, 18751 in all, are:
-= -- 1768
-> -- 362
-< -- 179
-+ -- 311
-- -- 116
-* -- 1129
-:= -- 2454
-add.period$ -- 72
-call.type$ -- 25
-change.case$ -- 157
-chr.to.int$ -- 52
-cite$ -- 21
-duplicate$ -- 1410
-empty$ -- 1354
-format.name$ -- 538
-if$ -- 4252
+            1314 strings with 12780 characters,
+and the built_in function-call counts, 19488 in all, are:
+= -- 1818
+> -- 378
+< -- 182
++ -- 316
+- -- 121
+* -- 1176
+:= -- 2551
+add.period$ -- 75
+call.type$ -- 26
+change.case$ -- 164
+chr.to.int$ -- 56
+cite$ -- 22
+duplicate$ -- 1458
+empty$ -- 1416
+format.name$ -- 561
+if$ -- 4427
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 402
-newline$ -- 113
-num.names$ -- 106
-pop$ -- 455
+missing$ -- 420
+newline$ -- 118
+num.names$ -- 111
+pop$ -- 475
 preamble$ -- 1
-purify$ -- 74
+purify$ -- 77
 quote$ -- 0
-skip$ -- 1537
+skip$ -- 1579
 stack$ -- 1
-substring$ -- 808
-swap$ -- 528
-text.length$ -- 25
+substring$ -- 854
+swap$ -- 553
+text.length$ -- 27
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 18
 warning$ -- 0
-while$ -- 147
+while$ -- 155
 width$ -- 0
-write$ -- 334
+write$ -- 350
