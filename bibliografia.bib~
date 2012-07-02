@@ -167,3 +167,21 @@ programming with penalty costs}},
 	school = {Polytechnic University},
 	month = {Março}
 }
+
+@Article{Burger,
+	author = {Mathias Bürger; Giuseppe Notarstefano; Francesco Bullo; Frank Allgöwer},
+	journal = {Automatica},
+	month = {Maio},
+	year = {2011},
+	title = {{A Distributed Simplex Algorithm for Degenerate
+Linear Programs and Multi-Agent Assignments}}
+}
+
+@Article{Karmarkar,
+	year = {1984},
+	title = {{A new polynomial algorithm for linear programming}},
+	pages = {373-395},
+	author = {N. Karmarkar},
+	journal = {Combinatorica},
+	volume = {4}
+}
