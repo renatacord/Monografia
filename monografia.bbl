@@ -5,6 +5,16 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{1.53 }
 
+\bibitem[Costa]{Elizabeth}
+\abntrefinfo{Costa}{COSTA}{}
+{COSTA, E. D.~S. da. \emph{{Reconhecimento de Expressões Faciais em Imagens}}.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.verlab\-.dcc\-.ufmg\-.br\-/\underline%
+{\ }media\-/cursos\-/visao\-/2010-1\-/grupo04\-/reconhecimento\underline{\
+  }de\underline{\ }expressao\underline{\
+  }facial\-.pdf$>$}{http://www.verlab.dcc.ufmg.br/_media/cursos/visao/2010-1/g%
+rupo04/reconhecimento_de_expressao_facial.pdf}.}
+
 \bibitem[Danzitg 1963]{Dan}
 \abntrefinfo{Danzitg}{DANZITG}{1963}
 {DANZITG, G. \emph{{Linear Programming and Extensions}}. [S.l.]: Princeton

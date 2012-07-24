@@ -188,7 +188,13 @@ Linear Programs and Multi-Agent Assignments}}
 
 @Book{Dan,
 	year = {1963},
-	author = {G. Danzitg}
+	author = {G. Danzitg},
 	publisher = {Princeton University Press},
 	title = {{Linear Programming and Extensions}}
+}
+
+@Misc{Elizabeth,
+	title = {{Reconhecimento de Expressões Faciais em Imagens}},
+	url = {http://www.verlab.dcc.ufmg.br/_media/cursos/visao/2010-1/grupo04/reconhecimento_de_expressao_facial.pdf},
+	author = {Elizabeth Duane Santos da Costa}
 }

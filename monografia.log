@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  24 JUL 2012 15:27
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  24 JUL 2012 16:13
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -1083,7 +1083,12 @@ Cap\'{\i }tulo 1.
 
 
 
-]) [3] [4] (./monografia.bbl)
+] [3]) [4] (./monografia.bbl
+Overfull \hbox (127.68039pt too wide) in paragraph at lines 10--17
+[][][][]\OT1/cmr/m/n/12 .  
+ []
+
+)
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
@@ -1101,12 +1106,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 13904 strings out of 495042
- 191807 string characters out of 1181920
+ 13909 strings out of 495042
+ 191889 string characters out of 1181920
  362152 words of memory out of 3000000
- 16802 multiletter control sequences out of 15000+50000
+ 16807 multiletter control sequences out of 15000+50000
  12986 words of font info for 48 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 38i,6n,49p,620b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,6n,49p,923b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on monografia.dvi (7 pages, 20072 bytes).
+Output written on monografia.dvi (7 pages, 21988 bytes).
