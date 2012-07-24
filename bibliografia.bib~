@@ -198,3 +198,21 @@ Linear Programs and Multi-Agent Assignments}}
 	url = {http://www.verlab.dcc.ufmg.br/_media/cursos/visao/2010-1/grupo04/reconhecimento_de_expressao_facial.pdf},
 	author = {Elizabeth Duane Santos da Costa}
 }
+
+@MastersThesis{FernandoGil,
+	title = {{Reconhecimento Expressões Faciais}},
+	author = {Fernando Gil Abreu Mesquita da Costa},
+	year = {2010},
+	url = {http://repositorio.utad.pt/bitstream/10348/634/1/MsC_fgamcosta.pdf},
+	school = {UNIVERSIDADE DE TRÁS-OS-MONTES E ALTO DOURO}
+}
+@Article{FiguraWave,
+	journal = {SatMagazine},
+	pages = {35-41},
+	author = {D. Lee Fugal},
+	title = {Wavelets: Beyond Comparison},
+	number = {1},
+	volume = {7},
+	month = {Maio},
+	year = {2009}
+}
