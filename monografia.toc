@@ -13,5 +13,8 @@
 \contentsline {section}{\numberline {2.4}Aplica\IeC {\c c}\IeC {\~o}es Pr\IeC {\'a}ticas}{9}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Aplica\IeC {\c c}\IeC {\~o}es em Processamento de Imagens}{10}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Aplica\IeC {\c c}\IeC {\~o}es em Programa\IeC {\c c}\IeC {\~a}o Distribu\IeC {\'\i }da}{11}{subsection.2.4.2}
-\contentsline {section}{\numberline {2.5}Ferramentas de Programa\IeC {\c c}\IeC {\~a}o Linear}{14}{section.2.5}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{17}{figure.2.3}
+\contentsline {subsection}{\numberline {2.4.3}Aplica\IeC {\c c}\IeC {\~o}es em Banco de Dados}{12}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Aplica\IeC {\c c}\IeC {\~a}o em Sa\IeC {\'u}de}{13}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}Aplica\IeC {\c c}\IeC {\~o}es na Engenharia de Produ\IeC {\c c}\IeC {\~a}o}{13}{subsection.2.4.5}
+\contentsline {section}{\numberline {2.5}Ferramentas de Programa\IeC {\c c}\IeC {\~a}o Linear}{15}{section.2.5}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{18}{figure.2.3}

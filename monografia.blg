@@ -6,7 +6,6 @@ The style file: abnt-alf.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: abnt-options.bib
 Database file #2: bibliografia.bib
-Warning--I didn't find a database entry for "Karypis"
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 +---------------------------------------------------------+
 | Estilo bibliografico abnt-alf.bst versao 1.53           |
@@ -14,45 +13,44 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 | Em caso de duvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
-You've used 28 entries,
+You've used 30 entries,
             6522 wiz_defined-function locations,
-            1334 strings with 13285 characters,
-and the built_in function-call counts, 29048 in all, are:
-= -- 3307
-> -- 423
-< -- 524
-+ -- 673
-- -- 136
-* -- 1621
-:= -- 3496
-add.period$ -- 85
-call.type$ -- 29
-change.case$ -- 182
-chr.to.int$ -- 59
-cite$ -- 25
-duplicate$ -- 2905
-empty$ -- 1574
-format.name$ -- 630
-if$ -- 6200
+            1344 strings with 13554 characters,
+and the built_in function-call counts, 32504 in all, are:
+= -- 3770
+> -- 454
+< -- 622
++ -- 777
+- -- 146
+* -- 1801
+:= -- 3868
+add.period$ -- 92
+call.type$ -- 31
+change.case$ -- 195
+chr.to.int$ -- 64
+cite$ -- 27
+duplicate$ -- 3350
+empty$ -- 1692
+format.name$ -- 676
+if$ -- 6886
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 471
-newline$ -- 134
-num.names$ -- 126
-pop$ -- 561
+missing$ -- 505
+newline$ -- 144
+num.names$ -- 136
+pop$ -- 611
 preamble$ -- 1
-purify$ -- 86
+purify$ -- 92
 quote$ -- 0
-skip$ -- 3017
+skip$ -- 3454
 stack$ -- 1
-substring$ -- 1233
-swap$ -- 925
-text.length$ -- 31
+substring$ -- 1381
+swap$ -- 1052
+text.length$ -- 36
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 22
 warning$ -- 0
-while$ -- 176
+while$ -- 192
 width$ -- 0
-write$ -- 393
-(There was 1 warning)
+write$ -- 424

@@ -54,6 +54,11 @@ amcosta.pdf}.}
   Minimização de Custos}.
 \emph{Revista Científica da Faculdade Lourenço Filho}, v.~6, n.~1, 2009.}
 
+\bibitem[Fugal 2009]{FotoWave}
+\abntrefinfo{Fugal}{FUGAL}{2009}
+{FUGAL, D.~L. {Wavelets: Beyond Comparison}.
+\emph{SatMagazine}, v.~7, n.~1, p. 35--41, maio 2009.}
+
 \bibitem[Goldberg 2006]{Alterovitz-saude}
 \abntrefinfo{Goldberg}{GOLDBERG}{2006}
 {GOLDBERG, R. A. E. L. J. P. I.-C. J. H. J. F. O.~K. {Optimization of HDR
@@ -79,6 +84,14 @@ Disserta\c{c}\~ao (Mestrado) --- Instituto de Ciências Matemáticas e de
 \abntrefinfo{Karmarkar}{KARMARKAR}{1984}
 {KARMARKAR, N. {A new polynomial algorithm for linear programming}.
 \emph{Combinatorica}, v.~4, p. 373--395, 1984.}
+
+\bibitem[Kumar 1994]{Karypis}
+\abntrefinfo{Kumar}{KUMAR}{1994}
+{KUMAR, G. K.~V. \emph{{Performance and Scalability of the Parallel Simplex
+  Method for Dense Linear Programming Problems An Extended Abstract}}. 1994.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.cs\-.umn\-.edu\-/\~{}kumar\-/papers\-%
+/simplex\-.ps$>$}{http://www.cs.umn.edu/~kumar/papers/simplex.ps}.}
 
 \bibitem[Leite 2007]{Leite-wavelet}
 \abntrefinfo{Leite}{LEITE}{2007}

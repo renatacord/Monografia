@@ -206,13 +206,14 @@ Linear Programs and Multi-Agent Assignments}}
 	url = {http://repositorio.utad.pt/bitstream/10348/634/1/MsC_fgamcosta.pdf},
 	school = {UNIVERSIDADE DE TRÁS-OS-MONTES E ALTO DOURO}
 }
-@Article{FiguraWave,
-	journal = {SatMagazine},
+
+@Article{FotoWave,
+	month = {maio},
+	title = {{Wavelets: Beyond Comparison}},
 	pages = {35-41},
-	author = {D. Lee Fugal},
-	title = {Wavelets: Beyond Comparison},
-	number = {1},
+	year = {2009},
+	journal = {SatMagazine},
 	volume = {7},
-	month = {Maio},
-	year = {2009}
+	author = {D. Lee Fugal},
+	number = {1}
 }

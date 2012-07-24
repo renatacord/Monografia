@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  24 JUL 2012 19:03
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  24 JUL 2012 19:56
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -1111,51 +1111,48 @@ File: graficos/ondaletas.eps Graphic file (type eps)
  <graficos/ondaletas.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 100.
+(caption)                particular \caption on input line 102.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (15.51465pt too wide) in paragraph at lines 99--100
+Overfull \hbox (15.51465pt too wide) in paragraph at lines 101--102
  [] 
  []
 
-[11]
-
-LaTeX Warning: Citation `Karypis' on page 12 undefined on input line 112.
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 122--124
+[11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 127--129
 
  []
 
 [13]
-Overfull \hbox (10.70569pt too wide) in paragraph at lines 148--149
+Overfull \hbox (10.70569pt too wide) in paragraph at lines 153--154
 []\OT1/cmr/m/n/12 A pro-grama^^Xc~ao li-near al^^Sem de es-tar pre-sente, ^^Se 
 fun-da-men-tal em di-ver-sas ^^Sareas, tornando-
  []
 
+[14]
 File: graficos/tora.eps Graphic file (type eps)
-<graficos/tora.eps>
+ <graficos/tora.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 156.
+(caption)                particular \caption on input line 161.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (339.72588pt too wide) in paragraph at lines 155--156
+Overfull \hbox (339.72588pt too wide) in paragraph at lines 160--161
  [] 
  []
 
-[14]
+[15]
 Overfull \vbox (52.65987pt too high) has occurred while \output is active []
 
 
-[15]) [16] (./monografia.bbl
+[16]) [17] (./monografia.bbl
 Overfull \hbox (127.68039pt too wide) in paragraph at lines 26--33
 [][][][]\OT1/cmr/m/n/12 .  
  []
 
-[17
+[18
 
 
 ])
@@ -1167,21 +1164,18 @@ Overfull \hbox (127.68039pt too wide) in paragraph at lines 26--33
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 59.
 See the caption package documentation for explanation.
 
-[18] (./monografia.aux (./introducao.aux) (./referencial_teorico.aux))
-
-LaTeX Warning: There were undefined references.
-
+[19] (./monografia.aux (./introducao.aux) (./referencial_teorico.aux))
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 14074 strings out of 495042
- 194477 string characters out of 1181920
+ 14085 strings out of 495042
+ 194650 string characters out of 1181920
  364152 words of memory out of 3000000
- 16952 multiletter control sequences out of 15000+50000
+ 16963 multiletter control sequences out of 15000+50000
  15902 words of font info for 58 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 38i,8n,49p,989b,498s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,8n,49p,990b,498s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on monografia.dvi (20 pages, 94796 bytes).
+Output written on monografia.dvi (21 pages, 99932 bytes).
