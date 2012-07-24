@@ -5,146 +5,14 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{1.53 }
 
-\bibitem[Allgöwer 2011]{Burger}
-\abntrefinfo{Allgöwer}{ALLGöWER}{2011}
-{ALLGöWER, M. B. G. N. F. B.~F. {A Distributed Simplex Algorithm for
-  Degenerate Linear Programs and Multi-Agent Assignments}.
-\emph{Automatica}, Maio 2011.}
-
-\bibitem[Bixby 1992]{Bixby}
-\abntrefinfo{Bixby}{BIXBY}{1992}
-{BIXBY, R.~E. {Implementing the simplex method: The initial basis}.
-\emph{ORSA Journal}, v.~4, p. 267--284, 1992.}
-
-\bibitem[Blitzkow 2008]{Ondaletas}
-\abntrefinfo{Blitzkow}{BLITZKOW}{2008}
-{BLITZKOW, A. C. B. B.~D. \emph{{Ondaletas: Histórico e Aplicação}}. Maio
-  2008.}
-
 \bibitem[Danzitg 1963]{Dan}
 \abntrefinfo{Danzitg}{DANZITG}{1963}
 {DANZITG, G. \emph{{Linear Programming and Extensions}}. [S.l.]: Princeton
   University Press, 1963.}
 
-\bibitem[Frossard 2009]{FrossardMaxMin}
-\abntrefinfo{Frossard}{FROSSARD}{2009}
-{FROSSARD, A. C.~P. {Programação Linear: Maximização de Lucro e
-  Minimização de Custos}.
-\emph{Revista Científica da Faculdade Lourenço Filho}, v.~6, n.~1, 2009.}
-
-\bibitem[Goldberg 2006]{Alterovitz-saude}
-\abntrefinfo{Goldberg}{GOLDBERG}{2006}
-{GOLDBERG, R. A. E. L. J. P. I.-C. J. H. J. F. O.~K. {Optimization of HDR
-  brachytherapy dose distributions using linear programming with penalty
-  costs}.
-\emph{The International Journal of Medical Physics Research and Practice},
-  v.~33, n.~11, 2006.}
-
-\bibitem[Hillier e Lieberman 2006]{Hillier}
-\abntrefinfo{Hillier e Lieberman}{HILLIER; LIEBERMAN}{2006}
-{HILLIER, F.; LIEBERMAN, G. \emph{{Introdução à Pesquisa Operacional}}. 8º.
-  ed. [S.l.]: Mc-Graw-Hill, 2006.}
-
-\bibitem[Junior 2009]{Munari}
-\abntrefinfo{Junior}{JUNIOR}{2009}
-{JUNIOR, P. A.~M.
-\emph{{Técnicas Computacionais para uma implementação eficiente e estável
-  de metódos tipo smplex}}.
-Disserta\c{c}\~ao (Mestrado) --- Instituto de Ciências Matemáticas e de
-  Computação, ICMP-USP, 2009.}
-
 \bibitem[Karmarkar 1984]{Karmarkar}
 \abntrefinfo{Karmarkar}{KARMARKAR}{1984}
 {KARMARKAR, N. {A new polynomial algorithm for linear programming}.
 \emph{Combinatorica}, v.~4, p. 373--395, 1984.}
-
-\bibitem[Leite 2007]{Leite-wavelet}
-\abntrefinfo{Leite}{LEITE}{2007}
-{LEITE, F. E.~A.
-\emph{{Análise Estatística de Padrões Sísmicos: Decomposição em
-  Multiescala}}.
-Tese (Doutorado) --- Universidade Federal do Rio Grande do Norte Centro de
-  Ciências Exatas e da Terra Departamento de Física Teórica e Experimental,
-  Dezembro 2007.}
-
-\bibitem[Maculan e Fampa 2006]{MaculanPI}
-\abntrefinfo{Maculan e Fampa}{MACULAN; FAMPA}{2006}
-{MACULAN, N.; FAMPA, M. H.~C. \emph{Otimização Linear}. [S.l.]: Editora
-  Universidade de Brasília, 2006.}
-
-\bibitem[Menezes 2008]{Pinto}
-\abntrefinfo{Menezes}{MENEZES}{2008}
-{MENEZES, L. de L. P. M. A.~F. {Implementação de algoritmos simplex e pontos
-  interiores para programação linear}.
-\emph{Estudos}, v.~15, n.~2, p. 225--246, 2008.}
-
-\bibitem[Nagel 2008]{Akira-database}
-\abntrefinfo{Nagel}{NAGEL}{2008}
-{NAGEL, A. K.~A. {New Developments in Robotics, Automation and Control}.
-In:  \underline{\ \ \ \ \ \ \ \ }. [S.l.]: InTech, 2008. cap. Linear
-  Programming in Database, p. 339--354.}
-
-\bibitem[Pamplona 2005]{Engecom}
-\abntrefinfo{Pamplona}{PAMPLONA}{2005}
-{PAMPLONA, E. de O. \emph{Engenharia Econômica II}. 2005.
-Dispon{\'\i}vel em:
-  \htmladdnormallink{$<$http:\-/\-/www\-.iepg\-.unifei\-.edu\-.br\-/edson\-/do%
-wnload\-/Engecon2\-/CAP5EE2PLapost\-.pdf$>$}{http://www.iepg.unifei.edu.br/eds%
-on/download/Engecon2/CAP5EE2PLapost.pdf}. Acesso em: 04/06/2012.}
-
-\bibitem[Passos 2009]{Passos}
-\abntrefinfo{Passos}{PASSOS}{2009}
-{PASSOS, A.~N.
-\emph{Estudos em Programação Linear}.
-Disserta\c{c}\~ao (Mestrado) --- Instituto de Matemática, Estatística e
-  Computação Científica, UNICAMP, 2009.}
-
-\bibitem[Peixoto 2009]{Peixoto-wavelet}
-\abntrefinfo{Peixoto}{PEIXOTO}{2009}
-{PEIXOTO, P. da S.
-\emph{{Resolução numérica de EDPs utilizando ondaletas harmônicas}}.
-Disserta\c{c}\~ao (Mestrado) --- Instituto de Matemática e Estátistica da
-  Universidade de São Paulo, Junho 2009.}
-
-\bibitem[Saunders 2001]{Chen}
-\abntrefinfo{Saunders}{SAUNDERS}{2001}
-{SAUNDERS, S. S. C. D. L. D. M.~A. {Atomic Decomposition by Basis Pursuit}.
-\emph{SIAM Review}, v.~43, n.~1, p. 129--159, 2001.}
-
-\bibitem[Slyke 2009]{Slyke}
-\abntrefinfo{Slyke}{SLYKE}{2009}
-{SLYKE, G. Y.~R. {A Distributed, scaleable simplex method}.
-\emph{The Journal of Supercomputing}, v.~49, n.~3, p. 373 -- 381, Setembro
-  2009.}
-
-\bibitem[Taha 2008]{Taha}
-\abntrefinfo{Taha}{TAHA}{2008}
-{TAHA, H.~A. \emph{{Operation Research: An Introduction}}. 8. ed. [S.l.]:
-  Pearson, 2008.}
-
-\bibitem[Todd 2002]{Todd}
-\abntrefinfo{Todd}{TODD}{2002}
-{TODD, M.~J. {The many facets of linear programming}.
-\emph{Mathematical Programming}, v.~91, p. 417--436, 2002.}
-
-\bibitem[Tziritas 2007]{Komodakis}
-\abntrefinfo{Tziritas}{TZIRITAS}{2007}
-{TZIRITAS, N. K.~G. {Approximate Labeling via Graph Cuts Based on Linear
-  Programming}.
-\emph{IEEE Transactions on Pattern Analysis and Machine Intelligence}, v.~29,
-  n.~8, p. 1436--1453, 2007.}
-
-\bibitem[Yarmish 2001]{Yarmish-Distrubuido}
-\abntrefinfo{Yarmish}{YARMISH}{2001}
-{YARMISH, G.
-\emph{{A Distributed Implementation of the Simplex Method }}.
-Tese (Doutorado) --- Polytechnic University, Março 2001.}
-
-\bibitem[Yarmish 2006]{YarmishWave}
-\abntrefinfo{Yarmish}{YARMISH}{2006}
-{YARMISH, G. {The Simplex Method Applied to Wavelet Decomposition}. In:
-  SCIENCE, U. o. T. a.~D. G.~R. Dattatreya Department~of C. (Ed.).
-  \emph{MATH'06 Proceedings of the 10th WSEAS International Conference on
-  Applied Mathematics}. [S.l.: s.n.], 2006. p. 226--228.}
 
 \end{thebibliography}

@@ -4,21 +4,27 @@
 A programação linear é uma das disciplinas que compõem a programação matemática e constitui um dos pilares da pesquisa operacional. As aplicações da programação linear estão presentes em diversos setores, tais como nas indústrias, nos transportes, na saúde, na educação, na administração pública. etc.  Além disso, a resolução de problemas de programação linear (PPL) é requerida em outras disciplinas da programação matemática como programação inteira e programação não-linear, onde é comum a resolução de vários PPL de forma repetida.
 
 O método simplex proposto por \citeonline{Dan} é um dos métodos mais conhecidos e eficientes para resolver problemas de programação linear. Trata-se de um dos poucos algoritmos que foi implantado comercialmente há mais de 40 anos. Atualmente, está presente em softwares comerciais tais como CPLEX e LINGO. Um método alternativo, teoricamente superior ao método simplex, é o método dos pontos interiores, proposto por \citeonline{Karmarkar}. Na prática, tanto o método simplex, quanto o método dos pontos interiores competem até hoje.  
-
+(FALAR O QUE É O SIMPLEX REVISADO)
 O presente trabalho, por opção, é focado especificamente no método simplex revisado. Busca-se o desenvolvimento de um aplicativo capaz de resolver problemas de programação linear utilizando o método simplex revisado. Acredita-se que a importância desse trabalho se deve ao intuito de explorar o conhecimento a respeito do método, e acima disso o desenvolvimento de uma ferramenta gratuita que proporcione ao usuário uma interface intuitiva e de fácil entendimento.
 
 \section{Objetivos e justificativas}
-O objetivo do presente trabalho é o desenvolvimento de um aplicativo para resolver problemas de programação linear utilizando o método simplex revisado. Para o cumprimento do objetivo final o trabalho é composto basicamente por três etapas: 
+O objetivo do presente trabalho é o estudo da utilização da programação linear, mais especificamente o método simplex, no reconhecimento de expressões faciais. 
 
-\begin{itemize}
+Através desse estudo deve ser possível verificar a eficiência da programação linear nesse tipo de aplicação da computação gráfica. Além disso, devem ser realizadas duas comparações do resultado final obtido, do ponto de vista computacional: a utilização da programação linear e outro método mais comumente utilizado na computação gráfica; e a utilização de uma biblioteca desenvolvida e uma implementação do modelo de progra,ação linear utlizando o softwrae Cplex.
+
+A programação linear possui aplicações em diversas áreas, como: indústria, produção, saúde e computação gráfica. Porém é um método mais comumente utilizado na engenharia de produção em problemas como: alocação de recursos e planejamento de produção. O presente trabalho justifica-se pelo fato de querer abordar uma aplicação prática dentro da computação, mais especificamente na computação gráfica, onde a aplicação da programação linear não é tão explorada quanto na engenharia de produção.
+
+\section{Metodologia}
+Para o cumprimento do obejtivo final, o trabalho é composto por algumas etapas:
+
+\begin{itemize} 
 \item O estudo do método simplex revisado, suas características, vantagens do ponto de vista computacional e suas variantes.
 \item O desenvolvimento da biblioteca para resolução de problemas de programação linear
-\item O desenvolvimento da interface e do aplicativo em si, incorporando a biblioteca previamente desenvolvida.
+\item A implementação do modelo do problema de programação linear no software Cplex
+\item Aplicação da biblioteca e da implementação feita no Cplex em alguma aplicação de computação gráfica para reconhecimento de expressões faciais.
 \end{itemize}
 
-Através da ferramenta desenvolvida deve ser possível a resolução de problemas de pequeno e médio porte. Além disso, a ferramenta deve oferecer ao usuário uma interface intuitiva e fácil aprendizado.
+Para a reralização desta última etapa, espera-se, através de pesquisas encontrar uma aplicação pronta que realize o reconhecimento de expressões faciais que deverá ser utilizada. Porém ao invés de realizar o processamento utilizando o método já incorporado à aplicação, o método simplex será utilizado. Caso não seja encontrada uma aplicação de reconhecimento de expressão facial, que torne viável a substituição do método utilizado, uma ferramenta de forneça essa funcionalidade será desenvolvida.
 
-Apesar de terem sido encontradas ferramentas que resolvem problemas de programação linear durante a fase de pesquisa, este trabalho justifica-se pelo fato de nenhuma dessas ferramentas oferecerem uma interface amigável ou o acesso gratuito ou ambos. Além disso, existe o interesse em desenvolver a capacidade de desenvolver uma biblioteca para resolução de problemas de programação linear com base no método estudado, uma biblioteca open source e que ofereça um bom desempenho e resultados de qualidade.
-
-\section{Estrutura do trabalho}
+\section{Estrutura do trabalho} (COLOCAR A ESTRUTURA COMPLETA DA  MONOGRAFIA)
 O presente trabalho apresenta a seguinte estrutura: o capítulo 2 apresenta uma descrição do problema geral de programação linear, os principais métodos de solução, algumas aplicações práticas e as ferramentas computacionais disponíveis. 

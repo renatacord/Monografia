@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  2 JUL 2012 18:06
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  24 JUL 2012 15:27
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -1017,7 +1017,7 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 ) (./monografia.aux
-(./introducao.aux) (./referencial_teorico.aux))
+(./introducao.aux))
 \openout1 = `monografia.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
@@ -1036,8 +1036,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 67.
-
-(/usr/share/texmf-texlive/tex/latex/base/ts1cmr.fd
+ (/usr/share/texmf-texlive/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 67.
@@ -1084,55 +1083,7 @@ Cap\'{\i }tulo 1.
 
 
 
-]
-Overfull \hbox (1.76402pt too wide) in paragraph at lines 21--22
-[]\OT1/cmr/m/n/12 Apesar de te-rem sido en-con-tra-das fer-ra-men-tas que re-so
-l-vem pro-ble-mas de pro-grama^^Xc~ao
- []
-
-) [3]
-\openout2 = `referencial_teorico.aux'.
-
- (./referencial_teorico.tex
-Cap\'{\i }tulo 2.
-[4
-
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
-
- []
-
-[5]
-File: graficos/simplex_grafico.eps Graphic file (type eps)
- <graficos/simplex_grafico.eps>
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 52.
-See the caption package documentation for explanation.
-
-[6] [7] [8] [9] [10]
-File: graficos/tora.eps Graphic file (type eps)
- <graficos/tora.eps>
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 115.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (339.72588pt too wide) in paragraph at lines 114--115
- [] 
- []
-
-[11]
-Overfull \vbox (52.65987pt too high) has occurred while \output is active []
-
-
-[12]) [13] (./monografia.bbl [14
-
-
-])
+]) [3] [4] (./monografia.bbl)
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
@@ -1141,18 +1092,21 @@ Overfull \vbox (52.65987pt too high) has occurred while \output is active []
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 59.
 See the caption package documentation for explanation.
 
-[15] (./monografia.aux (./introducao.aux) (./referencial_teorico.aux))
+[5
+
+
+] (./monografia.aux (./introducao.aux))
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 14040 strings out of 495042
- 194019 string characters out of 1181920
- 364152 words of memory out of 3000000
- 16927 multiletter control sequences out of 15000+50000
- 13440 words of font info for 50 fonts, out of 3000000 for 9000
+ 13904 strings out of 495042
+ 191807 string characters out of 1181920
+ 362152 words of memory out of 3000000
+ 16802 multiletter control sequences out of 15000+50000
+ 12986 words of font info for 48 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 38i,8n,49p,989b,498s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,6n,49p,620b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on monografia.dvi (17 pages, 79716 bytes).
+Output written on monografia.dvi (7 pages, 20072 bytes).

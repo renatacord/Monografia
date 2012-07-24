@@ -34,9 +34,9 @@ Sujeito\ a\\$
 
 Onde, 
 \begin{itemize}
-\item \textbf {x1} representa a quantidade do produto 1 produzido em uma semana
-\item \textbf {x2} representa a quantidade do produto 2 produzido em uma semana
-\item \textbf {Z} representa o lucro total por semana de produção desses dois produtos (em milhões de dólares), sendo o lucro do produto 1 de 3 milhões e o do produto 2 de 5 milhões.
+\item \textbf {$x_{1}$} representa a quantidade do produto 1 produzido em uma semana
+\item \textbf {$x_{2}$} representa a quantidade do produto 2 produzido em uma semana
+\item \textbf {$z$} representa o lucro total por semana de produção desses dois produtos (em milhões de dólares), sendo o lucro do produto 1 de 3 milhões e o do produto 2 de 5 milhões.
 \end{itemize}
 
 E as restrições representam as restrições de tempo de cada máquina utilizada no processo de produção,
@@ -92,7 +92,8 @@ Em seu trabalho \citeonline{Komodakis} diz que problemas de analise de imagens p
 Em \citeonline{Slyke} e \citeonline{Yarmish-Distrubuido} demonstram a eficiência da utilização do método simplex padrão de forma distribuída. Esse tipo de implementação é útil para a computação distribuída. Já que nesse tipo de implementação as colunas das matrizes, onde são armazenados os dados, são distribuídas entre os processadores, é mais intuitivo o uso do método simplex padrão. Além disso, esse método é mais utilizado e mais eficiente que o método revisado na resolução de problemas de grande porte, onde existe um maior volume de dados, fazendo mais sentido a utilização da programação distribuída.
 De acordo com \citeonline{Slyke} e \citeonline{Yarmish-Distrubuido} o eficiência do método simplex revisado é afetada pela densidade do problema, ou seja, é uma método mais eficiente para problemas esparsos, os quais são mais comuns. Porém existem aplicações que exigem modelos mais densos, como em processamento de imagens. Nesse caso a implementação de uma algoritmo do método simplex padrão distribuído se mostra mais eficiente. Além disso não existem algoritmos eficientes do método simplex revisado distribuído. Em conclusão o autor diz que a implementação apresentou bons resultados, especialmente para problemas grandes e densos.
 
-Em Burger é proposto um algoritmo simplex distribuído para problemas de programação linear degenerados e atribuições multi- agentes. Um problema de programação linear é dito degenerado se na solução uma das variáveis valer zero. O objetivo do trabalho é propor um algoritmo simplex para ser implementado em uma distribuição multi- agente, onde os a gentes devem concordar com uma solução ótima ou declarar o problema como inviável, caso não haja solução ótima.
+Em \citeonline{Burger} é proposto um algoritmo simplex distribuído para problemas de programação linear degenerados e atribuições multi- agentes. Um problema de programação linear é dito degenerado se na solução uma das variáveis valer zero. O objetivo do trabalho é propor um algoritmo simplex para ser implementado em uma distribuição multi- agente, onde os a gentes devem concordar com uma solução ótima ou declarar o problema como inviável, caso não haja solução ótima.
+
 No trabalho de \citeonline{YarmishWave} o autor resolve um conjunto de problemas de decomposição wavelet, utilizando tanto o método simplex revisado quanto o método simplex padrão. O autor mostra que embora o método simplex revisado seja superior no caso do problema mais geral (problema esparso), a resolução de problemas de decomposição wavelet resulta em um problema denso, onde o método simplex padrão tem melhor  desempenho.
 O termo wavelet refere-se basicamente a um conjunto de funções com forma de pequenas ondas \cite{Ondaletas}. A decomposição wavelet é uma metodologia de decomposição de uma função ou sinal em um domínio de freqüências e espaço, sendo possível investigar a ocorrência de fenômenos localizados no espaço e freqüência simultaneamente \cite{Peixoto-wavelet}.
 A decomposição wavelet em sua versão discreta é utilizada na compreensão de dados sendo útil no processamento de imagens. No processamento de imagens a utilização da decomposição wavelet se torna eficiente na extração de informações de um sinal e na análise de freqüências, principalmente quando ocorrem rápidas variações na frequência \cite{Leite-wavelet} 
