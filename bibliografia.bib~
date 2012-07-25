@@ -217,3 +217,12 @@ Linear Programs and Multi-Agent Assignments}}
 	author = {D. Lee Fugal},
 	number = {1}
 }
+
+@Misc{Karypis,
+	year = {1994},
+	title = {{Performance and Scalability of the Parallel Simplex Method for
+Dense Linear Programming Problems
+An Extended Abstract}},
+	author = {George Karypis; Vipin Kumar},
+	url = {http://www.cs.umn.edu/~kumar/papers/simplex.ps}
+}

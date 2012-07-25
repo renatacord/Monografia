@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  24 JUL 2012 19:56
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  25 JUL 2012 11:38
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -1017,7 +1017,7 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 ) (./monografia.aux
-(./introducao.aux) (./referencial_teorico.aux))
+(./introducao.aux) (./referencial_teorico.aux) (./referencial_teorico2.aux))
 \openout1 = `monografia.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
@@ -1069,27 +1069,27 @@ Underfull \hbox (badness 1394) in paragraph at lines 82--82
 \OT1/cmr/m/n/12 ver-si-dade Es-ta-dual do Norte Flu-mi-nense
  []
 
-[1] (./monografia.toc)
+[1] (./monografia.toc [1
+
+])
 \tf@toc=\write5
 \openout5 = `monografia.toc'.
 
- [1
-
-]
+ [2]
 \openout2 = `introducao.aux'.
 
  (./introducao.tex
 Cap\'{\i }tulo 1.
-[2
+[3
 
 
 
-] [3]) [4]
+] [4]) [5]
 \openout2 = `referencial_teorico.aux'.
 
  (./referencial_teorico.tex
 Cap\'{\i }tulo 2.
-[5
+[6
 
 
 
@@ -1098,7 +1098,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--28
 
  []
 
-[6]
+[7]
 File: graficos/simplex_grafico.eps Graphic file (type eps)
  <graficos/simplex_grafico.eps>
 
@@ -1106,7 +1106,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 52.
 See the caption package documentation for explanation.
 
-[7] [8] [9] [10]
+[8] [9] [10] [11]
 File: graficos/ondaletas.eps Graphic file (type eps)
  <graficos/ondaletas.eps>
 
@@ -1119,18 +1119,18 @@ Overfull \hbox (15.51465pt too wide) in paragraph at lines 101--102
  [] 
  []
 
-[11] [12]
+[12] [13]
 Underfull \hbox (badness 10000) in paragraph at lines 127--129
 
  []
 
-[13]
+[14]
 Overfull \hbox (10.70569pt too wide) in paragraph at lines 153--154
 []\OT1/cmr/m/n/12 A pro-grama^^Xc~ao li-near al^^Sem de es-tar pre-sente, ^^Se 
 fun-da-men-tal em di-ver-sas ^^Sareas, tornando-
  []
 
-[14]
+[15]
 File: graficos/tora.eps Graphic file (type eps)
  <graficos/tora.eps>
 
@@ -1143,16 +1143,40 @@ Overfull \hbox (339.72588pt too wide) in paragraph at lines 160--161
  [] 
  []
 
-[15]
+[16]
 Overfull \vbox (52.65987pt too high) has occurred while \output is active []
 
 
-[16]) [17] (./monografia.bbl
+[17]) [18]
+\openout2 = `referencial_teorico2.aux'.
+
+ (./referencial_teorico2.tex
+Cap\'{\i }tulo 3.
+File: graficos/rosto.eps Graphic file (type eps)
+<graficos/rosto.eps>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 14.
+See the caption package documentation for explanation.
+
+[19
+
+
+
+]
+File: graficos/rosto.eps Graphic file (type eps)
+ <graficos/rosto.eps>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 21.
+See the caption package documentation for explanation.
+
+) [20] [21] (./monografia.bbl
 Overfull \hbox (127.68039pt too wide) in paragraph at lines 26--33
 [][][][]\OT1/cmr/m/n/12 .  
  []
 
-[18
+[22
 
 
 ])
@@ -1164,18 +1188,19 @@ Overfull \hbox (127.68039pt too wide) in paragraph at lines 26--33
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 59.
 See the caption package documentation for explanation.
 
-[19] (./monografia.aux (./introducao.aux) (./referencial_teorico.aux))
+[23] (./monografia.aux (./introducao.aux) (./referencial_teorico.aux)
+(./referencial_teorico2.aux))
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 14085 strings out of 495042
- 194650 string characters out of 1181920
+ 14105 strings out of 495042
+ 195003 string characters out of 1181920
  364152 words of memory out of 3000000
- 16963 multiletter control sequences out of 15000+50000
+ 16975 multiletter control sequences out of 15000+50000
  15902 words of font info for 58 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 38i,8n,49p,990b,498s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,8n,49p,990b,559s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on monografia.dvi (21 pages, 99932 bytes).
+Output written on monografia.dvi (25 pages, 112764 bytes).
