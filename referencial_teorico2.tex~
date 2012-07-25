@@ -29,6 +29,14 @@ Em \citeonline{FernandoGil} é descrito um método onde é utlizada uma base de 
 \begin{center}
 	\includegraphics[scale=1.00]{graficos/metodo1_classi}
 	\captionof{figure}{Exemplo de aplicação de General Face Knowledge ao rosto}
-	\cite{Guo}
 \end{center}
+
+\citeonline{FernandoGil} apresenta ainda um outro método. Este método utiliza um framework denominado Active Appearance Models, nessa abordagem o objetivo é detectar a face idenpedente da luminosidade e posição. O  Active Appearance Models
+possui um modelo estático que deve se ajustar a face que está sendo analisada através de alguns parâmetros e de forma iterativa.
+\begin{center}
+	\includegraphics[scale=1.00]{graficos/metodo2_classi}
+	\captionof{figure}{Ajuste do Active Appearence Models em três iterações a partir da posição inicial}
+\end{center}
+
+Em um outro trabalho também citado por \citeonline{FernandoGil}
 \section{A Programação Linear e o Reconhecimento de Expressões Faciais}
