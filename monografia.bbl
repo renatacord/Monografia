@@ -48,6 +48,13 @@ amcosta.pdf}.}
 {DANZITG, G. \emph{{Linear Programming and Extensions}}. [S.l.]: Princeton
   University Press, 1963.}
 
+\bibitem[Dyer 2005]{Guo}
+\abntrefinfo{Dyer}{DYER}{2005}
+{DYER, G. G. C.~R. {Simultaneous Feature Selection and Classifier Training via
+  Linear Programming: A Case Study for Face Expression Recognition}.
+\emph{IEEE Transactions on systems, man, and cybernetics}, v.~35, n.~3, p.
+  477--488, Junho 2005.}
+
 \bibitem[Frossard 2009]{FrossardMaxMin}
 \abntrefinfo{Frossard}{FROSSARD}{2009}
 {FROSSARD, A. C.~P. {Programação Linear: Maximização de Lucro e

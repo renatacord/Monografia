@@ -21,10 +21,20 @@ A figura abaixo mostra a seleção de pontos mais relevantes para a classificaç
 	\captionof{figure}{Pontos mais relevantes na face}
 	\cite{Guo}
 \end{center}
-\item Classificar a imagem em uma detreminada expressão: 
+\item Classificar a imagem em uma detreminada expressão: Nesta etapa ocorre de fato a classificação da expressão. Para realizar esta classificação exitem diversos métodos, dos mais simples aos mais complexos.
 \end{itemize} 
 
+\section{Métodos de Classificação}
+Em \citeonline{FernandoGil} é descrito um método onde é utlizada uma base de dados com imagens de diferentes indivíduos relativas às expressões. A face a ser classificada é associada a face mais semelhante dentre as existentes na base dados, e após isso a expressão é classificada. Este método parte do princípio que pessoas com fisionomias semelhantes possuem uma maneira similar de apesentar a mesma expressão. Através de uma estrtura denominada General Face Knowledge são criados grafos sobre as imagens, através de pontos-chave da face. Quando o grafo do rosto, a ter sua expressão reconhecida, é criado, este é comparado aos grafos das imagens da base de dados, para que uma face semelhante seja enocntrada. Na figura abaixo é ilustrado uma grfao sobre uma face. Esta abordagem obteve uma taxa de sucesso de cerca de 89\%.
+\begin{center}
+	\includegraphics[scale=1.00]{graficos/metodo1_classi}
+	\captionof{figure}{Exemplo de aplicação de General Face Knowledge ao rosto}
+\end{center}
 
-\section{Métodos Utilizados}
-
+\cite{FernandoGil} apresenta ainda um outro método. Este método utiliza um framework denominado Active Appearance Models, nessa abordagem o objetivo é detectar a face idenpedente da luminosidade e posição. O  Active Appearance Models
+possui um modelo estático que deve se ajustar a face que etsá sendo analisada através de alguns parâmetros e de forma iterativa.
+\begin{center}
+	\includegraphics[scale=1.00]{graficos/metodo2_classi}
+	\captionof{figure}{Ajuste do Active Appearence Models em três iterações a partir da posição inicial}
+\end{center}
 \section{A Programação Linear e o Reconhecimento de Expressões Faciais}
