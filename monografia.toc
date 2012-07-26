@@ -16,10 +16,13 @@
 \contentsline {subsection}{\numberline {2.4.3}Aplica\IeC {\c c}\IeC {\~o}es em Banco de Dados}{13}{subsection.2.4.3}
 \contentsline {subsection}{\numberline {2.4.4}Aplica\IeC {\c c}\IeC {\~a}o em Sa\IeC {\'u}de}{14}{subsection.2.4.4}
 \contentsline {subsection}{\numberline {2.4.5}Aplica\IeC {\c c}\IeC {\~o}es na Engenharia de Produ\IeC {\c c}\IeC {\~a}o}{14}{subsection.2.4.5}
-\contentsline {section}{\numberline {2.5}Ferramentas de Programa\IeC {\c c}\IeC {\~a}o Linear}{16}{section.2.5}
-\contentsline {chapter}{\numberline {3}Reconhecimento de Express\IeC {\~o}es Faciais}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o}{19}{section.3.1}
-\contentsline {section}{\numberline {3.2}Fases do Reconhecimento}{19}{section.3.2}
-\contentsline {section}{\numberline {3.3}M\IeC {\'e}todos de Classifica\IeC {\c c}\IeC {\~a}o}{20}{section.3.3}
-\contentsline {section}{\numberline {3.4}O Reconhecimento de Express\IeC {\~o}es Faciais e a Programa\IeC {\c c}\IeC {\~a}o Linear}{22}{section.3.4}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{24}{section.3.4}
+\contentsline {chapter}{\numberline {3}O M\IeC {\'e}todo Simplex}{16}{chapter.3}
+\contentsline {section}{\numberline {3.1}Origem do M\IeC {\'e}todo Simplex}{16}{section.3.1}
+\contentsline {section}{\numberline {3.2}Descri\IeC {\c c}\IeC {\~a}o do M\IeC {\'e}todo}{16}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Princ\IeC {\'\i }pio B\IeC {\'a}sico do M\IeC {\'e}todo}{16}{subsection.3.2.1}
+\contentsline {chapter}{\numberline {4}Reconhecimento de Express\IeC {\~o}es Faciais}{18}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introdu\IeC {\c c}\IeC {\~a}o}{18}{section.4.1}
+\contentsline {section}{\numberline {4.2}Fases do Reconhecimento}{18}{section.4.2}
+\contentsline {section}{\numberline {4.3}M\IeC {\'e}todos de Classifica\IeC {\c c}\IeC {\~a}o}{19}{section.4.3}
+\contentsline {section}{\numberline {4.4}O Reconhecimento de Express\IeC {\~o}es Faciais e a Programa\IeC {\c c}\IeC {\~a}o Linear}{21}{section.4.4}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{23}{section.4.4}

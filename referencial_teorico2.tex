@@ -51,7 +51,7 @@ Em um outro trabalho também citado por \citeonline{FernandoGil} são definidas 
 
 Em seus trabalhos, \citeonline{Feng} e \citeonline{Guo} apresentaram uma bordagem de reconhecimebto de expresssões faciais utilizando a progrmação linear. Em ambos a progrmação linear foi utilizada na fase de classificação da expressão. Em \citeonline{Guo} a programação lienar foi utlizada ainda na fase de extração de carcaterísticas, para determinar a quantidade de caracteríticas a serem selecionadas e os principais pontos da face. Enquanto no trabalho de \cite{Feng} é utilizado o filtro de Gabor na etapa de extração de carcaterísticas. O Filtro de Gabor tem a capacidade de realçar bordas e saliências na imagem. Após a aplicação do filtro na imagem, são realçadas as características salientes presentes no rosto (cantos dos olhos, cantos da boca, narinas, entre outros) \cite{Gabor}. Em ambos os trabalhos foram obtidos ótimos resultados e superiores a outros métodos com os quais foram comparados. 
 
-A programação linear é utlizada na etapa após o tratamento da imagem. Primeiramente as expressões são combinadas em pares. No trabalho de \cite{Feng}, por exemplo, busca-se o reconhecimento de sete expressões: raiva, desgosto, medo, felicidade, trsiteza, surpresa e neutro. Essas expressões são combinada em pares do tipo: raiva-desgosto, raiva-medo, etc. Formando um total de 21 pares. Após isso o modelo de programação linear, apresentado mais adiante, é utilizado para gerar os calssificares, o modelo deve ser rodado 21 vezes, uma para cada par de expressões. Essa etapa é também chamada de treinamento, pois a partir do classificadores gerados as expressões das imagens a serem analisadas serão determinadas. Essa abordagem também substitui a utilização de redes neurais para o treinamento, uma vantagem é que o modelo necessita ser rodado uma única vez para cada par, enquanto em uma abordagem utilizando redes neurais este processo se trona iterativo.
+A programação linear é utlizada na etapa após o tratamento da imagem. Primeiramente as expressões são combinadas em pares. No trabalho de \cite{Feng}, por exemplo, busca-se o reconhecimento de sete expressões: raiva, desgosto, medo, felicidade, tristeza, surpresa e neutro. Essas expressões são combinada em pares do tipo: raiva-desgosto, raiva-medo, etc. Formando um total de 21 pares. Após isso o modelo de programação linear, apresentado mais adiante, é utilizado para gerar os calssificares, o modelo deve ser rodado 21 vezes, uma para cada par de expressões. Essa etapa é também chamada de treinamento, pois a partir do classificadores gerados as expressões das imagens a serem analisadas serão determinadas. Essa abordagem também substitui a utilização de redes neurais para o treinamento, uma vantagem é que o modelo necessita ser rodado uma única vez para cada par, enquanto em uma abordagem utilizando redes neurais este processo se trona iterativo.
 
 $Min\ \frac{e^{t}y}{m} + \frac{e^{t}z}{k}\\
 \ subject\ to  \\
@@ -59,4 +59,17 @@ $Min\ \frac{e^{t}y}{m} + \frac{e^{t}z}{k}\\
 \              B\omega - e\gamma + e <= z\\
 \              y>= 0, z>= 0 $
 
+Onde, 
+\begin{itemize}
+\item \textbf {$m$} representa a quantidade de imagens de rostos com a primeira expressão do par
+\item \textbf {$k$} representa a quantidade de imagens de rostos com a segunda expressão do par
+\item \textbf {$e$} é uma vetor de 1's
+\item \textbf {$y$} e {$z$} são as varáveis do modelo
+\item \textbf {$A$} é a matriz de pontos das imagens de rostos com a primeira expressão do par
+\item \textbf {$B$} é a matriz de pontos das imagens de rostos com a segunda expressão do par
+\end{itemize}
+
+Na última etapa de determinação da exepressão é utilizda uma estrtura de árvore binária de torneio.
+
+Através dessa arbordagem espera-se comprovar os ótimos resultados mostrados pelos trabalhos que utilizam a programação linear.
 

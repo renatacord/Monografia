@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  25 JUL 2012 21:52
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  26 JUL 2012 11:06
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -1017,7 +1017,8 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 ) (./monografia.aux
-(./introducao.aux) (./referencial_teorico.aux) (./referencial_teorico2.aux))
+(./introducao.aux) (./referencial_teorico.aux) (./metodologia.aux)
+(./referencial_teorico2.aux))
 \openout1 = `monografia.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
@@ -1130,28 +1131,27 @@ Overfull \hbox (10.70569pt too wide) in paragraph at lines 153--154
 fun-da-men-tal em di-ver-sas ^^Sareas, tornando-
  []
 
-[15]
-File: graficos/tora.eps Graphic file (type eps)
- <graficos/tora.eps>
+) [15]
+\openout2 = `metodologia.aux'.
+
+ (./metodologia.tex
+Cap\'{\i }tulo 3.
+File: graficos/Simplex_grafico_completo.eps Graphic file (type eps)
+<graficos/Simplex_grafico_completo.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 161.
+(caption)                particular \caption on input line 13.
 See the caption package documentation for explanation.
 
-
-Overfull \hbox (339.72588pt too wide) in paragraph at lines 160--161
- [] 
- []
-
-[16]
-Overfull \vbox (52.65987pt too high) has occurred while \output is active []
+[16
 
 
-[17]) [18]
+
+]) [17]
 \openout2 = `referencial_teorico2.aux'.
 
  (./referencial_teorico2.tex
-Cap\'{\i }tulo 3.
+Cap\'{\i }tulo 4.
 File: graficos/rosto.eps Graphic file (type eps)
 <graficos/rosto.eps>
 
@@ -1159,7 +1159,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 14.
 See the caption package documentation for explanation.
 
-[19
+[18
 
 
 
@@ -1171,7 +1171,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 21.
 See the caption package documentation for explanation.
 
-[20]
+[19]
 File: graficos/metodo1_classi.eps Graphic file (type eps)
  <graficos/metodo1_classi.eps>
 
@@ -1186,7 +1186,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 40.
 See the caption package documentation for explanation.
 
-[21]
+[20]
 File: graficos/metodo3_classi.eps Graphic file (type eps)
  <graficos/metodo3_classi.eps>
 
@@ -1194,15 +1194,15 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 47.
 See the caption package documentation for explanation.
 
-[22]) [23] (./monografia.bbl
+[21]) [22] (./monografia.bbl
 Overfull \hbox (127.68039pt too wide) in paragraph at lines 26--33
 [][][][]\OT1/cmr/m/n/12 .  
  []
 
-[24
+[23
 
 
-])
+] [24])
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
@@ -1212,18 +1212,18 @@ Package caption Warning: Unused \captionsetup[lstlisting] on input line 59.
 See the caption package documentation for explanation.
 
 [25] (./monografia.aux (./introducao.aux) (./referencial_teorico.aux)
-(./referencial_teorico2.aux))
+(./metodologia.aux) (./referencial_teorico2.aux))
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 14127 strings out of 495042
- 195337 string characters out of 1181920
- 363152 words of memory out of 3000000
- 16993 multiletter control sequences out of 15000+50000
+ 14143 strings out of 495042
+ 195642 string characters out of 1181920
+ 365037 words of memory out of 3000000
+ 17002 multiletter control sequences out of 15000+50000
  15902 words of font info for 58 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 38i,8n,49p,1050b,498s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,8n,49p,1050b,511s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on monografia.dvi (27 pages, 126784 bytes).
+Output written on monografia.dvi (27 pages, 130480 bytes).

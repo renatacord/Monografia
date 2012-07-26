@@ -85,7 +85,7 @@ orientação do Profº. Fermín Alfredo Tang Montané.}
 
 \include{introducao}
 \include{referencial_teorico}
-
+\include{referencial_teorico2}
 %--------------------------------- Bibliografia --------------------------------
 
 \citeoption{abnt-repeated-author-omit=yes}

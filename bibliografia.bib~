@@ -247,3 +247,11 @@ An Extended Abstract}},
 	year = {2005},
 	number = {2}
 }
+
+@InProceedings{Gabor,
+	booktitle = {Anais do I WORCAP},
+	pages = {45-47},
+	title = {{Sistema Híbrido Inteligente Aplicado ao Reconhecimento de Rostos}},
+	author = {Douglas Rodrigues Oliveira;Lamartine N.F. Guimarães},
+	year = {2001}
+}
