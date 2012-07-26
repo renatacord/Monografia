@@ -63,10 +63,10 @@
 \renewcommand*\lstlistlistingname{Lista de Códigos}
 
 %--------------------------------- Informações ---------------------------------
-
+\newcommand{\meutitulo}{Teste}
 \begin{document}
 
-\titulo{Desenvolvimento de um aplicativo para resolução de problemas de programação linear utilizando o método simplex revisado}
+\titulo{\meutitulo}
 \autor{Renata Gomes Cordeiro}
 \instituicao{Universidade Estadual do Norte Fluminense Darcy Ribeiro}
 \orientador[Tutor: ]{Fermín Alfredo Tang Montané.}
@@ -85,6 +85,7 @@ orientação do Profº. Fermín Alfredo Tang Montané.}
 
 \include{introducao}
 \include{referencial_teorico}
+\include{metodologia}
 \include{referencial_teorico2}
 %--------------------------------- Bibliografia --------------------------------
 
