@@ -20,9 +20,10 @@
 \contentsline {section}{\numberline {3.1}Origem do M\IeC {\'e}todo Simplex}{16}{section.3.1}
 \contentsline {section}{\numberline {3.2}Descri\IeC {\c c}\IeC {\~a}o do M\IeC {\'e}todo}{16}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Princ\IeC {\'\i }pio B\IeC {\'a}sico do M\IeC {\'e}todo}{16}{subsection.3.2.1}
-\contentsline {chapter}{\numberline {4}Reconhecimento de Express\IeC {\~o}es Faciais}{18}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introdu\IeC {\c c}\IeC {\~a}o}{18}{section.4.1}
-\contentsline {section}{\numberline {4.2}Fases do Reconhecimento}{18}{section.4.2}
-\contentsline {section}{\numberline {4.3}M\IeC {\'e}todos de Classifica\IeC {\c c}\IeC {\~a}o}{19}{section.4.3}
-\contentsline {section}{\numberline {4.4}O Reconhecimento de Express\IeC {\~o}es Faciais e a Programa\IeC {\c c}\IeC {\~a}o Linear}{21}{section.4.4}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{23}{section.4.4}
+\contentsline {subsection}{\numberline {3.2.2}Descri\IeC {\c c}\IeC {\~a}o do M\IeC {\'e}todo Simplex Revisado}{17}{subsection.3.2.2}
+\contentsline {chapter}{\numberline {4}Reconhecimento de Express\IeC {\~o}es Faciais}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introdu\IeC {\c c}\IeC {\~a}o}{19}{section.4.1}
+\contentsline {section}{\numberline {4.2}Fases do Reconhecimento}{19}{section.4.2}
+\contentsline {section}{\numberline {4.3}M\IeC {\'e}todos de Classifica\IeC {\c c}\IeC {\~a}o}{20}{section.4.3}
+\contentsline {section}{\numberline {4.4}O Reconhecimento de Express\IeC {\~o}es Faciais e a Programa\IeC {\c c}\IeC {\~a}o Linear}{22}{section.4.4}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{24}{section.4.4}

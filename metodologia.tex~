@@ -9,6 +9,53 @@ A idéia do método simplex consiste em resolver repetidas vezes um sistema de e
 
 Um problema de programação linear é sempre constituído de uma função objetivo e várias restrições. Geometricamente, essas restrições resultam em uma forma geométrica, chamada hiperplano, no espaço n-dimensional sendo n o número de variáveis no modelo. E cada vértice desse hiperplano é considerado uma solução viável, como ilustra o exemplo abaixo.
 \begin{center}
-	\includegraphics[scale=1.00]{graficos/Simplex_grafico_completo}
+	\includegraphics[scale=0.5]{graficos/Simplex_grafico_completo}
 	\captionof{figure}{Um modelo de programação linear e a sua respectiva representação gráfica}
+	\cite{Hillier}
 \end{center}
+
+Na Figura 1 apresenta-se um exemplo de um problema de programação linear e sua representação geométrica. Nesse exemplo, de acordo com a representação geométrica do modelo, existem cinco possíveis soluções: x1=0 e  x2=0; x1=0 e  x2=6; x1=2 e  x2=6; x1=4 e  x2=3; x1=4 e x2=0. Como o objetivo é maximizar, concluímos que a melhor solução é x1=2 e  x2=6, em que z =36. No método Simplex a cada iteração, antes da solução ótima ser obtida, é encontrada uma dessas possíveis soluções que se localizam nos vértices do gráfico.
+
+\subsection{Descrição do Método Simplex Revisado}
+O método simplex revisado surgiu como uma solução para evitar cálculos desnecessários. Esse método foi projetado para problemas a serem solucionados computacionalmente.
+
+No simplex revisado, são armazenados na memória volátil apenas os dados realmente necessários. Além disso, os cálculos são realizados apenas sobre a coluna que é utilizada na iteração, o que evita cálculos com matrizes que poderia acarretar uma imprecisão nos resultados.
+
+Esse método mantém a característica do simplex, que é a troca entre a variável que entra na base e a que sai, além de também exigir certo esforço computacional. Porém sua grande vantagem é a economia de tempo e espaço, que garantida pelo modo como é desenvolvida a solução. 
+
+Nesta seção descreve-se os passos do algoritmo simplex revisado. O problema considerado é de maximização. A distinção entre matrizes, vetores e escalares foi feita da seguinte forma: letra maiúscula e negrito para matriz (MATRIZ); letra minúscula e negrito para vetor (vetor); letra em itálico para escalar (escalar).
+
+Considere o seguinte problema de programação linear:
+
+$\\
+Maximizar\ cx \\
+Sujeito\ a \\
+Ax \leq b \\
+x \geq0$
+
+O vetor $c$, de coeficientes na função objetivo, é dividido duas componentes: $c{_B}$ e $c{_N}$, coeficientes das variáveis básicas e não-básicas, respectivamente. Por analogia, o vetor $x$, de incógnitas do problema, é subdividido em $x{_B}$ e $x{_N}$.  A matriz $A$, de coeficientes das restrições, é dividida em duas submatrizes: $B$ e $N$, coeficientes das variáveis básicas e não-básicas, respectivamente. Os passos do algoritmo são os seguintes.
+
+Passo 1: Calcular o valor das variáveis básicas: $x_{b}\ =\ B^{-1}b\geq0$
+
+Passo 2: Calcular o vetor multiplicador: $\lambda \ =\ c{_B}B^{-1}$
+
+Passo 3: Escolher a variável que entra na base. Para isso, calcula-se: $p\ =\ c{_N}-\lambda N$
+
+Se $p\ =\ (c{_N}-\lambda N)\leq 0$ PARAR. A solução $x{_B}$ já é a solução ótima. Caso contrário, escolher uma coluna de $N$, coluna $a{_k}$, tal que $p{_k}\ =\ c{_nk}-\lambda a{_k}> 0$
+
+Um critério freqüente é escolher a coluna $a{_k}$ que resulte no maior valor de $p{_k}$.
+
+Então, assumindo $e = k$, $k$ representa o índice da coluna, $a{_k}$ representa a coluna de $A$ candidata a entrar na base. 
+
+Passo 4: Determinar a variável que sai da base. Para isso, calcula-se: $y=B^{-1}a{_k}$
+
+Se $\forall i\frac{b{_i}}{y{_i}}\leq 0$ PARAR A solução é não-limitada. Caso contrário, calcular:
+$\forall i\ \underset{\underset{y{_i}>0}{1\leq i\leq m}}{Min}\begin{Bmatrix}
+\frac{b{_i}}{y{_i}}
+\end{Bmatrix}$ e guardar o índice correspondente a $s = i$. A variável $(x{_b}){_s}$ sai da base.
+
+Passo 5: Criar a matriz $E$.
+$E=(e{_1},e{_2},...,e{_s-1},\gamma , e{_s+1},...,e{_m})$
+
+Onde, cada coluna da matriz é um vetor unitário com exceção da coluna $s$, que corresponde ao vetor $\gamma$, calculado da seguinte maneira:
+$\gamma^{t}=\left( \frac{-\alpha {_{1,e}}}{\alpha {_{s,e}}}\ \frac{-\alpha {_2_,_e}}{\alpha {_s_,_e}}\ ...\ \frac{-\alpha {_s_-_1_,_e}}{\alpha {_s_,_e}}\ \frac{1}{\alpha {_s_,_e}}\ \frac{-\alpha {_s_+_1_,_e}}{\alpha {_s_,_e}}\ ...\ \frac{-\alpha {_m_,_e}}{\alpha {_s_,_e}} \right )$
