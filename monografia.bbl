@@ -134,6 +134,12 @@ Disserta\c{c}\~ao (Mestrado) --- Universidade Federal do Paraná, 2004.}
 {MACULAN, N.; FAMPA, M. H.~C. \emph{Otimização Linear}. [S.l.]: Editora
   Universidade de Brasília, 2006.}
 
+\bibitem[Malsburg 1998]{Hong}
+\abntrefinfo{Malsburg}{MALSBURG}{1998}
+{MALSBURG, H. H. H. N. C.~V. der. {Online Facial expression recognition based
+  on personalized gallaries.} In:  \emph{International Conf. Automation and
+  Gesture Recognition}. [S.l.: s.n.], 1998. p. 354--359.}
+
 \bibitem[Menezes 2008]{Pinto}
 \abntrefinfo{Menezes}{MENEZES}{2008}
 {MENEZES, L. de L. P. M. A.~F. {Implementação de algoritmos simplex e pontos
@@ -168,6 +174,12 @@ Disserta\c{c}\~ao (Mestrado) --- Instituto de Matemática, Estatística e
 Disserta\c{c}\~ao (Mestrado) --- Instituto de Matemática e Estátistica da
   Universidade de São Paulo, Junho 2009.}
 
+\bibitem[Rothkrantz 2000]{Pantic}
+\abntrefinfo{Rothkrantz}{ROTHKRANTZ}{2000}
+{ROTHKRANTZ, M. P. L. J.~M. {Expert system for automatic analysis of facial
+  expression}.
+\emph{Image and Vision Computing}, v.~18, p. 881--905, 2000.}
+
 \bibitem[Saunders 2001]{Chen}
 \abntrefinfo{Saunders}{SAUNDERS}{2001}
 {SAUNDERS, S. S. C. D. L. D. M.~A. {Atomic Decomposition by Basis Pursuit}.
@@ -183,6 +195,12 @@ Disserta\c{c}\~ao (Mestrado) --- Instituto de Matemática e Estátistica da
 \abntrefinfo{Taha}{TAHA}{2008}
 {TAHA, H.~A. \emph{{Operation Research: An Introduction}}. 8. ed. [S.l.]:
   Pearson, 2008.}
+
+\bibitem[Taylor 1998]{Edwards}
+\abntrefinfo{Taylor}{TAYLOR}{1998}
+{TAYLOR, G. J. E. T. F. C. C.~J. {Face recognition using active appearance}.
+  In:  \emph{European Conf. Computer Vision}. [S.l.: s.n.], 1998. v.~2, p.
+  581--695.}
 
 \bibitem[Todd 2002]{Todd}
 \abntrefinfo{Todd}{TODD}{2002}

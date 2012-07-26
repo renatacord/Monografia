@@ -33,35 +33,35 @@ Sujeito\ a \\
 \mathbf{Ax} \leq \mathbf{b} \\
 \mathbf{x} \geq0$
 
-O vetor $\mathbf{c}$, de coeficientes na função objetivo, é dividido duas componentes: $\mathbf{c{_B}}$ e $\mathbf{c{_N}}$, coeficientes das variáveis básicas e não-básicas, respectivamente. Por analogia, o vetor $x$, de incógnitas do problema, é subdividido em $\mathbf{x{_B}}$ e $\mathbf{x{_N}}$.  A matriz $\mathbf{A}$, de coeficientes das restrições, é dividida em duas submatrizes: $\mathbf{B}$ e $\mathbf{N}$, coeficientes das variáveis básicas e não-básicas, respectivamente. Os passos do algoritmo são os seguintes.
+O vetor $\mathbf{c}$, de coeficientes na função objetivo, é dividido duas componentes: $\mathbf{c{_B}}$ e $\mathbf{c{_N}}$, coeficientes das variáveis básicas e não-básicas, respectivamente. Por analogia, o vetor $\mathbf{x}$, de incógnitas do problema, é subdividido em $\mathbf{x{_B}}$ e $\mathbf{x{_N}}$.  A matriz $\mathbf{A}$, de coeficientes das restrições, é dividida em duas submatrizes: $\mathbf{B}$ e $\mathbf{N}$, coeficientes das variáveis básicas e não-básicas, respectivamente. Os passos do algoritmo são os seguintes.
 
-Passo 1: Calcular o valor das variáveis básicas: $x_{b}\ =\ B^{-1}b\geq0$
+Passo 1: Calcular o valor das variáveis básicas: $\mathbf{x_{b}}\ =\ \mathbf{B^{-1}b}\geq0$
 
-Passo 2: Calcular o vetor multiplicador: $\lambda \ =\ c{_B}B^{-1}$
+Passo 2: Calcular o vetor multiplicador: $\mathbf{\lambda} \ =\ \mathbf{c{_B}B^{-1}}$
 
-Passo 3: Escolher a variável que entra na base. Para isso, calcula-se: $p\ =\ c{_N}-\lambda N$
+Passo 3: Escolher a variável que entra na base. Para isso, calcula-se: $\mathbf{p}\ =\ \mathbf{c{_N}}-\mathbf{\lambda N}$
 
-Se $p\ =\ (c{_N}-\lambda N)\leq 0$ PARAR. A solução $x{_B}$ já é a solução ótima. Caso contrário, escolher uma coluna de $N$, coluna $a{_k}$, tal que $p{_k}\ =\ c{_nk}-\lambda a{_k}> 0$
+Se $\mathbf{p}\ =\ (\mathbf{c{_N}}-\mathbf{\lambda N})\leq 0$ PARAR. A solução $\mathbf{x{_B}}$ já é a solução ótima. Caso contrário, escolher uma coluna de $\mathbf{N}$, coluna $\mathbf{a{_k}}$, tal que $\mathit{p{_k}}\ =\ \mathit{c{_nk}}-\mathbf{\lambda a{_k}}> 0$
 
-Um critério freqüente é escolher a coluna $a{_k}$ que resulte no maior valor de $p{_k}$.
+Um critério frequente é escolher a coluna $\mathbf{a{_k}}$ que resulte no maior valor de $\mathit{p{_k}}$.
 
-Então, assumindo $e = k$, $k$ representa o índice da coluna, $a{_k}$ representa a coluna de $A$ candidata a entrar na base. 
+Então, assumindo $\mathit{e} = \mathit{k}$, $\mathit{k}$ representa o índice da coluna, $\mathbf{a{_k}}$ representa a coluna de $\mathbf{A}$ candidata a entrar na base. 
 
-Passo 4: Determinar a variável que sai da base. Para isso, calcula-se: $y=B^{-1}a{_k}$
+Passo 4: Determinar a variável que sai da base. Para isso, calcula-se: $\mathbf{y}=\mathbf{B^{-1}a{_k}}$
 
-Se $\forall i\frac{b{_i}}{y{_i}}\leq 0$ PARAR A solução é não-limitada. Caso contrário, calcular:
+Se $\forall i\mathit{\frac{b{_i}}{y{_i}}}\leq 0$ PARAR A solução é não-limitada. Caso contrário, calcular:
 $\forall i\ \underset{\underset{y{_i}>0}{1\leq i\leq m}}{Min}\begin{Bmatrix}
-\frac{b{_i}}{y{_i}}
+\mathit{\frac{b{_i}}{y{_i}}}
 \end{Bmatrix}$ e guardar o índice correspondente a $s = i$. A variável $(x{_b}){_s}$ sai da base.
 
-Passo 5: Criar a matriz $E$.
-$E=(e{_1},e{_2},...,e{_s-1},\gamma , e{_s+1},...,e{_m})$
+Passo 5: Criar a matriz $\mathbf{E}$.
+$\mathbf{E}=(\mathbf{e{_1}},\mathbf{e{_2}},...,\mathbf{e{_s-1}},\mathbf{\gamma} , \mathbf{e{_s+1}},...,\mathbf{e{_m}})$
 
-Onde, cada coluna da matriz é um vetor unitário com exceção da coluna $s$, que corresponde ao vetor $\gamma$, calculado da seguinte maneira:
-$\gamma^{t}=\left( \frac{-\alpha {_{1,e}}}{\alpha {_{s,e}}}\ \frac{-\alpha {_{2,e}}}{\alpha {_{s,e}}}\ ...\ \frac{-\alpha {_{s-1,e}}}{\alpha {_{s,e}}}\ \frac{1}{\alpha {_{s,e}}}\ \frac{-\alpha {_{s+1,e}}}{\alpha {_{s,e}}}\ ...\ \frac{-\alpha {_{m,e}}}{\alpha {_{s,e}}} \right )$
+Onde, cada coluna da matriz é um vetor unitário com exceção da coluna $\mathit{s}$, que corresponde ao vetor $\mathbf{\gamma}$, calculado da seguinte maneira:
+$\mathbf{\gamma^{t}}=\left( \mathit{\frac{-\alpha {_{1,e}}}{\alpha {_{s,e}}}}\ \mathit{\frac{-\alpha {_{2,e}}}{\alpha {_{s,e}}}}\ ...\ \mathit{\frac{-\alpha {_{s-1,e}}}{\alpha {_{s,e}}}}\ \mathit{\frac{1}{\alpha {_{s,e}}}\ \frac{-\alpha {_{s+1,e}}}{\alpha {_{s,e}}}}\ ...\ \mathit{\frac{-\alpha {_{m,e}}}{\alpha {_{s,e}}}} \right )$
 
-Onde $\alpha{_ie}$ são os elementos vetor do $y$.
+Onde $\mathit{\alpha{_ie}}$ são os elementos vetor do $\textbf{y}$.
 
-Passo 6: Calcular nova matriz $B^{-1}$: $B^{-1} = EB^{-1}$
+Passo 6: Calcular nova matriz $\textbf{B^{-1}}$: $\textbf{B^{-1}} = \textbf{EB^{-1}}$
 
-Passo 7: Atualizar os vetores $c{_B}$ e $x{_B}$.
+Passo 7: Atualizar os vetores $\textbf{c{_B}}$ e $\textbf{x{_B}}$.
