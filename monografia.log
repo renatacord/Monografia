@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  26 JUL 2012 14:56
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  26 JUL 2012 15:43
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -1065,12 +1065,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  [0
 
-]
-Underfull \hbox (badness 1394) in paragraph at lines 82--82
-\OT1/cmr/m/n/12 ver-si-dade Es-ta-dual do Norte Flu-mi-nense
- []
-
-[1] (./monografia.toc [1
+] [1] (./monografia.toc [1
 
 ])
 \tf@toc=\write5
@@ -1112,21 +1107,21 @@ File: graficos/ondaletas.eps Graphic file (type eps)
  <graficos/ondaletas.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 102.
+(caption)                particular \caption on input line 103.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (15.51465pt too wide) in paragraph at lines 101--102
+Overfull \hbox (2.4659pt too wide) in paragraph at lines 102--103
  [] 
  []
 
 [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 127--129
+Underfull \hbox (badness 10000) in paragraph at lines 129--131
 
  []
 
 [14]
-Overfull \hbox (10.70569pt too wide) in paragraph at lines 153--154
+Overfull \hbox (10.70569pt too wide) in paragraph at lines 155--156
 []\OT1/cmr/m/n/12 A pro-grama^^Xc~ao li-near al^^Sem de es-tar pre-sente, ^^Se 
 fun-da-men-tal em di-ver-sas ^^Sareas, tornando-
  []
@@ -1148,7 +1143,7 @@ See the caption package documentation for explanation.
 
 
 ] [17]
-Overfull \hbox (45.4314pt too wide) in paragraph at lines 60--62
+Overfull \hbox (45.4314pt too wide) in paragraph at lines 61--63
 \OT1/cmr/m/n/12 ponde ao ve-tor $\OML/cmm/m/it/12 ^^M$\OT1/cmr/m/n/12 , cal-cu-
 lado da se-guinte ma-neira: $[] = []$ 
  []
@@ -1174,7 +1169,14 @@ File: graficos/rosto_pontos.eps Graphic file (type eps)
  <graficos/rosto_pontos.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 21.
+(caption)                particular \caption on input line 22.
+See the caption package documentation for explanation.
+
+File: graficos/diagrama.eps Graphic file (type eps)
+<graficos/diagrama.eps>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 32.
 See the caption package documentation for explanation.
 
 [21]
@@ -1182,14 +1184,14 @@ File: graficos/metodo1_classi.eps Graphic file (type eps)
  <graficos/metodo1_classi.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 33.
+(caption)                particular \caption on input line 42.
 See the caption package documentation for explanation.
 
 File: graficos/metodo2_classi.eps Graphic file (type eps)
 <graficos/metodo2_classi.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 40.
+(caption)                particular \caption on input line 50.
 See the caption package documentation for explanation.
 
 [22]
@@ -1197,11 +1199,23 @@ File: graficos/metodo3_classi.eps Graphic file (type eps)
  <graficos/metodo3_classi.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 47.
+(caption)                particular \caption on input line 58.
 See the caption package documentation for explanation.
 
 [23]) [24] (./monografia.bbl
-Overfull \hbox (127.68039pt too wide) in paragraph at lines 26--33
+Underfull \hbox (badness 3240) in paragraph at lines 26--34
+[]\OT1/cmr/m/n/12 COSTA, E. D. S. da. \OT1/cmr/m/it/12 Re-co-nhe-ci-mento de Ex
+- 
+ []
+
+
+Underfull \hbox (badness 2293) in paragraph at lines 26--34
+\OT1/cmr/m/it/12 press~oes Fa-ci-ais em Ima-gens\OT1/cmr/m/n/12 . 2010. Dis-pon
+^^S^^Pvel em: 
+ []
+
+
+Overfull \hbox (127.68039pt too wide) in paragraph at lines 26--34
 [][][][]\OT1/cmr/m/n/12 .  
  []
 
@@ -1224,12 +1238,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 14159 strings out of 495042
- 195834 string characters out of 1181920
- 365684 words of memory out of 3000000
- 17016 multiletter control sequences out of 15000+50000
+ 14170 strings out of 495042
+ 196036 string characters out of 1181920
+ 366416 words of memory out of 3000000
+ 17026 multiletter control sequences out of 15000+50000
  16603 words of font info for 60 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 38i,10n,49p,1050b,512s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,10n,49p,1050b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on monografia.dvi (29 pages, 141820 bytes).
+Output written on monografia.dvi (29 pages, 144292 bytes).

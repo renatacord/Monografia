@@ -8,18 +8,20 @@ sentimentos e emoções, numa linguagem subentendida entre seres humanos. Desde 
 O reconhecimento facial se divide em três etapas básicas \cite{Elizabeth}:
 \begin{itemize}
 \item Detectar a face na cena: Inicialmente é apresentada uma imagem contendo a face que deve ser rceonhecida. Nesta primeira etapa, deve ser realizada a detecção da zona da face, e devem ser extraídos os outros artefatos que não compõem o rosto \cite{FernandoGil}.
-Na figura abaixo é ilustrado o resultado final desta primeira etapa.
+Na figura \ref{img:rosto} é ilustrado o resultado final desta primeira etapa.
 \begin{center} 
 	\includegraphics[scale=0.5]{graficos/rosto}
 	\captionof{figure}{Detecção da face}
+	\label{img:rosto}
 	\cite{Elizabeth}
 \end{center}
-\item Extrair as principais características: Nesta etapa são extraídas as características que são relevantes à classificação da expressão. Normalmente é dada maior ênfase as sobrancelhas, nariz, olhos e boca.
+\item Extrair as principais características: Nesta etapa são extraídas as características que são relevantes à classificação da expressão. Normalmente é dada maior ênfase as sobrancelhas, nariz, olhos e boca. \ref{img:rosto_pontos}
 A figura abaixo mostra a seleção de pontos mais relevantes para a classificação da expressão. CITAR MÉTODOS UTILIZADOS
 \begin{center}
 	\includegraphics[scale=0.5]{graficos/rosto_pontos}
 	\captionof{figure}{Pontos mais relevantes na face}
 	\cite{Guo}
+	\label{img:rosto_pontos}	
 \end{center}
 \item Classificar a imagem em uma detreminada expressão: Nesta etapa ocorre de fato a classificação da expressão. Para realizar esta classificação exitem diversos métodos, dos mais simples aos mais complexos. Alguns desse métodos serão apresentados na próxima seção.
 \end{itemize} 
@@ -27,24 +29,27 @@ A figura abaixo mostra a seleção de pontos mais relevantes para a classificaç
 \section{Métodos de Classificação}
 Na últipa de etapa do processe de reconheicmento de expressões faciais, é realizada a classificação da expressão. Para a realização desta etapa existem diversos métodos. Alguns deles são apresentados nesta seção. Entre os métodos, existe aquele que utiliza a programação linear, principal fico deste trabalho, e que será apresentado na seção seguinte.
 
-Em \cite{Hong} é descrito um método onde é utlizada uma base de dados com imagens de diferentes indivíduos relativas às expressões. A face a ser classificada é associada a face mais semelhante dentre as existentes na base dados, e após isso a expressão é classificada. Este método parte do princípio que pessoas com fisionomias semelhantes possuem uma maneira similar de apesentar a mesma expressão. Através de uma estrtura denominada General Face Knowledge são criados grafos sobre as imagens, através de pontos-chave da face. Quando o grafo do rosto, a ter sua expressão reconhecida, é criado, este é comparado aos grafos das imagens da base de dados, para que uma face semelhante seja encontrada. Na figura abaixo COLOCAR O NUMERO DA FIGURA, TIRAR A PALAVRA ABAIXO é ilustrado uma grfao sobre uma face. Esta abordagem obteve uma taxa de sucesso de cerca de 89\%.
+Em \cite{Hong} é descrito um método onde é utlizada uma base de dados com imagens de diferentes indivíduos relativas às expressões. A face a ser classificada é associada a face mais semelhante dentre as existentes na base dados, e após isso a expressão é classificada. Este método parte do princípio que pessoas com fisionomias semelhantes possuem uma maneira similar de apesentar a mesma expressão. Através de uma estrtura denominada General Face Knowledge são criados grafos sobre as imagens, através de pontos-chave da face. Quando o grafo do rosto, a ter sua expressão reconhecida, é criado, este é comparado aos grafos das imagens da base de dados, para que uma face semelhante seja encontrada. Na figura \ref{img:metodo1_classi} é ilustrado uma grfao sobre uma face. Esta abordagem obteve uma taxa de sucesso de cerca de 89\%.
 \begin{center}
 	\includegraphics[scale=0.5]{graficos/metodo1_classi}
 	\captionof{figure}{Exemplo de aplicação de General Face Knowledge ao rosto}
+	\label{img:metodo1_classi}
 \end{center}
 
-\cite{Edwards} apresenta um outro método, em que é utilizado um framework denominado Active Appearance Models, nessa abordagem o objetivo é detectar a face idenpedente da luminosidade e posição. O  Active Appearance Models
-possui um modelo estático que deve se ajustar a face que está sendo analisada através de alguns parâmetros e de forma iterativa. REFERENCIAR FIGURAS
+\cite{Edwards} apresenta um outro método, em que é utilizado um framework denominado Active Appearance Models, nessa abordagem o objetivo é detectar a face idependente da luminosidade e posição. O  Active Appearance Models
+possui um modelo estático que deve se ajustar a face que está sendo analisada através de alguns parâmetros e de forma iterativa. A figura \ref{img:metodo2_classi} ilustra o método.
 \begin{center}
 	\includegraphics[scale=0.5]{graficos/metodo2_classi}
 	\captionof{figure}{Ajuste do Active Appearence Models em três iterações a partir da posição inicial}
+	\label{img:metodo2_classi}
 \end{center}
 
 Em um outro trabalho são definidas características-modelo, que são comparadas às características da face neutra, ou seja, sem expressar emoção, do indivíduo que está sendo analisao. Após essa etapa, é analisada a deformação, em relação ao modelo, quando o indivíduo expressa alguma emoção. A partir da deformação é realizada a classificação da expressão. A taxa de sucesso é de 92\% para a metade superior da face e de
-86\% para a metade inferior. Na imagem a seguir é ilustrado o ajustamento das características modelo ao olho \cite{Pantic}.
+86\% para a metade inferior. Na imagem \ref{img:metodo3_classi} é ilustrado o ajustamento das características modelo ao olho \cite{Pantic}.
 \begin{center}
 	\includegraphics[scale=0.5]{graficos/metodo3_classi}
 	\captionof{figure}{ Ajustamento ao olho: características-modelo}
+	\label{img:metodo3_classi}
 \end{center}
 
 \section{O Reconhecimento de Expressões Faciais e a Programação Linear}

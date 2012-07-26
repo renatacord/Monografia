@@ -63,7 +63,7 @@
 \renewcommand*\lstlistlistingname{Lista de Códigos}
 
 %--------------------------------- Informações ---------------------------------
-\newcommand{\meutitulo}{Teste}
+\newcommand{\meutitulo}{A Programação Linear aplicada ao reconhecimento de expressões faciais, com ênfase no método Simplex Revisado}
 \begin{document}
 
 \titulo{\meutitulo}

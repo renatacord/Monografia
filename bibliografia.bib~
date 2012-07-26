@@ -279,3 +279,12 @@ An Extended Abstract}},
 	year = {1998},
 	pages = {354-359}
 }
+
+@Article{Pantic,
+	pages = {881-905},
+	journal = {Image and Vision Computing},
+	volume = {18},
+	title = {{Expert system for automatic analysis of facial expression}},
+	year = {2000},
+	author = {M. Pantic; L. J. M. Rothkrantz}
+}

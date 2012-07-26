@@ -21,9 +21,10 @@
 {BLITZKOW, A. C. B. B.~D. \emph{{Ondaletas: Histórico e Aplicação}}. Maio
   2008.}
 
-\bibitem[Costa]{Elizabeth}
-\abntrefinfo{Costa}{COSTA}{}
+\bibitem[Costa 2010]{Elizabeth}
+\abntrefinfo{Costa}{COSTA}{2010a}
 {COSTA, E. D.~S. da. \emph{{Reconhecimento de Expressões Faciais em Imagens}}.
+  2010.
 Dispon{\'\i}vel em:
   \htmladdnormallink{$<$http:\-/\-/www\-.verlab\-.dcc\-.ufmg\-.br\-/\underline%
 {\ }media\-/cursos\-/visao\-/2010-1\-/grupo04\-/reconhecimento\underline{\
@@ -32,7 +33,7 @@ Dispon{\'\i}vel em:
 rupo04/reconhecimento_de_expressao_facial.pdf}.}
 
 \bibitem[Costa 2010]{FernandoGil}
-\abntrefinfo{Costa}{COSTA}{2010}
+\abntrefinfo{Costa}{COSTA}{2010b}
 {COSTA, F. G. A.~M. da.
 \emph{{Reconhecimento Expressões Faciais}}.
 Disserta\c{c}\~ao (Mestrado) --- UNIVERSIDADE DE TRÁS-OS-MONTES E ALTO DOURO,

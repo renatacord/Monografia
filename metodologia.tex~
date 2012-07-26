@@ -60,8 +60,8 @@ $\mathbf{E}=(\mathbf{e{_1}},\mathbf{e{_2}},...,\mathbf{e{_s-1}},\mathbf{\gamma} 
 Onde, cada coluna da matriz é um vetor unitário com exceção da coluna $\mathit{s}$, que corresponde ao vetor $\mathbf{\gamma}$, calculado da seguinte maneira:
 $\mathbf{\gamma^{t}}=\left( \mathit{\frac{-\alpha {_{1,e}}}{\alpha {_{s,e}}}}\ \mathit{\frac{-\alpha {_{2,e}}}{\alpha {_{s,e}}}}\ ...\ \mathit{\frac{-\alpha {_{s-1,e}}}{\alpha {_{s,e}}}}\ \mathit{\frac{1}{\alpha {_{s,e}}}\ \frac{-\alpha {_{s+1,e}}}{\alpha {_{s,e}}}}\ ...\ \mathit{\frac{-\alpha {_{m,e}}}{\alpha {_{s,e}}}} \right )$
 
-Onde $\mathit{\alpha{_ie}}$ são os elementos vetor do $\textbf{y}$.
+Onde $\mathit{\alpha{_ie}}$ são os elementos vetor do $\mathbf{y}$.
 
-Passo 6: Calcular nova matriz $\textbf{B^{-1}}$: $\textbf{B^{-1}} = \textbf{EB^{-1}}$
+Passo 6: Calcular nova matriz $\mathbf{B^{-1}}$: $\mathbf{B^{-1}} = \mathbf{EB^{-1}}$
 
-Passo 7: Atualizar os vetores $\textbf{c{_B}}$ e $\textbf{x{_B}}$.
+Passo 7: Atualizar os vetores $\mathbf{c{_B}}$ e $\mathbf{x{_B}}$.
