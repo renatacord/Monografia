@@ -1,6 +1,6 @@
 \chapter{Reconhecimento de Expressões Faciais}
 
-\section{Introdução}
+%\section{Introdução}
 Segundo \citeonline{FernandoGil} a expressão facial é uma forma de comunicação não-verbal que permite a partilha de
 sentimentos e emoções, numa linguagem subentendida entre seres humanos. Desde o início das pesquisas na computação busca-se cada vez mais dotar o computador de um comprtamento inteligente. Sequindo esse caminho, o reconhecimento facial surgiu,  para trazer soluções no campo da Interface Homem- Computador, como um desafio esperado, porém desafiador. Principalmente no reconheciemnto de expressões faciais, já que se trata de um julgamento ambíguo até mesmo para os seres humanos, pois a mesma expressão pode variar de indivíduo para indivíduo \cite{FernandoGil} \cite{Elizabeth}.
 
@@ -8,9 +8,9 @@ sentimentos e emoções, numa linguagem subentendida entre seres humanos. Desde 
 O reconhecimento facial se divide em três etapas básicas \cite{Elizabeth}:
 \begin{itemize}
 \item Detectar a face na cena: Inicialmente é apresentada uma imagem contendo a face que deve ser rceonhecida. Nesta primeira etapa, deve ser realizada a detecção da zona da face, e devem ser extraídos os outros artefatos que não compõem o rosto \cite{FernandoGil}.
-Na figura \ref{img:rosto} é ilustrado o resultado final desta primeira etapa.
+Na figura \ref{img:rosto} é ilustrado o resultado final desta primeira etapa. \\
 \begin{center} 
-	\includegraphics[scale=0.5]{graficos/rosto}
+	\includegraphics[scale=0.8]{graficos/rosto}
 	\captionof{figure}{Detecção da face}
 	\label{img:rosto}
 	\cite{Elizabeth}
@@ -51,7 +51,7 @@ possui um modelo estático que deve se ajustar a face que está sendo analisada 
 	\label{img:metodo2_classi}
 \end{center}
 
-Em um outro trabalho são definidas características-modelo, que são comparadas às características da face neutra, ou seja, sem expressar emoção, do indivíduo que está sendo analisao. Após essa etapa, é analisada a deformação, em relação ao modelo, quando o indivíduo expressa alguma emoção. A partir da deformação é realizada a classificação da expressão. A taxa de sucesso é de 92\% para a metade superior da face e de
+Em um outro trabalho são definidas características-modelo, que são comparadas às características da face neutra, ou seja, sem expressar emoção, do indivíduo que está sendo analisado. Após essa etapa, é analisada a deformação, em relação ao modelo, quando o indivíduo expressa alguma emoção. A partir da deformação é realizada a classificação da expressão. A taxa de sucesso é de 92\% para a metade superior da face e de
 86\% para a metade inferior. Na imagem \ref{img:metodo3_classi} é ilustrado o ajustamento das características modelo ao olho \cite{Pantic}.
 \begin{center}
 	\includegraphics[scale=0.5]{graficos/metodo3_classi}
@@ -61,7 +61,7 @@ Em um outro trabalho são definidas características-modelo, que são comparadas
 
 \section{O Reconhecimento de Expressões Faciais e a Programação Linear}
 
-Em seus trabalhos, \citeonline{Feng} e \citeonline{Guo} apresentaram uma bordagem de reconhecimebto de expresssões faciais utilizando a progrmação linear. Em ambos a progrmação linear foi utilizada na fase de classificação da expressão. Em \citeonline{Guo} a programação lienar foi utlizada ainda na fase de extração de carcaterísticas, para determinar a quantidade de caracteríticas a serem selecionadas e os principais pontos da face. Enquanto no trabalho de \cite{Feng} é utilizado o filtro de Gabor na etapa de extração de carcaterísticas. O Filtro de Gabor tem a capacidade de realçar bordas e saliências na imagem. Após a aplicação do filtro na imagem, são realçadas as características salientes presentes no rosto (cantos dos olhos, cantos da boca, narinas, entre outros) \cite{Gabor}. Em ambos os trabalhos foram obtidos ótimos resultados e superiores a outros métodos com os quais foram comparados. 
+Em seus trabalhos, \citeonline{Feng} e \citeonline{Guo} apresentaram uma abordagem de reconhecimento de expresssões faciais utilizando a programação linear. Em ambos a programação linear foi utilizada na fase de classificação da expressão. Em \citeonline{Guo} a programação lienar foi utlizada ainda na fase de extração de carcaterísticas, para determinar a quantidade de caracteríticas a serem selecionadas e os principais pontos da face. Enquanto no trabalho de \cite{Feng} é utilizado o filtro de Gabor na etapa de extração de carcaterísticas. O Filtro de Gabor tem a capacidade de realçar bordas e saliências na imagem. Após a aplicação do filtro na imagem, são realçadas as características salientes presentes no rosto (cantos dos olhos, cantos da boca, narinas, entre outros) \cite{Gabor}. Em ambos os trabalhos foram obtidos ótimos resultados e superiores a outros métodos com os quais foram comparados. 
 
 A programação linear é utlizada na etapa após o tratamento da imagem. Primeiramente as expressões são combinadas em pares. No trabalho de \cite{Feng}, por exemplo, busca-se o reconhecimento de sete expressões: raiva, desgosto, medo, felicidade, tristeza, surpresa e neutro. Essas expressões são combinada em pares do tipo: raiva-desgosto, raiva-medo, etc. Formando um total de 21 pares. Após isso o modelo de programação linear, apresentado mais adiante, é utilizado para gerar os calssificares, o modelo deve ser rodado 21 vezes, uma para cada par de expressões. Essa etapa é também chamada de treinamento, pois a partir do classificadores gerados as expressões das imagens a serem analisadas serão determinadas. Essa abordagem também substitui a utilização de redes neurais para o treinamento, uma vantagem é que o modelo necessita ser rodado uma única vez para cada par, enquanto em uma abordagem utilizando redes neurais este processo se trona iterativo.
 
@@ -75,7 +75,7 @@ Onde,
 \begin{itemize}
 \item \textbf {$m$} representa a quantidade de imagens de rostos com a primeira expressão do par
 \item \textbf {$k$} representa a quantidade de imagens de rostos com a segunda expressão do par
-\item \textbf {$e$} é uma vetor de 1's
+\item \textbf {$e$} é um vetor de 1's
 \item \textbf {$y$} e {$z$} são as varáveis do modelo
 \item \textbf {$A$} é a matriz de pontos das imagens de rostos com a primeira expressão do par
 \item \textbf {$B$} é a matriz de pontos das imagens de rostos com a segunda expressão do par

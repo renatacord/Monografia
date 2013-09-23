@@ -1,22 +1,23 @@
 \chapter{O Método Simplex}
 
-\section{Origem do Método Simplex}
+%\section{Origem do Método Simplex}
 O método simplex surgiu nos Estados Unidos e foi proposto pelo matemático George Dantzig. Quando trabalhava no Pentágono recebeu dos seus colegas o desafio de tentar mecanizar o processo de planejamento. No ano de 1947 Dantzig propôs o método simplex que tornou possível a solução de problemas de otimização de vários tipos, como transporte, produção, alocação de recursos e problemas de escalonamento \cite{OrigemSimplex}.
 
-\section{Descrição do Método}
-\subsection{Princípio Básico do Método}
+%\section{Descrição do Método}
+\section{Princípio Básico do Método}
 A idéia do método simplex consiste em resolver repetidas vezes um sistema de equações lineares, e assim obter uma sucessão de soluções até encontrar a solução ótima. Ou seja, é um processo onde nos movemos de uma solução viável para outra sempre melhor ou pelo menos não pior.
 
 Um problema de programação linear é sempre constituído de uma função objetivo e várias restrições. Geometricamente, essas restrições resultam em uma forma geométrica, chamada hiperplano, no espaço n-dimensional sendo n o número de variáveis no modelo. E cada vértice desse hiperplano é considerado uma solução viável, como ilustra o exemplo abaixo.
 \begin{center}
 	\includegraphics[scale=0.5]{graficos/Simplex_grafico_completo}
 	\captionof{figure}{Um modelo de programação linear e a sua respectiva representação gráfica}
+	\label{img:simplex_grafico_completo}
 	\cite{Hillier}
 \end{center}
 
-Na Figura 1 apresenta-se um exemplo de um problema de programação linear e sua representação geométrica. Nesse exemplo, de acordo com a representação geométrica do modelo, existem cinco possíveis soluções: x1=0 e  x2=0; x1=0 e  x2=6; x1=2 e  x2=6; x1=4 e  x2=3; x1=4 e x2=0. Como o objetivo é maximizar, concluímos que a melhor solução é x1=2 e  x2=6, em que z =36. No método Simplex a cada iteração, antes da solução ótima ser obtida, é encontrada uma dessas possíveis soluções que se localizam nos vértices do gráfico.
+Na figura \ref{img:simplex_grafico_completo} apresenta-se um exemplo de um problema de programação linear e sua representação geométrica. Nesse exemplo, de acordo com a representação geométrica do modelo, existem cinco possíveis soluções: x1=0 e  x2=0; x1=0 e  x2=6; x1=2 e  x2=6; x1=4 e  x2=3; x1=4 e x2=0. Como o objetivo é maximizar, concluímos que a melhor solução é x1=2 e  x2=6, em que z =36. No método Simplex a cada iteração, antes da solução ótima ser obtida, é encontrada uma dessas possíveis soluções que se localizam nos vértices do gráfico.
 
-\subsection{Descrição do Método Simplex Revisado}
+\section{Descrição do Método Simplex Revisado}
 O método simplex revisado surgiu como uma solução para evitar cálculos desnecessários. Esse método foi projetado para problemas a serem solucionados computacionalmente.
 
 No simplex revisado, são armazenados na memória volátil apenas os dados realmente necessários. Além disso, os cálculos são realizados apenas sobre a coluna que é utilizada na iteração, o que evita cálculos com matrizes que poderia acarretar uma imprecisão nos resultados.
@@ -33,15 +34,19 @@ Sujeito\ a \\
 \mathbf{Ax} \leq \mathbf{b} \\
 \mathbf{x} \geq0$
 
-O vetor $\mathbf{c}$, de coeficientes na função objetivo, é dividido duas componentes: $\mathbf{c{_B}}$ e $\mathbf{c{_N}}$, coeficientes das variáveis básicas e não-básicas, respectivamente. Por analogia, o vetor $\mathbf{x}$, de incógnitas do problema, é subdividido em $\mathbf{x{_B}}$ e $\mathbf{x{_N}}$.  A matriz $\mathbf{A}$, de coeficientes das restrições, é dividida em duas submatrizes: $\mathbf{B}$ e $\mathbf{N}$, coeficientes das variáveis básicas e não-básicas, respectivamente. Os passos do algoritmo são os seguintes.
+O vetor $\mathbf{c}$, de coeficientes na função objetivo, é dividido duas componentes: $\mathbf{c{_B}}$ e $\mathbf{c{_N}}$, coeficientes das variáveis básicas e não-básicas, respectivamente. Por analogia, o vetor $\mathbf{x}$, de incógnitas do problema, é subdividido em $\mathbf{x{_B}}$ e $\mathbf{x{_N}}$.  A matriz $\mathbf{A}$, de coeficientes das restrições, é dividida em duas submatrizes: $\mathbf{B}$ e $\mathbf{N}$, coeficientes das variáveis básicas e não-básicas, respectivamente. Os passos do algoritmo são os seguintes.\\
 
-Passo 1: Calcular o valor das variáveis básicas: $\mathbf{x_{b}}\ =\ \mathbf{B^{-1}b}\geq0$
+Passo 1: Calcular o valor das variáveis básicas: \ \ $\mathbf{x_{b}}\ =\ \mathbf{B^{-1}b}\geq0$
 
-Passo 2: Calcular o vetor multiplicador: $\mathbf{\lambda} \ =\ \mathbf{c{_B}B^{-1}}$
+Passo 2: Calcular o vetor multiplicador: \ \ $\mathbf{\lambda} \ =\ \mathbf{c{_B}B^{-1}}$
 
 Passo 3: Escolher a variável que entra na base. Para isso, calcula-se: $\mathbf{p}\ =\ \mathbf{c{_N}}-\mathbf{\lambda N}$
 
-Se $\mathbf{p}\ =\ (\mathbf{c{_N}}-\mathbf{\lambda N})\leq 0$ PARAR. A solução $\mathbf{x{_B}}$ já é a solução ótima. Caso contrário, escolher uma coluna de $\mathbf{N}$, coluna $\mathbf{a{_k}}$, tal que $\mathit{p{_k}}\ =\ \mathit{c{_nk}}-\mathbf{\lambda a{_k}}> 0$
+Se \ \ $\mathbf{p}\ =\ (\mathbf{c{_N}}-\mathbf{\lambda N})\leq 0$ \ \ PARAR.
+
+A solução \ \ $\mathbf{x{_B}}$ \ \ já é a solução ótima. 
+
+Caso contrário, escolher uma coluna de $\mathbf{N}$, coluna $\mathbf{a{_k}}$, tal que $\mathit{p{_k}}\ =\ \mathit{c{_nk}}-\mathbf{\lambda a{_k}}> 0$
 
 Um critério frequente é escolher a coluna $\mathbf{a{_k}}$ que resulte no maior valor de $\mathit{p{_k}}$.
 

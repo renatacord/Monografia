@@ -1,13 +1,12 @@
 \chapter{A Programação Linear e as suas Aplicações}
 
-\section{Introdução}
+%\section{Introdução}
 Na pesquisa operacional, a programação linear é uma das técnicas mais utilizadas em problemas de otimização. Os problemas de programação linear geralmente buscam a distribuição eficiente de recursos limitados para atender um determinado objetivo, por isso suas aplicações estão presentes em diversas áreas como computação, administração, indústria e transporte \cite{Engecom}.
 
 Um problema de programação linear é expresso através de um modelo que é composto por equações e inequações lineares. Esse tipo de problema busca a distribuição eficiente de recursos com restrições para alcançar um objetivo, em geral, maximizar lucros ou minimizar custos. Em um problema de programação linear esse objetivo é expresso através de uma equação linear denominada função objetivo. Para a formulação do problema, é necessário também definir os recursos necessários e em que proporção são requeridos. Essas informações são expressas em equações ou inequações lineares, uma para cada recurso. Esse conjunto de equações ou inequações é denominado restrições do modelo \cite{Engecom}.
 
 \section{Descrição do Problema de Programação Linear}
 O modelo de um problema de programação linear normalmente é apresentado em uma das formas a seguir \cite{Passos}:
-
 $\\Max\ z = c^{T}x \\\\s.a.\left\{\begin{matrix}
 Ax\leq b\\x\geq 0 
 \end{matrix}\right.$  
@@ -18,19 +17,19 @@ $\\Min\ z = c^{T}x \\\\s.a.\left\{\begin{matrix}
 Ax\geq  b\\x\geq 0 
 \end{matrix}\right.$
 
+
 Um problema de programação linear com até três variáveis pode ser representado graficamente utilizando três eixos cartesianos. Os problemas com duas variáveis podem ainda ser facilmente resolvidos por meio da representação gráfica \cite{Passos}. 
 
-A seguir é apresentado um problema com duas variáveis e sua representação. Apesar de, na prática os problemas de programação linear possuir um número de variáveis muito maior que dois ou três, a visualização gráfica de modelo, mesmo que simples, contribui para o entendimento dos métodos de resolução apresentados nas seções a seguir.
-No problema exemplo, uma empresa, que fabrica vários produtos, deseja maximizar o lucro na vendo de 2 desses produtos \cite{Hillier}.
+A seguir é apresentado um problema com duas variáveis e sua representação. Apesar de, na prática os problemas de programação linear possuirem um número de variáveis muito maior que dois ou três, a visualização gráfica de modelo, mesmo que simples, contribui para o entendimento dos métodos de resolução apresentados nas seções a seguir.
+No problema exemplo, uma empresa, que fabrica vários produtos, deseja maximizar o lucro na venda de 2 desses produtos \cite{Hillier}.
 
-$\\Maximize\ z=3x_{1}+5x_{2}\\
-Sujeito\ a\\$
-\begin{eqnarray*}
-        1x_{1}\leq 4 (a)\\
-              2x_{2}\leq (b)\\
-        3x_{1}+2x_{2}\leq 8 (c)\\
-         x_{1}\geq 0, x_{2}\geq 0
-\end{eqnarray*}
+$\\
+Maximize\ z=3x_{1}+5x_{2}\\
+Sujeito\ a \\
+        1x_{1}\leq 4 \; \; \; \; \; \; \; \; \; \; \; \;(a)\\
+        2x_{2}\leq \; \; \; \; \; \; \; \; \; \; \; \; \; \; \;(b)\\
+        3x_{1}+2x_{2}\leq 8 \; \; \; \; (c)\\
+        x_{1}\geq 0, x_{2}\geq 0 $
 
 Onde, 
 \begin{itemize}
@@ -48,19 +47,19 @@ E as restrições representam as restrições de tempo de cada máquina utilizad
 
 Graficamente representado o problema ficaria da seguinte forma:
 \begin{center}
-	\includegraphics[scale=1.00]{graficos/simplex_grafico}
+	\includegraphics[scale=0.5]{graficos/simplex_grafico}
 	\captionof{figure}{Representação gráfica de um Problema de Programação Linear de duas variáveis}
 	\label{img:simplex_grafico}
 \end{center}
 
-Onde cada reta representa uma restrição do modelo, e a área cinza representa a região viável, ou seja nessa área estão contidas os valores viáveis de $x_{1}$ e $x_{2}$ para a maximização do lucro.
+Onde cada reta representa uma restrição do modelo, e a área cinza representa a região viável, ou seja, nessa área estão contidas os valores viáveis de $x_{1}$ e $x_{2}$ para a maximização do lucro.
 
-Os métodos para resolução problemas de programação linear buscam esses valores de $x_{1}$ e $x_{2}$  para determinação da solução ótima.
+Os métodos para resolução de problemas de programação linear buscam esses valores de $x_{1}$ e $x_{2}$  para a determinação da solução ótima.
 
 \section{Métodos de Solução}
 Entre os métodos mais famosos para a resolução de problemas de programação linear estão o método simplex  e o método de pontos interiores. 
 Depois da apresentação do método simplex,outros métodos com diferentes abordagens foram propostos \cite{Todd}. Porém, dentre os métodos existentes apenas o método de pontos interiores é atualmente competitivo em relação ao método simplex \apud{Bixby}{Munari}. 
-A principal diferença entre esse dois métodos é o que o método simplex caminha pelos vértices da região viável, enquanto o método de pontos interiores caminha pelo interior da região viável \cite{MaculanPI}. Além disso, uma outra diferença é que o simplex exige muitas iterações com cálculos simples, enquanto o método de pontos interiores poucas iterações são exigidas, porém com cálculos mais elaborados.
+A principal diferença entre esses dois métodos é o que o método simplex caminha pelos vértices da região viável, enquanto o método de pontos interiores caminha pelo interior da região viável \cite{MaculanPI}. Além disso, uma outra diferença é que o simplex exige muitas iterações com cálculos simples, enquanto no método de pontos interiores poucas iterações são exigidas, porém com cálculos mais elaborados.
 Apesar das vantagens do método de pontos interiores em relação ao método estudado neste trabalho, o método simplex possui melhor desempenho na resolução de problemas de pequeno porte em relação ao método de pontos interiores, tornando-se um método indispensável em ferramentas de programação linear.
 
 \subsection{Método Simplex}
@@ -68,15 +67,15 @@ O método simplex é um dos algoritmos mais populares para a resolução de prob
 
 É um método iterativo, e sua ideia principal consiste no fato de que a cada iteração uma nova solução é encontrada, sempre melhor que a anterior até o ponto em que a solução ótima é obtida. Outra característica do método é o fato de ser matricial, ou seja, os dados a serem calculados são armazenados em matrizes.  
 
-Com a utilização do método foi percebido que a cada iteração do método simplex eram requeridos muitos cálculos sobre valores que nem sempre importavam para a iteração seguinte, fato que do ponto de vista computacional tornaria o método ineficiente. Esse método é chamado de método simplex padrão ou tabular. A partir desse fato foi desenvolvido o método simplex revisado visando a resolução de problemas de programação linear computacionalmente.
+Com a utilização do método, foi percebido que a cada iteração eram requeridos muitos cálculos sobre valores que nem sempre importavam para a iteração seguinte, fato que do ponto de vista computacional tornaria o método ineficiente. Esse método é chamado de método simplex padrão ou tabular. A partir desse fato foi desenvolvido o método simplex revisado visando a resolução de problemas de programação linear computacionalmente.
 
 O presente trabalho tem foco no método simplex revisado e suas variantes.
 
 \subsection{Método de Pontos Interiores}
 Em 1984, Karmarkar revolucionou a área de programação linear com a publicação de um algoritmo de complexidade polinomial que apresentou bom desempenho quando aplicado a problemas práticos \cite{MaculanPI}. Essa publicação deu origem a um novo campo de pesquisa, chamado de método dos pontos interiores. 
 
-O método de pontos interiores tem como principal característica a de realizar a busca por soluções no interior da região viável do problema, até encontrar a solução ótima \cite{Pinto}.
-Em teoria, o método de pontos interiores é melhor que o método simplex, principalmente quando se leva em conta o critério de complexidade de pior caso. O método de pontos interiores possui complexidade epolinomial, enquanto o método simplex possui complexidade exponencial No entanto, na prática ambos os métodos concorrem até hoje. Já que o sucesso do método depende da estrutura dos problemas, da esparsidade \footnote{Quando uma matriz possui uma grande proporção de elementos nulos diz-se que é uma matriz esparsa \cite{Munari}.} e da arquitetura dos computadores \cite{MaculanPI}.
+O método de pontos interiores tem como principal característica realizar a busca por soluções no interior da região viável do problema, até encontrar a solução ótima \cite{Pinto}.
+Em teoria, o método de pontos interiores é melhor que o método simplex, principalmente quando se leva em conta o critério de complexidade de pior caso. O método de pontos interiores possui complexidade polinomial, enquanto o método simplex possui complexidade exponencial No entanto, na prática ambos os métodos concorrem até hoje. Já que o sucesso do método depende da estrutura dos problemas, da esparsidade \footnote{Quando uma matriz possui uma grande proporção de elementos nulos diz-se que é uma matriz esparsa \cite{Munari}.} e da arquitetura dos computadores \cite{MaculanPI}.
 
 \section{Aplicações Práticas}
 Um problema de programação linear, como já dito anteriormente, busca a otimização na distribuição de recursos sujeitos a restrições. Por isso é considerada uma poderosa ferramenta de apoio a decisão \cite{FrossardMaxMin} e com utilização em diversas áreas, como: indústria, saúde, computação, produção, etc.
@@ -86,10 +85,10 @@ As empresas, por exemplo, devem estar constantemente atentas à competitividade 
 “Administrar com eficiência os recursos disponíveis na empresa, através do planejamento, controle e execução das atividades relacionadas á utilização destes, é fator fundamental na busca da otimização do resultado global da empresa. A programação linear juntamente com as técnicas de pesquisa operacional, permite identificar o resultado ótimo, considerando todas as restrições impostas no modelo adotado.” \cite[p.~31]{FrossardMaxMin}
 \end{citacao}
 
-Na computação a programação linear é empregada, por exemplo, no processamento de imagens. Além disso é tema de estudos que buscam implementações eficientes de métodos de programação linear, em especial o método simplex, de forma distribuída ou integrada ao banco de dados.
+Na computação, a programação linear é empregada, por exemplo, no processamento de imagens. Além disso é tema de estudos que buscam implementações eficientes de métodos de programação linear, em especial o método simplex, de forma distribuída ou integrada ao banco de dados.
 
 \subsection{Aplicações em Processamento de Imagens}
-O termo wavelet refere-se basicamente a um conjunto de funções com forma de pequenas ondas \cite{Ondaletas}. A decomposição wavelet é uma metodologia de decomposição de uma função ou sinal em um domínio de freqüências e espaço, sendo possível investigar a ocorrência de fenômenos localizados no espaço e freqüência simultaneamente \cite{Peixoto-wavelet}.
+O termo wavelet refere-se basicamente a um conjunto de funções com forma de pequenas ondas \cite{Ondaletas}. A decomposição wavelet é uma metodologia de decomposição de uma função ou sinal em um domínio de frequências e espaço, sendo possível investigar a ocorrência de fenômenos localizados no espaço e frequência simultaneamente \cite{Peixoto-wavelet}.
 A decomposição wavelet em sua versão discreta é utilizada na compreensão de dados sendo útil no processamento de imagens quado é necessário realizar a extração de informações de um sinal e a análise de freqüências, principalmente quando ocorrem rápidas variações na frequência \cite{Leite-wavelet}
 
 A decomposição wavelet tem sido abordada mediante diferentes métodos, como a Transformada de Fourier, por exemplo. Dentre eles estão presentes os métodos que tem como base a programação linear. Um dos primeiros trabalhos nesta área foi proposto por \citeonline{Chen} utilizando métodos de pontos interiores. Devido ao fato dos problemas lineares obtidos a partir da decomposição wavelet possuirem matrizes muito densas, os autores restringiram a pesquisa apenas ao caso de problemas com dicionários (conjunto de formas de ondas) com uma estrutura especial.  O método gera problemas lineares de grande porte, um problema de sinal de onda típico de comprimento 8192, por exemplo, se traduz em um problema linear de tamanho 8192 por 212.992.
@@ -99,24 +98,30 @@ No trabalho de \citeonline{YarmishWave} o autor resolve um conjunto de problemas
 Na figura \ref{img:ondaletas} são apresentados vários tipos de wavelets.
 
 \begin{center}
-	\includegraphics[scale=1.00]{graficos/ondaletas}
+	\includegraphics[scale=0.5]{graficos/ondaletas}
 	\captionof{figure}{Exemplos de tipos de wavelets}
 	\label{img:ondaletas}
  	\cite{FotoWave}
 \end{center}
 
-Em seu trabalho \citeonline{Komodakis} diz que problemas de analise de imagens podem ser formulados como problemas de rotulagem, onde a partir de uma imagem segmentada, são realizadas comparações entre pontos vizinhos a fim de rotular um grupo de pontos afins. Uma questão que vem incentivando pesquisas nessas áreas, é como resolver problemas desse tipo de forma eficiente e precisa. O autor propõe a utilização do esquema primal- dual da programação linear, e diz que essa utilização revelou excelentes resultados
+Em seu trabalho \citeonline{Komodakis} diz que problemas de análise de imagens podem ser formulados como problemas de rotulagem, onde a partir de uma imagem segmentada, são realizadas comparações entre pontos vizinhos a fim de rotular um grupo de pontos afins. Uma questão que vem incentivando pesquisas nessas áreas, é como resolver problemas desse tipo de forma eficiente e precisa. O autor propõe a utilização do esquema primal- dual da programação linear, e diz que essa utilização revelou excelentes resultados
 
 \subsection{Aplicações em Programação Distribuída}
-Em \citeonline{Slyke} e \citeonline{Yarmish-Distrubuido} demonstram a eficiência da utilização do método simplex padrão de forma distribuída. Esse tipo de implementação é útil para a computação distribuída. Já que nesse tipo de implementação as colunas das matrizes, onde são armazenados os dados, são distribuídas entre os processadores, é mais intuitivo o uso do método simplex padrão. Além disso, esse método é mais utilizado e mais eficiente que o método revisado na resolução de problemas de grande porte, onde existe um maior volume de dados, fazendo mais sentido a utilização da programação distribuída.
+\citeonline{Slyke} e \citeonline{Yarmish-Distrubuido} demonstram a eficiência da utilização do método simplex padrão de forma distribuída. Esse método é mais utilizado e mais eficiente que o método revisado na resolução de problemas de grande porte, onde existe um maior volume de dados, fazendo mais sentido a utilização da programação distribuída.
 De acordo com \citeonline{Slyke} e \citeonline{Yarmish-Distrubuido} a eficiência do método simplex revisado é afetada pela densidade do problema, ou seja, é uma método mais eficiente para problemas esparsos, os quais são mais comuns. Porém existem aplicações que exigem modelos mais densos, como em processamento de imagens. Nesse caso a implementação de uma algoritmo do método simplex padrão distribuído se mostra mais eficiente. Além disso, não existem algoritmos eficientes do método simplex revisado distribuído. Em conclusão o autor diz que a implementação apresentou bons resultados, especialmente para problemas grandes e densos.
 
-Em \citeonline{Burger} é proposto um algoritmo simplex distribuído para problemas de programação linear degenerados e atribuições multi- agentes. Um problema de programação linear é dito degenerado se na solução uma das variáveis valer zero. O objetivo do trabalho é propor um algoritmo simplex para ser implementado em uma distribuição multi- agente, onde os a gentes devem concordar com uma solução ótima ou declarar o problema como inviável, caso não haja solução ótima.
+Em \citeonline{Burger} é proposto um algoritmo simplex distribuído para problemas de programação linear degenerados e atribuições multi- agentes. Um problema de programação linear é dito degenerado se na solução uma das variáveis receber valor zero. O objetivo do trabalho é propor um algoritmo simplex para ser implementado em uma distribuição multi- agente, onde os a gentes devem concordar com uma solução ótima ou declarar o problema como inviável, caso não haja solução ótima.
 
-Em seu trabalho \citeonline{Karypis} faz uma análise da performance de um algoritmo simplex paralelo em vários tipos de arquiteturas de rede, como por exemplo, redes hipercubo e redes de estações de trabalho. Nesse tipo de implementação do método simplex, os dados da matriz são distribuídos entre os processadores que compõem a rede. Como resultado preliminar o autor obteve que na rede hipercubo a velocidade da resolução dos problemas cresceu a medida que mais processadores foram incorporados, inclusive para problemas de grande porte. Já na rede de estações de trabalho, para problemas pequenos a velocidade não teve um aumento proporcional ao aumento do número de processadores, enquanto que para problemas de maior porte a velocidade aumentou de forma proporcional ao número de processadores.
+Em seu trabalho \citeonline{Karypis} faz uma análise da performance de um algoritmo simplex paralelo em vários tipos de arquiteturas de rede, como por exemplo, rede hipercubo (Figura \ref{img:hipercubo}) e rede de estações de trabalho. Nesse tipo de implementação do método simplex, os dados da matriz são distribuídos entre os processadores que compõem a rede. Como resultado preliminar o autor obteve que na rede hipercubo a velocidade da resolução dos problemas cresceu a medida que mais processadores foram incorporados, inclusive para problemas de grande porte. Já na rede de estações de trabalho, para problemas pequenos a velocidade não teve um aumento proporcional ao aumento do número de processadores, enquanto que para problemas de maior porte a velocidade aumentou de forma proporcional ao número de processadores.
+
+\begin{center}
+	\includegraphics[scale=0.5]{graficos/hipercubo}
+	\captionof{figure}{Na rede hipercubo com dimensão d, nesse caso d=4, cada nó está ligado a outros d nós, e o número de processadores é $2^{d}$}
+	\label{img:hipercubo}
+\end{center}
 
 \subsection{Aplicações em Banco de Dados}
-De acordo com \citeonline{Akira-database} dentre as inúmeras ferramentas de programação linear existentes, existe a carência de uma ferramenta que resolva problemas de programação linear de forma integrada a um banco de dados, utilizando procedimentos armazenados em sql pré-compiladas e armazenadas no banco de dados juntamente com os dados. Essa características em uma ferramenta se torna importante, principalmente, em problemas de grande porte, suprimindo o tráfego de dados já que toda a lógica é executada internamente no banco de dados, e apenas o resultado final é enviado para o usuario. Na implementação apresentada por \citeonline{Akira-database} os dados do modelo a ser resolvido são armazenados como modelos relacionais, ou seja, em matrizes bi-dimensionais. Apesar das vantagens desse tipo de implementação, o autor chegou a conclusão que o tempo de execução ainda deve ser melhorado.
+De acordo com \citeonline{Akira-database} dentre as inúmeras ferramentas de programação linear existentes, existe a carência de uma ferramenta que resolva problemas de programação linear de forma integrada a um banco de dados, utilizando procedimentos armazenados em sql pré-compiladas e armazenadas no banco de dados juntamente com os dados. Essa características em uma ferramenta se torna importante, principalmente, em problemas de grande porte, suprimindo o tráfego de dados já que toda a lógica é executada internamente no banco de dados, e apenas o resultado final é enviado para o usuário. Na implementação apresentada por \citeonline{Akira-database} os dados do modelo a ser resolvido são armazenados como modelos relacionais, ou seja, em matrizes bi-dimensionais. Apesar das vantagens desse tipo de implementação, o autor chegou a conclusão que o tempo de execução ainda deve ser melhorado.
 
 \subsection{Aplicação em Saúde}
 A programação linear também se aplica na área da saúde, em \citeonline{Alterovitz-saude} é feita uma proposta de utilização da programação linear no tratamento do câncer. 

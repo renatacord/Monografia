@@ -1,6 +1,6 @@
 \chapter{Reconhecimento de Expressões Faciais}
 
-\section{Introdução}
+%\section{Introdução}
 Segundo \citeonline{FernandoGil} a expressão facial é uma forma de comunicação não-verbal que permite a partilha de
 sentimentos e emoções, numa linguagem subentendida entre seres humanos. Desde o início das pesquisas na computação busca-se cada vez mais dotar o computador de um comprtamento inteligente. Sequindo esse caminho, o reconhecimento facial surgiu,  para trazer soluções no campo da Interface Homem- Computador, como um desafio esperado, porém desafiador. Principalmente no reconheciemnto de expressões faciais, já que se trata de um julgamento ambíguo até mesmo para os seres humanos, pois a mesma expressão pode variar de indivíduo para indivíduo \cite{FernandoGil} \cite{Elizabeth}.
 
@@ -8,15 +8,15 @@ sentimentos e emoções, numa linguagem subentendida entre seres humanos. Desde 
 O reconhecimento facial se divide em três etapas básicas \cite{Elizabeth}:
 \begin{itemize}
 \item Detectar a face na cena: Inicialmente é apresentada uma imagem contendo a face que deve ser rceonhecida. Nesta primeira etapa, deve ser realizada a detecção da zona da face, e devem ser extraídos os outros artefatos que não compõem o rosto \cite{FernandoGil}.
-Na figura \ref{img:rosto} é ilustrado o resultado final desta primeira etapa.
+Na figura \ref{img:rosto} é ilustrado o resultado final desta primeira etapa. \\
 \begin{center} 
-	\includegraphics[scale=0.5]{graficos/rosto}
+	\includegraphics[scale=0.8]{graficos/rosto}
 	\captionof{figure}{Detecção da face}
 	\label{img:rosto}
 	\cite{Elizabeth}
 \end{center}
 \item Extrair as principais características: Nesta etapa são extraídas as características que são relevantes à classificação da expressão. Normalmente é dada maior ênfase as sobrancelhas, nariz, olhos e boca. \ref{img:rosto_pontos}
-A figura abaixo mostra a seleção de pontos mais relevantes para a classificação da expressão. CITAR MÉTODOS UTILIZADOS
+A figura abaixo mostra a seleção de pontos mais relevantes para a classificação da expressão. 
 \begin{center}
 	\includegraphics[scale=0.5]{graficos/rosto_pontos}
 	\captionof{figure}{Pontos mais relevantes na face}
@@ -25,6 +25,13 @@ A figura abaixo mostra a seleção de pontos mais relevantes para a classificaç
 \end{center}
 \item Classificar a imagem em uma detreminada expressão: Nesta etapa ocorre de fato a classificação da expressão. Para realizar esta classificação exitem diversos métodos, dos mais simples aos mais complexos. Alguns desse métodos serão apresentados na próxima seção.
 \end{itemize} 
+
+Na figura \ref{img:diagrama} está respresentado o processo de reconhecimento facial em suas três etapas básicas. No presente trabalho, a programação linear se aplica na etapa de classificação.
+\begin{center}
+	\includegraphics[scale=0.5]{graficos/diagrama}
+	\captionof{figure}{Fases do processo de reconhecimento de expressão facial}
+	\label{img:diagrama}	
+\end{center}
 
 \section{Métodos de Classificação}
 Na últipa de etapa do processe de reconheicmento de expressões faciais, é realizada a classificação da expressão. Para a realização desta etapa existem diversos métodos. Alguns deles são apresentados nesta seção. Entre os métodos, existe aquele que utiliza a programação linear, principal fico deste trabalho, e que será apresentado na seção seguinte.
@@ -68,7 +75,7 @@ Onde,
 \begin{itemize}
 \item \textbf {$m$} representa a quantidade de imagens de rostos com a primeira expressão do par
 \item \textbf {$k$} representa a quantidade de imagens de rostos com a segunda expressão do par
-\item \textbf {$e$} é uma vetor de 1's
+\item \textbf {$e$} é um vetor de 1's
 \item \textbf {$y$} e {$z$} são as varáveis do modelo
 \item \textbf {$A$} é a matriz de pontos das imagens de rostos com a primeira expressão do par
 \item \textbf {$B$} é a matriz de pontos das imagens de rostos com a segunda expressão do par

@@ -4,6 +4,7 @@ A level-1 auxiliary file: introducao.aux
 A level-1 auxiliary file: referencial_teorico.aux
 A level-1 auxiliary file: metodologia.aux
 A level-1 auxiliary file: referencial_teorico2.aux
+A level-1 auxiliary file: teste.aux
 The style file: abnt-alf.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: abnt-options.bib
@@ -17,24 +18,24 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 +---------------------------------------------------------+
 You've used 37 entries,
             6522 wiz_defined-function locations,
-            1392 strings with 14790 characters,
-and the built_in function-call counts, 37757 in all, are:
-= -- 4160
+            1393 strings with 14801 characters,
+and the built_in function-call counts, 37803 in all, are:
+= -- 4168
 > -- 563
-< -- 638
-+ -- 813
+< -- 640
++ -- 815
 - -- 181
-* -- 2132
-:= -- 4554
+* -- 2134
+:= -- 4558
 add.period$ -- 120
 call.type$ -- 38
 change.case$ -- 243
 chr.to.int$ -- 82
 cite$ -- 34
-duplicate$ -- 3676
+duplicate$ -- 3684
 empty$ -- 2163
 format.name$ -- 837
-if$ -- 8166
+if$ -- 8174
 int.to.chr$ -- 3
 int.to.str$ -- 0
 missing$ -- 629
@@ -44,10 +45,10 @@ pop$ -- 747
 preamble$ -- 1
 purify$ -- 113
 quote$ -- 0
-skip$ -- 3761
+skip$ -- 3769
 stack$ -- 1
-substring$ -- 1666
-swap$ -- 1226
+substring$ -- 1668
+swap$ -- 1228
 text.length$ -- 48
 text.prefix$ -- 0
 top$ -- 0

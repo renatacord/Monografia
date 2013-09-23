@@ -27,10 +27,10 @@
   2010.
 Dispon{\'\i}vel em:
   \htmladdnormallink{$<$http:\-/\-/www\-.verlab\-.dcc\-.ufmg\-.br\-/\underline%
-{\ }media\-/cursos\-/visao\-/2010-1\-/grupo04\-/reconhecimento\underline{\
+{\ }media\-/cursos\-/visao\-/2010-1\-/grupo04 \-/reconhecimento\underline{\
   }de\underline{\ }expressao\underline{\
   }facial\-.pdf$>$}{http://www.verlab.dcc.ufmg.br/_media/cursos/visao/2010-1/g%
-rupo04/reconhecimento_de_expressao_facial.pdf}.}
+rupo04 /reconhecimento_de_expressao_facial.pdf}.}
 
 \bibitem[Costa 2010]{FernandoGil}
 \abntrefinfo{Costa}{COSTA}{2010b}
@@ -93,14 +93,6 @@ amcosta.pdf}.}
 {HILLIER, F.; LIEBERMAN, G. \emph{{Introdução à Pesquisa Operacional}}. 8º.
   ed. [S.l.]: Mc-Graw-Hill, 2006.}
 
-\bibitem[Junior 2009]{Munari}
-\abntrefinfo{Junior}{JUNIOR}{2009}
-{JUNIOR, P. A.~M.
-\emph{{Técnicas Computacionais para uma implementação eficiente e estável
-  de metódos tipo smplex}}.
-Disserta\c{c}\~ao (Mestrado) --- Instituto de Ciências Matemáticas e de
-  Computação, ICMP-USP, 2009.}
-
 \bibitem[Karmarkar 1984]{Karmarkar}
 \abntrefinfo{Karmarkar}{KARMARKAR}{1984}
 {KARMARKAR, N. {A new polynomial algorithm for linear programming}.
@@ -146,6 +138,14 @@ Disserta\c{c}\~ao (Mestrado) --- Universidade Federal do Paraná, 2004.}
 {MENEZES, L. de L. P. M. A.~F. {Implementação de algoritmos simplex e pontos
   interiores para programação linear}.
 \emph{Estudos}, v.~15, n.~2, p. 225--246, 2008.}
+
+\bibitem[Munari 2009]{Munari}
+\abntrefinfo{Munari}{MUNARI}{2009}
+{MUNARI, J. P.~A.
+\emph{{Técnicas Computacionais para uma implementação eficiente e estável
+  de metódos tipo smplex}}.
+Disserta\c{c}\~ao (Mestrado) --- Instituto de Ciências Matemáticas e de
+  Computação, ICMP-USP, 2009.}
 
 \bibitem[Nagel 2008]{Akira-database}
 \abntrefinfo{Nagel}{NAGEL}{2008}
