@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  23 SEP 2013 13:48
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  24 SEP 2013 11:14
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -1065,7 +1065,12 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  [0
 
-] [1] (./monografia.toc [1
+]
+Underfull \hbox (badness 1394) in paragraph at lines 83--83
+\OT1/cmr/m/n/12 ver-si-dade Es-ta-dual do Norte Flu-mi-nense
+ []
+
+[1] (./monografia.toc [1
 
 ])
 \tf@toc=\write5
@@ -1076,11 +1081,6 @@ Package caption Info: End \AtBeginDocument code.
 
  (./introducao.tex
 Cap\'{\i }tulo 1.
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
-
- []
-
 [3
 
 
@@ -1256,10 +1256,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Here is how much of TeX's memory you used:
  14177 strings out of 495042
  196095 string characters out of 1181920
- 366587 words of memory out of 3000000
+ 366568 words of memory out of 3000000
  17025 multiletter control sequences out of 15000+50000
  16603 words of font info for 60 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
  38i,10n,49p,1050b,563s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on monografia.dvi (31 pages, 141708 bytes).
+Output written on monografia.dvi (31 pages, 140244 bytes).
