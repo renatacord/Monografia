@@ -45,4 +45,50 @@ Seja $g:R^{n} \mapsto R^{m} , h:R^{n} \mapsto R^{k}$ e S um subconjunto de $R^{n
 $$\min_{x\in S}\left \| g(x)_{+} \right \|_{1} + \left \| h(x)_{+} \right \|_{1}$$
 
 
-$$\min_{x\in S} e^{t}y + e^{t}z\\ s.a.\left\{\begin{matrix}y\geq g(x)\\ \geq h(x)\\ y\geq 0, z\geq0\end{matrix}\right.$$
+$$\min_{x\in S} e^{t}y + e^{t}z\\$$
+$$ s.a.\left\{\begin{matrix}y\geq g(x)\\ \geq h(x)\\ y\geq 0, z\geq0\end{matrix}\right.$$
+
+Como $g(x)_{+}\geq g(x)$ e $h(x)_{+}\geq h(x)$ podemos observar que os valores ótimos de y e z podem der dados pelas igualdades $y=g(x)_{+}$ e $z=h(x)_{+}$.
+
+NUMERAR AS EQUAÇÕES!!!
+$$\min_{\omega ,\gamma ,y,z}\frac{e^{T}y}{m}+\frac{e^{T}z}{k}$$
+$$s.a.\left\{\begin{matrix}-A\omega +e\gamma+e\leq y\\B\omega -e\gamma+e\leq  z\\ y\geq 0,y\geq 0\end{matrix}\right.$$
+
+\underline{Dados do Modelo}:
+
+m: quantidade de imagens no conjunto correspondente a primeira expressão facial;
+k: quantidade de imagens no conjunto correspondente a segunda expressão facial;
+A: Matriz contendo o conjunto de vetores de caraterísticas das imagens correspondentes à primeira expressão facial;
+B: Matriz contendo o conjunto de vetores de caraterísticas das imagens correspondentes à segunda expressão facial;
+e:  vetor coluna unitário;
+
+\underline{Variáveis do Modelo}:
+
+$\omega$: coeficientes do hiperplano que separa os conjuntos de imagens em dois grupos;
+$\gamma$: constante do hiperplano que separa os conjuntos de imagens em dois grupos;
+y: vetor contendo as distâncias de cada imagem do conjunto A ao hiperplano separador mais um;
+z: vetor contendo as distâncias de cada imagem do conjunto B ao hiperplano separador mais um.
+
+\underline{Formulação Matemática}:
+
+	A função objetivo (1) procura minimizar a somas das médias das distâncias das imagens de ambos conjuntos. A restrição (2) exige que os pontos se encontrem necessariamente abaixo do hiperplano separador mais uma constante unitária.  A restrição (3) é análoga a restrição (2) aplicada as imagens da segunda expressão facial. As equações em (4) definem a natureza das variáveis do modelo, como sendo não negativas.
+
+\section{Exemplo Ilustrativo do Modelo Classificador}
+Para ilustrar o modelo vamos considerar dois exemplos em $R^{2}$ \cite{Bennett92robustlinear} desta que a ilustração gráfica fique mais facilmente compreensível.
+\begin{itemize}
+\item Exemplo1:
+
+Considerando as matrizes a seguir:
+$$A=\begin{bmatrix}1 & 1\\ 1 & 2\\ 1 & 3\\ 2 & 1\\ 2 & 2\\ 2 & 3\\ 2 & 4\\ 3 & 3\\ 3 & 4\end{bmatrix}
+B=\begin{bmatrix}4 & 1\\ 4 & 2\\ 4 & 3\\ 5 & 2\\ 5 & 3\\ 5 & 4\\ 6 & 2\end{bmatrix}$$
+
+Nesse caso, temos: m = 9 (quantidade de pontos da matriz A) e k = 7 (quantidade de pontos da matriz B).  Submetendo as matrizes ao modelo temos:
+\begin{itemize}
+\item {\ast} Valor da função objetivo = 0
+\item {\ast} $\omega$ = [-2 1]
+\item {\ast} $\gamma$ = -4
+\item {\ast} y = [0 0 0 0 0 0 0 0 0]
+\item {\ast} z = [0 0 0 0 0 0 0]
+\end{itemize}
+Como o valor da função objetivo depende dos vetores y e z, podemos notar que o valor 0 indica que os conjuntos A e B são linearmente separáveis. A seguir é apresentada a representação gráfica dos pontos e das retas geradas pelo modelo.
+\end{itemize}

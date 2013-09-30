@@ -23,4 +23,5 @@
 \contentsline {section}{\numberline {4.3}O Reconhecimento de Express\IeC {\~o}es Faciais e a Programa\IeC {\c c}\IeC {\~a}o Linear}{23}{section.4.3}
 \contentsline {chapter}{\numberline {5}Aplica\IeC {\c c}\IeC {\~a}o da programa\IeC {\c c}\IeC {\~a}o linear na separa\IeC {\c c}\IeC {\~a}o de pontos}{26}{chapter.5}
 \contentsline {section}{\numberline {5.1}O modelo}{26}{section.5.1}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{29}{section.5.1}
+\contentsline {section}{\numberline {5.2}Exemplo Ilustrativo do Modelo Classificador}{29}{section.5.2}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{30}{section.5.2}
