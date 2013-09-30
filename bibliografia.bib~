@@ -196,7 +196,8 @@ Linear Programs and Multi-Agent Assignments}}
 @Misc{Elizabeth,
 	title = {{Reconhecimento de Expressões Faciais em Imagens}},
 	url = {http://www.verlab.dcc.ufmg.br/_media/cursos/visao/2010-1/grupo04
-\\/reconhecimento_de_expressao_facial.pdf},
+
+/reconhecimento_de_expressao_facial.pdf},
 	year = {2010},
 	author = {Elizabeth Duane Santos da Costa}
 }

@@ -11,6 +11,11 @@
   Degenerate Linear Programs and Multi-Agent Assignments}.
 \emph{Automatica}, Maio 2011.}
 
+\bibitem[Bennett e Mangasarian 1992]{Bennett92robustlinear}
+\abntrefinfo{Bennett e Mangasarian}{BENNETT; MANGASARIAN}{1992}
+{BENNETT, K.~P.; MANGASARIAN, O.~L. \emph{Robust Linear Programming
+  Discrimination Of Two Linearly Inseparable Sets}. 1992.}
+
 \bibitem[Bixby 1992]{Bixby}
 \abntrefinfo{Bixby}{BIXBY}{1992}
 {BIXBY, R.~E. {Implementing the simplex method: The initial basis}.

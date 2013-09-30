@@ -3,8 +3,8 @@ The top-level auxiliary file: monografia.aux
 A level-1 auxiliary file: introducao.aux
 A level-1 auxiliary file: referencial_teorico.aux
 A level-1 auxiliary file: metodologia.aux
-A level-1 auxiliary file: referencial_teorico2.aux
-A level-1 auxiliary file: teste.aux
+A level-1 auxiliary file: reconhecimento_de_exp.aux
+A level-1 auxiliary file: modelo.aux
 The style file: abnt-alf.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: abnt-options.bib
@@ -16,44 +16,44 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 | Em caso de duvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
-You've used 37 entries,
+You've used 38 entries,
             6522 wiz_defined-function locations,
-            1393 strings with 14801 characters,
-and the built_in function-call counts, 37803 in all, are:
-= -- 4168
-> -- 563
+            1397 strings with 14958 characters,
+and the built_in function-call counts, 38536 in all, are:
+= -- 4221
+> -- 595
 < -- 640
-+ -- 815
-- -- 181
-* -- 2134
-:= -- 4558
-add.period$ -- 120
-call.type$ -- 38
-change.case$ -- 243
-chr.to.int$ -- 82
-cite$ -- 34
-duplicate$ -- 3684
-empty$ -- 2163
-format.name$ -- 837
-if$ -- 8174
++ -- 827
+- -- 191
+* -- 2186
+:= -- 4656
+add.period$ -- 123
+call.type$ -- 39
+change.case$ -- 253
+chr.to.int$ -- 83
+cite$ -- 35
+duplicate$ -- 3716
+empty$ -- 2222
+format.name$ -- 884
+if$ -- 8349
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 629
-newline$ -- 177
-num.names$ -- 171
-pop$ -- 747
+missing$ -- 646
+newline$ -- 181
+num.names$ -- 176
+pop$ -- 773
 preamble$ -- 1
-purify$ -- 113
+purify$ -- 117
 quote$ -- 0
-skip$ -- 3769
+skip$ -- 3812
 stack$ -- 1
-substring$ -- 1668
-swap$ -- 1228
+substring$ -- 1685
+swap$ -- 1240
 text.length$ -- 48
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 29
 warning$ -- 0
-while$ -- 246
+while$ -- 252
 width$ -- 0
-write$ -- 539
+write$ -- 552
