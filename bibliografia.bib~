@@ -291,3 +291,9 @@ An Extended Abstract}},
 	year = {2000},
 	author = {M. Pantic; L. J. M. Rothkrantz}
 }
+
+@MISC{Bennett92robustlinear,
+    author = {Kristin P. Bennett and O. L. Mangasarian},
+    title = {Robust Linear Programming Discrimination Of Two Linearly Inseparable Sets},
+    year = {1992}
+}

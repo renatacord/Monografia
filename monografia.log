@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  30 SEP 2013 12:41
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  30 SEP 2013 15:03
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -1248,7 +1248,7 @@ File: graficos/linear_insepa.eps Graphic file (type eps)
 
 
 
-]) [27]
+] [27]) [28]
 (./monografia.bbl
 Underfull \hbox (badness 3240) in paragraph at lines 31--39
 []\OT1/cmr/m/n/12 COSTA, E. D. S. da. \OT1/cmr/m/it/12 Re-co-nhe-ci-mento de Ex
@@ -1266,10 +1266,10 @@ Overfull \hbox (131.59702pt too wide) in paragraph at lines 31--39
 [][][][]\OT1/cmr/m/n/12 .  
  []
 
-[28
+[29
 
 
-] [29])
+] [30])
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
@@ -1278,19 +1278,19 @@ Overfull \hbox (131.59702pt too wide) in paragraph at lines 31--39
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 61.
 See the caption package documentation for explanation.
 
-[30] (./monografia.aux (./introducao.aux) (./referencial_teorico.aux)
+[31] (./monografia.aux (./introducao.aux) (./referencial_teorico.aux)
 (./metodologia.aux) (./reconhecimento_de_exp.aux) (./modelo.aux))
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 14337 strings out of 495042
- 198396 string characters out of 1181920
- 369453 words of memory out of 3000000
- 17177 multiletter control sequences out of 15000+50000
+ 14342 strings out of 495042
+ 198548 string characters out of 1181920
+ 369658 words of memory out of 3000000
+ 17182 multiletter control sequences out of 15000+50000
  16603 words of font info for 60 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
  38i,10n,49p,1051b,565s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on monografia.dvi (32 pages, 145724 bytes).
+Output written on monografia.dvi (33 pages, 149524 bytes).
