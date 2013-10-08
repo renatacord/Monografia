@@ -297,3 +297,19 @@ An Extended Abstract}},
     title = {Robust Linear Programming Discrimination Of Two Linearly Inseparable Sets},
     year = {1992}
 }
+
+@MastersThesis{Eberson10LPseparaPontos,
+	author = {Eberson Paulo Trevisan},
+	year = {2010},
+	school = {Universidade Estadual de Campinas - UNICAMP},
+	title = {{O uso da programação linear na separação de pontos}}
+}
+
+@INPROCEEDINGS{Kohavi95Cross,
+    author = {Ron Kohavi},
+    title = {A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection},
+    booktitle = {},
+    year = {1995},
+    pages = {1137--1143},
+    publisher = {Morgan Kaufmann}
+}

@@ -11,6 +11,13 @@
   Degenerate Linear Programs and Multi-Agent Assignments}.
 \emph{Automatica}, Maio 2011.}
 
+\bibitem[Baldisserotto 2005]{Baldisserotto05Validacao}
+\abntrefinfo{Baldisserotto}{BALDISSEROTTO}{2005}
+{BALDISSEROTTO, C.
+\emph{Técnicas de aprendizagem de máquina para previsão de sucesso em
+  implantes dentários}.
+Disserta\c{c}\~ao (Mestrado) --- Universidade de Pernambuco, 2005.}
+
 \bibitem[Bennett e Mangasarian 1992]{Bennett92robustlinear}
 \abntrefinfo{Bennett e Mangasarian}{BENNETT; MANGASARIAN}{1992}
 {BENNETT, K.~P.; MANGASARIAN, O.~L. \emph{Robust Linear Programming
@@ -102,6 +109,11 @@ amcosta.pdf}.}
 \abntrefinfo{Karmarkar}{KARMARKAR}{1984}
 {KARMARKAR, N. {A new polynomial algorithm for linear programming}.
 \emph{Combinatorica}, v.~4, p. 373--395, 1984.}
+
+\bibitem[Kohavi 1995]{Kohavi95Cross}
+\abntrefinfo{Kohavi}{KOHAVI}{1995}
+{KOHAVI, R. A study of cross-validation and bootstrap for accuracy estimation
+  and model selection. In:  . [S.l.]: Morgan Kaufmann, 1995. p. 1137--1143.}
 
 \bibitem[Kumar 1994]{Karypis}
 \abntrefinfo{Kumar}{KUMAR}{1994}

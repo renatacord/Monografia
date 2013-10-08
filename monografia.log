@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  30 SEP 2013 16:15
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  8 OCT 2013 11:42
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -1039,7 +1039,7 @@ Package caption Info: listings package is loaded.
 Package caption Info: subfigure package is loaded.
 ) (./monografia.aux
 (./introducao.aux) (./referencial_teorico.aux) (./metodologia.aux)
-(./reconhecimento_de_exp.aux) (./modelo.aux))
+(./reconhecimento_de_exp.aux) (./modelo.aux) (./validacao.aux))
 \openout1 = `monografia.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
@@ -1254,27 +1254,36 @@ Overfull \hbox (20.90184pt too wide) in paragraph at lines 77--78
  $\OML/cmm/m/it/12 R[]$ \OT1/cmr/m/n/12 ([][][][],
  []
 
-) [29] (./monografia.bbl
-Underfull \hbox (badness 3240) in paragraph at lines 31--39
+[29]) [30]
+\openout2 = `validacao.aux'.
+
+ (./validacao.tex
+Cap\'{\i }tulo 6.
+[31
+
+
+
+]) [32] (./monografia.bbl
+Underfull \hbox (badness 3240) in paragraph at lines 38--46
 []\OT1/cmr/m/n/12 COSTA, E. D. S. da. \OT1/cmr/m/it/12 Re-co-nhe-ci-mento de Ex
 - 
  []
 
 
-Underfull \hbox (badness 2293) in paragraph at lines 31--39
+Underfull \hbox (badness 2293) in paragraph at lines 38--46
 \OT1/cmr/m/it/12 press~oes Fa-ci-ais em Ima-gens\OT1/cmr/m/n/12 . 2010. Dis-pon
 ^^S^^Pvel em: 
  []
 
 
-Overfull \hbox (131.59702pt too wide) in paragraph at lines 31--39
+Overfull \hbox (131.59702pt too wide) in paragraph at lines 38--46
 [][][][]\OT1/cmr/m/n/12 .  
  []
 
-[30
+[33
 
 
-] [31])
+] [34])
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
@@ -1283,19 +1292,20 @@ Overfull \hbox (131.59702pt too wide) in paragraph at lines 31--39
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 61.
 See the caption package documentation for explanation.
 
-[32] (./monografia.aux (./introducao.aux) (./referencial_teorico.aux)
-(./metodologia.aux) (./reconhecimento_de_exp.aux) (./modelo.aux))
+[35] (./monografia.aux (./introducao.aux) (./referencial_teorico.aux)
+(./metodologia.aux) (./reconhecimento_de_exp.aux) (./modelo.aux)
+(./validacao.aux))
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 14343 strings out of 495042
- 198561 string characters out of 1181920
- 369776 words of memory out of 3000000
- 17183 multiletter control sequences out of 15000+50000
+ 14368 strings out of 495042
+ 199029 string characters out of 1181920
+ 371264 words of memory out of 3000000
+ 17201 multiletter control sequences out of 15000+50000
  16603 words of font info for 60 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
  38i,10n,49p,1051b,565s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on monografia.dvi (34 pages, 156228 bytes).
+Output written on monografia.dvi (37 pages, 173240 bytes).

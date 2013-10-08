@@ -84,11 +84,36 @@ B=\begin{bmatrix}4 & 1\\ 4 & 2\\ 4 & 3\\ 5 & 2\\ 5 & 3\\ 5 & 4\\ 6 & 2\end{bmatr
 
 Nesse caso, temos: m = 9 (quantidade de pontos da matriz A) e k = 7 (quantidade de pontos da matriz B).  Submetendo as matrizes ao modelo temos:
 \begin{itemize}
-\item {\ast} Valor da função objetivo = 0
-\item {\ast} $\omega$ = [-2 1]
-\item {\ast} $\gamma$ = -4
-\item {\ast} y = [0 0 0 0 0 0 0 0 0]
-\item {\ast} z = [0 0 0 0 0 0 0]
+\item[$\ast$] Valor da função objetivo = 0
+\item[$\ast$] $\omega$ = [-2  1]
+\item[$\ast$] $\gamma$ = -4
+\item[$\ast$] y = [0 0 0 0 0 0 0 0 0]
+\item[$\ast$] z = [0 0 0 0 0 0 0]
 \end{itemize}
 Como o valor da função objetivo depende dos vetores y e z, podemos notar que o valor 0 indica que os conjuntos A e B são linearmente separáveis. A seguir é apresentada a representação gráfica dos pontos e das retas geradas pelo modelo.
+
+COLOCAR FIGURA!!!
+
+A partir da representação gráfica podemos perceber que a reta separadora $-2x + y = -4$ se localizou exatamente no meio entre os dois conjuntos com o auxílio das duas retas: $-2x + y = -3$ e $-2x + y = -5$.
+
+\begin{itemize}
+\item Exemplo2:
+Vamos  considerar agora as matrizes:
+$$A=\begin{bmatrix}3 & 4\\ 4.3 & 4.5\\ 4.5 & 2\\ 3 & 5.5\end{bmatrix}
+B=\begin{bmatrix}4 & 2\\ 4.5 & 3.5\\ 5 & 3\end{bmatrix}$$
+
+Neste exemplo temos: m = 4 e k = 3. De acordo com o modelo, temos os seguintes valores:
+\begin{itemize}
+\item[$\ast$] Valor da função objetivo = 0.92
+\item[$\ast$] $\omega$ = [-0.91  0.91]
+\item[$\ast$] $\gamma$ = -0.82
+\item[$\ast$] y = [0 0 2.46 0]
+\item[$\ast$] z = [0 0.91 0]
+\end{itemize}
+
+Com o valor da função objetivo diferente de zero, temos dois conjuntos linearmente inseparáveis, como ilustrado na figura a seguir.
+
+COLOCAR FIGURA!!!
+
+Nesse exemplo notamos que o valor 2.46 no vetor y é referente ao ponto do conjunto A que está localizado do lado errado da reta. E o valor 0.91é referente ao ponto do conjunto B que está localizado mais próximo à reta separadora, apesar do ponto estar localizado do ponto correto da reta ele está localizado acima da reta limite $-0.91x + 0.91y = -1.82$.
 \end{itemize}
