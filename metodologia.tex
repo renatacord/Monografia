@@ -1,74 +1,132 @@
-\chapter{O Método Simplex}
+\chapter{Aplicação da programação linear na separação de pontos}
 
-%\section{Origem do Método Simplex}
-O método simplex surgiu nos Estados Unidos e foi proposto pelo matemático George Dantzig. Quando trabalhava no Pentágono recebeu dos seus colegas o desafio de tentar mecanizar o processo de planejamento. No ano de 1947 Dantzig propôs o método simplex que tornou possível a solução de problemas de otimização de vários tipos, como transporte, produção, alocação de recursos e problemas de escalonamento \cite{OrigemSimplex}.
+Na tarefa onde o obejtivo é a separação de dois ou mais conjuntos de pontos, sendo que cada conjunto representa um padrão, busca-se um método para que essa separação seja obtida com resultado ótimo. Cada conjunto é o resultado de um conjunto de pontos e cada ponto é é representado por um vetor de características.
+Em \cite{Bennett92robustlinear} é proposto um modelo de programação linear capaz de um gerar um hiperplano de minimiza a soma dos pontos classificados de forma errada. Dessa forma o modelo é capaz de gerar um hiperplano separador para pontos linearmente separáveis e para conjutnos linearmente inseparáveis, o modelo gera o melhor hiperplano de forma que essa média calculada seja mínima. Na figura abaixo estão ilustrados os casos de dois conjuntos linearmente separáveis e dois conjuntos linearmente inseparáveis. COLOCAR FIGURA!!!
+ 
+\begin{figure}
+\centering
+\subfigure[]{\includegraphics[scale=0.5]{graficos/linear_sepa}\label{fig1}}
+\qquad
+\subfigure[]{\includegraphics[scale=0.5]{graficos/linear_insepa}\label{fig2}}
+\label{img:linear_sepa}
+\caption{Em \ref{fig1} são apresentados dois conjuntos linearmente separáveis e em \ref{fig2} são apresentados dois conjuntos linearmente inseparáveis}
+\end{figure}
 
-%\section{Descrição do Método}
-\section{Princípio Básico do Método}
-A idéia do método simplex consiste em resolver repetidas vezes um sistema de equações lineares, e assim obter uma sucessão de soluções até encontrar a solução ótima. Ou seja, é um processo onde nos movemos de uma solução viável para outra sempre melhor ou pelo menos não pior.
+\section{O modelo}
+Considerando dois conjuntos, no espaço n-dimensional $ R^{n} $, sendo o conjunto A representado pela matriz m x n, e o conjunto B representado pela matriz k x n. Contextualizando, k e m são as quantidades de pontos em cada conjunto, e n é a quantidade de características. O modelo gera um hiperplano que separa os pontos dos dois conjuntos. De forma que os m pontos do conjunto A fiquem de um lado do hiperplano e os k pontos do conjunto B fiquem do outro lado do hiperplano. Na figura abaixo o modelo é apresentado. E a seguir é apresentado de forma mais detalhada.
 
-Um problema de programação linear é sempre constituído de uma função objetivo e várias restrições. Geometricamente, essas restrições resultam em uma forma geométrica, chamada hiperplano, no espaço n-dimensional sendo n o número de variáveis no modelo. E cada vértice desse hiperplano é considerado uma solução viável, como ilustra o exemplo abaixo.
-\begin{center}
-	\includegraphics[scale=0.5]{graficos/Simplex_grafico_completo}
-	\captionof{figure}{Um modelo de programação linear e a sua respectiva representação gráfica}
-	\label{img:simplex_grafico_completo}
-	\cite{Hillier}
-\end{center}
+COLOCAR MODELO!!!!
 
-Na figura \ref{img:simplex_grafico_completo} apresenta-se um exemplo de um problema de programação linear e sua representação geométrica. Nesse exemplo, de acordo com a representação geométrica do modelo, existem cinco possíveis soluções: x1=0 e  x2=0; x1=0 e  x2=6; x1=2 e  x2=6; x1=4 e  x2=3; x1=4 e x2=0. Como o objetivo é maximizar, concluímos que a melhor solução é x1=2 e  x2=6, em que z =36. No método Simplex a cada iteração, antes da solução ótima ser obtida, é encontrada uma dessas possíveis soluções que se localizam nos vértices do gráfico.
+O modelo determina o hiperplano:
+$$ x\omega = \gamma $$
+Onde,  é $\omega$ o vetor normal ao hiperplano e $\gamma$ é um escalar. De forma que:
+$$A\omega \geq e\gamma$$
+e
+$$B\omega \leq e\gamma$$
+Onde e é um vetor de 1’s com dimensão m para o conjunto A e k para o conjunto B.
+Para conjuntos linearmente separáveis torna-se fácil traçar um hiperplano separador, porém para conjuntos linearmente inseparáveis é necessária uma estratégia para que o hiperplano separador seja ótimo.
+O modelo busca o melhor hiperplano, para isso gera dois hiperplanos limites somando 1 unidade a equação do hiperplano separador:
+$$A\omega \geq e\gamma + e$$
+e
+$$B\omega \leq e\gamma - e$$
+De forma que o hiperplano separador fica localizado exatamente entre esses dois hiperplanos limites.
+Detalhando o modelo de acordo com \citeonline{Eberson10LPseparaPontos}, considerando x como um vetor em $ R^{n} $, definimos:
 
-\section{Descrição do Método Simplex Revisado}
-O método simplex revisado surgiu como uma solução para evitar cálculos desnecessários. Esse método foi projetado para problemas a serem solucionados computacionalmente.
+$1.\ \ (x_{i})_{+} = \max_{i=1,2,...,n}{\left \{x_{i},0  \right \}}$
 
-No simplex revisado, são armazenados na memória volátil apenas os dados realmente necessários. Além disso, os cálculos são realizados apenas sobre a coluna que é utilizada na iteração, o que evita cálculos com matrizes que poderia acarretar uma imprecisão nos resultados.
+$2.\ \ \left \| x \right \|_{1} = \sum_{i=1}^{n}\left | x_{i} \right |$
 
-Esse método mantém a característica do simplex, que é a troca entre a variável que entra na base e a que sai, além de também exigir certo esforço computacional. Porém sua grande vantagem é a economia de tempo e espaço, que garantida pelo modo como é desenvolvida a solução. 
+Podemos escrever o problema de minimização com norma da seguinte forma:
 
-Nesta seção descreve-se os passos do algoritmo simplex revisado. O problema considerado é de maximização. A distinção entre matrizes, vetores e escalares foi feita da seguinte forma: letra maiúscula e negrito para matriz (\textbf{MATRIZ}); letra minúscula e negrito para vetor (\textbf{vetor}); letra em itálico para escalar (\textit{escalar}).
+$$\min_{\omega ,\gamma }\frac{1}{m}\left \| \left ( -A\omega + e\gamma  + e \right )_{+} \right \|_{1} + \frac{1}{k}\left \| \left ( B\omega - e\gamma + e  \right )_{+} \right \|_{1}$$
 
-Considere o seguinte problema de programação linear:
+Seja $g:R^{n} \mapsto R^{m} , h:R^{n} \mapsto R^{k}$ e S um subconjunto de $R^{n}$ . Os problemas abaixo possuem soluções idênticas:
 
-$\\
-Maximizar\ \mathbf{cx} \\
-Sujeito\ a \\
-\mathbf{Ax} \leq \mathbf{b} \\
-\mathbf{x} \geq0$
+$$\min_{x\in S}\left \| g(x)_{+} \right \|_{1} + \left \| h(x)_{+} \right \|_{1}$$
 
-O vetor $\mathbf{c}$, de coeficientes na função objetivo, é dividido duas componentes: $\mathbf{c{_B}}$ e $\mathbf{c{_N}}$, coeficientes das variáveis básicas e não-básicas, respectivamente. Por analogia, o vetor $\mathbf{x}$, de incógnitas do problema, é subdividido em $\mathbf{x{_B}}$ e $\mathbf{x{_N}}$.  A matriz $\mathbf{A}$, de coeficientes das restrições, é dividida em duas submatrizes: $\mathbf{B}$ e $\mathbf{N}$, coeficientes das variáveis básicas e não-básicas, respectivamente. Os passos do algoritmo são os seguintes.\\
 
-Passo 1: Calcular o valor das variáveis básicas: \ \ $\mathbf{x_{b}}\ =\ \mathbf{B^{-1}b}\geq0$
+$$\min_{x\in S} e^{t}y + e^{t}z\\$$
+$$ s.a.\left\{\begin{matrix}y\geq g(x)\\ \geq h(x)\\ y\geq 0, z\geq0\end{matrix}\right.$$
 
-Passo 2: Calcular o vetor multiplicador: \ \ $\mathbf{\lambda} \ =\ \mathbf{c{_B}B^{-1}}$
+Como $g(x)_{+}\geq g(x)$ e $h(x)_{+}\geq h(x)$ podemos observar que os valores ótimos de y e z podem der dados pelas igualdades $y=g(x)_{+}$ e $z=h(x)_{+}$.
 
-Passo 3: Escolher a variável que entra na base. Para isso, calcula-se: $\mathbf{p}\ =\ \mathbf{c{_N}}-\mathbf{\lambda N}$
+NUMERAR AS EQUAÇÕES!!!
+$$\min_{\omega ,\gamma ,y,z}\frac{e^{T}y}{m}+\frac{e^{T}z}{k}$$
+$$s.a.\left\{\begin{matrix}-A\omega +e\gamma+e\leq y\\B\omega -e\gamma+e\leq  z\\ y\geq 0,y\geq 0\end{matrix}\right.$$
 
-Se \ \ $\mathbf{p}\ =\ (\mathbf{c{_N}}-\mathbf{\lambda N})\leq 0$ \ \ PARAR.
+\underline{Dados do Modelo}:
 
-A solução \ \ $\mathbf{x{_B}}$ \ \ já é a solução ótima. 
+m: quantidade de imagens no conjunto correspondente a primeira expressão facial;
+k: quantidade de imagens no conjunto correspondente a segunda expressão facial;
+A: Matriz contendo o conjunto de vetores de caraterísticas das imagens correspondentes à primeira expressão facial;
+B: Matriz contendo o conjunto de vetores de caraterísticas das imagens correspondentes à segunda expressão facial;
+e:  vetor coluna unitário;
 
-Caso contrário, escolher uma coluna de $\mathbf{N}$, coluna $\mathbf{a{_k}}$, tal que $\mathit{p{_k}}\ =\ \mathit{c{_nk}}-\mathbf{\lambda a{_k}}> 0$
+\underline{Variáveis do Modelo}:
 
-Um critério frequente é escolher a coluna $\mathbf{a{_k}}$ que resulte no maior valor de $\mathit{p{_k}}$.
+$\omega$: coeficientes do hiperplano que separa os conjuntos de imagens em dois grupos;
+$\gamma$: constante do hiperplano que separa os conjuntos de imagens em dois grupos;
+y: vetor contendo as distâncias de cada imagem do conjunto A ao hiperplano separador mais um;
+z: vetor contendo as distâncias de cada imagem do conjunto B ao hiperplano separador mais um.
 
-Então, assumindo $\mathit{e} = \mathit{k}$, $\mathit{k}$ representa o índice da coluna, $\mathbf{a{_k}}$ representa a coluna de $\mathbf{A}$ candidata a entrar na base. 
+\underline{Formulação Matemática}:
 
-Passo 4: Determinar a variável que sai da base. Para isso, calcula-se: $\mathbf{y}=\mathbf{B^{-1}a{_k}}$
+	A função objetivo (1) procura minimizar a somas das médias das distâncias das imagens de ambos conjuntos. A restrição (2) exige que os pontos se encontrem necessariamente abaixo do hiperplano separador mais uma constante unitária.  A restrição (3) é análoga a restrição (2) aplicada as imagens da segunda expressão facial. As equações em (4) definem a natureza das variáveis do modelo, como sendo não negativas.
 
-Se \ \ $\forall i\mathit{\frac{b{_i}}{y{_i}}}\leq 0$ \ \ PARAR.
+\section{Exemplo Ilustrativo do Modelo Classificador}
+Para ilustrar o modelo vamos considerar dois exemplos em $R^{2}$ \cite{Bennett92robustlinear} desta que a ilustração gráfica fique mais facilmente compreensível.
+\begin{itemize}
+\item Exemplo1:
 
-A solução é não-limitada. Caso contrário, calcular:\ \ 
-$\forall i\ \underset{\underset{y{_i}>0}{1\leq i\leq m}}{Min}\begin{Bmatrix}
-\mathit{\frac{b{_i}}{y{_i}}}
-\end{Bmatrix}$ e guardar o índice correspondente a $s = i$. A variável $(x{_b}){_s}$ sai da base.
+Considerando as matrizes a seguir:
+$$A=\begin{bmatrix}1 & 1\\ 1 & 2\\ 1 & 3\\ 2 & 1\\ 2 & 2\\ 2 & 3\\ 2 & 4\\ 3 & 3\\ 3 & 4\end{bmatrix}
+B=\begin{bmatrix}4 & 1\\ 4 & 2\\ 4 & 3\\ 5 & 2\\ 5 & 3\\ 5 & 4\\ 6 & 2\end{bmatrix}$$
 
-Passo 5: Criar a matriz $\mathbf{E}$.
-$\mathbf{E}=(\mathbf{e{_1}},\mathbf{e{_2}},...,\mathbf{e{_s-1}},\mathbf{\gamma} , \mathbf{e{_s+1}},...,\mathbf{e{_m}})$
+Nesse caso, temos: m = 9 (quantidade de pontos da matriz A) e k = 7 (quantidade de pontos da matriz B).  Submetendo as matrizes ao modelo temos:
+\begin{itemize}
+\item[$\ast$] Valor da função objetivo = 0
+\item[$\ast$] $\omega$ = [-2  1]
+\item[$\ast$] $\gamma$ = -4
+\item[$\ast$] y = [0 0 0 0 0 0 0 0 0]
+\item[$\ast$] z = [0 0 0 0 0 0 0]
+\end{itemize}
+Como o valor da função objetivo depende dos vetores y e z, podemos notar que o valor 0 indica que os conjuntos A e B são linearmente separáveis. A seguir é apresentada a representação gráfica dos pontos e das retas geradas pelo modelo.
 
-Onde, cada coluna da matriz é um vetor unitário com exceção da coluna $\mathit{s}$, que corresponde ao vetor $\mathbf{\gamma}$, calculado da seguinte maneira: \\
-$\mathbf{\gamma^{t}}=\left( \mathit{\frac{-\alpha {_{1,e}}}{\alpha {_{s,e}}}}\ \mathit{\frac{-\alpha {_{2,e}}}{\alpha {_{s,e}}}}\ ...\ \mathit{\frac{-\alpha {_{s-1,e}}}{\alpha {_{s,e}}}}\ \mathit{\frac{1}{\alpha {_{s,e}}}\ \frac{-\alpha {_{s+1,e}}}{\alpha {_{s,e}}}}\ ...\ \mathit{\frac{-\alpha {_{m,e}}}{\alpha {_{s,e}}}} \right )$
+COLOCAR FIGURA!!!
 
-Onde $\mathit{\alpha{_ie}}$ são os elementos vetor do $\mathbf{y}$.
+A partir da representação gráfica podemos perceber que a reta separadora $-2x + y = -4$ se localizou exatamente no meio entre os dois conjuntos com o auxílio das duas retas: $-2x + y = -3$ e $-2x + y = -5$.
 
-Passo 6: Calcular nova matriz $\mathbf{B^{-1}}$: $\mathbf{B^{-1}} = \mathbf{EB^{-1}}$
+\item Exemplo2:
+Vamos  considerar agora as matrizes:
+$$A=\begin{bmatrix}3 & 4\\ 4.3 & 4.5\\ 4.5 & 2\\ 3 & 5.5\end{bmatrix}
+B=\begin{bmatrix}4 & 2\\ 4.5 & 3.5\\ 5 & 3\end{bmatrix}$$
 
-Passo 7: Atualizar os vetores $\mathbf{c{_B}}$ e $\mathbf{x{_B}}$.
+Neste exemplo temos: m = 4 e k = 3. De acordo com o modelo, temos os seguintes valores:
+\begin{itemize}
+\item[$\ast$] Valor da função objetivo = 0.92
+\item[$\ast$] $\omega$ = [-0.91  0.91]
+\item[$\ast$] $\gamma$ = -0.82
+\item[$\ast$] y = [0 0 2.46 0]
+\item[$\ast$] z = [0 0.91 0]
+\end{itemize}
+
+Com o valor da função objetivo diferente de zero, temos dois conjuntos linearmente inseparáveis, como ilustrado na figura a seguir.
+
+COLOCAR FIGURA!!!
+
+Nesse exemplo notamos que o valor 2.46 no vetor y é referente ao ponto do conjunto A que está localizado do lado errado da reta. E o valor 0.91é referente ao ponto do conjunto B que está localizado mais próximo à reta separadora, apesar do ponto estar localizado do ponto correto da reta ele está localizado acima da reta limite $-0.91x + 0.91y = -1.82$.
+\end{itemize}
+
+Em \citeonline{Feng} foi realizado um estudo de reconhecimento de expressões faciais, utilizando a base de dados JAFFE \cite{Jaffe}, em uma etapa de pre processamento as coordenadas do olhos foram marcadas manualmente e utilizando uam máscara elíptica as imagens foram reduzidas a região da face. Na extraçãod e características foi utilizado o método local binary patterns. O modelo de programação linear proposto em \cite{Bennett92robustlinear} é utlizado para gerar os classificadores e na classificação de imagens com expressão desconhecida foi utilizada uma árvore de torneio. Para validação os dados foram divididos em 10 conjuntos, o ciclo de treinamento e teste foi repetido 10 vezes, sendo que em cada ciclo um conjunto foi usado como teste e os outros nove para validação. Foram realizados 20 desses ciclos e uma média da taxa de acertos foi calculada, obtendo uma taxa de 93.8\%. Os autores concluíram que o método obteve uma performance excelente comparado a outros estudos de receonhecimento de expressão facial que utilizaram a mesma base de dados.
+
+\subsection{Etapa de validação}
+COLOCAR FIGURA do método!!!
+
+COLOCAR FIGURA DA IMPLEMENTAÇÃO!!!
+
+Para testar a metodologia utlizada neste trabalho para classificação de padrões, foi utilizado o método cross validation. Através dos resultados desse método é possível analisar a acurácia da metodologia de classificação, ou seja, a capacidade de classificar uma instância com o seu padrão correto.
+
+A metodologia k-fold cross validation foi implementada na linguagem de programação Java. Os dados são arrumados manualmente em k arquiivos. A implementação seleciona os dados de teste e de validação, e retorna o resultado parcial a cada rodada e o resultado final após os k ciclos de validação e teste.
+
+
+

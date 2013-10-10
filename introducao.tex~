@@ -1,7 +1,7 @@
 \chapter{Introdução}
 
 %\section{Considerações Iniciais}
-A programação linear é uma das disciplinas que compõem a programação matemática e constitui um dos pilares da pesquisa operacional. As aplicações da programação linear estão presentes em diversos setores, tais como nas indústrias, nos transportes, na saúde, na educação, na administração pública, na computação, etc. É mais comunente aplicada na engenharia de produção, em problemas que buscam a distribuição eficiente de recursos, minimização de gastos e maximização do lucro. O presente trabalho está focado na utilização da programação linear em aplicações que buscam a cliassifcação de dados em determiando padrão, por meio de classificadores gerados através de uma modelo de programação lienar.
+A programação linear é uma das disciplinas que compõem a programação matemática e constitui um dos pilares da pesquisa operacional. As aplicações da programação linear estão presentes em diversos setores, tais como nas indústrias, nos transportes, na saúde, na educação, na administração pública, na computação, etc. É mais comunente aplicada na engenharia de produção, em problemas que buscam a distribuição eficiente de recursos, minimização de gastos e maximização do lucro. O presente trabalho está focado na utilização da programação linear em aplicações que buscam a cliassifcação de dados em determiando padrão, por meio de classificadores gerados através de um modelo de programação lienar.
 
 O método simplex proposto por \citeonline{Dan} é um dos métodos mais conhecidos e eficientes para resolver problemas de programação linear. Trata-se de um dos poucos algoritmos que foi implantado comercialmente há mais de 40 anos. Atualmente, está presente em softwares comerciais tais como CPLEX\footnote{http://www-01.ibm.com/software/integration/optimization/cplex-optimizer/} e LINGO\footnote{http://www.lindo.com/}. O método simplex tem como principais carcaterísticas o fato de ser matricial, ou seja, aloca os dados a serem calculados em matrizes, de resolver o conjunto de equações, que formam o modelo de programação linear, de forma interativa até que a solução ótima seja obtida e de ser um método determinístico. Um método alternativo, teoricamente superior ao método simplex, é o método dos pontos interiores, proposto por \citeonline{Karmarkar}. Na prática, tanto o método simplex, quanto o método dos pontos interiores competem até hoje.  
 
@@ -16,9 +16,9 @@ Um dos focos dos estudos das aplicações da programação linear é na utlizaç
 De forma geral, a aplicação da programação linear na separação de pontos pode ser utilizada em abordagens que permitam a caracterização de padrões através de vetores númericos, esse vetores representam os pontos e são denominados vetores de carcaterísticas.
 
 \section{Objetivos e justificativas}
-O objetivo do presente trabalho é o estudo da utilização da programação linear, mais especificamente do método simplex, na separação de pontos através de hiperplanos, que serão utlizados na classificação de um conjunto em um determinado padrão. 
+O objetivo do presente trabalho é o estudo da utilização da programação linear, mais especificamente do método simplex, na separação de pontos que repesentam padrões através de hiperplanos, que serão utlizados na classificação de um conjunto em um determinado padrão. 
 
-Através desse estudo deve ser possível verificar a eficiência da programação linear nesse tipo de aplicação. Além disso, devem ser realizadas duas comparações do resultado final obtido, do ponto de vista computacional: a utilização da programação linear e outro método mais comumente utilizado na computação gráfica; e a utilização de uma biblioteca desenvolvida e uma implementação do modelo de programação linear utlizando o softwrae CPLEX.
+Através desse estudo deve ser possível verificar a eficiência da programação linear nesse tipo de aplicação. São realizados testes com vetores gerados aleatóriamente e com dados reais para verificar a eficácia do modelo de programação linear na separação de padrões.
 
 A programação linear possui aplicações em diversas áreas, como: indústria, produção, saúde e computação gráfica. Porém é um método mais comumente utilizado na engenharia de produção em problemas como: alocação de recursos e planejamento de produção. O presente trabalho justifica-se pelo fato de querer abordar uma aplicação prática dentro da computação, onde a aplicação da programação linear não é tão explorada quanto na engenharia de produção.
 
@@ -26,13 +26,12 @@ A programação linear possui aplicações em diversas áreas, como: indústria,
 Para o cumprimento do obejtivo final, o trabalho é composto por algumas etapas:
 
 \begin{itemize} 
-\item O estudo do método simplex revisado, suas características, vantagens do ponto de vista computacional e suas variantes.
-\item O desenvolvimento da biblioteca para resolução de problemas de programação linear
+\item O estudo do método simplex revisado, suas características, vantagens do ponto de vista computacional e suas variantes
+\item Obtenção de dados para testes
 \item A implementação do modelo do problema de programação linear utilizando a linguagem de programação JAVA juntamente com o software CPLEX
-\item A implementação da etapa de classificação de um conjunto de dados que possui padrão inicialmente desconhecido. 
+\item A implementação da etapa de classificação de um conjunto de dados que possui padrão inicialmente desconhecido
+\item Realização de testes 
 \end{itemize}
-
-Para a reralização desta última etapa, espera-se, através de pesquisas encontrar uma aplicação pronta que realize o reconhecimento de expressões faciais que deverá ser utilizada. Porém, ao invés de realizar o processamento utilizando o método já incorporado à aplicação, o método simplex será utilizado. Caso não seja encontrada uma aplicação de reconhecimento de expressão facial, que torne viável a substituição do método utilizado, uma ferramenta de forneça essa funcionalidade será desenvolvida.
 
 \section{Estrutura do trabalho}
 O presente trabalho apresenta a seguinte estrutura: o capítulo 2 apresenta uma descrição do problema geral de programação linear, os principais métodos de solução e algumas aplicações práticas; o capítulo 3 apresenta de forma detalhada o Método Simplex Revisado, foco deste trabalho; o capítulo 4 apresenta o processo de classificação de imagens e como a programação linear se aplica neste processo; no capítulo 5 serão apresentadas as ; e no capítulo 6 serão apresentadas as conclusões e possíveis trabalhos futuros. 

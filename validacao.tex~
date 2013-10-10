@@ -11,3 +11,17 @@ Nesse método, o conjunto de dados também é dividido em cojunto de treinamento
 
 \subsection{Leave-one-out}
 Nessa técnica, do conjunto com o número total de dados N, são realizadas N rodadas de treinamento e teste, sendo que a cada rodada N-1 dados são utlizados para teste e o dados restante é utlizado para treinamento. Pelas suas características, esse é um método recomendável para conjuntos de dados pequenos já que a quantidade de rodadas de treinamento e teste é igual a quantidade de dados o que o torna um método com alto custo computacional \cite{Kohavi95Cross} \cite{Baldisserotto05Validacao}.
+
+TIRAR DO REFERENCIAL TEÓRICO
+
+\subsection{Etapa de validação}
+COLOCAR FIGURA do método!!!
+
+COLOCAR FIGURA DA IMPLEMENTAÇÃO!!!
+
+Para testar a metodologia utlizada neste trabalho para classificação de padrões, foi utilizado o método cross validation. Através dos resultados desse método é possível analisar a acurácia da metodologia de classificação, ou seja, a capacidade de classificar uma instância com o seu padrão correto.
+
+A metodologia k-fold cross validation foi implementada na linguagem de programação Java. Os dados são arrumados manualmente em k arquiivos. A implementação seleciona os dados de teste e de validação, e retorna o resultado parcial a cada rodada e o resultado final após os k ciclos de validação e teste.
+
+
+

@@ -65,6 +65,7 @@ Em seus trabalhos, \citeonline{Feng} e \citeonline{Guo} apresentaram uma abordag
 
 A programação linear é utlizada na etapa após o tratamento da imagem. Primeiramente as expressões são combinadas em pares. No trabalho de \cite{Feng}, por exemplo, busca-se o reconhecimento de sete expressões: raiva, desgosto, medo, felicidade, tristeza, surpresa e neutro. Essas expressões são combinada em pares do tipo: raiva-desgosto, raiva-medo, etc. Formando um total de 21 pares. Após isso o modelo de programação linear, apresentado mais adiante, é utilizado para gerar os calssificares, o modelo deve ser rodado 21 vezes, uma para cada par de expressões. Essa etapa é também chamada de treinamento, pois a partir do classificadores gerados as expressões das imagens a serem analisadas serão determinadas. Essa abordagem também substitui a utilização de redes neurais para o treinamento, uma vantagem é que o modelo necessita ser rodado uma única vez para cada par, enquanto em uma abordagem utilizando redes neurais este processo se trona iterativo.
 
+Na última etapa de determinação da exepressão é utilizda uma estrtura de árvore binária de torneio.
 $Min\ \frac{e^{t}y}{m} + \frac{e^{t}z}{k}\\
 \ subject\ to  \\
 \              -A\omega + e\gamma + e <= y\\
@@ -81,7 +82,7 @@ Onde,
 \item \textbf {$B$} é a matriz de pontos das imagens de rostos com a segunda expressão do par
 \end{itemize}
 
-Na última etapa de determinação da exepressão é utilizda uma estrtura de árvore binária de torneio.
+
 
 Através dessa arbordagem espera-se comprovar os ótimos resultados mostrados pelos trabalhos que utilizam a programação linear.
 

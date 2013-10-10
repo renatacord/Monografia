@@ -1,6 +1,4 @@
-\chapter{A Programação Linear e as suas Aplicações}
-
-%\section{Introdução}
+\section{A Programação Linear e as suas Aplicações}
 Na pesquisa operacional, a programação linear é uma das técnicas mais utilizadas em problemas de otimização. Os problemas de programação linear geralmente buscam a distribuição eficiente de recursos limitados para atender um determinado objetivo, por isso suas aplicações estão presentes em diversas áreas como computação, administração, indústria e transporte \cite{Engecom}.
 
 Um problema de programação linear é expresso através de um modelo que é composto por equações e inequações lineares. Esse tipo de problema busca a distribuição eficiente de recursos com restrições para alcançar um objetivo, em geral, maximizar lucros ou minimizar custos. Em um problema de programação linear esse objetivo é expresso através de uma equação linear denominada função objetivo. Para a formulação do problema, é necessário também definir os recursos necessários e em que proporção são requeridos. Essas informações são expressas em equações ou inequações lineares, uma para cada recurso. Esse conjunto de equações ou inequações é denominado restrições do modelo \cite{Engecom}.
@@ -69,7 +67,78 @@ O método simplex é um dos algoritmos mais populares para a resolução de prob
 
 Com a utilização do método, foi percebido que a cada iteração eram requeridos muitos cálculos sobre valores que nem sempre importavam para a iteração seguinte, fato que do ponto de vista computacional tornaria o método ineficiente. Esse método é chamado de método simplex padrão ou tabular. A partir desse fato foi desenvolvido o método simplex revisado visando a resolução de problemas de programação linear computacionalmente.
 
-O presente trabalho tem foco no método simplex revisado e suas variantes.
+%\section{Origem do Método Simplex}
+O método simplex surgiu nos Estados Unidos e foi proposto pelo matemático George Dantzig. Quando trabalhava no Pentágono recebeu dos seus colegas o desafio de tentar mecanizar o processo de planejamento. No ano de 1947 Dantzig propôs o método simplex que tornou possível a solução de problemas de otimização de vários tipos, como transporte, produção, alocação de recursos e problemas de escalonamento \cite{OrigemSimplex}.
+
+%\section{Descrição do Método}
+\section{Princípio Básico do Método}
+A idéia do método simplex consiste em resolver repetidas vezes um sistema de equações lineares, e assim obter uma sucessão de soluções até encontrar a solução ótima. Ou seja, é um processo onde nos movemos de uma solução viável para outra sempre melhor ou pelo menos não pior.
+
+Um problema de programação linear é sempre constituído de uma função objetivo e várias restrições. Geometricamente, essas restrições resultam em uma forma geométrica, chamada hiperplano, no espaço n-dimensional sendo n o número de variáveis no modelo. E cada vértice desse hiperplano é considerado uma solução viável, como ilustra o exemplo abaixo.
+\begin{center}
+	\includegraphics[scale=0.5]{graficos/Simplex_grafico_completo}
+	\captionof{figure}{Um modelo de programação linear e a sua respectiva representação gráfica}
+	\label{img:simplex_grafico_completo}
+	\cite{Hillier}
+\end{center}
+
+Na figura \ref{img:simplex_grafico_completo} apresenta-se um exemplo de um problema de programação linear e sua representação geométrica. Nesse exemplo, de acordo com a representação geométrica do modelo, existem cinco possíveis soluções: x1=0 e  x2=0; x1=0 e  x2=6; x1=2 e  x2=6; x1=4 e  x2=3; x1=4 e x2=0. Como o objetivo é maximizar, concluímos que a melhor solução é x1=2 e  x2=6, em que z =36. No método Simplex a cada iteração, antes da solução ótima ser obtida, é encontrada uma dessas possíveis soluções que se localizam nos vértices do gráfico.
+
+\section{Descrição do Método Simplex Revisado}
+O método simplex revisado surgiu como uma solução para evitar cálculos desnecessários. Esse método foi projetado para problemas a serem solucionados computacionalmente.
+
+No simplex revisado, são armazenados na memória volátil apenas os dados realmente necessários. Além disso, os cálculos são realizados apenas sobre a coluna que é utilizada na iteração, o que evita cálculos com matrizes que poderia acarretar uma imprecisão nos resultados.
+
+Esse método mantém a característica do simplex, que é a troca entre a variável que entra na base e a que sai, além de também exigir certo esforço computacional. Porém sua grande vantagem é a economia de tempo e espaço, que garantida pelo modo como é desenvolvida a solução. 
+
+Nesta seção descreve-se os passos do algoritmo simplex revisado. O problema considerado é de maximização. A distinção entre matrizes, vetores e escalares foi feita da seguinte forma: letra maiúscula e negrito para matriz (\textbf{MATRIZ}); letra minúscula e negrito para vetor (\textbf{vetor}); letra em itálico para escalar (\textit{escalar}).
+
+Considere o seguinte problema de programação linear:
+
+$\\
+Maximizar\ \mathbf{cx} \\
+Sujeito\ a \\
+\mathbf{Ax} \leq \mathbf{b} \\
+\mathbf{x} \geq0$
+
+O vetor $\mathbf{c}$, de coeficientes na função objetivo, é dividido duas componentes: $\mathbf{c{_B}}$ e $\mathbf{c{_N}}$, coeficientes das variáveis básicas e não-básicas, respectivamente. Por analogia, o vetor $\mathbf{x}$, de incógnitas do problema, é subdividido em $\mathbf{x{_B}}$ e $\mathbf{x{_N}}$.  A matriz $\mathbf{A}$, de coeficientes das restrições, é dividida em duas submatrizes: $\mathbf{B}$ e $\mathbf{N}$, coeficientes das variáveis básicas e não-básicas, respectivamente. Os passos do algoritmo são os seguintes.\\
+
+Passo 1: Calcular o valor das variáveis básicas: \ \ $\mathbf{x_{b}}\ =\ \mathbf{B^{-1}b}\geq0$
+
+Passo 2: Calcular o vetor multiplicador: \ \ $\mathbf{\lambda} \ =\ \mathbf{c{_B}B^{-1}}$
+
+Passo 3: Escolher a variável que entra na base. Para isso, calcula-se: $\mathbf{p}\ =\ \mathbf{c{_N}}-\mathbf{\lambda N}$
+
+Se \ \ $\mathbf{p}\ =\ (\mathbf{c{_N}}-\mathbf{\lambda N})\leq 0$ \ \ PARAR.
+
+A solução \ \ $\mathbf{x{_B}}$ \ \ já é a solução ótima. 
+
+Caso contrário, escolher uma coluna de $\mathbf{N}$, coluna $\mathbf{a{_k}}$, tal que $\mathit{p{_k}}\ =\ \mathit{c{_nk}}-\mathbf{\lambda a{_k}}> 0$
+
+Um critério frequente é escolher a coluna $\mathbf{a{_k}}$ que resulte no maior valor de $\mathit{p{_k}}$.
+
+Então, assumindo $\mathit{e} = \mathit{k}$, $\mathit{k}$ representa o índice da coluna, $\mathbf{a{_k}}$ representa a coluna de $\mathbf{A}$ candidata a entrar na base. 
+
+Passo 4: Determinar a variável que sai da base. Para isso, calcula-se: $\mathbf{y}=\mathbf{B^{-1}a{_k}}$
+
+Se \ \ $\forall i\mathit{\frac{b{_i}}{y{_i}}}\leq 0$ \ \ PARAR.
+
+A solução é não-limitada. Caso contrário, calcular:\ \ 
+$\forall i\ \underset{\underset{y{_i}>0}{1\leq i\leq m}}{Min}\begin{Bmatrix}
+\mathit{\frac{b{_i}}{y{_i}}}
+\end{Bmatrix}$ e guardar o índice correspondente a $s = i$. A variável $(x{_b}){_s}$ sai da base.
+
+Passo 5: Criar a matriz $\mathbf{E}$.
+$\mathbf{E}=(\mathbf{e{_1}},\mathbf{e{_2}},...,\mathbf{e{_s-1}},\mathbf{\gamma} , \mathbf{e{_s+1}},...,\mathbf{e{_m}})$
+
+Onde, cada coluna da matriz é um vetor unitário com exceção da coluna $\mathit{s}$, que corresponde ao vetor $\mathbf{\gamma}$, calculado da seguinte maneira: \\
+$\mathbf{\gamma^{t}}=\left( \mathit{\frac{-\alpha {_{1,e}}}{\alpha {_{s,e}}}}\ \mathit{\frac{-\alpha {_{2,e}}}{\alpha {_{s,e}}}}\ ...\ \mathit{\frac{-\alpha {_{s-1,e}}}{\alpha {_{s,e}}}}\ \mathit{\frac{1}{\alpha {_{s,e}}}\ \frac{-\alpha {_{s+1,e}}}{\alpha {_{s,e}}}}\ ...\ \mathit{\frac{-\alpha {_{m,e}}}{\alpha {_{s,e}}}} \right )$
+
+Onde $\mathit{\alpha{_ie}}$ são os elementos vetor do $\mathbf{y}$.
+
+Passo 6: Calcular nova matriz $\mathbf{B^{-1}}$: $\mathbf{B^{-1}} = \mathbf{EB^{-1}}$
+
+Passo 7: Atualizar os vetores $\mathbf{c{_B}}$ e $\mathbf{x{_B}}$.
 
 \subsection{Método de Pontos Interiores}
 Em 1984, Karmarkar revolucionou a área de programação linear com a publicação de um algoritmo de complexidade polinomial que apresentou bom desempenho quando aplicado a problemas práticos \cite{MaculanPI}. Essa publicação deu origem a um novo campo de pesquisa, chamado de método dos pontos interiores. 
@@ -127,6 +196,14 @@ De acordo com \citeonline{Akira-database} dentre as inúmeras ferramentas de pro
 A programação linear também se aplica na área da saúde, em \citeonline{Alterovitz-saude} é feita uma proposta de utilização da programação linear no tratamento do câncer. 
 Em um determinado tipo de tratamento são inseridos cateteres na área afetada para introduzir o medicamento necessário, porém o medicamento acaba afetado células saudáveis além das cancerígenas. Como os problemas de programação linear podem ser resolvidos como problemas determinísticos e com solução exata, \citeonline{Alterovitz-saude} propõe que a formulação de um problema de otimização para determinar o tempo de permanência dos cateteres, minimizando os desvios na quantidade da dose necessitada pelo paciente. Nos testes realizados, os resultados obtidos não mostraram uma vantagem significativa em relação ao método atualmente utilizado.
 
+\subsection{Aplicação no reconhecimento de expressões faciais}
+
+Em seus trabalhos, \citeonline{Feng} e \citeonline{Guo} apresentaram uma abordagem de reconhecimento de expresssões faciais utilizando a programação linear. Em ambos a programação linear foi utilizada na fase de classificação da expressão. Em \citeonline{Guo} a programação lienar foi utlizada ainda na fase de extração de carcaterísticas, para determinar a quantidade de caracteríticas a serem selecionadas e os principais pontos da face. Enquanto no trabalho de \cite{Feng} é utilizado o filtro de Gabor na etapa de extração de carcaterísticas. O Filtro de Gabor tem a capacidade de realçar bordas e saliências na imagem. Após a aplicação do filtro na imagem, são realçadas as características salientes presentes no rosto (cantos dos olhos, cantos da boca, narinas, entre outros) \cite{Gabor}. Em ambos os trabalhos foram obtidos ótimos resultados e superiores a outros métodos com os quais foram comparados. 
+
+A programação linear é utlizada na etapa após o tratamento da imagem. Primeiramente as expressões são combinadas em pares. No trabalho de \cite{Feng}, por exemplo, busca-se o reconhecimento de sete expressões: raiva, desgosto, medo, felicidade, tristeza, surpresa e neutro. Essas expressões são combinada em pares do tipo: raiva-desgosto, raiva-medo, etc. Formando um total de 21 pares. Após isso o modelo de programação linear, apresentado mais adiante, é utilizado para gerar os calssificares, o modelo deve ser rodado 21 vezes, uma para cada par de expressões. Essa etapa é também chamada de treinamento, pois a partir do classificadores gerados as expressões das imagens a serem analisadas serão determinadas. Essa abordagem também substitui a utilização de redes neurais para o treinamento, uma vantagem é que o modelo necessita ser rodado uma única vez para cada par, enquanto em uma abordagem utilizando redes neurais este processo se trona iterativo.
+
+Na última etapa de determinação da exepressão é utilizda uma estrtura de árvore binária de torneio.
+
 \subsection{Aplicações na Engenharia de Produção}
 Dentre as aplicações mais conhecidas da programação linear, encontram-se os problemas de planejamento de produção e controle de estoque e os problemas de mistura. Os problemas do primeiro tipo possuem inúmeras aplicações, desde a alocação de máquinas para atender determinada demanda, até a utilização do estoque para atender a uma mudança imprevisível na demanda e necessidades de contratação de demissão para enfrentar mudanças nas necessidades de mão de obra. Já os problemas de mistura tratam, basicamente, da mistura de diferentes matérias para a produção de produtos, que devem obedecer a algumas especificações e, ao mesmo tempo, minimizar o custo ou maximizar o lucro.  \cite{Taha}.
 Um exemplo mais prático seria a produção de rações animais onde o objetivo é minimizar o custo de produção da ração composta por dois ingredientes. Estando restrito a quantidade total que deve ser produzida, além das quantidades de nutrientes necessários.
@@ -159,16 +236,37 @@ E as restrições representam as restrições das quantidades de nutrientes que 
 
 A programação linear além de estar presente, é fundamental em diversas áreas, tornando-se uma ferramenta de apoio a decisão e contribuindo para o sucesso de projetos nas áreas em que se aplica.
 
-%\section{Ferramentas de Programação Linear}
-%Durante a pesquisa foram utilizadas e encontradas algumas ferramentas para a resolução de problemas de programação %linear, além de bibliotecas com problemas testes. 
-%Uma das ferramentas é o Tora \cite{Taha}, que é software com uma interface simples, mas com algumas características que não há tornam muito amigável, além disso é um software mais educacional, inclusive com o recurso que mostra o passo a passo na resolução do problema utilizando o método simplex tabular.
+\section{Métodos de Classificação}
+Em problemas de calssificação, dado um conjunto de dados de treinamento onde cada subconjunto pertence a uma entre n classes, o objetivo é que dada uma instância o método de classificação retorne a qual das n classes essa instância pertence. A seguir são apresentados alguns dos métodos mais citados na literatura. 
 
-%\begin{center}
-%	\includegraphics[scale=1.00]{tora}
-%	\captionof{figure}{Telas de entrada e sáida de dados do software Tora}
-%\end{center}
+\subsection{Support Vector Machines}
+Support Vector Machines ou Máquinas de vetores de suporte (SVM) têm a capacidade de gerar classificadores na etapa de treinamento e de classificar os dados na etapa de teste de acordo com o classificadores gerados. Considerando um problema de classificação com duas classes, uma SVM irá determinar um plano que separe os pontos dessas duas classe, de forma que a distância entre o hiperplano e os pontos seja a máxima possível. Os pontos de cada classe utlizados como referência são denominados vetores de suporte.
+No caso de conjuntos linearmente inseparáveis, é adicionada uma variável não negativa a equação do hiperplano. De forma que para os pontos que estão do lado correto do hiperplano classificador, essa variável é nula, porém para os pontos que se encontram do lado incorreto do hiperplano, essa variável recebe o valor que pode ser definido como uma medida de quanto o ponto falhou em estar no lado correto do hiperplano e na medida de distância máxima de acordo com os vetores de suporte, nesse caso além de buscar o hiperplano com distância máxima entre o hiperplano e os pontos, deve-se buscar também a minimização do somatório dessas variáveis em cada ponto\cite{Gunn98SVM}\cite{Reffson02SVM}.
 
-%Já o Lingo disponibiliza uma versão demo gratuita. A maior dificuldade na utilização dessa ferramenta é o fato do usuário precisar digitar o modelo sem nenhuma orientação em relação a sintaxe, além disso a forma como o resultado é exibido dificulta a interpretação.
-%O Cplex é uma ferramenta mais robusta, com mais recursos e uma interface mais elaborada. Não é gratuita, mas uma versão com licença acadêmica é disponibilizada. Permite a modelagem e resolução de problemas de otimização de diversa natureza, como por exemplo: programação inteira, programação linear e programação inteira mista. Utilizando para isso diferentes métodos de solução.
-%O Glpk é um conjunto de rotinas destinadas a resolução de problemas de programação linear, além de problemas de programação inteira mista. As rotinas são escritas em ANSI C e podem ser utilizadas como biblioteca.
+FIGURA!!!!!!!!!!
 
+No caso em que é o núemro de classes é maior que dois, duas abordagens podem ser utilizadas com as SVM \cite{Lorena03SVM}:
+\begin{itemize}
+\item{"Um contra todos: "}Nessa abordagem, para K padrões são geradas K SVM. Na criação das SVM, é gerado um hiperplano que separa 1 classe das k-1 classes. Na determinação do padrão de uma instância x, o padrão é aquele que, entre as k SVM obteve mais mais valores de x do lado do hiperplano onde se encontrava o padrão k.  
+\item{"Todos contra um: "}Nessa abordagem os padrões são agrupados em pares e uma SVM é gerada para cada par. Um esquema de votação deve ser utilizado para determinar o padrão de uma instância, que deve ser analisada a partir de cada SVM e cada SVM retorna uma classe possível. A classe que obtiver mais pontos da instância é a classe atribuída.
+\end{itemize}
+
+\subsection{Árvore de decisão}
+\subsection{Bayes}
+\subsection{Multi- layer pecceptron}
+\subsection{k- nearest neighbor}
+
+\section{Métodos de validação do modelo}
+Um modelo de classificação pode ser verificado em relação a sua acurácia apartir de uma conjunto de dados ou a sua performance em relação a outros métodos classificadores podem ser verificados. Algumas técnicas utilizadas com esse intuito serão apresentadas a seguir. No presente trabalho a técnica Cross Validation é utilizada com o objetivo de verificar a acurácia, nesse caso, da metodologia utlizada na classificação de padrões \cite{Kohavi95Cross} \cite{Baldisserotto05Validacao}.
+
+\subsection{Handout}
+Esse é um método simples, onde os dados são divididos em 2 grupos mutuamente exclusivos, sendo um grupo utilizado para treino e o outro para teste. Em geral 2/3 dos dados são utilizados no treinamento e 1/3 na etapa de testes. É mais indicado quando uma grande quantidade de dados está disponível, de forma que os dois grupos possam conter dados suficientes de todos os padrões, nesse caso, suficientes para que o resultado final não seja comprometido pela falta de dados no grupo da etapa de treino e nem no grupo de testes. Apesar de ser um método de fácil implementação, a divisão entre conjunto de treinamento e teste deve ser bem estudada de forma que todos os padrões estejam bem representados nos dois grupos, por isso é um método recomendável quando o conjunto de dados possui um grande número de representações de cada padrão \cite{Kohavi95Cross} \cite{Baldisserotto05Validacao}.
+
+\subsection {Cross Validation}
+Nesse método, o conjunto de dados também é dividido em cojunto de treinamento e de teste, porém esses dois grupos variam a cada rodada de teste. O tipo de cross validation mais comumente utilizado é o k-fold cross validation, onde os dados são divididos em k conjuntos mutuamente exclusivos e as etapas de treinamento e teste são realizdas K vezes, de forma que a cada rodada um conjunto diferente é utilizado como teste e os outros k-1 conjuntos são utilizados para treinamento. Esse método é recomendável quando o conjunto de dados não é tão grande, pois não existema  preocupação de quais dados separa para teste e quais separa para validação, já que a ao final da execução do método todos o dados terão participado dos conjuntos de validação e teste \cite{Kohavi95Cross} \cite{Baldisserotto05Validacao}.
+
+\subsection{Leave-one-out}
+Nessa técnica, do conjunto com o número total de dados N, são realizadas N rodadas de treinamento e teste, sendo que a cada rodada N-1 dados são utlizados para teste e o dados restante é utlizado para treinamento. Pelas suas características, esse é um método recomendável para conjuntos de dados pequenos já que a quantidade de rodadas de treinamento e teste é igual a quantidade de dados o que o torna um método com alto custo computacional \cite{Kohavi95Cross} \cite{Baldisserotto05Validacao}.
+
+\section{Trabalhos Relacionados}
+E seu trabalho \cite{Reffson02SVM} busca o classificação de impressões digitais em 5 classe. Esse tipo de classificação tem o próposito de gerenciar grandes bancos de dados de impressões digitais e acelerar o processo de identificação. Foi utilizado um banco contendo 4000 imagens igualmente distribuídas entre as cinco classes. O autor dividiu o banco em dois grupos, utilizando um para treinamento e outro para teste. Após a extração das características das imagens, Máquinas de Vetores de Suporte foram utlizadas na classificação. Na abordagem todos contra um foi obtida uma média de precisão de 91,18\%, já na abordagem um contra todos a precisão na classificação das impressões foi de 90,43\%.	

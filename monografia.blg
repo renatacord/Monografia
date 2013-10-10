@@ -3,9 +3,6 @@ The top-level auxiliary file: monografia.aux
 A level-1 auxiliary file: introducao.aux
 A level-1 auxiliary file: referencial_teorico.aux
 A level-1 auxiliary file: metodologia.aux
-A level-1 auxiliary file: reconhecimento_de_exp.aux
-A level-1 auxiliary file: modelo.aux
-A level-1 auxiliary file: validacao.aux
 The style file: abnt-alf.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: abnt-options.bib
@@ -17,44 +14,44 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 | Em caso de duvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
-You've used 41 entries,
+You've used 40 entries,
             6522 wiz_defined-function locations,
-            1415 strings with 15471 characters,
-and the built_in function-call counts, 40433 in all, are:
-= -- 4365
-> -- 640
-< -- 641
-+ -- 843
-- -- 206
-* -- 2307
-:= -- 4927
-add.period$ -- 134
-call.type$ -- 42
-change.case$ -- 272
-chr.to.int$ -- 86
-cite$ -- 38
-duplicate$ -- 3815
-empty$ -- 2389
-format.name$ -- 953
-if$ -- 8795
-int.to.chr$ -- 3
+            1400 strings with 15050 characters,
+and the built_in function-call counts, 31240 in all, are:
+= -- 2868
+> -- 623
+< -- 290
++ -- 493
+- -- 201
+* -- 1877
+:= -- 4081
+add.period$ -- 125
+call.type$ -- 41
+change.case$ -- 263
+chr.to.int$ -- 80
+cite$ -- 37
+duplicate$ -- 2366
+empty$ -- 2280
+format.name$ -- 930
+if$ -- 7085
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 696
-newline$ -- 197
-num.names$ -- 191
-pop$ -- 821
+missing$ -- 675
+newline$ -- 190
+num.names$ -- 186
+pop$ -- 774
 preamble$ -- 1
-purify$ -- 126
+purify$ -- 123
 quote$ -- 0
-skip$ -- 3922
+skip$ -- 2518
 stack$ -- 1
-substring$ -- 1777
-swap$ -- 1287
-text.length$ -- 49
+substring$ -- 1332
+swap$ -- 892
+text.length$ -- 40
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 38
+type$ -- 36
 warning$ -- 0
-while$ -- 273
+while$ -- 257
 width$ -- 0
-write$ -- 598
+write$ -- 573

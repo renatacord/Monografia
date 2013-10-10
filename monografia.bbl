@@ -33,29 +33,6 @@ Disserta\c{c}\~ao (Mestrado) --- Universidade de Pernambuco, 2005.}
 {BLITZKOW, A. C. B. B.~D. \emph{{Ondaletas: Histórico e Aplicação}}. Maio
   2008.}
 
-\bibitem[Costa 2010]{Elizabeth}
-\abntrefinfo{Costa}{COSTA}{2010a}
-{COSTA, E. D.~S. da. \emph{{Reconhecimento de Expressões Faciais em Imagens}}.
-  2010.
-Dispon{\'\i}vel em:
-  \htmladdnormallink{$<$http:\-/\-/www\-.verlab\-.dcc\-.ufmg\-.br\-/\underline%
-{\ }media\-/cursos\-/visao\-/2010-1\-/grupo04 \-/reconhecimento\underline{\
-  }de\underline{\ }expressao\underline{\
-  }facial\-.pdf$>$}{http://www.verlab.dcc.ufmg.br/_media/cursos/visao/2010-1/g%
-rupo04 /reconhecimento_de_expressao_facial.pdf}.}
-
-\bibitem[Costa 2010]{FernandoGil}
-\abntrefinfo{Costa}{COSTA}{2010b}
-{COSTA, F. G. A.~M. da.
-\emph{{Reconhecimento Expressões Faciais}}.
-Disserta\c{c}\~ao (Mestrado) --- UNIVERSIDADE DE TRÁS-OS-MONTES E ALTO DOURO,
-  2010.
-Dispon{\'\i}vel em:
-  \htmladdnormallink{$<$http:\-/\-/repositorio\-.utad\-.pt\-/bitstream\-/10348%
-\-/634\-/1\-/MsC\underline{\
-  }fgamcosta\-.pdf$>$}{http://repositorio.utad.pt/bitstream/10348/634/1/MsC_fg%
-amcosta.pdf}.}
-
 \bibitem[Danzitg 1963]{Dan}
 \abntrefinfo{Danzitg}{DANZITG}{1963}
 {DANZITG, G. \emph{{Linear Programming and Extensions}}. [S.l.]: Princeton
@@ -92,6 +69,11 @@ amcosta.pdf}.}
 {GUIMARãES, D. R. O.~N. {Sistema Híbrido Inteligente Aplicado ao
   Reconhecimento de Rostos}. In:  \emph{Anais do I WORCAP}. [S.l.: s.n.], 2001.
   p. 45--47.}
+
+\bibitem[Gunn 1998]{Gunn98SVM}
+\abntrefinfo{Gunn}{GUNN}{1998}
+{GUNN, S.~R. \emph{Support Vector Machines for Classification and Regression}.
+  1998.}
 
 \bibitem[Hadid 2005]{Feng}
 \abntrefinfo{Hadid}{HADID}{2005}
@@ -132,6 +114,12 @@ Tese (Doutorado) --- Universidade Federal do Rio Grande do Norte Centro de
   Ciências Exatas e da Terra Departamento de Física Teórica e Experimental,
   Dezembro 2007.}
 
+\bibitem[Lima 2002]{Reffson02SVM}
+\abntrefinfo{Lima}{LIMA}{2002}
+{LIMA, A. R.~G.
+\emph{Máquinas de Vetores Suporte na Classificaçã de Impressões Digitais}.
+Disserta\c{c}\~ao (Mestrado) --- Universidade Federal do Ceará, 2002.}
+
 \bibitem[Lima 2004]{OrigemSimplex}
 \abntrefinfo{Lima}{LIMA}{2004}
 {LIMA, D. de.
@@ -139,16 +127,20 @@ Tese (Doutorado) --- Universidade Federal do Rio Grande do Norte Centro de
   Avícola/ Aviário: Alojamento e Desalojamento de Aves}}.
 Disserta\c{c}\~ao (Mestrado) --- Universidade Federal do Paraná, 2004.}
 
+\bibitem[Lorena 2003]{Lorena03SVM}
+\abntrefinfo{Lorena}{LORENA}{2003}
+{LORENA, A. C. P. L. F. d.~C. A.~C. \emph{Introdução às Máquinas de Vetores
+  Suporte}. 2003.}
+
+\bibitem[Lyons Miyuki~Kamachi 1997]{Jaffe}
+\abntrefinfo{Lyons Miyuki~Kamachi}{LYONS MIYUKI~KAMACHI}{1997}
+{LYONS MIYUKI~KAMACHI, J.~G. M.~J. \emph{Japanese Female Facial Expressions
+  (JAFFE), Database of digital images}. 1997.}
+
 \bibitem[Maculan e Fampa 2006]{MaculanPI}
 \abntrefinfo{Maculan e Fampa}{MACULAN; FAMPA}{2006}
 {MACULAN, N.; FAMPA, M. H.~C. \emph{Otimização Linear}. [S.l.]: Editora
   Universidade de Brasília, 2006.}
-
-\bibitem[Malsburg 1998]{Hong}
-\abntrefinfo{Malsburg}{MALSBURG}{1998}
-{MALSBURG, H. H. H. N. C.~V. der. {Online Facial expression recognition based
-  on personalized gallaries.} In:  \emph{International Conf. Automation and
-  Gesture Recognition}. [S.l.: s.n.], 1998. p. 354--359.}
 
 \bibitem[Menezes 2008]{Pinto}
 \abntrefinfo{Menezes}{MENEZES}{2008}
@@ -192,12 +184,6 @@ Disserta\c{c}\~ao (Mestrado) --- Instituto de Matemática, Estatística e
 Disserta\c{c}\~ao (Mestrado) --- Instituto de Matemática e Estátistica da
   Universidade de São Paulo, Junho 2009.}
 
-\bibitem[Rothkrantz 2000]{Pantic}
-\abntrefinfo{Rothkrantz}{ROTHKRANTZ}{2000}
-{ROTHKRANTZ, M. P. L. J.~M. {Expert system for automatic analysis of facial
-  expression}.
-\emph{Image and Vision Computing}, v.~18, p. 881--905, 2000.}
-
 \bibitem[Saunders 2001]{Chen}
 \abntrefinfo{Saunders}{SAUNDERS}{2001}
 {SAUNDERS, S. S. C. D. L. D. M.~A. {Atomic Decomposition by Basis Pursuit}.
@@ -213,12 +199,6 @@ Disserta\c{c}\~ao (Mestrado) --- Instituto de Matemática e Estátistica da
 \abntrefinfo{Taha}{TAHA}{2008}
 {TAHA, H.~A. \emph{{Operation Research: An Introduction}}. 8. ed. [S.l.]:
   Pearson, 2008.}
-
-\bibitem[Taylor 1998]{Edwards}
-\abntrefinfo{Taylor}{TAYLOR}{1998}
-{TAYLOR, G. J. E. T. F. C. C.~J. {Face recognition using active appearance}.
-  In:  \emph{European Conf. Computer Vision}. [S.l.: s.n.], 1998. v.~2, p.
-  581--695.}
 
 \bibitem[Todd 2002]{Todd}
 \abntrefinfo{Todd}{TODD}{2002}

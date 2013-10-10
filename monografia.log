@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  8 OCT 2013 11:42
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  10 OCT 2013 20:09
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -1038,8 +1038,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: subfigure package is loaded.
 ) (./monografia.aux
-(./introducao.aux) (./referencial_teorico.aux) (./metodologia.aux)
-(./reconhecimento_de_exp.aux) (./modelo.aux) (./validacao.aux))
+(./introducao.aux) (./referencial_teorico.aux) (./metodologia.aux))
 \openout1 = `monografia.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
@@ -1109,132 +1108,62 @@ Cap\'{\i }tulo 1.
 ] [4]) [5]
 \openout2 = `referencial_teorico.aux'.
 
- (./referencial_teorico.tex
-Cap\'{\i }tulo 2.
-[6
+ (./referencial_teorico.tex [6
 
 
-
-] [7]
+]
 File: graficos/simplex_grafico.eps Graphic file (type eps)
  <graficos/simplex_grafico.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 51.
+(caption)                particular \caption on input line 49.
 See the caption package documentation for explanation.
 
-[8] [9] [10]
+[7] [8]
+File: graficos/Simplex_grafico_completo.eps Graphic file (type eps)
+ <graficos/Simplex_grafico_completo.eps>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 80.
+See the caption package documentation for explanation.
+
+[9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+[11] [12] [13]
 File: graficos/ondaletas.eps Graphic file (type eps)
  <graficos/ondaletas.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 102.
+(caption)                particular \caption on input line 171.
 See the caption package documentation for explanation.
 
-[11]
+[14]
 File: graficos/hipercubo.eps Graphic file (type eps)
  <graficos/hipercubo.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 119.
+(caption)                particular \caption on input line 188.
 See the caption package documentation for explanation.
 
-[12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 134--136
+[15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 211--213
 
  []
 
-[14])
-Overfull \hbox (10.70569pt too wide) in paragraph at lines 160--89
+[17]
+Overfull \hbox (10.70569pt too wide) in paragraph at lines 237--238
 []\OT1/cmr/m/n/12 A pro-grama^^Xc~ao li-near al^^Sem de es-tar pre-sente, ^^Se 
 fun-da-men-tal em di-ver-sas ^^Sareas, tornando-
  []
 
-[15]
+[18] [19] [20]) [21]
 \openout2 = `metodologia.aux'.
 
  (./metodologia.tex
-Cap\'{\i }tulo 3.
-File: graficos/Simplex_grafico_completo.eps Graphic file (type eps)
-<graficos/Simplex_grafico_completo.eps>
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 13.
-See the caption package documentation for explanation.
-
-[16
-
-
-
-] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
-
- []
-
-[18]) [19]
-\openout2 = `reconhecimento_de_exp.aux'.
-
- (./reconhecimento_de_exp.tex
-Cap\'{\i }tulo 4.
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--12
-
- []
-
-File: graficos/rosto.eps Graphic file (type eps)
-<graficos/rosto.eps>
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 14.
-See the caption package documentation for explanation.
-
-[20
-
-
-
-]
-File: graficos/rosto_pontos.eps Graphic file (type eps)
- <graficos/rosto_pontos.eps>
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 22.
-See the caption package documentation for explanation.
-
-File: graficos/diagrama.eps Graphic file (type eps)
-<graficos/diagrama.eps>
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 32.
-See the caption package documentation for explanation.
-
-[21]
-File: graficos/metodo1_classi.eps Graphic file (type eps)
- <graficos/metodo1_classi.eps>
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 42.
-See the caption package documentation for explanation.
-
-[22]
-File: graficos/metodo2_classi.eps Graphic file (type eps)
- <graficos/metodo2_classi.eps>
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 50.
-See the caption package documentation for explanation.
-
-File: graficos/metodo3_classi.eps Graphic file (type eps)
-<graficos/metodo3_classi.eps>
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 58.
-See the caption package documentation for explanation.
-
-[23] [24]) [25]
-\openout2 = `modelo.aux'.
-
- (./modelo.tex
-Cap\'{\i }tulo 5.
+Cap\'{\i }tulo 2.
 
 Overfull \hbox (9.15483pt too wide) in paragraph at lines 3--5
 \OT1/cmr/m/n/12 ponto ^^Se ^^Se re-pre-sen-tado por um ve-tor de ca-rac-ter^^S^
@@ -1244,46 +1173,20 @@ Overfull \hbox (9.15483pt too wide) in paragraph at lines 3--5
 File: graficos/linear_sepa.eps Graphic file (type eps)
 <graficos/linear_sepa.eps>
 File: graficos/linear_insepa.eps Graphic file (type eps)
- <graficos/linear_insepa.eps> [26
+ <graficos/linear_insepa.eps> [22
 
 
 
-] [27] [28]
+] [23] [24]
 Overfull \hbox (20.90184pt too wide) in paragraph at lines 77--78
 \OT1/cmr/m/n/12 Para ilus-trar o mo-delo va-mos con-si-de-rar dois exem-plos em
  $\OML/cmm/m/it/12 R[]$ \OT1/cmr/m/n/12 ([][][][],
  []
 
-[29]) [30]
-\openout2 = `validacao.aux'.
-
- (./validacao.tex
-Cap\'{\i }tulo 6.
-[31
+[25] [26]) [27] (./monografia.bbl [28
 
 
-
-]) [32] (./monografia.bbl
-Underfull \hbox (badness 3240) in paragraph at lines 38--46
-[]\OT1/cmr/m/n/12 COSTA, E. D. S. da. \OT1/cmr/m/it/12 Re-co-nhe-ci-mento de Ex
-- 
- []
-
-
-Underfull \hbox (badness 2293) in paragraph at lines 38--46
-\OT1/cmr/m/it/12 press~oes Fa-ci-ais em Ima-gens\OT1/cmr/m/n/12 . 2010. Dis-pon
-^^S^^Pvel em: 
- []
-
-
-Overfull \hbox (131.59702pt too wide) in paragraph at lines 38--46
-[][][][]\OT1/cmr/m/n/12 .  
- []
-
-[33
-
-
-] [34])
+] [29])
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
@@ -1292,20 +1195,19 @@ Overfull \hbox (131.59702pt too wide) in paragraph at lines 38--46
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 61.
 See the caption package documentation for explanation.
 
-[35] (./monografia.aux (./introducao.aux) (./referencial_teorico.aux)
-(./metodologia.aux) (./reconhecimento_de_exp.aux) (./modelo.aux)
-(./validacao.aux))
+[30] (./monografia.aux (./introducao.aux) (./referencial_teorico.aux)
+(./metodologia.aux))
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 14368 strings out of 495042
- 199029 string characters out of 1181920
- 371264 words of memory out of 3000000
- 17201 multiletter control sequences out of 15000+50000
- 16603 words of font info for 60 fonts, out of 3000000 for 9000
+ 14332 strings out of 495042
+ 198441 string characters out of 1181920
+ 370319 words of memory out of 3000000
+ 17188 multiletter control sequences out of 15000+50000
+ 18574 words of font info for 66 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 38i,10n,49p,1051b,565s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,10n,49p,1153b,513s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on monografia.dvi (37 pages, 173240 bytes).
+Output written on monografia.dvi (32 pages, 166416 bytes).
