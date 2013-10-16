@@ -117,4 +117,42 @@ COLOCAR FIGURA!!!
 Nesse exemplo notamos que o valor 2.46 no vetor y é referente ao ponto do conjunto A que está localizado do lado errado da reta. E o valor 0.91é referente ao ponto do conjunto B que está localizado mais próximo à reta separadora, apesar do ponto estar localizado do ponto correto da reta ele está localizado acima da reta limite $-0.91x + 0.91y = -1.82$.
 \end{itemize}
 
-Em \citeonline{Feng} foi realizado um estudo de reconhecimento de expressões faciais, utilizando a base de dados JAFFE \cite{Jaffe}, em uma etapa de pre processamento as coordenadas do olhos foram marcadas manualmente e utilizando uam máscara elíptica as imagens foram reduzidas a região da face. Na extraçãod e características foi utilizado o método local binary patterns. O modelo de programação linear proposto em \cite{Bennett92robustlinear} é utlizado para gerar os classificadores e na classificação de imagens com expressão desconhecida foi utilizada uma árvore de torneio. Para validação os dados foram divididos em 10 conjuntos, o ciclo de treinamento e teste foi repetido 10 vezes, sendo que em cada ciclo um conjunto foi usado como teste e os outros nove para validação. Foram realizados 20 desses ciclos e uma média da taxa de acertos foi calculada, obtendo uma taxa de 93.8\%. Os autores concluíram que o método obteve uma performance excelente comparado a outros estudos de receonhecimento de expressão facial que utilizaram a mesma base de dados.
+\section{Implementação}
+FAZER DIAGRAMA PARA ILUSTRAR IMPLEMENTAÇÃO!!!
+Todo o processo, desde a organização dos dados até a etapa de classificação, foi implementado utilizando a linguagem de programação Java. A implementação foi feita em módulos, organizados da seguinte forma: Módulo de geração de classificadores, Módulo e classificação, Módulo Unificador, Módulo organizador dos dados.
+
+\section{Etapa de classificação}
+Em seus trabalhos \citeonline{Guo} e \citeonline{Feng} utilizaram a estrutura de árvore de torneio na etapa de classificação após a utilização do modelo de programação linear para gerar os classificadores.
+
+\begin{center}
+	\includegraphics[scale=0.4]{graficos/ArvTorneio1}
+	\captionof{figure}{Ilustração de uma árvore de torneio com 6 padrões}
+	\label{img:ArvTorneio1}
+\end{center}
+
+\begin{center}
+	\includegraphics[scale=0.4]{graficos/ArvTorneio2}
+	\captionof{figure}{Ilustração de uma árvore de torneio de acordo com os classificadores}
+	\label{img:ArvTorneio2}
+\end{center}
+
+\section{Etapa de validação}
+Para testar a metodologia utlizada neste trabalho para classificação de padrões, foi utilizado o método cross validation. Através dos resultados desse método é possível analisar a acurácia da metodologia de classificação, ou seja, a capacidade de classificar uma instância com o seu padrão correto.
+Entre os três métodos de validação apresentados no referêncial teórico: Handout, Cross Validation e Leave One Out. O método cross validation foi escolhido como melhor opção já que os teste são feitos com várias bases de dados com tamanhos variados. Para bases de dados muito grandes o método Leave One Out de tornaria computacionalmete custoso e o método Handout poderia ter seu resultado comprometido de acordo com os parâmetros escolhidos na separação de dados para teste e de dados para validação. Além disso, o método Cross Validation é de fácil implementação e permite a utlização de toso os dados como teste e validação.
+Na figura abaixo o método é ilustrado para o parâmetro 5 fold, apesar desse parâmetro não ter sido utlizado em nenhum teste, foi utlizado para um facilitar a ilustração.
+\begin{center}
+	\includegraphics[scale=1.0]{graficos/cross_validation}
+	\captionof{figure}{Mecanismo do método de validação 5-fold cross validation}
+	\label{img:cross_validation}
+\end{center}
+
+Na ilustração o conjunto de dados foi dividido em 5 subconjuntos e consequentemente foram realizados 5 ciclos de treinamento e testes. A cada etapa 4 subconjuntos são utlizados para treinamento e um subconjunto diferente é utilizado para teste. 
+
+A metodologia k-fold cross validation foi implementada na linguagem de programação Java. Os dados são arrumados manualmente em k arquiivos. A implementação seleciona os dados de teste e de validação, e retorna o resultado parcial a cada rodada e o resultado final após os k ciclos de validação e teste. A cada ciclo de treinamento e teste a porcetagem de acerto de classificação é calculada da seguinte forma:
+
+$$A = \frac{acertos}{total}\times 100$$
+
+Onde total é a quantidade de vetores para classificação submetidos a cada ciclo de teste. E acertos é a quantidade de vetores que foram classificados corretamente.
+
+
+

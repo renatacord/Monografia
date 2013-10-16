@@ -19,17 +19,17 @@
 \contentsline {subsection}{\numberline {1.9.6}Aplica\IeC {\c c}\IeC {\~o}es na Engenharia de Produ\IeC {\c c}\IeC {\~a}o}{17}{subsection.1.9.6}
 \contentsline {section}{\numberline {1.10}M\IeC {\'e}todos de Classifica\IeC {\c c}\IeC {\~a}o}{19}{section.1.10}
 \contentsline {subsection}{\numberline {1.10.1}Support Vector Machines}{19}{subsection.1.10.1}
-\contentsline {subsection}{\numberline {1.10.2}\IeC {\'A}rvore de decis\IeC {\~a}o}{20}{subsection.1.10.2}
-\contentsline {subsection}{\numberline {1.10.3}Bayes}{20}{subsection.1.10.3}
-\contentsline {subsection}{\numberline {1.10.4}Multi- layer pecceptron}{20}{subsection.1.10.4}
-\contentsline {subsection}{\numberline {1.10.5}k- nearest neighbor}{20}{subsection.1.10.5}
+\contentsline {subsection}{\numberline {1.10.2}Naive Bayes}{20}{subsection.1.10.2}
+\contentsline {subsection}{\numberline {1.10.3}k- nearest neighbor}{20}{subsection.1.10.3}
 \contentsline {section}{\numberline {1.11}M\IeC {\'e}todos de valida\IeC {\c c}\IeC {\~a}o do modelo}{20}{section.1.11}
-\contentsline {subsection}{\numberline {1.11.1}Handout}{20}{subsection.1.11.1}
-\contentsline {subsection}{\numberline {1.11.2}Cross Validation}{20}{subsection.1.11.2}
+\contentsline {subsection}{\numberline {1.11.1}Handout}{21}{subsection.1.11.1}
+\contentsline {subsection}{\numberline {1.11.2}Cross Validation}{21}{subsection.1.11.2}
 \contentsline {subsection}{\numberline {1.11.3}Leave-one-out}{21}{subsection.1.11.3}
-\contentsline {section}{\numberline {1.12}Trabalhos Relacionados}{21}{section.1.12}
-\contentsline {chapter}{\numberline {2}Aplica\IeC {\c c}\IeC {\~a}o da programa\IeC {\c c}\IeC {\~a}o linear na separa\IeC {\c c}\IeC {\~a}o de pontos}{22}{chapter.2}
-\contentsline {section}{\numberline {2.1}O modelo}{22}{section.2.1}
-\contentsline {section}{\numberline {2.2}Exemplo Ilustrativo do Modelo Classificador}{25}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Etapa de valida\IeC {\c c}\IeC {\~a}o}{27}{subsection.2.2.1}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{28}{subsection.2.2.1}
+\contentsline {section}{\numberline {1.12}Trabalhos Relacionados}{22}{section.1.12}
+\contentsline {chapter}{\numberline {2}Aplica\IeC {\c c}\IeC {\~a}o da programa\IeC {\c c}\IeC {\~a}o linear na separa\IeC {\c c}\IeC {\~a}o de pontos}{23}{chapter.2}
+\contentsline {section}{\numberline {2.1}O modelo}{23}{section.2.1}
+\contentsline {section}{\numberline {2.2}Exemplo Ilustrativo do Modelo Classificador}{26}{section.2.2}
+\contentsline {section}{\numberline {2.3}Implementa\IeC {\c c}\IeC {\~a}o}{27}{section.2.3}
+\contentsline {section}{\numberline {2.4}Etapa de classifica\IeC {\c c}\IeC {\~a}o}{28}{section.2.4}
+\contentsline {section}{\numberline {2.5}Etapa de valida\IeC {\c c}\IeC {\~a}o}{28}{section.2.5}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{30}{figure.2.8}

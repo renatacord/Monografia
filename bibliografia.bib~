@@ -339,3 +339,25 @@ An Extended Abstract}},
 	school = {Universidade Federal do Ceará},
 	title = {Máquinas de Vetores Suporte na Classificaçã de Impressões Digitais}
 }
+
+@MISC{Lorena03SVM,
+    author = {Ana Carolina Lorena, André C. P. L. F. de Carvalho},
+    title = {Introdução às Máquinas de Vetores Suporte},
+    year = {2003}
+}
+
+@MastersThesis{Chagas09KNN,
+	author = {Fernando Chagas Santos},
+	year = {2009},
+	school = {Universidade Federal de Goiás},
+	title = {Variações do método kNN e suas aplicações na classificação automática de textos}
+}
+
+@INPROCEEDINGS{McCallum98Bayes,
+    author = {Andrew McCallum and Kamal Nigam},
+    title = {A comparison of event models for Naive Bayes text classification},
+    booktitle = {IN AAAI-98 WORKSHOP ON LEARNING FOR TEXT CATEGORIZATION},
+    year = {1998},
+    pages = {41--48},
+    publisher = {AAAI Press}
+}

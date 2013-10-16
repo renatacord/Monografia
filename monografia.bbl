@@ -105,6 +105,12 @@ Dispon{\'\i}vel em:
   \htmladdnormallink{$<$http:\-/\-/www\-.cs\-.umn\-.edu\-/\~{}kumar\-/papers\-%
 /simplex\-.ps$>$}{http://www.cs.umn.edu/~kumar/papers/simplex.ps}.}
 
+\bibitem[Langley, Iba e Thompson 1992]{Langley92Bayes}
+\abntrefinfo{Langley, Iba e Thompson}{LANGLEY; IBA; THOMPSON}{1992}
+{LANGLEY, P.; IBA, W.; THOMPSON, K. An analysis of bayesian classifiers. In:
+  \emph{IN PROCEEDINGS OF THE TENTH NATIONAL CONFERENCE ON ARTI CIAL
+  INTELLIGENCE}. [S.l.]: MIT Press, 1992. p. 223--228.}
+
 \bibitem[Leite 2007]{Leite-wavelet}
 \abntrefinfo{Leite}{LEITE}{2007}
 {LEITE, F. E.~A.
@@ -141,6 +147,12 @@ Disserta\c{c}\~ao (Mestrado) --- Universidade Federal do Paraná, 2004.}
 \abntrefinfo{Maculan e Fampa}{MACULAN; FAMPA}{2006}
 {MACULAN, N.; FAMPA, M. H.~C. \emph{Otimização Linear}. [S.l.]: Editora
   Universidade de Brasília, 2006.}
+
+\bibitem[McCallum e Nigam 1998]{McCallum98Bayes}
+\abntrefinfo{McCallum e Nigam}{MCCALLUM; NIGAM}{1998}
+{MCCALLUM, A.; NIGAM, K. A comparison of event models for naive bayes text
+  classification. In:  \emph{IN AAAI-98 WORKSHOP ON LEARNING FOR TEXT
+  CATEGORIZATION}. [S.l.]: AAAI Press, 1998. p. 41--48.}
 
 \bibitem[Menezes 2008]{Pinto}
 \abntrefinfo{Menezes}{MENEZES}{2008}
@@ -183,6 +195,13 @@ Disserta\c{c}\~ao (Mestrado) --- Instituto de Matemática, Estatística e
 \emph{{Resolução numérica de EDPs utilizando ondaletas harmônicas}}.
 Disserta\c{c}\~ao (Mestrado) --- Instituto de Matemática e Estátistica da
   Universidade de São Paulo, Junho 2009.}
+
+\bibitem[Santos 2009]{Chagas09KNN}
+\abntrefinfo{Santos}{SANTOS}{2009}
+{SANTOS, F.~C.
+\emph{Variações do método kNN e suas aplicações na classificação
+  automática de textos}.
+Disserta\c{c}\~ao (Mestrado) --- Universidade Federal de Goiás, 2009.}
 
 \bibitem[Saunders 2001]{Chen}
 \abntrefinfo{Saunders}{SAUNDERS}{2001}

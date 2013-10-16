@@ -18,10 +18,8 @@
 \BOOKMARK [2][-]{subsection.1.9.6}{Aplica\347\365es na Engenharia de Produ\347\343o}{section.1.9}
 \BOOKMARK [1][-]{section.1.10}{M\351todos de Classifica\347\343o}{chapter.1}
 \BOOKMARK [2][-]{subsection.1.10.1}{Support Vector Machines}{section.1.10}
-\BOOKMARK [2][-]{subsection.1.10.2}{\301rvore de decis\343o}{section.1.10}
-\BOOKMARK [2][-]{subsection.1.10.3}{Bayes}{section.1.10}
-\BOOKMARK [2][-]{subsection.1.10.4}{Multi- layer pecceptron}{section.1.10}
-\BOOKMARK [2][-]{subsection.1.10.5}{k- nearest neighbor}{section.1.10}
+\BOOKMARK [2][-]{subsection.1.10.2}{Naive Bayes}{section.1.10}
+\BOOKMARK [2][-]{subsection.1.10.3}{k- nearest neighbor}{section.1.10}
 \BOOKMARK [1][-]{section.1.11}{M\351todos de valida\347\343o do modelo}{chapter.1}
 \BOOKMARK [2][-]{subsection.1.11.1}{Handout}{section.1.11}
 \BOOKMARK [2][-]{subsection.1.11.2}{Cross Validation}{section.1.11}
@@ -30,5 +28,7 @@
 \BOOKMARK [0][-]{chapter.2}{Aplica\347\343o da programa\347\343o linear na separa\347\343o de pontos}{}
 \BOOKMARK [1][-]{section.2.1}{O modelo}{chapter.2}
 \BOOKMARK [1][-]{section.2.2}{Exemplo Ilustrativo do Modelo Classificador}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.2.1}{Etapa de valida\347\343o}{section.2.2}
-\BOOKMARK [0][-]{subsection.2.2.1}{Refer\352ncias Bibliogr\341ficas}{}
+\BOOKMARK [1][-]{section.2.3}{Implementa\347\343o}{chapter.2}
+\BOOKMARK [1][-]{section.2.4}{Etapa de classifica\347\343o}{chapter.2}
+\BOOKMARK [1][-]{section.2.5}{Etapa de valida\347\343o}{chapter.2}
+\BOOKMARK [0][-]{figure.2.8}{Refer\352ncias Bibliogr\341ficas}{}
