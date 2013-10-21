@@ -1,35 +1,42 @@
 \select@language {brazil}
 \contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}Objetivos e justificativas}{4}{section.1.1}
-\contentsline {section}{\numberline {1.2}Metodologia}{4}{section.1.2}
+\contentsline {section}{\numberline {1.2}Metodologia}{5}{section.1.2}
 \contentsline {section}{\numberline {1.3}Estrutura do trabalho}{5}{section.1.3}
 \contentsline {section}{\numberline {1.4}A Programa\IeC {\c c}\IeC {\~a}o Linear e as suas Aplica\IeC {\c c}\IeC {\~o}es}{6}{section.1.4}
 \contentsline {section}{\numberline {1.5}Descri\IeC {\c c}\IeC {\~a}o do Problema de Programa\IeC {\c c}\IeC {\~a}o Linear}{6}{section.1.5}
-\contentsline {section}{\numberline {1.6}M\IeC {\'e}todos de Solu\IeC {\c c}\IeC {\~a}o}{8}{section.1.6}
-\contentsline {subsection}{\numberline {1.6.1}M\IeC {\'e}todo Simplex}{9}{subsection.1.6.1}
-\contentsline {section}{\numberline {1.7}Princ\IeC {\'\i }pio B\IeC {\'a}sico do M\IeC {\'e}todo}{9}{section.1.7}
-\contentsline {section}{\numberline {1.8}Descri\IeC {\c c}\IeC {\~a}o do M\IeC {\'e}todo Simplex Revisado}{10}{section.1.8}
-\contentsline {subsection}{\numberline {1.8.1}M\IeC {\'e}todo de Pontos Interiores}{12}{subsection.1.8.1}
-\contentsline {section}{\numberline {1.9}Aplica\IeC {\c c}\IeC {\~o}es Pr\IeC {\'a}ticas}{12}{section.1.9}
-\contentsline {subsection}{\numberline {1.9.1}Aplica\IeC {\c c}\IeC {\~o}es em Processamento de Imagens}{13}{subsection.1.9.1}
-\contentsline {subsection}{\numberline {1.9.2}Aplica\IeC {\c c}\IeC {\~o}es em Programa\IeC {\c c}\IeC {\~a}o Distribu\IeC {\'\i }da}{14}{subsection.1.9.2}
-\contentsline {subsection}{\numberline {1.9.3}Aplica\IeC {\c c}\IeC {\~o}es em Banco de Dados}{15}{subsection.1.9.3}
-\contentsline {subsection}{\numberline {1.9.4}Aplica\IeC {\c c}\IeC {\~a}o em Sa\IeC {\'u}de}{16}{subsection.1.9.4}
-\contentsline {subsection}{\numberline {1.9.5}Aplica\IeC {\c c}\IeC {\~a}o no reconhecimento de express\IeC {\~o}es faciais}{16}{subsection.1.9.5}
-\contentsline {subsection}{\numberline {1.9.6}Aplica\IeC {\c c}\IeC {\~o}es na Engenharia de Produ\IeC {\c c}\IeC {\~a}o}{17}{subsection.1.9.6}
-\contentsline {section}{\numberline {1.10}M\IeC {\'e}todos de Classifica\IeC {\c c}\IeC {\~a}o}{19}{section.1.10}
-\contentsline {subsection}{\numberline {1.10.1}Support Vector Machines}{19}{subsection.1.10.1}
-\contentsline {subsection}{\numberline {1.10.2}Naive Bayes}{20}{subsection.1.10.2}
-\contentsline {subsection}{\numberline {1.10.3}k- nearest neighbor}{20}{subsection.1.10.3}
-\contentsline {section}{\numberline {1.11}M\IeC {\'e}todos de valida\IeC {\c c}\IeC {\~a}o do modelo}{20}{section.1.11}
-\contentsline {subsection}{\numberline {1.11.1}Handout}{21}{subsection.1.11.1}
-\contentsline {subsection}{\numberline {1.11.2}Cross Validation}{21}{subsection.1.11.2}
-\contentsline {subsection}{\numberline {1.11.3}Leave-one-out}{21}{subsection.1.11.3}
-\contentsline {section}{\numberline {1.12}Trabalhos Relacionados}{22}{section.1.12}
-\contentsline {chapter}{\numberline {2}Aplica\IeC {\c c}\IeC {\~a}o da programa\IeC {\c c}\IeC {\~a}o linear na separa\IeC {\c c}\IeC {\~a}o de pontos}{23}{chapter.2}
-\contentsline {section}{\numberline {2.1}O modelo}{23}{section.2.1}
-\contentsline {section}{\numberline {2.2}Exemplo Ilustrativo do Modelo Classificador}{26}{section.2.2}
-\contentsline {section}{\numberline {2.3}Implementa\IeC {\c c}\IeC {\~a}o}{27}{section.2.3}
-\contentsline {section}{\numberline {2.4}Etapa de classifica\IeC {\c c}\IeC {\~a}o}{28}{section.2.4}
-\contentsline {section}{\numberline {2.5}Etapa de valida\IeC {\c c}\IeC {\~a}o}{28}{section.2.5}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{30}{figure.2.8}
+\contentsline {section}{\numberline {1.6}Aplica\IeC {\c c}\IeC {\~o}es Pr\IeC {\'a}ticas}{8}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}Aplica\IeC {\c c}\IeC {\~o}es em Processamento de Imagens}{9}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.2}Aplica\IeC {\c c}\IeC {\~o}es em Programa\IeC {\c c}\IeC {\~a}o Distribu\IeC {\'\i }da}{10}{subsection.1.6.2}
+\contentsline {subsection}{\numberline {1.6.3}Aplica\IeC {\c c}\IeC {\~o}es em Banco de Dados}{11}{subsection.1.6.3}
+\contentsline {subsection}{\numberline {1.6.4}Aplica\IeC {\c c}\IeC {\~a}o em Sa\IeC {\'u}de}{12}{subsection.1.6.4}
+\contentsline {subsection}{\numberline {1.6.5}Aplica\IeC {\c c}\IeC {\~a}o no reconhecimento de express\IeC {\~o}es faciais}{12}{subsection.1.6.5}
+\contentsline {subsection}{\numberline {1.6.6}Aplica\IeC {\c c}\IeC {\~o}es na Engenharia de Produ\IeC {\c c}\IeC {\~a}o}{13}{subsection.1.6.6}
+\contentsline {section}{\numberline {1.7}M\IeC {\'e}todos de Classifica\IeC {\c c}\IeC {\~a}o}{14}{section.1.7}
+\contentsline {subsection}{\numberline {1.7.1}Support Vector Machines}{14}{subsection.1.7.1}
+\contentsline {subsection}{\numberline {1.7.2}Naive Bayes}{15}{subsection.1.7.2}
+\contentsline {subsection}{\numberline {1.7.3}k- nearest neighbor}{16}{subsection.1.7.3}
+\contentsline {section}{\numberline {1.8}M\IeC {\'e}todos de valida\IeC {\c c}\IeC {\~a}o do modelo}{16}{section.1.8}
+\contentsline {subsection}{\numberline {1.8.1}Handout}{16}{subsection.1.8.1}
+\contentsline {subsection}{\numberline {1.8.2}Cross Validation}{17}{subsection.1.8.2}
+\contentsline {subsection}{\numberline {1.8.3}Leave-one-out}{17}{subsection.1.8.3}
+\contentsline {section}{\numberline {1.9}Trabalhos Relacionados}{17}{section.1.9}
+\contentsline {chapter}{\numberline {2}Marco Te\IeC {\'o}rico}{19}{chapter.2}
+\contentsline {section}{\numberline {2.1}M\IeC {\'e}todos de Solu\IeC {\c c}\IeC {\~a}o}{19}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}M\IeC {\'e}todo Simplex}{19}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Princ\IeC {\'\i }pio B\IeC {\'a}sico do M\IeC {\'e}todo}{20}{section.2.2}
+\contentsline {section}{\numberline {2.3}Descri\IeC {\c c}\IeC {\~a}o do M\IeC {\'e}todo Simplex Revisado}{21}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}M\IeC {\'e}todo de Pontos Interiores}{23}{subsection.2.3.1}
+\contentsline {chapter}{\numberline {3}Aplica\IeC {\c c}\IeC {\~a}o da programa\IeC {\c c}\IeC {\~a}o linear na separa\IeC {\c c}\IeC {\~a}o de pontos}{24}{chapter.3}
+\contentsline {section}{\numberline {3.1}O modelo}{25}{section.3.1}
+\contentsline {section}{\numberline {3.2}Exemplo Ilustrativo do Modelo Classificador}{27}{section.3.2}
+\contentsline {section}{\numberline {3.3}Etapa de classifica\IeC {\c c}\IeC {\~a}o}{29}{section.3.3}
+\contentsline {chapter}{\numberline {4}Experimentos Computacionais}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}Conjuntos de Dados}{32}{section.4.1}
+\contentsline {section}{\numberline {4.2}Processo de treinamento}{35}{section.4.2}
+\contentsline {section}{\numberline {4.3}Processo de teste}{36}{section.4.3}
+\contentsline {section}{\numberline {4.4}Etapa de valida\IeC {\c c}\IeC {\~a}o}{36}{section.4.4}
+\contentsline {section}{\numberline {4.5}Resultados}{38}{section.4.5}
+\contentsline {section}{\numberline {4.6}An\IeC {\'a}lise dos Resultados}{38}{section.4.6}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{39}{chapter.5}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{40}{chapter.5}

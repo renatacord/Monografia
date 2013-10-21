@@ -2,7 +2,10 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: monografia.aux
 A level-1 auxiliary file: introducao.aux
 A level-1 auxiliary file: referencial_teorico.aux
+A level-1 auxiliary file: marco_teorico.aux
 A level-1 auxiliary file: metodologia.aux
+A level-1 auxiliary file: experimentos.aux
+A level-1 auxiliary file: conclusao.aux
 The style file: abnt-alf.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: abnt-options.bib
@@ -14,44 +17,44 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 | Em caso de duvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
-You've used 43 entries,
+You've used 48 entries,
             6522 wiz_defined-function locations,
-            1419 strings with 15604 characters,
-and the built_in function-call counts, 33864 in all, are:
-= -- 3076
-> -- 721
-< -- 292
-+ -- 531
-- -- 231
-* -- 2071
-:= -- 4419
-add.period$ -- 138
-call.type$ -- 44
-change.case$ -- 295
-chr.to.int$ -- 83
-cite$ -- 40
-duplicate$ -- 2493
-empty$ -- 2490
-format.name$ -- 1070
-if$ -- 7719
+            1454 strings with 16561 characters,
+and the built_in function-call counts, 47128 in all, are:
+= -- 5026
+> -- 850
+< -- 720
++ -- 1001
+- -- 271
+* -- 2740
+:= -- 5766
+add.period$ -- 156
+call.type$ -- 49
+change.case$ -- 338
+chr.to.int$ -- 91
+cite$ -- 45
+duplicate$ -- 4332
+empty$ -- 2784
+format.name$ -- 1256
+if$ -- 10262
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 729
-newline$ -- 204
-num.names$ -- 201
-pop$ -- 841
+missing$ -- 813
+newline$ -- 229
+num.names$ -- 226
+pop$ -- 986
 preamble$ -- 1
-purify$ -- 135
+purify$ -- 153
 quote$ -- 0
-skip$ -- 2655
+skip$ -- 4512
 stack$ -- 1
-substring$ -- 1441
-swap$ -- 956
-text.length$ -- 42
+substring$ -- 1967
+swap$ -- 1443
+text.length$ -- 53
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 42
 warning$ -- 0
-while$ -- 281
+while$ -- 321
 width$ -- 0
-write$ -- 620
+write$ -- 692

@@ -11,6 +11,22 @@
   Degenerate Linear Programs and Multi-Agent Assignments}.
 \emph{Automatica}, Maio 2011.}
 
+\bibitem[Alpaydin 2013]{Digitos}
+\abntrefinfo{Alpaydin}{ALPAYDIN}{2013}
+{ALPAYDIN, F.~A. E. \emph{Pen-Based Recognition of Handwritten Digits Data
+  Set}. 2013.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/archive\-.ics\-.uci\-.edu\-/ml\-/datasets\-%
+/Pen-Based+Recognition+of+Handwritten+Digits$>$}{http://archive.ics.uci.edu/ml%
+/datasets/Pen-Based+Recognition+of+Handwritten+Digits}.}
+
+\bibitem[Bache e Lichman 2013]{Repositorio2013}
+\abntrefinfo{Bache e Lichman}{BACHE; LICHMAN}{2013}
+{BACHE, K.; LICHMAN, M. \emph{UCI Machine Learning Repository}. 2013.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/archive\-.ics\-.uci\-.edu\-/ml$>$}{http://a%
+rchive.ics.uci.edu/ml}.}
+
 \bibitem[Baldisserotto 2005]{Baldisserotto05Validacao}
 \abntrefinfo{Baldisserotto}{BALDISSEROTTO}{2005}
 {BALDISSEROTTO, C.
@@ -38,12 +54,26 @@ Disserta\c{c}\~ao (Mestrado) --- Universidade de Pernambuco, 2005.}
 {DANZITG, G. \emph{{Linear Programming and Extensions}}. [S.l.]: Princeton
   University Press, 1963.}
 
+\bibitem[Dias Sarajane Marques~Peres]{Libras}
+\abntrefinfo{Dias Sarajane Marques~Peres}{DIAS SARAJANE MARQUES~PERES}{}
+{DIAS SARAJANE MARQUES~PERES, H. H.~B. D.~B. \emph{Libras Movement Data Set}.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/archive\-.ics\-.uci\-.edu\-/ml\-/datasets\-%
+/Libras+Movement$>$}{http://archive.ics.uci.edu/ml/datasets/Libras+Movement}.}
+
 \bibitem[Dyer 2005]{Guo}
 \abntrefinfo{Dyer}{DYER}{2005}
 {DYER, G. G. C.~R. {Simultaneous Feature Selection and Classifier Training via
   Linear Programming: A Case Study for Face Expression Recognition}.
 \emph{IEEE Transactions on systems, man, and cybernetics}, v.~35, n.~3, p.
   477--488, Junho 2005.}
+
+\bibitem[Fisher 1936]{Iris}
+\abntrefinfo{Fisher}{FISHER}{1936}
+{FISHER, R. \emph{Iris Data Set}. 1936.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/archive\-.ics\-.uci\-.edu\-/ml\-/datasets\-%
+/Iris$>$}{http://archive.ics.uci.edu/ml/datasets/Iris}.}
 
 \bibitem[Frossard 2009]{FrossardMaxMin}
 \abntrefinfo{Frossard}{FROSSARD}{2009}
@@ -207,6 +237,12 @@ Disserta\c{c}\~ao (Mestrado) --- Universidade Federal de Goiás, 2009.}
 \abntrefinfo{Saunders}{SAUNDERS}{2001}
 {SAUNDERS, S. S. C. D. L. D. M.~A. {Atomic Decomposition by Basis Pursuit}.
 \emph{SIAM Review}, v.~43, n.~1, p. 129--159, 2001.}
+
+\bibitem[Shan, Gong e McOwan 2009]{LBPShan2009}
+\abntrefinfo{Shan, Gong e McOwan}{SHAN; GONG; MCOWAN}{2009}
+{SHAN, C.; GONG, S.; MCOWAN, P.~W. Facial expression recognition based on local
+  binary patterns: A comprehensive study.
+\emph{Image Vision Comput.}, v.~27, n.~6, p. 803--816, 2009.}
 
 \bibitem[Slyke 2009]{Slyke}
 \abntrefinfo{Slyke}{SLYKE}{2009}

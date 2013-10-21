@@ -1,0 +1,127 @@
+\chapter{Experimentos Computacionais}
+
+Para a realização do experiemntos computacionais foi necessário, primeiramente, obter os dados para teste e organizá-los para posteriormente submeter ao modelo para geração dos classificadores e aos testes de classificação.
+
+Todo o processo, desde a organização dos dados até a etapa de classificação, foi implementado utilizando a linguagem de programação Java. A implementação foi feita em módulos, organizados da seguinte forma: Módulo organizador dos dados, Módulo de geração de classificadores, Módulo e classificação, Módulo Unificador.
+
+\begin{center}
+	\includegraphics[scale=0.5]{graficos/diagrama_modulos}
+	\captionof{figure}{Diagrama simples das etapas reaalizadas nos experimentos}
+	\label{img:diagrama_modulos}
+\end{center}
+
+Na \ref{img:diagrama_modulos} estão representadas as principais etapas realizadas durante os experimentos computacionais. Primeiramente os dados foram obtidos já no formato de vetores de caracteríticas ou extraídos através de imagens, e depois foram organizados no formato padrão definido para este trabalho. Em seguida foram submetidos ao modelos de Programação Linear, reponsável por gerar os classificadores e por último vetores com padrão desconhecido foram classificados. As duas últimas etapas são repetidas a cada ciclo de teste. Nas seções seguintes essas etapas serão apresentadas de forma mais detalhada.
+
+\section{Conjuntos de Dados}
+Foram relaizados testes com quatro conjuntos de dados: dígitos de 0 a 9 escritos manualmente, gestos da Língua Brasileira de Sinais, espécies da planta Iris e expressões facias . Desses conjuntos, os três primeiros foram obtidos do repositório de dados \citeonline{Repositorio2013} e já estavam representados na forma de vetores de características. O último conjunto foi gerado a partir do conjunto de imagens \citeonline{Jaffe}. A seguir são apresentadas as caraterísticas de cada um dos quatro conjuntos de dados:
+
+\begin{itemize}
+\item{Dígitos de 0 a 9 escritos manualmente \cite{Digitos}}
+Na formação dessa base de dados 250 digítos entre 0 e 9 foram escritos de forma aleatória por 44 pessoas, totalizando 11000 dígitos, porém estão disponíveis 10992 dígitos. Durante a coleta dos dados foram recolhidas, em intervalos fixos de 100 milisegundos, as coordenadas e a pressão da caneta sobre a superfície enquanto o dígito era escrito. Na base de dados utilizada foram considerados apenas os valores das coordenadas. Os dados foram reorganizados utilizando interpolação linear, foram utilizados 8 pontos, e obtidos vetores com 16 características.
+Cada vetor é composto por 16 atributos que variam entre 0 e 100 e mais um valor variando entre 0 e 9 que representa o classe representada pelo vetor correspondente.
+Os dados estão distribuídos como na tabela a seguir:
+\begin{center}
+	\begin{tabular}{cc}
+        \hline
+        Classe & Quantidade de instâncias \\
+        \hline
+		0 & 1143 \\
+		1 & 1143 \\
+		2 & 1144 \\
+		3 & 1055 \\
+		4 & 1144 \\
+		5 & 1055 \\
+		6 & 1056 \\
+		7 & 1142 \\
+		8 & 1055 \\
+		9 & 1055 \\
+        \hline
+	\end{tabular}
+	\label{tab:tabela}
+\end{center}
+
+\item{Gestos da Língua Brasileira de Sinais (LIBRAS) \cite{Libras}}
+Essa base de dados é composta por 15 classes, ou seja, nela estão presentes 15 sinais da LIBRAS, sendo 24 instâncias de cada classe, totalizando 360 vetores de características. Os dados foram extraídos de vídeos com tempo médio de 7 segundos, em cada vídeo um movimento é executado e depois é representado como uma curva bidimensional. No pre processamento foram selecionados 45 frames de cada vídeo, em cada frame a coordenada do ponto central da mão é encontrado, compondo uma curva com 45 pontos. As coordenadas dos 45 pontos formam o vetor de características com 90 valores, os 45 primeiros valores representam o valor de x e o restante o valor de y.
+O vetor de características tem no total 91 valores, sendo que 90 deles caracterizam o movimento e o último valor representa o padrão representado pelo vetor.
+
+\item{Espécies da planta Iris \cite{Iris}}
+Nessa base dados são representados três tipos da planta Iris, é composta por 50 instâncias de cada tipo, totalizando 150 vetores. Cada vetor é composto por 4 características: comprimento da sépala, largura da sépala, comprimento da pétala, largura da pétala; e mais o nome da classe que o vetor representa.
+
+\item{Expressões facias}
+No caso das expressões faciais, as imagens foram obtidas da base de dados \citeonline{Jaffe} e o pre processamento e a extração e caracteríticas foram implementaos na linguagem de programação Python.
+Inicialmente ao proposta do presente trabalho era focar apenas na classificação de expressões faciais utilizando a programação linear. Durante a pesquisa não foi encontrada nenhuma base de dados que disponibilizasse os vetores de características da imagens, portanto foi necessária a implementação para a obtenção dos dados. Posteriormente foi verificado que seria necessário um aprofundamento do estudo na área da visão computacional, para que os vetores de caracteríticas não comprometessem o método classificador. Portanto esses dados foram obtidos através de uma implementação superficial de extração de caracteríticas.
+Após a obtenção do banco de imagens JAFFE. As imagens foram recortadas a fim de isolar a região da face, utilizando linguagem de programação python, como mostrado na figura
+
+\begin{center}
+	\includegraphics[scale=0.5]{graficos/jaffe}
+	\captionof{figure}{Pre processamento das imagens do banco JAFFE}
+	\label{img:jaffe}
+\end{center}
+
+O banco de imagens JAFFE é composto por 213 imagens, sendo divididas em 7 expressões: tristeza, alegria, desgosto, surpresa, raiva, medo e neutro.
+Na extração dos vetores de características foi utilizado o método Local Binary Patterns (LBP) que é um classificador de texturas. A cada pixel da imagem é atribuído um código, que é gerado a partir dos pixels ao redor. Tomando como referência o pixel central, a cada pixel vizinho é atribuído o valor 0 ou 1: se o valor do pixel vizinho for menor que o valor do pixel central, o valor 0 é atribuído, se for menor, o valor atribuído é 1. A partir daí, é gerado um código binário que é transformado em um valor decimal, esse valor decimal é o código LBP do pixel central \cite{LBPShan2009}. A figura abaixo demonstra como é calculado o código LBP.
+
+\begin{center}
+	\includegraphics[scale=0.5]{graficos/LBP}
+	\captionof{figure}{Cálculo do código LBP}
+	\label{img:LBP}
+\end{center}
+
+Na implementação, primeiramente, a imagem é dividida em blocos, é gerado o histograma dos códigos LBP de cada bloco, por fim, os histogramas são concatenados. Esse resultado final é o descritor de texturas da imagem. A figura \ref{img:LBPHistograma} representa esse processo.
+
+\begin{center}
+	\includegraphics[scale=0.5]{graficos/histograma}
+	\captionof{figure}{Representação da imagem dividida em blocos e da concatenação dos histogramas de cada bloco.}
+	\label{img:LBPHistograma}
+\end{center}
+
+Para reduzir o tamanho do vetor de caracteríticas os códigos LBP de cada pixel são somados e divididos pelo número de imagens, qundo o resultado é menor do que um valor limiar os códigos desse pixel é excluído em todos os vetores de determinada expressão \cite{Feng}. O limiar adotado nese caso foi 5 \cite{LBPShan2009}. 
+\end{itemize}
+
+Nos vetores de características de todas as bases de dados utlizadas, é acrescido um valor informando a classe representada pelo vetor, para as etapas de treinamento e teste esse valor é omitido, ele só é utlizado na etapa de validação para verificar se o vetor foi corretamente classificado.
+
+\section{Processo de treinamento}
+Na etapa de treinamento, os padrões são agrupados em pares e dessa forma são submetidos ao modelo de programação linear, já que o modelo gera um hiperplano que separa dois conjutnos de pontos. Dessa forma para um base de dados com N padrões, a quantidade de pares formados é dada pela fórmula:
+$$ \frac{N!}{2\times (N-2)!)} $$
+
+A etapa de treinamento consiste em gerar um hiperplano para cada par formado. No caso da base de dados Iris, por exemplo, que é constituido por 3 classes, são gerados 3 hiperplanos classificadores, da seguinte forma: 
+\begin{itemize}
+\item{Classificador dos padrões 1 e 2}
+\item{Classificador dos padrões 1 e 3}
+\item{Classificador dos padrões 2 e 3}
+\end{itemize}
+
+Na figura \ref{img:diagrama_modulos} o processo de treinamento corresponde ao módulo de geração de classificadores. Esse módulo foi implementado na linguagem de programação JAVA, utilizada como interface com o software CPLEX da IBM. Os dados necessários para a execução do modelo são lidos de arquivos previamente criados, cada arquivo contêm os dados de uma classe. Os resultados gerados pelo modelo são escritos em um único arquivo, antes dos parâmetros de cada hiperplano, são escritos os padrões dividos pelo hiperplano, como etiquetas identificadoras do hieprplano.
+O modelo é resolvido utilizando o método simplex revisado e toda etapa de resolução é feita pelo software CPLEX
+
+\section{Processo de teste}
+No processo de teste vetores de caracetrísticas são submetidos a estrtura de áravore de torneio e classificados em um dos N padrões do conjunto de dados.
+Na figura \ref{img:diagrama_modulos} corresponde ao módulo de classificação de vetores com padrão desconhecido. E um arquivo contendo vários vetores para teste é utilizado.  A cada teste uma árvore de torneio é construída e um vetor para teste é lido e sua classificação é retornada. Na estrutura de árvore de torneio os padrões são confrotados aos pares, e o hiperplano que separa os dois padrões do par é utlizado para verificar de qual lado do hiperplano o vetor teste se localiza, o padrão que estiver do mesmo lado do vetor teste é elevado ao nível superior da árvore. Para verificar de qual lado o vetor teste de localiza é realizado o seguinte cálculo:
+
+Considerando os padrões A e B, 
+
+Se $ omega \times vetor\_teste < gamma$, o padrão A é elvado ao próximo nível da árvore;
+
+Se $ omega \times vetor\_teste > gamma$, o padrão B é elvado ao próximo nível da árvore; 
+
+\section{Etapa de validação}
+Para testar a metodologia utlizada neste trabalho para classificação de padrões, foi utilizado o método cross validation. Através dos resultados desse método é possível analisar a acurácia da metodologia de classificação, ou seja, a capacidade de classificar uma instância com o seu padrão correto.
+Entre os três métodos de validação apresentados no referêncial teórico: Handout, Cross Validation e Leave One Out. O método cross validation foi escolhido como melhor opção já que os teste são feitos com várias bases de dados com tamanhos variados. Para bases de dados muito grandes o método Leave One Out de tornaria computacionalmete custoso e o método Handout poderia ter seu resultado comprometido de acordo com os parâmetros escolhidos na separação de dados para teste e de dados para validação. Além disso, o método Cross Validation é de fácil implementação e permite a utlização de toso os dados como teste e validação.
+Na figura abaixo o método é ilustrado para o parâmetro 5 fold, apesar desse parâmetro não ter sido utlizado em nenhum teste, foi utlizado para um facilitar a ilustração.
+\begin{center}
+	\includegraphics[scale=1.0]{graficos/cross_validation}
+	\captionof{figure}{Mecanismo do método de validação 5-fold cross validation}
+	\label{img:cross_validation}
+\end{center}
+
+Na ilustração o conjunto de dados foi dividido em 5 subconjuntos e consequentemente foram realizados 5 ciclos de treinamento e testes. A cada etapa 4 subconjuntos são utlizados para treinamento e um subconjunto diferente é utilizado para teste. 
+
+A metodologia k-fold cross validation foi implementada na linguagem de programação Java. Os dados são arrumados manualmente em k arquiivos. A implementação seleciona os dados de teste e de validação, e retorna o resultado parcial a cada rodada e o resultado final após os k ciclos de validação e teste. A cada ciclo de treinamento e teste a porcetagem de acerto de classificação é calculada da seguinte forma:
+
+$$A = \frac{acertos}{total}\times 100$$
+
+Onde total é a quantidade de vetores para classificação submetidos a cada ciclo de teste. E acertos é a quantidade de vetores que foram classificados corretamente.
+
+\section{Resultados}
+
+\section{Análise dos Resultados}

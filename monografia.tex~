@@ -87,10 +87,10 @@ orientação do Profº. Fermín Alfredo Tang Montané.}
 
 \include{introducao}
 \include{referencial_teorico}
-%\include{metodologia}
-%\include{reconhecimento_de_exp}
+\include{marco_teorico}
 \include{metodologia}
-\include{validacao}
+\include{experimentos}
+\include{conclusao}
 %--------------------------------- Bibliografia --------------------------------
 
 \citeoption{abnt-repeated-author-omit=yes}
