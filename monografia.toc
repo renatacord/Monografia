@@ -33,10 +33,11 @@
 \contentsline {section}{\numberline {3.3}Etapa de classifica\IeC {\c c}\IeC {\~a}o}{29}{section.3.3}
 \contentsline {chapter}{\numberline {4}Experimentos Computacionais}{31}{chapter.4}
 \contentsline {section}{\numberline {4.1}Conjuntos de Dados}{32}{section.4.1}
-\contentsline {section}{\numberline {4.2}Processo de treinamento}{35}{section.4.2}
+\contentsline {section}{\numberline {4.2}Processo de treinamento}{36}{section.4.2}
 \contentsline {section}{\numberline {4.3}Processo de teste}{36}{section.4.3}
-\contentsline {section}{\numberline {4.4}Etapa de valida\IeC {\c c}\IeC {\~a}o}{36}{section.4.4}
-\contentsline {section}{\numberline {4.5}Resultados}{38}{section.4.5}
-\contentsline {section}{\numberline {4.6}An\IeC {\'a}lise dos Resultados}{38}{section.4.6}
-\contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{39}{chapter.5}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{40}{chapter.5}
+\contentsline {section}{\numberline {4.4}Etapa de valida\IeC {\c c}\IeC {\~a}o}{37}{section.4.4}
+\contentsline {section}{\numberline {4.5}Organiza\IeC {\c c}\IeC {\~a}o dos dados}{38}{section.4.5}
+\contentsline {section}{\numberline {4.6}Resultados}{39}{section.4.6}
+\contentsline {section}{\numberline {4.7}An\IeC {\'a}lise dos Resultados}{39}{section.4.7}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{40}{chapter.5}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{41}{chapter.5}

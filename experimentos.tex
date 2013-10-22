@@ -37,7 +37,8 @@ Os dados estão distribuídos como na tabela a seguir:
 		9 & 1055 \\
         \hline
 	\end{tabular}
-	\label{tab:tabela}
+	\label{tab:tabela_digitos}
+        \captionof{table}{Quantidade de instâncias de cada dígito}
 \end{center}
 
 \item{Gestos da Língua Brasileira de Sinais (LIBRAS) \cite{Libras}}
@@ -58,7 +59,26 @@ Após a obtenção do banco de imagens JAFFE. As imagens foram recortadas a fim 
 	\label{img:jaffe}
 \end{center}
 
-O banco de imagens JAFFE é composto por 213 imagens, sendo divididas em 7 expressões: tristeza, alegria, desgosto, surpresa, raiva, medo e neutro.
+O banco de imagens JAFFE é composto por 213 imagens, sendo divididas em 7 expressões: tristeza, alegria, desgosto, surpresa, raiva, medo e neutro. Na tebela \ref{tab:tabela_expressoes} é apresentada a quantidade de imagens para cada expressão.
+
+\begin{center}
+	\begin{tabular}{cc}
+        \hline
+        Classe & Quantidade de imagens \\
+        \hline
+		Tristeza & 31 \\
+		Alegria & 31 \\
+		Desgosto & 29 \\
+		Surpresa & 30 \\
+		Raiva & 30 \\
+		Medo & 32 \\
+		Neutro & 30 \\
+        \hline
+	\end{tabular}
+	\label{tab:tabela_expressoes}
+\captionof{table}{Quantidade de imagens para cada expressão}
+\end{center}
+
 Na extração dos vetores de características foi utilizado o método Local Binary Patterns (LBP) que é um classificador de texturas. A cada pixel da imagem é atribuído um código, que é gerado a partir dos pixels ao redor. Tomando como referência o pixel central, a cada pixel vizinho é atribuído o valor 0 ou 1: se o valor do pixel vizinho for menor que o valor do pixel central, o valor 0 é atribuído, se for menor, o valor atribuído é 1. A partir daí, é gerado um código binário que é transformado em um valor decimal, esse valor decimal é o código LBP do pixel central \cite{LBPShan2009}. A figura abaixo demonstra como é calculado o código LBP.
 
 \begin{center}
@@ -122,6 +142,35 @@ $$A = \frac{acertos}{total}\times 100$$
 
 Onde total é a quantidade de vetores para classificação submetidos a cada ciclo de teste. E acertos é a quantidade de vetores que foram classificados corretamente.
 
+\section{Organização dos dados}
+Em todos os testes foi o utilizado o método k -fold cross validation com k = 10, em seus trabalhos \citeonline{Baldisserotto05Validacao}, \citeonline{Kohavi95Cross}, \citeonline{Guo} utlizaram esse mesmo parâmetro. Os dados foram dividos em 10 subgrupos com mesmo tamanho \cite{Guo} e com a mesma quantidade de vetores para cada classe, por isso não foram em utlizados todos os dados de todas as bases de dados.
+
+\begin{table}
+	\begin{tabular}{|l|l|l|l|p{3cm}|p{3cm}|p{2cm}|}
+        \hline
+        Base de dados & Vetores & Vetores utilizados\\ \hline
+		Dígitos    &10992  & 10500 \\ \hline
+		LIBRAS     & 360   & 300   \\ \hline
+		Íris       & 150   & 150   \\ \hline
+		Expressões & 213   & 210   \\ \hline
+	\end{tabular}
+	\label{tab:org_dados}
+        \captionof{table}{Organização dos dados}
+\end{table}
+
+Na tabela \ref{tab:org_dados} constam informações das quatro bases de dados utlizadas como teste nomeadas da seguinte forma: Dígitos, LIBRAS, Íris, Expressões. Na segunda coluna são apresentados quantos vetores compõem a base de dados no total sem distinguir o número de vetores por classe. E na última coluna são apresentados o número de vetores utlizados nos testes.
+
+Na base de dados Dígitos, as classes que possuiam menos vetores eram as dos dígitos 3, 5, 8 e 9 com 1055 vetores, e as que possuiam mais vetores eram as dos dígitos 2 e 4 com 1144 vetores como mostrado na tabela \ref{tab:tabela_digitos}. Nessa caso, foram utilizados 1050 vetores de cada classe, totalizando 10500 vetores.
+
+Na base de dados LIBRAS, cada classe possui 24 vetores, para a distribuição dos vetores entre os 10 subgrupos foram utlizados 20 vetores de cada classe, totalizando 300 vetores.
+
+A base de dados Íris possui 50 vetores para cada classe, possibilitando a utlização dos 150 vetores na distribuição entre os 10 subgrupos.
+
+Na quarta base de dados, Expressões, a classe desgosto possui 29 vetores enquanto as classe restantes possuem 30 ou mais, como mostrado na tebela \ref{tab:tabela_expressoes}. Nesse caso, uma imagem da classe desgosoto foi repetida e utilizou-se 30 vetores para cada classe. 
+
+Para essa base de dados Expressões, se vetores fossem excluídos em todas as classes, o número de vetores divisível por 10, que é a quantidade de subgrupos, mais próximo é 20, o que acarretaria a exclusão de 9 ou mais imagens por classe, em contrapartida, na solução utlizada apenas 1 ou 2 imagens foram excluídas de cada classe, com exceção da classe desgosto que teve apenas uma imagem repetida. Já na base de dados Dígitos optou-se pela exclusão, pois seria necessário repetir muitos vetores nas classes com o número mais baixo de vetores, o que poderia comprometer o resultado, o mesmo ocorre com a base de dados LIBRAS.
+
 \section{Resultados}
+Nesta seção são apresentados os resultados encontrados nos testes realizados com as quatro bases de dados anteriormento descritas. 
 
 \section{Análise dos Resultados}
