@@ -16,6 +16,7 @@
 \BOOKMARK [2][-]{subsection.2.4.1}{Support Vector Machines}{section.2.4}
 \BOOKMARK [2][-]{subsection.2.4.2}{Naive Bayes}{section.2.4}
 \BOOKMARK [2][-]{subsection.2.4.3}{k- nearest neighbor}{section.2.4}
+\BOOKMARK [2][-]{subsection.2.4.4}{Redes Neurais Artificias}{section.2.4}
 \BOOKMARK [1][-]{section.2.5}{M\351todos de valida\347\343o do modelo}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.5.1}{Handout}{section.2.5}
 \BOOKMARK [2][-]{subsection.2.5.2}{Cross Validation}{section.2.5}
@@ -39,6 +40,7 @@
 \BOOKMARK [1][-]{section.5.5}{Organiza\347\343o dos dados}{chapter.5}
 \BOOKMARK [1][-]{section.5.6}{Resultados}{chapter.5}
 \BOOKMARK [2][-]{subsection.5.6.1}{Quantidade de vetores X Taxa de acerto}{section.5.6}
+\BOOKMARK [2][-]{subsection.5.6.2}{Tempo computacional}{section.5.6}
 \BOOKMARK [1][-]{section.5.7}{An\341lise dos Resultados}{chapter.5}
 \BOOKMARK [0][-]{chapter.6}{Conclus\343o}{}
 \BOOKMARK [0][-]{chapter.6}{Refer\352ncias Bibliogr\341ficas}{}

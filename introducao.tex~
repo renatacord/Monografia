@@ -1,7 +1,7 @@
 \chapter{Introdução}
 
 %\section{Considerações Iniciais}
-A programação linear é uma das disciplinas que compõem a programação matemática e constitui um dos pilares da pesquisa operacional. As aplicações da programação linear estão presentes em diversos setores, tais como nas indústrias, nos transportes, na saúde, na educação, na administração pública, na computação, etc. É mais comunente aplicada na engenharia de produção, em problemas que buscam a distribuição eficiente de recursos, minimização de gastos e maximização do lucro. O presente trabalho está focado na utilização da programação linear em aplicações que buscam a cliassifcação de dados em determiando padrão, por meio de classificadores gerados através de um modelo de programação lienar.
+A programação linear é uma das disciplinas que compõem a programação matemática e constitui um dos pilares da pesquisa operacional. As aplicações da programação linear estão presentes em diversos setores, tais como nas indústrias, nos transportes, na saúde, na educação, na administração pública, na computação, etc. É mais comunente aplicada na engenharia de produção, em problemas que buscam a distribuição eficiente de recursos, minimização de gastos e maximização do lucro. O presente trabalho está focado na utilização da programação linear na separação de padrões. Um modelo de programação linear é resolvido através do método simplex, gerando hiperplanos utlizados na classificação de dados em um dos padrões separados pelo hiperplano.
 
 O método simplex proposto por \citeonline{Dan} é um dos métodos mais conhecidos e eficientes para resolver problemas de programação linear. Trata-se de um dos poucos algoritmos que foi implantado comercialmente há mais de 40 anos. Atualmente, está presente em softwares comerciais tais como CPLEX\footnote{http://www-01.ibm.com/software/integration/optimization/cplex-optimizer/} e LINGO\footnote{http://www.lindo.com/}. O método simplex tem como principais carcaterísticas o fato de ser matricial, ou seja, aloca os dados a serem calculados em matrizes, de resolver o conjunto de equações, que formam o modelo de programação linear, de forma interativa até que a solução ótima seja obtida e de ser um método determinístico. Um método alternativo, teoricamente superior ao método simplex, é o método dos pontos interiores, proposto por \citeonline{Karmarkar}. Na prática, tanto o método simplex, quanto o método dos pontos interiores competem até hoje.  
 
@@ -15,6 +15,8 @@ Um dos focos dos estudos das aplicações da programação linear é na utlizaç
 \end{itemize}
 
 De forma geral, a aplicação da programação linear na separação de pontos pode ser utilizada em abordagens que permitam a caracterização de padrões através de vetores númericos, esse vetores representam os pontos e são denominados vetores de carcaterísticas.
+
+O modelo proposto separa dois conjuntos de pontos, porém também pode ser utlizado em problemas onde busca-se a separação de múltiplos padrões. O presente trabalho foca nessa última abordagem, em todos os testes realizados o número de conjutnso de pontos é igual ou maior que três.
 
 \section{Objetivos e justificativas}
 O objetivo do presente trabalho é o estudo da utilização da programação linear, mais especificamente do método simplex, na separação de pontos, que repesentam padrões, através de hiperplanos, que serão utlizados na classificação de um conjunto em um determinado padrão. 

@@ -1,5 +1,7 @@
 \chapter{Referencial Teorico}
 
+Este capítulo aprsenta uma revisão de trabalhos que utilizaram a programação linear e de trabalhos sobre classificação de dados. Também são aprsentadas revisões teóricas sobre as principais metodologias utilizadas nesse trabalho: programação linear, métodos de classificação e métodos de validação. 
+
 \section{A Programação Linear e as suas Aplicações}
 Na pesquisa operacional, a programação linear é uma das técnicas mais utilizadas em problemas de otimização. Os problemas de programação linear geralmente buscam a distribuição eficiente de recursos limitados para atender um determinado objetivo, por isso suas aplicações estão presentes em diversas áreas como computação, administração, indústria e transporte \cite{Engecom}.
 
@@ -153,7 +155,17 @@ Em problemas de calssificação, dado um conjunto de dados de treinamento onde c
 Support Vector Machines ou Máquinas de vetores de suporte (SVM) têm a capacidade de gerar classificadores na etapa de treinamento e de classificar os dados na etapa de teste de acordo com o classificadores gerados. Considerando um problema de classificação com duas classes, uma SVM irá determinar um plano que separe os pontos dessas duas classe, de forma que a distância entre o hiperplano e os pontos seja a máxima possível. Os pontos de cada classe utlizados como referência são denominados vetores de suporte.
 No caso de conjuntos linearmente inseparáveis, é utilizada um função denominada Kernel. Essa função é responsável por elevar a dimensão espacial a fim de que os pontos se tornem linearmente separáveis.Portanto a obtenção de um classificador por meio do uso de SVM é necessária a escolha de uma função kernel e os parâmetros dessa função. Essa esolha influencia diretamente no desempenho do classificador\cite{Gunn98SVM}\cite{Reffson02SVM}.
 
-FIGURA!!!!!!!!!!
+\begin{center}
+	\includegraphics[scale=0.5]{graficos/SVm1}
+	\captionof{figure}{}
+	\label{img:svm1}
+\end{center}
+
+\begin{center}
+	\includegraphics[scale=0.5]{graficos/SVM2}
+	\captionof{figure}{}
+	\label{img:svm2}
+\end{center}
 
 No caso em que é o núemro de classes é maior que dois, duas abordagens podem ser utilizadas com as SVM \cite{Lorena03SVM}:
 \begin{itemize}
@@ -168,7 +180,9 @@ Na metodologia Naive Bayes as carcterísticas do dado a ser classificado são an
 Nesse método a classificação é feita pela similaridade da instância a ser classificada com um dado ou vetor utlizado no treinamento, a classe do dado utilizado no treinamento é então atribuída a instância com padrão inicalmente desconhecido. As estapas desse métodos consistem em utilizar um parâmetro para medir a semelhança ou a distância do dado a ser classificado em relação a cada um dos dados utlizados no treinamento. Os k vetores mais similares ou mais próximos são selecionados e entre o padrão mais frequente é atribuído ao dado incialmente desconhecido. Apesar de ser considerado um método simples, sua dificuldade está em definir os parâmetros ou a métrica que definirá a semelhança ou distância entre os dados\cite{Chagas09KNN}.
 COLOCAR FIGURA!!!!!
 
-
+\subsection{Redes Neurais Artificias}
+Em seu trabalho  \citeonline{Morais2010RNA} define Redes Neurais Artificiais (RNA) como sistemas paralelos e distribuídos compostos por unidades de processamento simples (neurônios) interligadas por conexões, esses neurônios calculam determinadas funções matemáticas. Na fase de treinamento ou aprendizagem "um conjunto de exemplos é apresentado a rede que extrai automaticamente características necessárias para representar a informação fornecida" \cite{Morais2010RNA}.
+Uma rede neural pode receber como entrada, na etapa de treinamento, um conjunto de vetores com seus respectivos padrões. Ao submeter como entrada um vetor com padrão desconehcido a rede neural deve classificar esse vetor. A vantegem desse método é que uma rede pode construir fronteiras não lineares entre padrões, o que pode ser muito vantajoso em problemas complexos de classificação. Existem vários modelos de redes neurais que possibilitam o reconheciemnto de padrões, entre eles: Perceptron de Camada Simples, Perceptron de Múltiplas e Redes de Kohonen \cite{ZubenRNA2}  ACERTAR CITAÇÃO%\cite{ZubenRNA}.
 
 \section{Métodos de validação do modelo}
 Um modelo de classificação pode ser verificado em relação a sua acurácia apartir de um conjunto de dados ou a sua performance em relação a outros métodos classificadores podem ser verificados. Algumas técnicas utilizadas com esse intuito serão apresentadas a seguir. No presente trabalho a técnica Cross Validation é utilizada com o objetivo de verificar a acurácia, nesse caso, da metodologia utlizada na classificação de padrões \cite{Kohavi95Cross} \cite{Baldisserotto05Validacao}.

@@ -217,10 +217,43 @@ Na primeira coluna da tabela \ref{tab:vetorxtaxa} estão específicadas as quant
 
 É possível observar um aumento na taxa de acertos a medida que a quantidade de vetores cresce. Porém esse aumento não é proporcional ao aumento do núemro de vetores. A variação na taxa de acerto diminui a medida que a quantidade de vetores aumenta, do teste com 50 vetores por calsse para o teste com 100, houve um aumento de 2,8\% na taxa de acerto. Já no testes com 200 e 400 a variação na taxa foi de 2\%. E entre o teste com 600 vetores e o teste com quantidade máximamde vetores que é 1050 é observado um aumento bem pequeno de 0,02\% na taxa de acerto.
 
+\subsection{Tempo computacional}
+A partir dos testes realizados também foram realizadas análises do ponto de vista computacional.
+Todos os experimento foram feitos utilizando um notebbok com configuração core i3 COMPLETAR CONFIGURACAO !!!
+Os resultados mostrados na tabela a seguir são as médias dos tempos de 5 execuções.
+\begin{table}[h!]
+	\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+\multirow{2}{*}{Base de Dados} & \multirow{2}{*}{Classes} & \multirow{2}{*}{Vetores por classe} & \multicolumn{2}{c|}{Tempo de Execução (s)} \\
+\cline{4-5}
+&&& Gerador de Classificadores & Total\\
+        \hline
+	%Base de dados  & Classes & Vetores por classe & Gerador de Classificadores & Total\\ \hline
+    	Dígitos	       &   10 	 &	1050	      &		  4	           &  37  \\ \hline
+   	LIBRAS         &   15 	 &	  20	      &	          1	           &   9,6\\ \hline
+    	Íris           &    3	 &        50	      &		 $<1$	           &  $<1$ \\ \hline
+    	Expressões     &    7 	 &        30	      &		  1                &  12,4\\ \hline
+	\end{tabular}
+        \captionof{table}{Tempo Computacional}
+	\label{tab:tempocomp}
+\end{table}
+
+Na segunda quarta da tabela \ref{tab:tempocomp} estão os temspo de execução apenas do módulo de geração de classificadores, que é o módulo onde o modelo de programação linear é resolvido. É possível constatar um tempo computacional igual ou menor que 1 segundo para três casos, apenas para a base de dados Dígitos esse tempo foi elevado para 4 segundos. Esse aumento pode ser atribuído ao fato de que essa base de dados possui uma quantidae de vetores consideravelmente maior do que as outras bases de dados. Nos experimentos é utlizada a validação 10-fold cross validation, então o módulo gerador de classificadores é executado 10 vezes, porém os tempos expostos na tabela não podem ser multiplicados por 10 para a obtenção do tempo gasto pelo módulo gerador de classificadores em relação ao tempo total da execução porque para a obtenção desses tempos, o módulo foi executado isoladamente e apenas uma vez a cada uma das 5 execuções. \ref{tab:tempocomp}
+
+Na última coluna da tebla \ref{tab:tempocomp} são apresentados os tempos totais de execução de cada experimento. Pode-se constatar que esse tempo é proporcional ao tamanho dos vetores da base de dados e a quantidade de classes. A base de dados Íris obteve um tempo computacional execelente sendo uma base de dados com 3 classe e 50 vetores para cada classe. Enquanto a base de dados Dígitos obteve o maior tempo computacional apesar de possuir vetores com 16 caracteríticas é a base de dados com maior número de vetores por classe. 
+
+Comparando os tempos computacionais das bases Dígitos e Expressões é possível verificar que a quantidade de vetores por classe teve maior influência no tempo de execução, já que a diferença dos tempos de execução das duas classes é bastante alto, proporcional a diferença entre as quantidades de vetores por classe. 
+
+A mesma observação pode ser feita comparando os tempos das base LIBRAS e Expressões, ainda que o núemro de classe da base LIBRAS seja mais que o dobro do número de classes da base Expressões, cada vetor da base Expressões possui 10 características a mais que os vetores da base LIBRAS e o tempo computacional da base Expressões foi superior ao tempo da base LIBRAS.
+
 \section{Análise dos Resultados}
 
 Juntamente com a base de dados Dígitos \cite{Digitos}, estão disponíveis resultados de testes utilizando como metódo de classificação K nearest neighbor, a métrica utlizada para medir as distâncias entro os K vizinhos mais próximos foi a distância Euclidiana. O autor testou variando o parâmetro K de 1 à 11 com a taxa de acerto variando entre 97,34\% e 97,80\%. Em relação ao experimentos realizados neste trabalho é possível verificar que utilizando o método proposto foram obtidas taxas de acertos próximas as encontradas em \citeonline{Digitos}.
 
-Em seu trabalho, 
+Em seu trabalho \citeonline{Swan2012Iris} abordou a classificação de padrões utlizando Redes Neurais e a base de dados Íris. O autor dividiu 75 vetores para treinamento e 75 para teste. Foram realizados 3 testes, variando um parâmetro na configuração da rede neural. As taxas de acertos obtidas variaram entre 83,33\% e 96,66\%. No experiento utilizando o modelo de programação linear a meia de acertos obtida foi de 87\%, um taxa que supera a obtida utilizando redes neurais, dependeno da configuração.
 
+Em \citeonline{Feng} foi utilizada a base de dados JAFFE \cite{Jaffe}. O modelo de programação linear proposto em \citeonline{Bennett92robustlinear} é utlizado para gerar os classificadores e na classificação de imagens com expressão desconhecida foi utilizada uma árvore de torneio, assim como nos experimentos deste trabalho. A taxa de acerto foi de 93.8\%.
 
+No trabalho de \citeonline{Guo} também foi utilizado o banco JAFFE\cite{Jaffe}. Foram feitas comparações entre aluns métodos de classificação, entre eles: Bayes com taxa de acertos 71,0\%, Support Vector Machine linear e não linear, com taxa de acertos 92,4\% e 91,9\%, respectivamente e uma variação do modelo de programação linear utilizado neste trabalho, com taxa 91,0\%. Em todos os casos foram utilizados mecanismos para seleção das características que seriam utlizadas
+ 
+Tanto no trabalho de \citeonline{Feng} quanto no trabalho de \citeonline{Guo} foram obtidas taxas consideravelmente mais altas do que a obtida nos experimentos (34,0\%). Essa diferença pode ser atribuída pela falta de pre processamento das imagens, como já comentado anteriormente.

@@ -190,6 +190,13 @@ Disserta\c{c}\~ao (Mestrado) --- Universidade Federal do Paraná, 2004.}
   interiores para programação linear}.
 \emph{Estudos}, v.~15, n.~2, p. 225--246, 2008.}
 
+\bibitem[Morais 2010]{Morais2010RNA}
+\abntrefinfo{Morais}{MORAIS}{2010}
+{MORAIS, E.~C.
+\emph{{Reconhecimento de padrões e Redes Neurais Artificiais em predição de
+  estruturas secundárias de proteínas}}.
+Tese (Doutorado) --- Universidade Federal do Rio de Janeiro, 2010.}
+
 \bibitem[Munari 2009]{Munari}
 \abntrefinfo{Munari}{MUNARI}{2009}
 {MUNARI, J. P.~A.
@@ -250,6 +257,13 @@ Disserta\c{c}\~ao (Mestrado) --- Universidade Federal de Goiás, 2009.}
 \emph{The Journal of Supercomputing}, v.~49, n.~3, p. 373 -- 381, Setembro
   2009.}
 
+\bibitem[Swain Sanjit Kumar~Dash e Mohapatra 2012]{Swan2012Iris}
+\abntrefinfo{Swain Sanjit Kumar~Dash e Mohapatra}{SWAIN SANJIT KUMAR~DASH;
+  MOHAPATRA}{2012}
+{SWAIN SANJIT KUMAR~DASH, S.~D. M.; MOHAPATRA, A. An approach for iris palnt
+  classification using neural network.
+\emph{International Journal on Soft Computing}, v.~3, n.~1, 2012.}
+
 \bibitem[Taha 2008]{Taha}
 \abntrefinfo{Taha}{TAHA}{2008}
 {TAHA, H.~A. \emph{{Operation Research: An Introduction}}. 8. ed. [S.l.]:
@@ -286,5 +300,10 @@ Tese (Doutorado) --- Polytechnic University, Março 2001.}
   SCIENCE, U. o. T. a.~D. G.~R. Dattatreya Department~of C. (Ed.).
   \emph{MATH'06 Proceedings of the 10th WSEAS International Conference on
   Applied Mathematics}. [S.l.: s.n.], 2006. p. 226--228.}
+
+\bibitem[Zuben e Castro]{ZubenRNA2}
+\abntrefinfo{Zuben e Castro}{ZUBEN; CASTRO}{}
+{ZUBEN, F.~V.; CASTRO, L.~N. de. \emph{Redes Neurais Artificiais para
+  Reconhecimento e Classificação de Padrões}.}
 
 \end{thebibliography}

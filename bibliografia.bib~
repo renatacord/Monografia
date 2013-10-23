@@ -378,6 +378,8 @@ An Extended Abstract}},
 	url = {http://archive.ics.uci.edu/ml},
 	institution = {University of California, Irvine, School of Information and Computer Sciences} }
 
+
+
 @misc{Digitos,
  	author = {E. Alpaydin, Fevzi. Alimoglu},
 	year = {2013},
@@ -411,13 +413,6 @@ An Extended Abstract}},
  numpages = {14}
 }
 
-@misc{ZubenRNA,
- 	author = { F. V. Zuben, L. N. de Castro}, 
-        year = {1936},
-	title = {Redes Neurais Artificiais para Reconhecimento e Classificação de Padrões}, 
-	url = {ftp://ftp.dca.fee.unicamp.br/pub/docs/vonzuben/ia353_03/revisao/docs/tema16.doc}
- }
-
 @PhDThesis{Morais2010RNA,
 	author = {Emerson Cordeiro Morais },
 	school = {Universidade Federal do Rio de Janeiro},
@@ -433,4 +428,9 @@ An Extended Abstract}},
  number = {1},
  year = {2012},
  numpages = {11}
+}
+@Misc{ZubenRNA2,
+	author = {Fernando Von Zuben and Leandro N. de Castro},
+	title = {Redes Neurais Artificiais para Reconhecimento e Classificação de Padrões},
+	url = {{ftp://ftp.dca.fee.unicamp.br/pub/docs/vonzuben/ia353_03/revisao/docs/tema16.doc}}
 }
