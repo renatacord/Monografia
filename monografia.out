@@ -2,42 +2,43 @@
 \BOOKMARK [1][-]{section.1.1}{Objetivos e justificativas}{chapter.1}
 \BOOKMARK [1][-]{section.1.2}{Metodologia}{chapter.1}
 \BOOKMARK [1][-]{section.1.3}{Estrutura do trabalho}{chapter.1}
-\BOOKMARK [1][-]{section.1.4}{A Programa\347\343o Linear e as suas Aplica\347\365es}{chapter.1}
-\BOOKMARK [1][-]{section.1.5}{Descri\347\343o do Problema de Programa\347\343o Linear}{chapter.1}
-\BOOKMARK [1][-]{section.1.6}{Aplica\347\365es Pr\341ticas}{chapter.1}
-\BOOKMARK [2][-]{subsection.1.6.1}{Aplica\347\365es em Processamento de Imagens}{section.1.6}
-\BOOKMARK [2][-]{subsection.1.6.2}{Aplica\347\365es em Programa\347\343o Distribu\355da}{section.1.6}
-\BOOKMARK [2][-]{subsection.1.6.3}{Aplica\347\365es em Banco de Dados}{section.1.6}
-\BOOKMARK [2][-]{subsection.1.6.4}{Aplica\347\343o em Sa\372de}{section.1.6}
-\BOOKMARK [2][-]{subsection.1.6.5}{Aplica\347\343o no reconhecimento de express\365es faciais}{section.1.6}
-\BOOKMARK [2][-]{subsection.1.6.6}{Aplica\347\365es na Engenharia de Produ\347\343o}{section.1.6}
-\BOOKMARK [1][-]{section.1.7}{M\351todos de Classifica\347\343o}{chapter.1}
-\BOOKMARK [2][-]{subsection.1.7.1}{Support Vector Machines}{section.1.7}
-\BOOKMARK [2][-]{subsection.1.7.2}{Naive Bayes}{section.1.7}
-\BOOKMARK [2][-]{subsection.1.7.3}{k- nearest neighbor}{section.1.7}
-\BOOKMARK [1][-]{section.1.8}{M\351todos de valida\347\343o do modelo}{chapter.1}
-\BOOKMARK [2][-]{subsection.1.8.1}{Handout}{section.1.8}
-\BOOKMARK [2][-]{subsection.1.8.2}{Cross Validation}{section.1.8}
-\BOOKMARK [2][-]{subsection.1.8.3}{Leave-one-out}{section.1.8}
-\BOOKMARK [1][-]{section.1.9}{Trabalhos Relacionados}{chapter.1}
-\BOOKMARK [0][-]{chapter.2}{Marco Te\363rico}{}
-\BOOKMARK [1][-]{section.2.1}{M\351todos de Solu\347\343o}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.1.1}{M\351todo Simplex}{section.2.1}
-\BOOKMARK [1][-]{section.2.2}{Princ\355pio B\341sico do M\351todo}{chapter.2}
-\BOOKMARK [1][-]{section.2.3}{Descri\347\343o do M\351todo Simplex Revisado}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.3.1}{M\351todo de Pontos Interiores}{section.2.3}
-\BOOKMARK [0][-]{chapter.3}{Aplica\347\343o da programa\347\343o linear na separa\347\343o de pontos}{}
-\BOOKMARK [1][-]{section.3.1}{O modelo}{chapter.3}
-\BOOKMARK [1][-]{section.3.2}{Exemplo Ilustrativo do Modelo Classificador}{chapter.3}
-\BOOKMARK [1][-]{section.3.3}{Etapa de classifica\347\343o}{chapter.3}
-\BOOKMARK [0][-]{chapter.4}{Experimentos Computacionais}{}
-\BOOKMARK [1][-]{section.4.1}{Conjuntos de Dados}{chapter.4}
-\BOOKMARK [1][-]{section.4.2}{Processo de treinamento}{chapter.4}
-\BOOKMARK [1][-]{section.4.3}{Processo de teste}{chapter.4}
-\BOOKMARK [1][-]{section.4.4}{Etapa de valida\347\343o}{chapter.4}
-\BOOKMARK [1][-]{section.4.5}{Organiza\347\343o dos dados}{chapter.4}
-\BOOKMARK [1][-]{section.4.6}{Resultados}{chapter.4}
-\BOOKMARK [2][-]{subsection.4.6.1}{Quantidade de vetores X Taxa de acerto}{section.4.6}
-\BOOKMARK [1][-]{section.4.7}{An\341lise dos Resultados}{chapter.4}
-\BOOKMARK [0][-]{chapter.5}{Conclus\343o}{}
-\BOOKMARK [0][-]{chapter.5}{Refer\352ncias Bibliogr\341ficas}{}
+\BOOKMARK [0][-]{chapter.2}{Referencial Teorico}{}
+\BOOKMARK [1][-]{section.2.1}{A Programa\347\343o Linear e as suas Aplica\347\365es}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{Descri\347\343o do Problema de Programa\347\343o Linear}{chapter.2}
+\BOOKMARK [1][-]{section.2.3}{Aplica\347\365es Pr\341ticas}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.3.1}{Aplica\347\365es em Processamento de Imagens}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.2}{Aplica\347\365es em Programa\347\343o Distribu\355da}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.3}{Aplica\347\365es em Banco de Dados}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.4}{Aplica\347\343o em Sa\372de}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.5}{Aplica\347\343o no reconhecimento de express\365es faciais}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.6}{Aplica\347\365es na Engenharia de Produ\347\343o}{section.2.3}
+\BOOKMARK [1][-]{section.2.4}{M\351todos de Classifica\347\343o}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.4.1}{Support Vector Machines}{section.2.4}
+\BOOKMARK [2][-]{subsection.2.4.2}{Naive Bayes}{section.2.4}
+\BOOKMARK [2][-]{subsection.2.4.3}{k- nearest neighbor}{section.2.4}
+\BOOKMARK [1][-]{section.2.5}{M\351todos de valida\347\343o do modelo}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.5.1}{Handout}{section.2.5}
+\BOOKMARK [2][-]{subsection.2.5.2}{Cross Validation}{section.2.5}
+\BOOKMARK [2][-]{subsection.2.5.3}{Leave-one-out}{section.2.5}
+\BOOKMARK [1][-]{section.2.6}{Trabalhos Relacionados}{chapter.2}
+\BOOKMARK [0][-]{chapter.3}{Marco Te\363rico}{}
+\BOOKMARK [1][-]{section.3.1}{M\351todos de Solu\347\343o}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.1.1}{M\351todo Simplex}{section.3.1}
+\BOOKMARK [1][-]{section.3.2}{Princ\355pio B\341sico do M\351todo}{chapter.3}
+\BOOKMARK [1][-]{section.3.3}{Descri\347\343o do M\351todo Simplex Revisado}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.3.1}{M\351todo de Pontos Interiores}{section.3.3}
+\BOOKMARK [0][-]{chapter.4}{Aplica\347\343o da programa\347\343o linear na separa\347\343o de pontos}{}
+\BOOKMARK [1][-]{section.4.1}{O modelo}{chapter.4}
+\BOOKMARK [1][-]{section.4.2}{Exemplo Ilustrativo do Modelo Classificador}{chapter.4}
+\BOOKMARK [1][-]{section.4.3}{Etapa de classifica\347\343o}{chapter.4}
+\BOOKMARK [0][-]{chapter.5}{Experimentos Computacionais}{}
+\BOOKMARK [1][-]{section.5.1}{Conjuntos de Dados}{chapter.5}
+\BOOKMARK [1][-]{section.5.2}{Processo de treinamento}{chapter.5}
+\BOOKMARK [1][-]{section.5.3}{Processo de teste}{chapter.5}
+\BOOKMARK [1][-]{section.5.4}{Etapa de valida\347\343o}{chapter.5}
+\BOOKMARK [1][-]{section.5.5}{Organiza\347\343o dos dados}{chapter.5}
+\BOOKMARK [1][-]{section.5.6}{Resultados}{chapter.5}
+\BOOKMARK [2][-]{subsection.5.6.1}{Quantidade de vetores X Taxa de acerto}{section.5.6}
+\BOOKMARK [1][-]{section.5.7}{An\341lise dos Resultados}{chapter.5}
+\BOOKMARK [0][-]{chapter.6}{Conclus\343o}{}
+\BOOKMARK [0][-]{chapter.6}{Refer\352ncias Bibliogr\341ficas}{}

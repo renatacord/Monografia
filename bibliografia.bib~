@@ -399,3 +399,38 @@ An Extended Abstract}},
 	title = {Iris Data Set}, 
 	url = {http://archive.ics.uci.edu/ml/datasets/Iris}
  }
+
+@article{LBPShan2009,
+ author = {Shan, Caifeng and Gong, Shaogang and McOwan, Peter W.},
+ title = {Facial expression recognition based on Local Binary Patterns: A comprehensive study},
+ journal = {Image Vision Comput.},
+ volume = {27},
+ number = {6},
+ year = {2009},
+ pages = {803--816},
+ numpages = {14}
+}
+
+@misc{ZubenRNA,
+ 	author = { F. V. Zuben, L. N. de Castro}, 
+        year = {1936},
+	title = {Redes Neurais Artificiais para Reconhecimento e Classificação de Padrões}, 
+	url = {ftp://ftp.dca.fee.unicamp.br/pub/docs/vonzuben/ia353_03/revisao/docs/tema16.doc}
+ }
+
+@PhDThesis{Morais2010RNA,
+	author = {Emerson Cordeiro Morais },
+	school = {Universidade Federal do Rio de Janeiro},
+	title = {{Reconhecimento de padrões e Redes Neurais Artificiais em predição de estruturas secundárias de proteínas}},
+	year = {2010}
+}
+
+@article{Swan2012Iris,
+ author = {Madhusmita Swain, Sanjit Kumar Dash, Sweta Dash and Ayeskanta Mohapatra},
+ title = {An approach for Iris palnt classification using neural network},
+ journal = {International Journal on Soft Computing},
+ volume = {3},
+ number = {1},
+ year = {2012},
+ numpages = {11}
+}

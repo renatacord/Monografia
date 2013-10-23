@@ -216,4 +216,9 @@ As bases de dados são compostas por mais de um vetor de características de cad
 Na primeira coluna da tabela \ref{tab:vetorxtaxa} estão específicadas as quantidades de vetores de cada classe e nas duas colunas seguintes as quantidades de vetores de cada classe utilizados na etapa de treinamento e na etapa de testes respectivamente. Na útlima coluna estão específicadas as taxas de acertos em cada teste. 
 
 É possível observar um aumento na taxa de acertos a medida que a quantidade de vetores cresce. Porém esse aumento não é proporcional ao aumento do núemro de vetores. A variação na taxa de acerto diminui a medida que a quantidade de vetores aumenta, do teste com 50 vetores por calsse para o teste com 100, houve um aumento de 2,8\% na taxa de acerto. Já no testes com 200 e 400 a variação na taxa foi de 2\%. E entre o teste com 600 vetores e o teste com quantidade máximamde vetores que é 1050 é observado um aumento bem pequeno de 0,02\% na taxa de acerto.
+
 \section{Análise dos Resultados}
+
+Juntamente com a base de dados Dígitos \cite{Digitos}, estão disponíveis resultados de testes utilizando como metódo de classificação K nearest neighbor, a métrica utlizada para medir as distâncias entro os K vizinhos mais próximos foi a distância Euclidiana. O autor testou variando o parâmetro K de 1 à 11 com a taxa de acerto variando entre 97,34\% e 97,80\%. Em relação ao experimentos realizados neste trabalho é possível verificar que utilizando o método proposto foram obtidas taxas de acertos próximas as encontradas em \citeonline{Digitos}.
+
+

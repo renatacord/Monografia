@@ -1,3 +1,5 @@
+\chapter{Referencial Teorico}
+
 \section{A Programação Linear e as suas Aplicações}
 Na pesquisa operacional, a programação linear é uma das técnicas mais utilizadas em problemas de otimização. Os problemas de programação linear geralmente buscam a distribuição eficiente de recursos limitados para atender um determinado objetivo, por isso suas aplicações estão presentes em diversas áreas como computação, administração, indústria e transporte \cite{Engecom}.
 
@@ -163,8 +165,10 @@ No caso em que é o núemro de classes é maior que dois, duas abordagens podem 
 Na metodologia Naive Bayes as carcterísticas do dado a ser classificado são analisadas de forma independente. O vetor de característcas é formado pela número de vezes que cada característica ocorre no dado caracterizado. A probabilidade de uma instância pertencer a um determinado padrão é dada por uma probabilidade inicial, baseada na quantidade total de dados, e pelas probabilidades das ocorrências das características. Essa abordagem é mais comunmente utlizada na área de mineração de dados, onde dada uma palavra busca-se o melhor texto baseado nas probabilidades de aparecimento da palavra no textos utilizados no treinamento \cite{McCallum98Bayes}\cite{Langley92Bayes}.
 
 \subsection{k- nearest neighbor}
-Nesse método a classificação é feita pela similaridade da instância a ser classificada com um dado utlizado no treinamento, a classe do dado utilizado no treinamento é então atribuída a instância com padrão inicalmente desconhecido. As estapas desse métodos consistem em utilizar um parâmetro para medir a semelhança ou a distância do dado a ser classificado em relação a cada um dos dados utlizados no treinamento. Os mais similares ou mais próximos são selecionados e entre esses um é escolhido e o seu padrão é atribuído ao dado incialmente desconhecido. Apesar de ser considerado um método simples, sua dificuldade está em definir os parâmetros que definiram a semelhança entre os dados\cite{Chagas09KNN}.
+Nesse método a classificação é feita pela similaridade da instância a ser classificada com um dado ou vetor utlizado no treinamento, a classe do dado utilizado no treinamento é então atribuída a instância com padrão inicalmente desconhecido. As estapas desse métodos consistem em utilizar um parâmetro para medir a semelhança ou a distância do dado a ser classificado em relação a cada um dos dados utlizados no treinamento. Os k vetores mais similares ou mais próximos são selecionados e entre o padrão mais frequente é atribuído ao dado incialmente desconhecido. Apesar de ser considerado um método simples, sua dificuldade está em definir os parâmetros ou a métrica que definirá a semelhança ou distância entre os dados\cite{Chagas09KNN}.
 COLOCAR FIGURA!!!!!
+
+
 
 \section{Métodos de validação do modelo}
 Um modelo de classificação pode ser verificado em relação a sua acurácia apartir de um conjunto de dados ou a sua performance em relação a outros métodos classificadores podem ser verificados. Algumas técnicas utilizadas com esse intuito serão apresentadas a seguir. No presente trabalho a técnica Cross Validation é utilizada com o objetivo de verificar a acurácia, nesse caso, da metodologia utlizada na classificação de padrões \cite{Kohavi95Cross} \cite{Baldisserotto05Validacao}.
