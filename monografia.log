@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  22 OCT 2013 17:47
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  22 OCT 2013 20:12
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -1277,7 +1277,7 @@ See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 79.
+(caption)                particular \caption on input line 78.
 See the caption package documentation for explanation.
 
 File: graficos/LBP.eps Graphic file (type eps)
@@ -1310,19 +1310,26 @@ Overfull \hbox (44.6234pt too wide) in paragraph at lines 132--133
 
 [37]
 
-Package caption Warning: \label before \caption on input line 157.
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 157.
 See the caption package documentation for explanation.
 
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 181--181
+[]|\OT1/cmr/m/n/12 Taxa de
+ []
 
-LaTeX Warning: Reference `tab:org_dados' on page 38 undefined on input line 161
-.
 
-[38]) [39]
+Overfull \hbox (36.09784pt too wide) in paragraph at lines 179--187
+[][] 
+ []
+
+[39] [40]) [41]
 \openout2 = `conclusao.aux'.
 
  (./conclusao.tex
 Cap\'{\i }tulo 5.
-) [40
+) [42
 
 
 
@@ -1349,10 +1356,10 @@ Underfull \hbox (badness 2573) in paragraph at lines 73--77
 36. Dis-pon^^S^^Pvel em: 
  []
 
-[41
+[43
 
 
-] [42])
+] [44])
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
@@ -1361,23 +1368,20 @@ Underfull \hbox (badness 2573) in paragraph at lines 73--77
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 64.
 See the caption package documentation for explanation.
 
-[43] (./monografia.aux (./introducao.aux) (./referencial_teorico.aux)
+[45] (./monografia.aux (./introducao.aux) (./referencial_teorico.aux)
 (./marco_teorico.aux) (./metodologia.aux) (./experimentos.aux) (./conclusao.aux
 ))
-
-LaTeX Warning: There were undefined references.
-
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 14542 strings out of 495042
- 201565 string characters out of 1181920
- 375473 words of memory out of 3000000
- 17360 multiletter control sequences out of 15000+50000
+ 14545 strings out of 495042
+ 201617 string characters out of 1181920
+ 375675 words of memory out of 3000000
+ 17363 multiletter control sequences out of 15000+50000
  18574 words of font info for 66 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
  38i,10n,49p,1161b,565s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on monografia.dvi (45 pages, 224216 bytes).
+Output written on monografia.dvi (47 pages, 232960 bytes).

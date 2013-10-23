@@ -38,6 +38,7 @@
 \contentsline {section}{\numberline {4.4}Etapa de valida\IeC {\c c}\IeC {\~a}o}{37}{section.4.4}
 \contentsline {section}{\numberline {4.5}Organiza\IeC {\c c}\IeC {\~a}o dos dados}{38}{section.4.5}
 \contentsline {section}{\numberline {4.6}Resultados}{39}{section.4.6}
-\contentsline {section}{\numberline {4.7}An\IeC {\'a}lise dos Resultados}{39}{section.4.7}
-\contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{40}{chapter.5}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{41}{chapter.5}
+\contentsline {subsection}{\numberline {4.6.1}Quantidade de vetores X Taxa de acerto}{40}{subsection.4.6.1}
+\contentsline {section}{\numberline {4.7}An\IeC {\'a}lise dos Resultados}{41}{section.4.7}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~a}o}{42}{chapter.5}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{43}{chapter.5}
