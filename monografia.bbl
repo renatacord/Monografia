@@ -5,16 +5,10 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{1.53 }
 
-\bibitem[Allgöwer 2011]{Burger}
-\abntrefinfo{Allgöwer}{ALLGöWER}{2011}
-{ALLGöWER, M. B. G. N. F. B.~F. {A Distributed Simplex Algorithm for
-  Degenerate Linear Programs and Multi-Agent Assignments}.
-\emph{Automatica}, Maio 2011.}
-
-\bibitem[Alpaydin 2013]{Digitos}
-\abntrefinfo{Alpaydin}{ALPAYDIN}{2013}
-{ALPAYDIN, F.~A. E. \emph{Pen-Based Recognition of Handwritten Digits Data
-  Set}. 2013.
+\bibitem[Alpaydin e Alimoglu 2013]{Digitos}
+\abntrefinfo{Alpaydin e Alimoglu}{ALPAYDIN; ALIMOGLU}{2013}
+{ALPAYDIN, E.; ALIMOGLU, F. \emph{Pen-Based Recognition of Handwritten Digits
+  Data Set}. 2013.
 Dispon{\'\i}vel em:
   \htmladdnormallink{$<$http:\-/\-/archive\-.ics\-.uci\-.edu\-/ml\-/datasets\-%
 /Pen-Based+Recognition+of+Handwritten+Digits$>$}{http://archive.ics.uci.edu/ml%
@@ -44,11 +38,6 @@ Disserta\c{c}\~ao (Mestrado) --- Universidade de Pernambuco, 2005.}
 {BIXBY, R.~E. {Implementing the simplex method: The initial basis}.
 \emph{ORSA Journal}, v.~4, p. 267--284, 1992.}
 
-\bibitem[Blitzkow 2008]{Ondaletas}
-\abntrefinfo{Blitzkow}{BLITZKOW}{2008}
-{BLITZKOW, A. C. B. B.~D. \emph{{Ondaletas: Histórico e Aplicação}}. Maio
-  2008.}
-
 \bibitem[Danzitg 1963]{Dan}
 \abntrefinfo{Danzitg}{DANZITG}{1963}
 {DANZITG, G. \emph{{Linear Programming and Extensions}}. [S.l.]: Princeton
@@ -75,17 +64,6 @@ Dispon{\'\i}vel em:
   \htmladdnormallink{$<$http:\-/\-/archive\-.ics\-.uci\-.edu\-/ml\-/datasets\-%
 /Iris$>$}{http://archive.ics.uci.edu/ml/datasets/Iris}.}
 
-\bibitem[Frossard 2009]{FrossardMaxMin}
-\abntrefinfo{Frossard}{FROSSARD}{2009}
-{FROSSARD, A. C.~P. {Programação Linear: Maximização de Lucro e
-  Minimização de Custos}.
-\emph{Revista Científica da Faculdade Lourenço Filho}, v.~6, n.~1, 2009.}
-
-\bibitem[Fugal 2009]{FotoWave}
-\abntrefinfo{Fugal}{FUGAL}{2009}
-{FUGAL, D.~L. {Wavelets: Beyond Comparison}.
-\emph{SatMagazine}, v.~7, n.~1, p. 35--41, maio 2009.}
-
 \bibitem[Goldberg 2006]{Alterovitz-saude}
 \abntrefinfo{Goldberg}{GOLDBERG}{2006}
 {GOLDBERG, R. A. E. L. J. P. I.-C. J. H. J. F. O.~K. {Optimization of HDR
@@ -93,12 +71,6 @@ Dispon{\'\i}vel em:
   costs}.
 \emph{The International Journal of Medical Physics Research and Practice},
   v.~33, n.~11, 2006.}
-
-\bibitem[Guimarães 2001]{Gabor}
-\abntrefinfo{Guimarães}{GUIMARãES}{2001}
-{GUIMARãES, D. R. O.~N. {Sistema Híbrido Inteligente Aplicado ao
-  Reconhecimento de Rostos}. In:  \emph{Anais do I WORCAP}. [S.l.: s.n.], 2001.
-  p. 45--47.}
 
 \bibitem[Gunn 1998]{Gunn98SVM}
 \abntrefinfo{Gunn}{GUNN}{1998}
@@ -127,28 +99,18 @@ Dispon{\'\i}vel em:
 {KOHAVI, R. A study of cross-validation and bootstrap for accuracy estimation
   and model selection. In:  . [S.l.]: Morgan Kaufmann, 1995. p. 1137--1143.}
 
-\bibitem[Kumar 1994]{Karypis}
-\abntrefinfo{Kumar}{KUMAR}{1994}
-{KUMAR, G. K.~V. \emph{{Performance and Scalability of the Parallel Simplex
-  Method for Dense Linear Programming Problems An Extended Abstract}}. 1994.
-Dispon{\'\i}vel em:
-  \htmladdnormallink{$<$http:\-/\-/www\-.cs\-.umn\-.edu\-/\~{}kumar\-/papers\-%
-/simplex\-.ps$>$}{http://www.cs.umn.edu/~kumar/papers/simplex.ps}.}
+\bibitem[Krukoski 2010]{Krukoski2010Economia}
+\abntrefinfo{Krukoski}{KRUKOSKI}{2010}
+{KRUKOSKI, F.~A.
+\emph{{Programação linear aplicada ao mercado de opções na criação de um
+  portifólio seguro}}.
+Disserta\c{c}\~ao (Mestrado) --- Universidade Federal do Paraná, 2010.}
 
 \bibitem[Langley, Iba e Thompson 1992]{Langley92Bayes}
 \abntrefinfo{Langley, Iba e Thompson}{LANGLEY; IBA; THOMPSON}{1992}
 {LANGLEY, P.; IBA, W.; THOMPSON, K. An analysis of bayesian classifiers. In:
   \emph{IN PROCEEDINGS OF THE TENTH NATIONAL CONFERENCE ON ARTI CIAL
   INTELLIGENCE}. [S.l.]: MIT Press, 1992. p. 223--228.}
-
-\bibitem[Leite 2007]{Leite-wavelet}
-\abntrefinfo{Leite}{LEITE}{2007}
-{LEITE, F. E.~A.
-\emph{{Análise Estatística de Padrões Sísmicos: Decomposição em
-  Multiescala}}.
-Tese (Doutorado) --- Universidade Federal do Rio Grande do Norte Centro de
-  Ciências Exatas e da Terra Departamento de Física Teórica e Experimental,
-  Dezembro 2007.}
 
 \bibitem[Lima 2002]{Reffson02SVM}
 \abntrefinfo{Lima}{LIMA}{2002}
@@ -197,6 +159,11 @@ Disserta\c{c}\~ao (Mestrado) --- Universidade Federal do Paraná, 2004.}
   estruturas secundárias de proteínas}}.
 Tese (Doutorado) --- Universidade Federal do Rio de Janeiro, 2010.}
 
+\bibitem[Moreira 2003]{Moreira2003Saude}
+\abntrefinfo{Moreira}{MOREIRA}{2003}
+{MOREIRA, F.~R. Programação linear aplicada a problemas da área de saúde.
+\emph{Einstein}, v.~105, n.~1, 2003.}
+
 \bibitem[Munari 2009]{Munari}
 \abntrefinfo{Munari}{MUNARI}{2009}
 {MUNARI, J. P.~A.
@@ -204,12 +171,6 @@ Tese (Doutorado) --- Universidade Federal do Rio de Janeiro, 2010.}
   de metódos tipo smplex}}.
 Disserta\c{c}\~ao (Mestrado) --- Instituto de Ciências Matemáticas e de
   Computação, ICMP-USP, 2009.}
-
-\bibitem[Nagel 2008]{Akira-database}
-\abntrefinfo{Nagel}{NAGEL}{2008}
-{NAGEL, A. K.~A. {New Developments in Robotics, Automation and Control}.
-In:  \underline{\ \ \ \ \ \ \ \ }. [S.l.]: InTech, 2008. cap. Linear
-  Programming in Database, p. 339--354.}
 
 \bibitem[Pamplona 2005]{Engecom}
 \abntrefinfo{Pamplona}{PAMPLONA}{2005}
@@ -226,12 +187,11 @@ on/download/Engecon2/CAP5EE2PLapost.pdf}. Acesso em: 04/06/2012.}
 Disserta\c{c}\~ao (Mestrado) --- Instituto de Matemática, Estatística e
   Computação Científica, UNICAMP, 2009.}
 
-\bibitem[Peixoto 2009]{Peixoto-wavelet}
-\abntrefinfo{Peixoto}{PEIXOTO}{2009}
-{PEIXOTO, P. da S.
-\emph{{Resolução numérica de EDPs utilizando ondaletas harmônicas}}.
-Disserta\c{c}\~ao (Mestrado) --- Instituto de Matemática e Estátistica da
-  Universidade de São Paulo, Junho 2009.}
+\bibitem[Possamai e Pescador 2011]{Possami2011Logistica}
+\abntrefinfo{Possamai e Pescador}{POSSAMAI; PESCADOR}{2011}
+{POSSAMAI, J.~P.; PESCADOR, A. {Transporte e estocagem de fumo - Um modelo de
+  programação linear usado na tomada de decisão}.
+\emph{XXXIX Congresso Brasileiro de Educação em Engenharia}, 2011.}
 
 \bibitem[Santos 2009]{Chagas09KNN}
 \abntrefinfo{Santos}{SANTOS}{2009}
@@ -240,22 +200,18 @@ Disserta\c{c}\~ao (Mestrado) --- Instituto de Matemática e Estátistica da
   automática de textos}.
 Disserta\c{c}\~ao (Mestrado) --- Universidade Federal de Goiás, 2009.}
 
-\bibitem[Saunders 2001]{Chen}
-\abntrefinfo{Saunders}{SAUNDERS}{2001}
-{SAUNDERS, S. S. C. D. L. D. M.~A. {Atomic Decomposition by Basis Pursuit}.
-\emph{SIAM Review}, v.~43, n.~1, p. 129--159, 2001.}
-
 \bibitem[Shan, Gong e McOwan 2009]{LBPShan2009}
 \abntrefinfo{Shan, Gong e McOwan}{SHAN; GONG; MCOWAN}{2009}
 {SHAN, C.; GONG, S.; MCOWAN, P.~W. Facial expression recognition based on local
   binary patterns: A comprehensive study.
 \emph{Image Vision Comput.}, v.~27, n.~6, p. 803--816, 2009.}
 
-\bibitem[Slyke 2009]{Slyke}
-\abntrefinfo{Slyke}{SLYKE}{2009}
-{SLYKE, G. Y.~R. {A Distributed, scaleable simplex method}.
-\emph{The Journal of Supercomputing}, v.~49, n.~3, p. 373 -- 381, Setembro
-  2009.}
+\bibitem[SIMÕES e Costa 2003]{sbai2003RNALaranjas}
+\abntrefinfo{SIMÕES e Costa}{SIMÕES; COSTA}{2003}
+{SIMÕES, A. d.~S.; COSTA, A. H.~R. Classificação de laranjas baseada em
+  padrões visuais de alto nível. In:  \emph{6o. Simpósio Brasileiro de
+  Automação Inteligente - SBAI/SBA, 2003, Bauru, SP. Anais do VI Simpósio
+  Brasileiro de Automação Inteligente}. [S.l.: s.n.], 2003. p. 77--81.}
 
 \bibitem[Swain Sanjit Kumar~Dash e Mohapatra 2012]{Swan2012Iris}
 \abntrefinfo{Swain Sanjit Kumar~Dash e Mohapatra}{SWAIN SANJIT KUMAR~DASH;
@@ -263,11 +219,6 @@ Disserta\c{c}\~ao (Mestrado) --- Universidade Federal de Goiás, 2009.}
 {SWAIN SANJIT KUMAR~DASH, S.~D. M.; MOHAPATRA, A. An approach for iris palnt
   classification using neural network.
 \emph{International Journal on Soft Computing}, v.~3, n.~1, 2012.}
-
-\bibitem[Taha 2008]{Taha}
-\abntrefinfo{Taha}{TAHA}{2008}
-{TAHA, H.~A. \emph{{Operation Research: An Introduction}}. 8. ed. [S.l.]:
-  Pearson, 2008.}
 
 \bibitem[Todd 2002]{Todd}
 \abntrefinfo{Todd}{TODD}{2002}
@@ -280,26 +231,6 @@ Disserta\c{c}\~ao (Mestrado) --- Universidade Federal de Goiás, 2009.}
 \emph{{O uso da programação linear na separação de pontos}}.
 Disserta\c{c}\~ao (Mestrado) --- Universidade Estadual de Campinas - UNICAMP,
   2010.}
-
-\bibitem[Tziritas 2007]{Komodakis}
-\abntrefinfo{Tziritas}{TZIRITAS}{2007}
-{TZIRITAS, N. K.~G. {Approximate Labeling via Graph Cuts Based on Linear
-  Programming}.
-\emph{IEEE Transactions on Pattern Analysis and Machine Intelligence}, v.~29,
-  n.~8, p. 1436--1453, 2007.}
-
-\bibitem[Yarmish 2001]{Yarmish-Distrubuido}
-\abntrefinfo{Yarmish}{YARMISH}{2001}
-{YARMISH, G.
-\emph{{A Distributed Implementation of the Simplex Method }}.
-Tese (Doutorado) --- Polytechnic University, Março 2001.}
-
-\bibitem[Yarmish 2006]{YarmishWave}
-\abntrefinfo{Yarmish}{YARMISH}{2006}
-{YARMISH, G. {The Simplex Method Applied to Wavelet Decomposition}. In:
-  SCIENCE, U. o. T. a.~D. G.~R. Dattatreya Department~of C. (Ed.).
-  \emph{MATH'06 Proceedings of the 10th WSEAS International Conference on
-  Applied Mathematics}. [S.l.: s.n.], 2006. p. 226--228.}
 
 \bibitem[Zuben e Castro]{ZubenRNA2}
 \abntrefinfo{Zuben e Castro}{ZUBEN; CASTRO}{}

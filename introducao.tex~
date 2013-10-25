@@ -1,27 +1,26 @@
 \chapter{Introdução}
 
-%\section{Considerações Iniciais}
-A programação linear é uma das disciplinas que compõem a programação matemática e constitui um dos pilares da pesquisa operacional. As aplicações da programação linear estão presentes em diversos setores, tais como nas indústrias, nos transportes, na saúde, na educação, na administração pública, na computação, etc. É mais comunente aplicada na engenharia de produção, em problemas que buscam a distribuição eficiente de recursos, minimização de gastos e maximização do lucro. O presente trabalho está focado na utilização da programação linear na separação de padrões. Um modelo de programação linear é resolvido através do método simplex, gerando hiperplanos utlizados na classificação de dados em um dos padrões separados pelo hiperplano.
+A programação linear é uma das disciplinas que compõem a programação matemática e constitui um dos pilares da pesquisa operacional. As aplicações da programação linear estão presentes em diversos setores, tais como nas indústrias, nos transportes, na saúde, na educação, na computação, etc. Mas é mais comunente aplicada na engenharia de produção, em problemas que buscam a distribuição eficiente de recursos, minimização de gastos e maximização do lucro. O presente trabalho está focado na utilização da programação linear na computação, mais especificamente na separação de padrões. Um modelo de programação linear é resolvido através do método simplex, gerando hiperplanos utlizados na classificação de dados em um dos padrões separados pelo hiperplano.
 
 O método simplex proposto por \citeonline{Dan} é um dos métodos mais conhecidos e eficientes para resolver problemas de programação linear. Trata-se de um dos poucos algoritmos que foi implantado comercialmente há mais de 40 anos. Atualmente, está presente em softwares comerciais tais como CPLEX\footnote{http://www-01.ibm.com/software/integration/optimization/cplex-optimizer/} e LINGO\footnote{http://www.lindo.com/}. O método simplex tem como principais carcaterísticas o fato de ser matricial, ou seja, aloca os dados a serem calculados em matrizes, de resolver o conjunto de equações, que formam o modelo de programação linear, de forma interativa até que a solução ótima seja obtida e de ser um método determinístico. Um método alternativo, teoricamente superior ao método simplex, é o método dos pontos interiores, proposto por \citeonline{Karmarkar}. Na prática, tanto o método simplex, quanto o método dos pontos interiores competem até hoje.  
 
-Um dos focos dos estudos das aplicações da programação linear é na utlização de separação de pontos. O modelo gera um hiperplano que separa conjuntos de pontos, sendo que cada conjunto pertence a um padrão. Na classificação de um conjunto é possivel conhecer o padrão ao qual o conjunto pertence através dos hiperplanos. Na computação esse tipo de aplicação pode ser utilizada em várias atividades com o objetivo de classificar dados, como por exemplo:
+Um dos focos dos estudos das aplicações da programação linear é na utlização de separação de pontos. O modelo gera um hiperplano que separa conjuntos de pontos, sendo que cada conjunto pertence a um padrão. Na classificação de um conjunto é possivel conhecer o padrão ao qual o conjunto pertence através dos hiperplanos. Na computação esse tipo de aplicação pode ser utilizada em atividades com o objetivo de classificar dados, como por exemplo:
 
 \begin{itemize}
-\item Diagnósticos através de imagens de exames médicos, como por exemplo se um tumor é benigno ou maligno.
-\item Classificação de expressões facias, que podem ser utlizadas em aplicações que buscam uma iteração tranparente homem - máquina.
-\item Classificação de espécies de plantas através de imagens.
-\item Classificação de genêros músicas através de arquivos de áudio.
+\item Dígitos escritos manualmente
+\item Expressões facias
+\item Espécies de plantas
+\item Gestos manuais
 \end{itemize}
 
-De forma geral, a aplicação da programação linear na separação de pontos pode ser utilizada em abordagens que permitam a caracterização de padrões através de vetores númericos, esse vetores representam os pontos e são denominados vetores de carcaterísticas.
+De forma geral, esse tipo de aplicação da programação linear pode ser utilizado em abordagens que permitam a representação das características de cada item do conjunto de dados em forma de vetor númerico. Esse vetor representam um ponto no hiperplano e é denominado vetor de carcaterística, cada valor do vetor representa uma característica
 
 O modelo proposto separa dois conjuntos de pontos, porém também pode ser utlizado em problemas onde busca-se a separação de múltiplos padrões. O presente trabalho foca nessa última abordagem, em todos os testes realizados o número de conjutnso de pontos é igual ou maior que três.
 
 \section{Objetivos e justificativas}
-O objetivo do presente trabalho é o estudo da utilização da programação linear, mais especificamente do método simplex, na separação de pontos, que repesentam padrões, através de hiperplanos, que serão utlizados na classificação de um conjunto em um determinado padrão. 
+O objetivo do presente trabalho é o estudo da utilização da programação linear e do método simplex, na separação de pontos que repesentam padrões, através de hiperplanos, que serão utlizados na classificação de um dado em um determinado padrão.
 
-Através desse estudo deve ser possível verificar a eficiência da programação linear nesse tipo de aplicação. São realizados testes com vetores gerados aleatóriamente e com dados reais para verificar a eficácia do modelo de programação linear na separação de padrões.
+Através desse estudo deve ser possível verificar a eficiência da programação linear nesse tipo de aplicação. São realizados testes com quatro conjuntos de dados para verificar a eficácia do modelo de programação linear na separação de padrões. Três desses conjuntos foram obtidos já na forma de vetores de características, o quarto conjunto foi obtido em forma de imagens e um método de extração de características foi utilizado para obter os vetores.
 
 A programação linear possui aplicações em diversas áreas, como: indústria, produção, saúde e computação gráfica. Porém é um método mais comumente utilizado na engenharia de produção em problemas como: alocação de recursos e planejamento de produção. O presente trabalho justifica-se pelo fato de abordar uma aplicação prática dentro da computação, onde a aplicação da programação linear não é tão explorada quanto na engenharia de produção.
 
@@ -37,5 +36,14 @@ Para o cumprimento do obejtivo final, o trabalho é composto por algumas etapas:
 \end{itemize}
 
 \section{Estrutura do trabalho}
-REFAZER NO FINAL!!!!
-O presente trabalho apresenta a seguinte estrutura: o capítulo 2 apresenta uma descrição do problema geral de programação linear, os principais métodos de solução e algumas aplicações práticas; o capítulo 3 apresenta de forma detalhada o Método Simplex Revisado, foco deste trabalho; o capítulo 4 apresenta o processo de classificação de imagens e como a programação linear se aplica neste processo; no capítulo 5 serão apresentadas as ; e no capítulo 6 serão apresentadas as conclusões e possíveis trabalhos futuros. 
+Este trabalho está estrturado em seis capítulos. Este primeiro capítulo aprsenta a introdução ao tema abordado, os objetivos e justificativas e a metodologia desecrevendo as etapas para o cumprimento do trabalho.
+
+O segundo capítulo é composto descrição geral do problema de programação linear, algumas aplicações práticas, uma apresentação de alguns métodos de classificação e métodos de validação, além de alguns trabalhos sobre classificação de padrões
+
+O capítulo 3 apresenta de forma detalhada o Método Simplex Revisado e outro importante método de solução de problemas de programação linear
+
+No quarto capítulo apresentado o modelo de programação linear utilizado na geração dos hiperplanos separadores e o processo de classificação de dados
+
+O capítulo 5 são apresentadas os experimentos realizados, suas análises e os dados utilizados
+
+O sexto e último capítulo trata das considerações finais, comclusões e propostas de continuação deste trabalho.. 

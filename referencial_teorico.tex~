@@ -1,14 +1,14 @@
-\chapter{Referencial Teorico}
+\chapter{Referencial Teórico}
 
-Este capítulo aprsenta uma revisão de trabalhos que utilizaram a programação linear e de trabalhos sobre classificação de dados. Também são aprsentadas revisões teóricas sobre as principais metodologias utilizadas nesse trabalho: programação linear, métodos de classificação e métodos de validação. 
+Este capítulo apresenta revisões teóricas sobre as principais metodologias utilizadas nesse trabalho: programação linear, métodos de classificação e métodos de validação. Também é aprsentada uma revisão de trabalhos sobre classificação de dados.  
 
-\section{A Programação Linear e as suas Aplicações}
+\section{A programação linear}
 Na pesquisa operacional, a programação linear é uma das técnicas mais utilizadas em problemas de otimização. Os problemas de programação linear geralmente buscam a distribuição eficiente de recursos limitados para atender um determinado objetivo, por isso suas aplicações estão presentes em diversas áreas como computação, administração, indústria e transporte \cite{Engecom}.
 
 Um problema de programação linear é expresso através de um modelo que é composto por equações e inequações lineares. Esse tipo de problema busca a distribuição eficiente de recursos com restrições para alcançar um objetivo, em geral, maximizar lucros ou minimizar custos. Em um problema de programação linear esse objetivo é expresso através de uma equação linear denominada função objetivo. Para a formulação do problema, é necessário também definir os recursos necessários e em que proporção são requeridos. Essas informações são expressas em equações ou inequações lineares, uma para cada recurso. Esse conjunto de equações ou inequações é denominado restrições do modelo \cite{Engecom}.
 
 \section{Descrição do Problema de Programação Linear}
-O modelo de um problema de programação linear normalmente é apresentado em uma das formas a seguir \cite{Passos}:
+O modelo de um problema de programação linear normalmente é apresentado em uma das formas a seguir:
 $\\Max\ z = c^{T}x \\\\s.a.\left\{\begin{matrix}
 Ax\leq b\\x\geq 0 
 \end{matrix}\right.$  
@@ -22,7 +22,7 @@ Ax\geq  b\\x\geq 0
 
 Um problema de programação linear com até três variáveis pode ser representado graficamente utilizando três eixos cartesianos. Os problemas com duas variáveis podem ainda ser facilmente resolvidos por meio da representação gráfica \cite{Passos}. 
 
-A seguir é apresentado um problema com duas variáveis e sua representação. Apesar de, na prática os problemas de programação linear possuirem um número de variáveis muito maior que dois ou três, a visualização gráfica de modelo, mesmo que simples, contribui para o entendimento dos métodos de resolução apresentados nas seções a seguir.
+A seguir é apresentado um problema com duas variáveis e sua representação. Apesar de, na prática os problemas de programação linear possuirem um número de variáveis muito maior que dois ou três, a visualização gráfica de modelo, mesmo que simples, contribui para o entendimento dos métodos de resolução apresentados nao capítulo a seguir.
 No problema exemplo, uma empresa, que fabrica vários produtos, deseja maximizar o lucro na venda de 2 desses produtos \cite{Hillier}.
 
 $\\
@@ -49,7 +49,7 @@ E as restrições representam as restrições de tempo de cada máquina utilizad
 
 Graficamente representado o problema ficaria da seguinte forma:
 \begin{center}
-	\includegraphics[scale=0.5]{graficos/simplex_grafico}
+	\includegraphics[scale=1.0]{graficos/simplex_graf}
 	\captionof{figure}{Representação gráfica de um Problema de Programação Linear de duas variáveis}
 	\label{img:simplex_grafico}
 \end{center}
@@ -58,93 +58,22 @@ Onde cada reta representa uma restrição do modelo, e a área cinza representa 
 
 Os métodos para resolução de problemas de programação linear buscam esses valores de $x_{1}$ e $x_{2}$  para a determinação da solução ótima.
 
-\section{Aplicações Práticas}
-Um problema de programação linear, como já dito anteriormente, busca a otimização na distribuição de recursos sujeitos a restrições. Por isso é considerada uma poderosa ferramenta de apoio a decisão \cite{FrossardMaxMin} e com utilização em diversas áreas, como: indústria, saúde, computação, produção, etc.
-As empresas, por exemplo, devem estar constantemente atentas à competitividade e às restrições existentes com o objetivo de alcançar suas metas, para isso é necessário otimizar os recursos disponíveis \cite{FrossardMaxMin}. Daí a importância da utilização da programação linear empregada em seu exemplo mais geral: maximizar o lucro e minimizar custos.  Na definição de modelos desse tipo deve-se considerar o preço de venda e o custo de produção, além de restrições do tipo: quantidade de matéria- prima e mão-de-obra disponíveis, máquinas disponíveis para produção, entre outros \cite{FrossardMaxMin}.
+\section{Aplicações utilizando programação linear}
+Um problema de programação linear, como já dito anteriormente, busca um resultado ótimo sujeito a restrições, com utilização em diversas áreas.
 
-\begin{citacao}
-“Administrar com eficiência os recursos disponíveis na empresa, através do planejamento, controle e execução das atividades relacionadas á utilização destes, é fator fundamental na busca da otimização do resultado global da empresa. A programação linear juntamente com as técnicas de pesquisa operacional, permite identificar o resultado ótimo, considerando todas as restrições impostas no modelo adotado.” \cite[p.~31]{FrossardMaxMin}
-\end{citacao}
+A programação linear se aplica na área da saúde, como demonstrado por \citeonline{Alterovitz-saude} em seu trabalho. Em um determinado tipo de tratamento são inseridos cateteres na área afetada para introduzir o medicamento necessário, porém o medicamento acaba afetado células saudáveis além das cancerígenas. Como os problemas de programação linear podem ser resolvidos como problemas determinísticos e com solução exata, \citeonline{Alterovitz-saude} propõe que a formulação de um problema de otimização para determinar o tempo de permanência dos cateteres, minimizando os desvios na quantidade da dose necessitada pelo paciente através da minimização de custos atribuídos. Nos testes realizados, foi obtida uma melhoria nos desvios da quantidade da dosse necessitada pelo paciente mas clinicamente os resultados obtidos não mostraram uma vantagem significativa em relação ao método atualmente utilizado.
 
-Na computação, a programação linear é empregada, por exemplo, no processamento de imagens. Além disso é tema de estudos que buscam implementações eficientes de métodos de programação linear, em especial o método simplex, de forma distribuída ou integrada ao banco de dados.
+Em \citeonline{Moreira2003Saude} modelos de programação linear foram desenvolvidos para duas aplicações relacionadas a área da saúde. Em um dos modelos busca-se a formulação de uma dieta com custo mínimo, considerando as restrições alimentares e os nutrientes esseciais em uma dieta. Um segundo modelo visa analisar intervenções médicas que buscando maximizar os anos de vida de pacientes considerando uma população, como restrições são utilizados os custos e o número de visitas médicas. Para a resolução dos modelos foi utilizado o método simplex. O autor considerou a programação linear como um instrumento útil na tomada de decisões na área da saúde, considerando a importância da substituição de métodos tradicionais baseados no bom senso e tentativa de erro por métodos com soluções otimizadas.
 
-\subsection{Aplicações em Processamento de Imagens}
-O termo wavelet refere-se basicamente a um conjunto de funções com forma de pequenas ondas \cite{Ondaletas}. A decomposição wavelet é uma metodologia de decomposição de uma função ou sinal em um domínio de frequências e espaço, sendo possível investigar a ocorrência de fenômenos localizados no espaço e frequência simultaneamente \cite{Peixoto-wavelet}.
-A decomposição wavelet em sua versão discreta é utilizada na compreensão de dados sendo útil no processamento de imagens quado é necessário realizar a extração de informações de um sinal e a análise de freqüências, principalmente quando ocorrem rápidas variações na frequência \cite{Leite-wavelet}
+Nos trabalhos de \citeonline{Alterovitz-saude} e \citeonline{Moreira2003Saude} foi exemplificado como a programação pode ser útil e importante na área da saúde. No primeiro trabalho apesar de não demonstrar uma melhoria nos resultados foi comprovada a equivalência dos resultados com um método probabilístico atualmente utilizado. Em MOREIRA apesar dos dados utlizados serem reduzidos e uma dieta real possuir mais restrições que as propsotas no trabalho, o autor demonstrou que a eficiência da programação linear em duas situações da área da saúde.
 
-A decomposição wavelet tem sido abordada mediante diferentes métodos, como a Transformada de Fourier, por exemplo. Dentre eles estão presentes os métodos que tem como base a programação linear. Um dos primeiros trabalhos nesta área foi proposto por \citeonline{Chen} utilizando métodos de pontos interiores. Devido ao fato dos problemas lineares obtidos a partir da decomposição wavelet possuirem matrizes muito densas, os autores restringiram a pesquisa apenas ao caso de problemas com dicionários (conjunto de formas de ondas) com uma estrutura especial.  O método gera problemas lineares de grande porte, um problema de sinal de onda típico de comprimento 8192, por exemplo, se traduz em um problema linear de tamanho 8192 por 212.992.
+Em \citeonline{Possami2011Logistica} a programação linear foi utlizada na resolução de um problema abrangendo o transporte, processamento e estocagem de fumo, buscando como objetivo a minimização dos custos. O modelo proposto foi composto por 650 variáveis e 150 restrições. A partir do resultado obtido foi possível determinar parâmetros deste o transporte da matéria bruta, estocagem até a venda do produto.
 
-No trabalho de \citeonline{YarmishWave} o autor resolve um conjunto de problemas de decomposição wavelet, utilizando tanto o método simplex revisado quanto o método simplex padrão. O autor mostra que embora o método simplex revisado seja superior no caso do problema mais geral (problema esparso), a resolução de problemas de decomposição wavelet resulta em um problema denso, onde o método simplex padrão tem melhor  desempenho.
+Dentre as aplicações mais conhecidas da programação linear, encontram-se os problemas de planejamento de produção e controle de estoque, assuntos relacionados a engenharia de produção, como no trabalho de \citeonline{Possami2011Logistica}. A partir desse trabalho tem-se o exemplo de como os resultados extraídos de um modelo de programação linear pode ser determinante no sucesso de um processo de produção.
 
-Na figura \ref{img:ondaletas} são apresentados vários tipos de wavelets.
+Em seu trabalho \citeonline{Krukoski2010Economia} porpõe a utlização da programação linear na economia. Considerando que os investimentos em ações etsão cada vez mais acessíveis para pequenos investidores, o autor porpõe um modelo programação linear na determinação de uma operação de compra ou venda que maximize o lucro e baseado-se também nos riscos. Os resultados obtidos em sua maioria foram positivos, apesar de, de acordo com o autor, alguns resultados serem pouco aplicáveis de comparados as atitudes rotineiras dos investidores.
 
-\begin{center}
-	\includegraphics[scale=0.5]{graficos/ondaletas}
-	\captionof{figure}{Exemplos de tipos de wavelets}
-	\label{img:ondaletas}
- 	\cite{FotoWave}
-\end{center}
-
-Em seu trabalho \citeonline{Komodakis} diz que problemas de análise de imagens podem ser formulados como problemas de rotulagem, onde a partir de uma imagem segmentada, são realizadas comparações entre pontos vizinhos a fim de rotular um grupo de pontos afins. Uma questão que vem incentivando pesquisas nessas áreas, é como resolver problemas desse tipo de forma eficiente e precisa. O autor propõe a utilização do esquema primal- dual da programação linear, e diz que essa utilização revelou excelentes resultados
-
-\subsection{Aplicações em Programação Distribuída}
-\citeonline{Slyke} e \citeonline{Yarmish-Distrubuido} demonstram a eficiência da utilização do método simplex padrão de forma distribuída. Esse método é mais utilizado e mais eficiente que o método revisado na resolução de problemas de grande porte, onde existe um maior volume de dados, fazendo mais sentido a utilização da programação distribuída.
-De acordo com \citeonline{Slyke} e \citeonline{Yarmish-Distrubuido} a eficiência do método simplex revisado é afetada pela densidade do problema, ou seja, é uma método mais eficiente para problemas esparsos, os quais são mais comuns. Porém existem aplicações que exigem modelos mais densos, como em processamento de imagens. Nesse caso a implementação de uma algoritmo do método simplex padrão distribuído se mostra mais eficiente. Além disso, não existem algoritmos eficientes do método simplex revisado distribuído. Em conclusão o autor diz que a implementação apresentou bons resultados, especialmente para problemas grandes e densos.
-
-Em \citeonline{Burger} é proposto um algoritmo simplex distribuído para problemas de programação linear degenerados e atribuições multi- agentes. Um problema de programação linear é dito degenerado se na solução uma das variáveis receber valor zero. O objetivo do trabalho é propor um algoritmo simplex para ser implementado em uma distribuição multi- agente, onde os a gentes devem concordar com uma solução ótima ou declarar o problema como inviável, caso não haja solução ótima.
-
-Em seu trabalho \citeonline{Karypis} faz uma análise da performance de um algoritmo simplex paralelo em vários tipos de arquiteturas de rede, como por exemplo, rede hipercubo (Figura \ref{img:hipercubo}) e rede de estações de trabalho. Nesse tipo de implementação do método simplex, os dados da matriz são distribuídos entre os processadores que compõem a rede. Como resultado preliminar o autor obteve que na rede hipercubo a velocidade da resolução dos problemas cresceu a medida que mais processadores foram incorporados, inclusive para problemas de grande porte. Já na rede de estações de trabalho, para problemas pequenos a velocidade não teve um aumento proporcional ao aumento do número de processadores, enquanto que para problemas de maior porte a velocidade aumentou de forma proporcional ao número de processadores.
-
-\begin{center}
-	\includegraphics[scale=0.5]{graficos/hipercubo}
-	\captionof{figure}{Na rede hipercubo com dimensão d, nesse caso d=4, cada nó está ligado a outros d nós, e o número de processadores é $2^{d}$}
-	\label{img:hipercubo}
-\end{center}
-
-\subsection{Aplicações em Banco de Dados}
-De acordo com \citeonline{Akira-database} dentre as inúmeras ferramentas de programação linear existentes, existe a carência de uma ferramenta que resolva problemas de programação linear de forma integrada a um banco de dados, utilizando procedimentos armazenados em sql pré-compiladas e armazenadas no banco de dados juntamente com os dados. Essa características em uma ferramenta se torna importante, principalmente, em problemas de grande porte, suprimindo o tráfego de dados já que toda a lógica é executada internamente no banco de dados, e apenas o resultado final é enviado para o usuário. Na implementação apresentada por \citeonline{Akira-database} os dados do modelo a ser resolvido são armazenados como modelos relacionais, ou seja, em matrizes bi-dimensionais. Apesar das vantagens desse tipo de implementação, o autor chegou a conclusão que o tempo de execução ainda deve ser melhorado.
-
-\subsection{Aplicação em Saúde}
-A programação linear também se aplica na área da saúde, em \citeonline{Alterovitz-saude} é feita uma proposta de utilização da programação linear no tratamento do câncer. 
-Em um determinado tipo de tratamento são inseridos cateteres na área afetada para introduzir o medicamento necessário, porém o medicamento acaba afetado células saudáveis além das cancerígenas. Como os problemas de programação linear podem ser resolvidos como problemas determinísticos e com solução exata, \citeonline{Alterovitz-saude} propõe que a formulação de um problema de otimização para determinar o tempo de permanência dos cateteres, minimizando os desvios na quantidade da dose necessitada pelo paciente. Nos testes realizados, os resultados obtidos não mostraram uma vantagem significativa em relação ao método atualmente utilizado.
-
-\subsection{Aplicação no reconhecimento de expressões faciais}
-
-Em seus trabalhos, \citeonline{Feng} e \citeonline{Guo} apresentaram uma abordagem de reconhecimento de expresssões faciais utilizando a programação linear. Em ambos a programação linear foi utilizada na fase de classificação da expressão. Em \citeonline{Guo} a programação lienar foi utlizada ainda na fase de extração de carcaterísticas, para determinar a quantidade de caracteríticas a serem selecionadas e os principais pontos da face. Enquanto no trabalho de \cite{Feng} é utilizado o filtro de Gabor na etapa de extração de carcaterísticas. O Filtro de Gabor tem a capacidade de realçar bordas e saliências na imagem. Após a aplicação do filtro na imagem, são realçadas as características salientes presentes no rosto (cantos dos olhos, cantos da boca, narinas, entre outros) \cite{Gabor}. Em ambos os trabalhos foram obtidos ótimos resultados e superiores a outros métodos com os quais foram comparados. 
-
-A programação linear é utlizada na etapa após o tratamento da imagem. Primeiramente as expressões são combinadas em pares. No trabalho de \cite{Feng}, por exemplo, busca-se o reconhecimento de sete expressões: raiva, desgosto, medo, felicidade, tristeza, surpresa e neutro. Essas expressões são combinada em pares do tipo: raiva-desgosto, raiva-medo, etc. Formando um total de 21 pares. Após isso o modelo de programação linear, apresentado mais adiante, é utilizado para gerar os calssificares, o modelo deve ser rodado 21 vezes, uma para cada par de expressões. Essa etapa é também chamada de treinamento, pois a partir do classificadores gerados as expressões das imagens a serem analisadas serão determinadas. Essa abordagem também substitui a utilização de redes neurais para o treinamento, uma vantagem é que o modelo necessita ser rodado uma única vez para cada par, enquanto em uma abordagem utilizando redes neurais este processo se trona iterativo.
-
-Na última etapa de determinação da exepressão é utilizda uma estrtura de árvore binária de torneio.
-
-\subsection{Aplicações na Engenharia de Produção}
-Dentre as aplicações mais conhecidas da programação linear, encontram-se os problemas de planejamento de produção e controle de estoque e os problemas de mistura. Os problemas do primeiro tipo possuem inúmeras aplicações, desde a alocação de máquinas para atender determinada demanda, até a utilização do estoque para atender a uma mudança imprevisível na demanda e necessidades de contratação de demissão para enfrentar mudanças nas necessidades de mão de obra. Já os problemas de mistura tratam, basicamente, da mistura de diferentes matérias para a produção de produtos, que devem obedecer a algumas especificações e, ao mesmo tempo, minimizar o custo ou maximizar o lucro.  \cite{Taha}.
-Um exemplo mais prático seria a produção de rações animais onde o objetivo é minimizar o custo de produção da ração composta por dois ingredientes. Estando restrito a quantidade total que deve ser produzida, além das quantidades de nutrientes necessários.
-
- $\\Minimize\ z=0,9x_{1}+0,5x_{2}\\
-Sujeito\ a\\$
-\begin{eqnarray*}
-        x_{1}+x_{2}\geq 90 \ (a)\\
-        0,09x_{1}+0,05x_{2}\geq 0,07(x_{1}+x_{2}) \ (b)\\
-        0,02x_{1}+0,06x_{2}\geq 0,03(x_{1}+x_{2}) \ (c)\\
-         x_{1}\geq 0 \ (d)\\
-	 x_{2}\geq 0 \ (e)
-\end{eqnarray*}
-
-Onde, 
-\begin{itemize}
-\item \textbf {x1} representa a quantidade do ingrediente 1 que a ração deve conter
-\item \textbf {x2} representa a quantidade do ingrediente 2 que a ração deve conter
-\item \textbf {Z} representa o custo total da produção dessa ração, sendo que o custo (por grama) do ingrediente 1 é de R\$ 0,9 e o custo (por grama) do ingrediente 2 é de R\$ 0,5
-\end{itemize}
-
-E as restrições representam as restrições das quantidades de nutrientes que a ração deve conter e a quantidade total,
-\begin{itemize}
-\item \textbf {(a)} representa a quantidade total de ração que deve ser produzida (em quilos)
-\item \textbf {(b)} representa que a ração deve conter 7\% de um determinado nutriente, e 9\% de cada grama do ingrediente 1 e 5\% de cada grama do ingrediente 2 é composto por esse nutriente. 
-\item \textbf {(c)} representa que a ração deve conter 3\% de um determinado nutriente, e 2\% de cada grama do ingrediente 1 e 6\% de cada grama do ingrediente 2 é composto por esse nutriente.
-\item \textbf {(d)} representa que a ração deve conter o ingrediente 1
-\item \textbf {(e)} representa que a ração deve conter o ingrediente 1
-\end{itemize}
+No trabalho proposto por \cite{Krukoski2010Economia} foi aprsentada uma aplicação que pode auxiliar na tomada de decisões de decisões na área da economia. Os bons resultados mostram que a programação linear, como método determinístico, pode ser empregada mesmo em problemas que estão mais relacionados a métodos probabilísticos, como é o caso dos investimentos em ações.
 
 A programação linear além de estar presente, é fundamental em diversas áreas, tornando-se uma ferramenta de apoio a decisão e contribuindo para o sucesso de projetos nas áreas em que se aplica.
 
@@ -167,7 +96,7 @@ No caso de conjuntos linearmente inseparáveis, é utilizada um função denomin
 	\label{img:svm2}
 \end{center}
 
-No caso em que é o núemro de classes é maior que dois, duas abordagens podem ser utilizadas com as SVM \cite{Lorena03SVM}:
+No caso em que é o número de classes é maior que dois, duas abordagens podem ser utilizadas com as SVM \cite{Lorena03SVM}:
 \begin{itemize}
 \item{Um contra todos: }Nessa abordagem, para K padrões são geradas K SVM. Na criação das SVM, é gerado um hiperplano que separa 1 classe das k-1 classes. Na determinação do padrão de uma instância x, o padrão é aquele que, entre as k SVM obteve mais mais valores de x do lado do hiperplano onde se encontrava o padrão k.  
 \item{Todos contra um: }Nessa abordagem os padrões são agrupados em pares e uma SVM é gerada para cada par. Um esquema de votação deve ser utilizado para determinar o padrão de uma instância, que deve ser analisada a partir de cada SVM e cada SVM retorna uma classe possível. A classe que obtiver mais pontos da instância é a classe atribuída.
@@ -178,11 +107,22 @@ Na metodologia Naive Bayes as carcterísticas do dado a ser classificado são an
 
 \subsection{k- nearest neighbor}
 Nesse método a classificação é feita pela similaridade da instância a ser classificada com um dado ou vetor utlizado no treinamento, a classe do dado utilizado no treinamento é então atribuída a instância com padrão inicalmente desconhecido. As estapas desse métodos consistem em utilizar um parâmetro para medir a semelhança ou a distância do dado a ser classificado em relação a cada um dos dados utlizados no treinamento. Os k vetores mais similares ou mais próximos são selecionados e entre o padrão mais frequente é atribuído ao dado incialmente desconhecido. Apesar de ser considerado um método simples, sua dificuldade está em definir os parâmetros ou a métrica que definirá a semelhança ou distância entre os dados\cite{Chagas09KNN}.
-COLOCAR FIGURA!!!!!
+\begin{center}
+	\includegraphics[scale=0.5]{graficos/KNN}
+	\captionof{figure}{}
+	\label{img:svm2}
+\end{center}
 
 \subsection{Redes Neurais Artificias}
 Em seu trabalho  \citeonline{Morais2010RNA} define Redes Neurais Artificiais (RNA) como sistemas paralelos e distribuídos compostos por unidades de processamento simples (neurônios) interligadas por conexões, esses neurônios calculam determinadas funções matemáticas. Na fase de treinamento ou aprendizagem "um conjunto de exemplos é apresentado a rede que extrai automaticamente características necessárias para representar a informação fornecida" \cite{Morais2010RNA}.
-Uma rede neural pode receber como entrada, na etapa de treinamento, um conjunto de vetores com seus respectivos padrões. Ao submeter como entrada um vetor com padrão desconehcido a rede neural deve classificar esse vetor. A vantegem desse método é que uma rede pode construir fronteiras não lineares entre padrões, o que pode ser muito vantajoso em problemas complexos de classificação. Existem vários modelos de redes neurais que possibilitam o reconheciemnto de padrões, entre eles: Perceptron de Camada Simples, Perceptron de Múltiplas e Redes de Kohonen  ACERTAR CITAÇÃO%\cite{ZubenRNA}.
+Uma rede neural pode receber como entrada, na etapa de treinamento, um conjunto de vetores com seus respectivos padrões. Ao submeter como entrada um vetor com padrão desconehcido a rede neural deve classificar esse vetor. A vantegem desse método é que uma rede pode construir fronteiras não lineares entre padrões, o que pode ser muito vantajoso em problemas complexos de classificação. Existem vários modelos de redes neurais que possibilitam o reconheciemnto de padrões, entre eles: Perceptron de Camada Simples, Perceptron de Múltiplas e Redes de Kohonen \cite{ZubenRNA2}.
+
+\section{Trabalhos Relacionados}
+Em seu trabalho \citeonline{Reffson02SVM} busca o classificação de impressões digitais em 5 classe. Esse tipo de classificação tem o próposito de gerenciar grandes bancos de dados de impressões digitais e acelerar o processo de identificação. Foi utilizado um banco contendo 4000 imagens igualmente distribuídas entre as cinco classes. O autor dividiu o banco em dois grupos, utilizando um para treinamento e outro para teste. Após a extração das características das imagens, Máquinas de Vetores de Suporte foram utlizadas na classificação. Na abordagem todos contra um foi obtida uma média de precisão de 91,18\%, já na abordagem um contra todos a precisão na classificação das impressões foi de 90,43\%.
+
+\citeonline{Chagas09KNN} apresentou uma técnica para a classificação de textos, uma atividade importante em aplicações como bibliotecas digitais e em outras que em geral buscam a organização de documentos disponíveis no formato digital. O autor propôs variações no método K near neighbor a fim de  aprimorar a escolha dos textos utilizados no treinamento mais próximos ao texto que precisa ser classificado. Nos testes feitos com três coleções de textos, as médias de acertos na classificação obtidas foram acima de 90\% em duas coleções, e próxima a 70\% na terceira.
+
+Em seu trabalho, CITAR 	uma rede neural artificil foi utlizada na classificação de laranjas através de iamgens. Os autores consideraram que apesar da automação de muitos setores industriais, em um sistema de produção, as frutas consideradas boas, são selecionadas através de inspeção visual humana. A principal característica utlizada foi a cor que pode classificar a fruta em cinco padrões. No trabalho ficou comprovada a aplicabilidade do método para o domínio proposto que era classificar as frutas de acordo com a cor.
 
 \section{Métodos de validação do modelo}
 Um modelo de classificação pode ser verificado em relação a sua acurácia apartir de um conjunto de dados ou a sua performance em relação a outros métodos classificadores podem ser verificados. Algumas técnicas utilizadas com esse intuito serão apresentadas a seguir. No presente trabalho a técnica Cross Validation é utilizada com o objetivo de verificar a acurácia, nesse caso, da metodologia utlizada na classificação de padrões \cite{Kohavi95Cross} \cite{Baldisserotto05Validacao}.
@@ -196,10 +136,3 @@ Nesse método, o conjunto de dados também é dividido em cojunto de treinamento
 
 \subsection{Leave-one-out}
 Nessa técnica, do conjunto com o número total de dados N, são realizadas N rodadas de treinamento e teste, sendo que a cada rodada N-1 dados são utlizados para teste e o dados restante é utlizado para treinamento. Pelas suas características, esse é um método recomendável para conjuntos de dados pequenos já que a quantidade de rodadas de treinamento e teste é igual a quantidade de dados o que o torna um método com alto custo computacional \cite{Kohavi95Cross} \cite{Baldisserotto05Validacao}.
-
-\section{Trabalhos Relacionados}
-Em seu trabalho \citeonline{Reffson02SVM} busca o classificação de impressões digitais em 5 classe. Esse tipo de classificação tem o próposito de gerenciar grandes bancos de dados de impressões digitais e acelerar o processo de identificação. Foi utilizado um banco contendo 4000 imagens igualmente distribuídas entre as cinco classes. O autor dividiu o banco em dois grupos, utilizando um para treinamento e outro para teste. Após a extração das características das imagens, Máquinas de Vetores de Suporte foram utlizadas na classificação. Na abordagem todos contra um foi obtida uma média de precisão de 91,18\%, já na abordagem um contra todos a precisão na classificação das impressões foi de 90,43\%.
-
-\citeonline{Chagas09KNN} apresentou uma técnica para a classificação de textos, uma atividade importante em aplicações como bibliotecas digitais e em outras que em geral buscam a organização de documentos disponíveis no formato digital. O autor propôs variações no método K near neighbor a fim de  aprimorar a escolha dos textos utilizados no treinamento mais próximos ao texto que precisa ser classificado. Nos testes feitos com três coleções de textos, as médias de acertos na classificação obtidas foram acima de 90\% em duas coleções, e próxima a 70\% na terceira.
-
-Em \citeonline{Feng} foi realizado um estudo de reconhecimento de expressões faciais, utilizando a base de dados JAFFE \cite{Jaffe}, em uma etapa de pre processamento as coordenadas do olhos foram marcadas manualmente e utilizando uam máscara elíptica as imagens foram reduzidas a região da face. Na extraçãod e características foi utilizado o método local binary patterns. O modelo de programação linear proposto em \cite{Bennett92robustlinear} é utlizado para gerar os classificadores e na classificação de imagens com expressão desconhecida foi utilizada uma árvore de torneio. Para validação os dados foram divididos em 10 conjuntos, o ciclo de treinamento e teste foi repetido 10 vezes, sendo que em cada ciclo um conjunto foi usado como teste e os outros nove para validação. Foram realizados 20 desses ciclos e uma média da taxa de acertos foi calculada, obtendo uma taxa de 93.8\%. Os autores concluíram que o método obteve uma performance excelente comparado a outros estudos de receonhecimento de expressão facial que utilizaram a mesma base de dados.

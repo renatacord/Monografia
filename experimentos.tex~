@@ -217,8 +217,6 @@ Na primeira coluna da tabela \ref{tab:vetorxtaxa} estão específicadas as quant
 
 É possível observar um aumento na taxa de acertos a medida que a quantidade de vetores cresce. Porém esse aumento não é proporcional ao aumento do núemro de vetores. A variação na taxa de acerto diminui a medida que a quantidade de vetores aumenta, do teste com 50 vetores por calsse para o teste com 100, houve um aumento de 2,8\% na taxa de acerto. Já no testes com 200 e 400 a variação na taxa foi de 2\%. E entre o teste com 600 vetores e o teste com quantidade máximamde vetores que é 1050 é observado um aumento bem pequeno de 0,02\% na taxa de acerto.
 
-\subsection{Utilização total e parcial dos dados}
-
 \subsection{Tempo computacional}
 A partir dos testes realizados também foram realizadas análises do ponto de vista computacional.
 Todos os experimento foram feitos utilizando um notebbok com configuração core i3 COMPLETAR CONFIGURACAO !!!
@@ -239,18 +237,6 @@ Os resultados mostrados na tabela a seguir são as médias dos tempos de 5 execu
         \captionof{table}{Tempo Computacional}
 	\label{tab:tempocomp}
 \end{table}
-
- %\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
- %   \hline
- %   \multicolumn{1}{|c|}&\multicolumn{4}{c|}{Rank}&\multirow{2}{*}{Total}\\
- %   \arrayrulecolor{kugray5}
- %   \arrayrulecolor{black}
- %  \cline{2-5}
- %   \multicolumn{1}{|c|}{}&A&B&C&Other&\\
- %   \hline
- %  type 2&8&14&5&2&29\\
- %  \hline
- % \end{tabular}
 
 Na segunda quarta da tabela \ref{tab:tempocomp} estão os temspo de execução apenas do módulo de geração de classificadores, que é o módulo onde o modelo de programação linear é resolvido. É possível constatar um tempo computacional igual ou menor que 1 segundo para três casos, apenas para a base de dados Dígitos esse tempo foi elevado para 4 segundos. Esse aumento pode ser atribuído ao fato de que essa base de dados possui uma quantidae de vetores consideravelmente maior do que as outras bases de dados. Nos experimentos é utlizada a validação 10-fold cross validation, então o módulo gerador de classificadores é executado 10 vezes, porém os tempos expostos na tabela não podem ser multiplicados por 10 para a obtenção do tempo gasto pelo módulo gerador de classificadores em relação ao tempo total da execução porque para a obtenção desses tempos, o módulo foi executado isoladamente e apenas uma vez a cada uma das 5 execuções. \ref{tab:tempocomp}
 
