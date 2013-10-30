@@ -1,41 +1,35 @@
-\chapter{Marco Teórico}
-
-\section{Métodos de Solução}
+\chapter{Métodos de Solução}
 Entre os métodos mais famosos para a resolução de problemas de programação linear estão o método simplex  e o método de pontos interiores. 
 Depois da apresentação do método simplex,outros métodos com diferentes abordagens foram propostos \cite{Todd}. Porém, dentre os métodos existentes apenas o método de pontos interiores é atualmente competitivo em relação ao método simplex \apud{Bixby}{Munari}. 
 A principal diferença entre esses dois métodos é o que o método simplex caminha pelos vértices da região viável, enquanto o método de pontos interiores caminha pelo interior da região viável \cite{MaculanPI}. Além disso, uma outra diferença é que o simplex exige muitas iterações com cálculos simples, enquanto no método de pontos interiores poucas iterações são exigidas, porém com cálculos mais elaborados.
-Apesar das vantagens do método de pontos interiores em relação ao método estudado neste trabalho, o método simplex possui melhor desempenho na resolução de problemas de pequeno porte em relação ao método de pontos interiores, tornando-se um método indispensável em ferramentas de programação linear.
+Apesar das vantagens do método de pontos interiores em relação ao método estudado neste trabalho, o método simplex possui melhor desempenho na resolução de problemas de pequeno porte em relação ao método de pontos interiores.
 
-\subsection{Método Simplex}
+\section{Método Simplex}
 O método simplex é um dos algoritmos mais populares para a resolução de problemas de programação linear. Surgiu a mais de 60 anos atrás e foi proposto por George Dantzig.  
 
 É um método iterativo, e sua ideia principal consiste no fato de que a cada iteração uma nova solução é encontrada, sempre melhor que a anterior até o ponto em que a solução ótima é obtida. Outra característica do método é o fato de ser matricial, ou seja, os dados a serem calculados são armazenados em matrizes.  
 
 Com a utilização do método, foi percebido que a cada iteração eram requeridos muitos cálculos sobre valores que nem sempre importavam para a iteração seguinte, fato que do ponto de vista computacional tornaria o método ineficiente. Esse método é chamado de método simplex padrão ou tabular. A partir desse fato foi desenvolvido o método simplex revisado visando a resolução de problemas de programação linear computacionalmente.
 
-%\section{Origem do Método Simplex}
-O método simplex surgiu nos Estados Unidos e foi proposto pelo matemático George Dantzig. Quando trabalhava no Pentágono recebeu dos seus colegas o desafio de tentar mecanizar o processo de planejamento. No ano de 1947 Dantzig propôs o método simplex que tornou possível a solução de problemas de otimização de vários tipos, como transporte, produção, alocação de recursos e problemas de escalonamento \cite{OrigemSimplex}.
-
 %\section{Descrição do Método}
-\section{Princípio Básico do Método}
+\subsection{Princípio Básico do Método}
 A idéia do método simplex consiste em resolver repetidas vezes um sistema de equações lineares, e assim obter uma sucessão de soluções até encontrar a solução ótima. Ou seja, é um processo onde nos movemos de uma solução viável para outra sempre melhor ou pelo menos não pior.
 
-Um problema de programação linear é sempre constituído de uma função objetivo e várias restrições. Geometricamente, essas restrições resultam em uma forma geométrica, chamada hiperplano, no espaço n-dimensional sendo n o número de variáveis no modelo. E cada vértice desse hiperplano é considerado uma solução viável, como ilustra o exemplo abaixo.
+Um problema de programação linear é sempre constituído de uma função objetivo e várias restrições. Geometricamente, essas restrições resultam em uma forma geométrica, chamada hiperplano, no espaço n-dimensional sendo n o número de variáveis no modelo. E cada vértice desse hiperplano é considerado uma solução viável, retomando o exemplo apresentado na seção 2.2.
 \begin{center}
-	\includegraphics[scale=0.5]{graficos/Simplex_grafico_completo}
-	\captionof{figure}{Um modelo de programação linear e a sua respectiva representação gráfica}
+	\includegraphics[scale=0.5]{graficos/graf_simplex_pontos}
+	\captionof{figure}{Representação gráfica de um modelo de programação linear}
 	\label{img:simplex_grafico_completo}
-	\cite{Hillier}
 \end{center}
 
-Na figura \ref{img:simplex_grafico_completo} apresenta-se um exemplo de um problema de programação linear e sua representação geométrica. Nesse exemplo, de acordo com a representação geométrica do modelo, existem cinco possíveis soluções: x1=0 e  x2=0; x1=0 e  x2=6; x1=2 e  x2=6; x1=4 e  x2=3; x1=4 e x2=0. Como o objetivo é maximizar, concluímos que a melhor solução é x1=2 e  x2=6, em que z =36. No método Simplex a cada iteração, antes da solução ótima ser obtida, é encontrada uma dessas possíveis soluções que se localizam nos vértices do gráfico.
+Nesse exemplo, de acordo com a representação geométrica do modelo, existem cinco possíveis soluções: x1=0 e  x2=0; x1=0 e  x2=6; x1=2 e  x2=6; x1=4 e  x2=3; x1=4 e x2=0. Como o objetivo é maximizar, concluímos que a melhor solução é x1=2 e  x2=6, em que z =36. No método Simplex a cada iteração, antes da solução ótima ser obtida, é encontrada uma dessas possíveis soluções que se localizam nos vértices do gráfico.
 
-\section{Descrição do Método Simplex Revisado}
+\subsection{Descrição do Método Simplex Revisado}
 O método simplex revisado surgiu como uma solução para evitar cálculos desnecessários. Esse método foi projetado para problemas a serem solucionados computacionalmente.
 
-No simplex revisado, são armazenados na memória volátil apenas os dados realmente necessários. Além disso, os cálculos são realizados apenas sobre a coluna que é utilizada na iteração, o que evita cálculos com matrizes que poderia acarretar uma imprecisão nos resultados.
+No simplex revisado, são armazenados na memória volátil apenas os dados realmente necessários. Além disso, os cálculos são realizados apenas sobre a coluna que é utilizada na iteração, o que evita cálculos com matrizes que poderiam acarretar uma imprecisão nos resultados.
 
-Esse método mantém a característica do simplex, que é a troca entre a variável que entra na base e a que sai, além de também exigir certo esforço computacional. Porém sua grande vantagem é a economia de tempo e espaço, que garantida pelo modo como é desenvolvida a solução. 
+Esse método mantém a característica do simplex, que é a troca entre a variável que entra na base e a que sai, além de também exigir certo esforço computacional. Porém sua grande vantagem é a economia de tempo e espaço, que é garantida pelo modo como é desenvolvida a solução. 
 
 Nesta seção descreve-se os passos do algoritmo simplex revisado. O problema considerado é de maximização. A distinção entre matrizes, vetores e escalares foi feita da seguinte forma: letra maiúscula e negrito para matriz (\textbf{MATRIZ}); letra minúscula e negrito para vetor (\textbf{vetor}); letra em itálico para escalar (\textit{escalar}).
 
@@ -86,7 +80,7 @@ Passo 6: Calcular nova matriz $\mathbf{B^{-1}}$: $\mathbf{B^{-1}} = \mathbf{EB^{
 
 Passo 7: Atualizar os vetores $\mathbf{c{_B}}$ e $\mathbf{x{_B}}$.
 
-\subsection{Método de Pontos Interiores}
+\section{Método de Pontos Interiores}
 Em 1984, Karmarkar revolucionou a área de programação linear com a publicação de um algoritmo de complexidade polinomial que apresentou bom desempenho quando aplicado a problemas práticos \cite{MaculanPI}. Essa publicação deu origem a um novo campo de pesquisa, chamado de método dos pontos interiores. 
 
 O método de pontos interiores tem como principal característica realizar a busca por soluções no interior da região viável do problema, até encontrar a solução ótima \cite{Pinto}.

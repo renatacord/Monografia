@@ -433,7 +433,8 @@ An Extended Abstract}},
 @Misc{ZubenRNA2,
 	author = {Fernando Von Zuben and Leandro N. de Castro},
 	title = {Redes Neurais Artificiais para Reconhecimento e Classificação de Padrões},
-        institution = {Universidade Estadual de Campinas}
+        institution = {Universidade Estadual de Campinas},
+        year = {2003}
 }
 
 @article{Moreira2003Saude,
@@ -460,3 +461,10 @@ An Extended Abstract}},
 	year = {2010}
 }
 
+@inproceedings{sbai2003RNALaranjas,
+	title     = "Classificação de laranjas baseada em padrões visuais de alto nível",
+	author    = "Simões, Alexandre da Silva and Costa, Anna Helena Reali",
+	booktitle = "6o. Simpósio Brasileiro de Automação Inteligente - SBAI/SBA, 2003, Bauru, SP. Anais do VI Simpósio Brasileiro de Automação Inteligente",
+	year      = "2003",
+	pages     = "77-81",
+}

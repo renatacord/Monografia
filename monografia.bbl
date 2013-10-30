@@ -43,9 +43,9 @@ Disserta\c{c}\~ao (Mestrado) --- Universidade de Pernambuco, 2005.}
 {DANZITG, G. \emph{{Linear Programming and Extensions}}. [S.l.]: Princeton
   University Press, 1963.}
 
-\bibitem[Dias Sarajane Marques~Peres]{Libras}
-\abntrefinfo{Dias Sarajane Marques~Peres}{DIAS SARAJANE MARQUES~PERES}{}
-{DIAS SARAJANE MARQUES~PERES, H. H.~B. D.~B. \emph{Libras Movement Data Set}.
+\bibitem[Dias e Bíscaro]{Libras}
+\abntrefinfo{Dias e Bíscaro}{DIAS; BíSCARO}{}
+{DIAS, S. M.~P. D.~B.; BíSCARO, H.~H. \emph{Libras Movement Data Set}.
 Dispon{\'\i}vel em:
   \htmladdnormallink{$<$http:\-/\-/archive\-.ics\-.uci\-.edu\-/ml\-/datasets\-%
 /Libras+Movement$>$}{http://archive.ics.uci.edu/ml/datasets/Libras+Movement}.}
@@ -89,11 +89,6 @@ Dispon{\'\i}vel em:
 {HILLIER, F.; LIEBERMAN, G. \emph{{Introdução à Pesquisa Operacional}}. 8º.
   ed. [S.l.]: Mc-Graw-Hill, 2006.}
 
-\bibitem[Karmarkar 1984]{Karmarkar}
-\abntrefinfo{Karmarkar}{KARMARKAR}{1984}
-{KARMARKAR, N. {A new polynomial algorithm for linear programming}.
-\emph{Combinatorica}, v.~4, p. 373--395, 1984.}
-
 \bibitem[Kohavi 1995]{Kohavi95Cross}
 \abntrefinfo{Kohavi}{KOHAVI}{1995}
 {KOHAVI, R. A study of cross-validation and bootstrap for accuracy estimation
@@ -117,13 +112,6 @@ Disserta\c{c}\~ao (Mestrado) --- Universidade Federal do Paraná, 2010.}
 {LIMA, A. R.~G.
 \emph{Máquinas de Vetores Suporte na Classificaçã de Impressões Digitais}.
 Disserta\c{c}\~ao (Mestrado) --- Universidade Federal do Ceará, 2002.}
-
-\bibitem[Lima 2004]{OrigemSimplex}
-\abntrefinfo{Lima}{LIMA}{2004}
-{LIMA, D. de.
-\emph{{A Programação Matemática no Planejamento de Produção na Relação
-  Avícola/ Aviário: Alojamento e Desalojamento de Aves}}.
-Disserta\c{c}\~ao (Mestrado) --- Universidade Federal do Paraná, 2004.}
 
 \bibitem[Lorena 2003]{Lorena03SVM}
 \abntrefinfo{Lorena}{LORENA}{2003}
@@ -206,9 +194,9 @@ Disserta\c{c}\~ao (Mestrado) --- Universidade Federal de Goiás, 2009.}
   binary patterns: A comprehensive study.
 \emph{Image Vision Comput.}, v.~27, n.~6, p. 803--816, 2009.}
 
-\bibitem[SIMÕES e Costa 2003]{sbai2003RNALaranjas}
-\abntrefinfo{SIMÕES e Costa}{SIMÕES; COSTA}{2003}
-{SIMÕES, A. d.~S.; COSTA, A. H.~R. Classificação de laranjas baseada em
+\bibitem[Simões e Costa 2003]{sbai2003RNALaranjas}
+\abntrefinfo{Simões e Costa}{SIMõES; COSTA}{2003}
+{SIMõES, A. d.~S.; COSTA, A. H.~R. Classificação de laranjas baseada em
   padrões visuais de alto nível. In:  \emph{6o. Simpósio Brasileiro de
   Automação Inteligente - SBAI/SBA, 2003, Bauru, SP. Anais do VI Simpósio
   Brasileiro de Automação Inteligente}. [S.l.: s.n.], 2003. p. 77--81.}
@@ -232,9 +220,9 @@ Disserta\c{c}\~ao (Mestrado) --- Universidade Federal de Goiás, 2009.}
 Disserta\c{c}\~ao (Mestrado) --- Universidade Estadual de Campinas - UNICAMP,
   2010.}
 
-\bibitem[Zuben e Castro]{ZubenRNA2}
-\abntrefinfo{Zuben e Castro}{ZUBEN; CASTRO}{}
+\bibitem[Zuben e Castro 2003]{ZubenRNA2}
+\abntrefinfo{Zuben e Castro}{ZUBEN; CASTRO}{2003}
 {ZUBEN, F.~V.; CASTRO, L.~N. de. \emph{Redes Neurais Artificiais para
-  Reconhecimento e Classificação de Padrões}.}
+  Reconhecimento e Classificação de Padrões}. 2003.}
 
 \end{thebibliography}

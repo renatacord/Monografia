@@ -9,30 +9,29 @@
 \contentsline {section}{\numberline {2.3}Aplica\IeC {\c c}\IeC {\~o}es utilizando programa\IeC {\c c}\IeC {\~a}o linear}{8}{section.2.3}
 \contentsline {section}{\numberline {2.4}M\IeC {\'e}todos de Classifica\IeC {\c c}\IeC {\~a}o}{10}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Support Vector Machines}{10}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Naive Bayes}{12}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}k- nearest neighbor}{12}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.2}Naive Bayes}{11}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}\textit {k}- nearest neighbor}{11}{subsection.2.4.3}
 \contentsline {subsection}{\numberline {2.4.4}Redes Neurais Artificias}{12}{subsection.2.4.4}
-\contentsline {section}{\numberline {2.5}Trabalhos Relacionados}{13}{section.2.5}
-\contentsline {section}{\numberline {2.6}M\IeC {\'e}todos de valida\IeC {\c c}\IeC {\~a}o do modelo}{14}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Handout}{14}{subsection.2.6.1}
+\contentsline {section}{\numberline {2.5}Reconhecimento de padr\IeC {\~o}es}{12}{section.2.5}
+\contentsline {section}{\numberline {2.6}M\IeC {\'e}todos de valida\IeC {\c c}\IeC {\~a}o do modelo}{13}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Handout}{13}{subsection.2.6.1}
 \contentsline {subsection}{\numberline {2.6.2}Cross Validation}{14}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {2.6.3}Leave-one-out}{15}{subsection.2.6.3}
-\contentsline {chapter}{\numberline {3}Marco Te\IeC {\'o}rico}{16}{chapter.3}
-\contentsline {section}{\numberline {3.1}M\IeC {\'e}todos de Solu\IeC {\c c}\IeC {\~a}o}{16}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}M\IeC {\'e}todo Simplex}{16}{subsection.3.1.1}
-\contentsline {section}{\numberline {3.2}Princ\IeC {\'\i }pio B\IeC {\'a}sico do M\IeC {\'e}todo}{17}{section.3.2}
-\contentsline {section}{\numberline {3.3}Descri\IeC {\c c}\IeC {\~a}o do M\IeC {\'e}todo Simplex Revisado}{18}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}M\IeC {\'e}todo de Pontos Interiores}{20}{subsection.3.3.1}
-\contentsline {chapter}{\numberline {4}Aplica\IeC {\c c}\IeC {\~a}o da programa\IeC {\c c}\IeC {\~a}o linear na separa\IeC {\c c}\IeC {\~a}o de pontos}{21}{chapter.4}
-\contentsline {section}{\numberline {4.1}O modelo}{22}{section.4.1}
-\contentsline {section}{\numberline {4.2}Exemplo Ilustrativo do Modelo Classificador}{24}{section.4.2}
-\contentsline {section}{\numberline {4.3}Etapa de classifica\IeC {\c c}\IeC {\~a}o}{26}{section.4.3}
-\contentsline {chapter}{\numberline {5}Experimentos Computacionais}{28}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conjuntos de Dados}{29}{section.5.1}
-\contentsline {section}{\numberline {5.2}Processo de treinamento}{33}{section.5.2}
+\contentsline {subsection}{\numberline {2.6.3}Leave-one-out}{14}{subsection.2.6.3}
+\contentsline {chapter}{\numberline {3}M\IeC {\'e}todos de Solu\IeC {\c c}\IeC {\~a}o}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}M\IeC {\'e}todo Simplex}{15}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Princ\IeC {\'\i }pio B\IeC {\'a}sico do M\IeC {\'e}todo}{16}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Descri\IeC {\c c}\IeC {\~a}o do M\IeC {\'e}todo Simplex Revisado}{16}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}M\IeC {\'e}todo de Pontos Interiores}{18}{section.3.2}
+\contentsline {chapter}{\numberline {4}Aplica\IeC {\c c}\IeC {\~a}o da programa\IeC {\c c}\IeC {\~a}o linear no reconhecimento de padr\IeC {\~o}es}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}O modelo}{20}{section.4.1}
+\contentsline {section}{\numberline {4.2}Exemplo Ilustrativo do Modelo Classificador}{22}{section.4.2}
+\contentsline {section}{\numberline {4.3}Etapa de classifica\IeC {\c c}\IeC {\~a}o}{25}{section.4.3}
+\contentsline {chapter}{\numberline {5}Experimentos Computacionais}{27}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conjuntos de Dados}{28}{section.5.1}
+\contentsline {section}{\numberline {5.2}Processo de treinamento}{32}{section.5.2}
 \contentsline {section}{\numberline {5.3}Processo de teste}{33}{section.5.3}
-\contentsline {section}{\numberline {5.4}Etapa de valida\IeC {\c c}\IeC {\~a}o}{34}{section.5.4}
-\contentsline {section}{\numberline {5.5}Organiza\IeC {\c c}\IeC {\~a}o dos dados}{35}{section.5.5}
+\contentsline {section}{\numberline {5.4}Etapa de valida\IeC {\c c}\IeC {\~a}o}{33}{section.5.4}
+\contentsline {section}{\numberline {5.5}Organiza\IeC {\c c}\IeC {\~a}o dos dados}{34}{section.5.5}
 \contentsline {section}{\numberline {5.6}Resultados}{36}{section.5.6}
 \contentsline {subsection}{\numberline {5.6.1}Quantidade de vetores X Taxa de acerto}{37}{subsection.5.6.1}
 \contentsline {subsection}{\numberline {5.6.2}Tempo computacional}{38}{subsection.5.6.2}

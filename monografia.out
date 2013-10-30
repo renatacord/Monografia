@@ -11,18 +11,17 @@
 \BOOKMARK [2][-]{subsection.2.4.2}{Naive Bayes}{section.2.4}
 \BOOKMARK [2][-]{subsection.2.4.3}{k- nearest neighbor}{section.2.4}
 \BOOKMARK [2][-]{subsection.2.4.4}{Redes Neurais Artificias}{section.2.4}
-\BOOKMARK [1][-]{section.2.5}{Trabalhos Relacionados}{chapter.2}
+\BOOKMARK [1][-]{section.2.5}{Reconhecimento de padr\365es}{chapter.2}
 \BOOKMARK [1][-]{section.2.6}{M\351todos de valida\347\343o do modelo}{chapter.2}
 \BOOKMARK [2][-]{subsection.2.6.1}{Handout}{section.2.6}
 \BOOKMARK [2][-]{subsection.2.6.2}{Cross Validation}{section.2.6}
 \BOOKMARK [2][-]{subsection.2.6.3}{Leave-one-out}{section.2.6}
-\BOOKMARK [0][-]{chapter.3}{Marco Te\363rico}{}
-\BOOKMARK [1][-]{section.3.1}{M\351todos de Solu\347\343o}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.1.1}{M\351todo Simplex}{section.3.1}
-\BOOKMARK [1][-]{section.3.2}{Princ\355pio B\341sico do M\351todo}{chapter.3}
-\BOOKMARK [1][-]{section.3.3}{Descri\347\343o do M\351todo Simplex Revisado}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.3.1}{M\351todo de Pontos Interiores}{section.3.3}
-\BOOKMARK [0][-]{chapter.4}{Aplica\347\343o da programa\347\343o linear na separa\347\343o de pontos}{}
+\BOOKMARK [0][-]{chapter.3}{M\351todos de Solu\347\343o}{}
+\BOOKMARK [1][-]{section.3.1}{M\351todo Simplex}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.1.1}{Princ\355pio B\341sico do M\351todo}{section.3.1}
+\BOOKMARK [2][-]{subsection.3.1.2}{Descri\347\343o do M\351todo Simplex Revisado}{section.3.1}
+\BOOKMARK [1][-]{section.3.2}{M\351todo de Pontos Interiores}{chapter.3}
+\BOOKMARK [0][-]{chapter.4}{Aplica\347\343o da programa\347\343o linear no reconhecimento de padr\365es}{}
 \BOOKMARK [1][-]{section.4.1}{O modelo}{chapter.4}
 \BOOKMARK [1][-]{section.4.2}{Exemplo Ilustrativo do Modelo Classificador}{chapter.4}
 \BOOKMARK [1][-]{section.4.3}{Etapa de classifica\347\343o}{chapter.4}
