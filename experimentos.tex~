@@ -101,88 +101,18 @@ Para reduzir o tamanho do vetor de caracteríticas os códigos LBP de cada pixel
 
 Nos vetores de características de todos os conjuntos de dados utlizados, é acrescido um valor informando a classe representada pelo vetor, para as etapas de treinamento e teste esse valor é omitido, ele só é utlizado na etapa de validação para verificar se o vetor foi corretamente classificado.
 
-\section{Processo de treinamento}
-Na etapa de treinamento, os padrões são agrupados em pares e dessa forma são submetidos ao modelo de programação linear, já que o modelo gera um hiperplano que separa dois padrões. Dessa forma para um conjunto de dados com N padrões, a quantidade de pares formados é dada pela fórmula:
-$$ C_{N}^{2}=\frac{N!}{2\times (N-2)!)} $$
-
-A etapa de treinamento consiste em gerar um hiperplano para cada par formado. No caso de um conjunto de dados constituido por 3 classes, são gerados 3 hiperplanos classificadores, da seguinte forma: 
-\begin{figure}[h!]
-\centering
-\subfigure[Classificador dos padrões 1 e 2]{\includegraphics[scale=0.5]{graficos/class1e2}\label{fig1_ls}}
-\qquad
-\subfigure[Classificador dos padrões 1 e 3]{\includegraphics[scale=0.5]{graficos/class1e3}\label{fig2_ls}}
-\qquad
-\subfigure[Classificador dos padrões 2 e 3]{\includegraphics[scale=0.5]{graficos/class2e3}\label{fig3_ls}}
-\label{img:linear_sepa}
-\end{figure}
-
-Na figura \ref{img:diagrama_modulos} o processo de treinamento corresponde ao módulo de geração de classificadores. Esse módulo foi implementado na linguagem de programação JAVA, utilizada como interface com o software CPLEX da IBM. O modelo é resolvido utilizando o método simplex revisado e toda etapa de resolução é feita pelo software CPLEX
-
-\section{Processo de teste}
-No processo de teste vetores de caracetrísticas são submetidos a estrtura de áravore de torneio e classificados em um dos N padrões do conjunto de dados.
-Na figura \ref{img:diagrama_modulos} corresponde ao módulo de classificação de vetores com padrão desconhecido. E um arquivo contendo vários vetores para teste é utilizado.  A cada teste uma árvore de torneio é construída e um vetor para teste é lido e sua classificação é retornada. Na estrutura de árvore de torneio os padrões são confrontados aos pares, e o hiperplano que separa os dois padrões do par é utlizado para verificar de qual lado do hiperplano o vetor teste se localiza, o padrão que estiver do mesmo lado do vetor teste é elevado ao nível superior da árvore. Para verificar de qual lado o vetor teste de localiza é realizado o seguinte cálculo, considerando o vetor x como o vetor teste:
-
-Se $ \begin{bmatrix}
-\omega _{1} & ... & \omega _{n} 
-\end{bmatrix}
-\begin{bmatrix}
-x_{1}
-\\ 
-.
-\\
-. 
-\\
-. 
-\\
-x_{n}
-\end{bmatrix}
-\geq \gamma $, o padrão A é elvado ao próximo nível da árvore;
-
-Se $ \begin{bmatrix}
-\omega _{1} & ... & \omega _{n} 
-\end{bmatrix}
-\begin{bmatrix}
-x_{1}
-\\ 
-.
-\\
-. 
-\\
-. 
-\\
-x_{n}
-\end{bmatrix}
-\leq  \gamma $, o padrão B é elvado ao próximo nível da árvore.
-
-\section{Etapa de validação}
-Para testar a metodologia utlizada neste trabalho para o reconhecimento de padrões, foi utilizado o método cross validation \cite{Kohavi95Cross} \cite{Baldisserotto05Validacao}. Através dos resultados desse método é possível analisar a acurácia da metodologia de classificação, ou seja, a capacidade de classificar uma instância com o seu padrão correto.
-Entre os três métodos de validação apresentados no referêncial teórico: Handout, Cross Validation e Leave One Out. O método cross validation foi escolhido como melhor opção já que os teste são feitos com vários conjuntos de dados com tamanhos variados. Para conjuntos de dados muito grandes o método Leave One Out se tornaria computacionalmete custoso e o método Handout poderia ter seu resultado comprometido de acordo com os parâmetros escolhidos na separação de dados para teste e de dados para validação. Além disso, o método Cross Validation é de fácil implementação e permite a utlização de todos os dados como teste e validação.
-Na figura abaixo o método é ilustrado para o parâmetro 5 fold, apesar desse parâmetro não ter sido utlizado em nenhum teste, foi utlizado para um facilitar a ilustração. 
-\begin{center}
-	\includegraphics[scale=1.0]{graficos/cross_validation}
-	\captionof{figure}{Mecanismo do método de validação 5-fold cross validation}
-	\label{img:cross_validation}
-\end{center}
-
-Na ilustração o conjunto de dados foi dividido em 5 subconjuntos e consequentemente foram realizados 5 ciclos de treinamento e testes. A cada etapa 4 subconjuntos são utlizados para treinamento e um subconjunto diferente é utilizado para teste. 
-
-A metodologia k-fold cross validation foi implementada na linguagem de programação Java. Os dados são organizados k arquivos. A implementação seleciona os dados de teste e de validação, e retorna o resultado parcial a cada rodada e o resultado final após os k ciclos de validação e teste. A cada ciclo de treinamento e teste a porcetagem de acerto de classificação é calculada da seguinte forma:
-
-$$A = \frac{acertos}{total}\times 100$$
-
-Onde total é a quantidade de vetores para classificação submetidos a cada ciclo de teste. E acertos é a quantidade de vetores que foram classificados corretamente.
-
 \section{Organização dos dados}
 Em todos os testes foi o utilizado o método k -fold cross validation com k = 10, em seus trabalhos \citeonline{Baldisserotto05Validacao}, \citeonline{Kohavi95Cross}, \citeonline{Guo} utlizaram esse mesmo parâmetro. Os dados foram dividos em 10 subgrupos com mesmo tamanho \cite{Guo} e com a mesma quantidade de vetores para cada classe, por isso não foram em utlizados todos os dados de todos os conjuntos de dados.
 
 \begin{center}
-	\begin{tabular}{|l|l|l|l|p{3cm}|p{3cm}|p{2cm}|}
+	\begin{tabular}{|p{2cm}|p{3cm}|p{3cm}|p{2cm}|}
         \hline
-        Conjunto de dados & Vetores & Vetores utilizados\\ \hline
-		Dígitos    &10992  & 10500 \\ \hline
-		LIBRAS     & 360   & 300   \\ \hline
-		Íris       & 150   & 150   \\ \hline
-		Expressões & 213   & 210   \\ \hline
+        \multicolumn{4}{c|}{Conjuntos de dados} \\ \hline
+        Nome & Total de vetores & Vetores utilizados & Quantidade de padrões\\ \hline
+		Dígitos    &10992  & 10500 & 10\\ \hline
+		LIBRAS     & 360   & 300   & 15\\ \hline
+		Íris       & 150   & 150   & 3\\ \hline
+		Expressões & 213   & 210   & 7\\ \hline
 	\end{tabular}
         \captionof{table}{Organização dos dados}
 	\label{table:org_dados}
@@ -268,6 +198,7 @@ Na primeira coluna da tabela \ref{tab:vetorxtaxa} estão específicadas as quant
 A partir dos testes realizados também foram realizadas análises do ponto de vista computacional.
 Os resultados mostrados na tabela a seguir são as médias dos tempos de 5 execuções incluindo a etapa de validação compĺeta, com os dez ciclos .
 
+\begin{table}[h!]
 \begin{tabular}{l p{3cm}|l|l|l|l|}
 \cline{3-6}
 & & \multicolumn{4}{ c| }{Conjuntos de dados} \\ \cline{3-6}
@@ -281,7 +212,9 @@ Os resultados mostrados na tabela a seguir são as médias dos tempos de 5 execu
 \multicolumn{1}{ |c  }{}                        &
 \multicolumn{1}{ |p{3cm}| }{Total} & 30,53 & 7,87 & 0,65 & 8,93\\ \cline{1-6}
 \end{tabular}
-
+        \captionof{table}{Tempos computacionais}
+	\label{tab:tempocomp}
+\end{table}
 Na terceira linha da tabela \ref{tab:tempocomp} estão os tempos de execução apenas do módulo de geração de classificadores, que é o módulo onde o modelo de programação linear é resolvido. É possível constatar um tempo computacional para a geração dos classificadores corresponde a mais de 50\% do tempo computacional total. A quantidade de classificadores gerados deve ser considerada. Na quinta coluna é apresentado o tempo médio para geração dos classificadores a cada ciclo de teste e na segunda linha da tabela são apresentadas as quantidades de classificadores gerados nesse tempo, para três conjuntos de dados esse tempo foi inferior a 1 segundo.
 
 Na última linha da tebla \ref{tab:tempocomp} são apresentados os tempos totais de execução de cada experimento. Pode-se constatar que esse tempo é proporcional ao tamanho dos vetores do conjunto de dados e a quantidade de classes. O conjunto de dados Íris obteve um tempo computacional menor que 1 segundo sendo um conjunto de dados com 3 classe e 50 vetores para cada classe. Enquanto o conjunto de dados Dígitos obteve o maior tempo computacional apesar de possuir vetores com 16 caracteríticas é o conjunto de dados com maior número de vetores por classe. 
