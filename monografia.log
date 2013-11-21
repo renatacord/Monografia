@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  21 NOV 2013 09:58
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  21 NOV 2013 12:16
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -1374,39 +1374,47 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 141--141
-[]|\OT1/cmr/m/n/12 Taxa de
- []
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 151.
+See the caption package documentation for explanation.
 
 
-Overfull \hbox (59.69759pt too wide) in paragraph at lines 139--147
-[][] 
+Overfull \hbox (10.07137pt too wide) in paragraph at lines 139--151
+ [] 
  []
 
 [41]
-Overfull \hbox (15.38905pt too wide) in paragraph at lines 176--189
-[][] 
- []
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 172.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 198.
+See the caption package documentation for explanation.
 
 [42]
-Underfull \hbox (badness 10000) in paragraph at lines 209--209
-\OT1/cmr/m/n/12 si-fi-ca-do-res por
- []
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 224.
+See the caption package documentation for explanation.
 
 [43]
-Overfull \hbox (1.23865pt too wide) in paragraph at lines 222--223
+Overfull \hbox (1.23865pt too wide) in paragraph at lines 232--233
 \OT1/cmr/m/n/12 ve-ri-fi-car que a quan-ti-dade de ve-to-res por classe teve ma
 ior in-flu^encia no tempo de execu^^Xc~ao,
  []
 
-
-Overfull \hbox (18.98622pt too wide) in paragraph at lines 232--233
+[44]
+Overfull \hbox (18.98622pt too wide) in paragraph at lines 242--243
 []\OT1/cmr/m/n/12 Em [][][][] ([][][][]) foi uti-li-zado o con-junto de da-dos 
 JAFFE ([][][][],
  []
 
-[44]
-Overfull \hbox (52.86504pt too wide) in paragraph at lines 234--235
+
+Overfull \hbox (52.86504pt too wide) in paragraph at lines 244--245
 []\OT1/cmr/m/n/12 No tra-ba-lho de [][][][] ([][][][]) tamb^^Sem foi uti-li-zad
 o o banco JAFFE ([][][][],
  []
@@ -1465,10 +1473,10 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  14530 strings out of 495042
  201505 string characters out of 1181920
- 375974 words of memory out of 3000000
+ 376950 words of memory out of 3000000
  17341 multiletter control sequences out of 15000+50000
  18933 words of font info for 67 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 38i,11n,49p,1061b,511s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,10n,49p,1061b,511s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on monografia.dvi (52 pages, 249348 bytes).
+Output written on monografia.dvi (52 pages, 250276 bytes).
