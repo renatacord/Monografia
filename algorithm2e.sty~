@@ -808,13 +808,18 @@
 \renewcommand{\algocf@languagechoosen}{german}%
 }%
 %
-\DeclareOption{portugues}{%
- \renewcommand{\listalgorithmcfname}{Lista de Algoritmos}%
- \renewcommand{\algorithmcfname}{Algoritmo}%
- \renewcommand{\algocf@typo}{}%
- \renewcommand{\@algocf@procname}{Procedimento}
- \renewcommand{\@algocf@funcname}{Fun\c{c}\~{a}o}
- }
+\DeclareOption{portuguese}{%
+\renewcommand{\listalgorithmcfname}{Lista de Algoritmos}%
+\renewcommand{\algorithmcfname}{Algoritmo}%
+\renewcommand{\algorithmautorefname}{algoritmo}%
+\renewcommand{\algorithmcflinename}{linha}%
+\renewcommand{\algocf@typo}{}%
+\renewcommand{\@algocf@procname}{Procedimento}%
+\renewcommand{\@algocf@funcname}{Fun\c{c}\~{a}o}%
+\renewcommand{\procedureautorefname}{procedimento}%
+\renewcommand{\functionautorefname}{fun\c{c}\~{a}o}%
+\renewcommand{\algocf@languagechoosen}{portuguese}%
+}%
 %
 \DeclareOption{italiano}{%
 \renewcommand{\listalgorithmcfname}{Elenco degli algoritmi}%

@@ -25,7 +25,7 @@
 \usepackage{listings} % http://www.atscire.de/index.php?nav=products/listings2 http://linorg.usp.br/CTAN/macros/latex/contrib/listings/listings.pdf
 \usepackage{textcomp}
 \usepackage[usenames,dvipsnames]{xcolor} % http://en.wikibooks.org/wiki/LaTeX/Colors
-\usepackage[algoruled,longend]{algorithm2e}
+\usepackage[portuguese,algoruled,longend]{algorithm2e}
 \usepackage{mathtools, mhsetup} % fórmulas matemáticas
 \usepackage[usenames,dvipsnames]{pstricks} % gerar os gráficos
 \usepackage{epsfig} % gerar os gráficos
@@ -68,7 +68,7 @@
 %\renewcommand*\lstlistlistingname{Lista de Códigos}
 
 %--------------------------------- Informações ---------------------------------
-\newcommand{\meutitulo}{A Programação Linear na classificação de padrões}
+\newcommand{\meutitulo}{A Programação Linear na classificação de dados em padrões}
 \begin{document}
 
 \titulo{\meutitulo}

@@ -389,7 +389,7 @@ An Extended Abstract}},
 }
 
 @misc{Libras,
- 	author = {Daniel Baptista Dias, Sarajane Marques Peres, Helton Hideraldo Bíscaro},
+ 	author = {Daniel Baptista Dias, Sarajane Marques Peres and Helton Hideraldo Bíscaro},
 	title = {Libras Movement Data Set},
 	url = {http://archive.ics.uci.edu/ml/datasets/Libras+Movement}, 
 	institution = {Universidade de São Paulo - Brazil}  
@@ -467,4 +467,9 @@ An Extended Abstract}},
 	booktitle = "6o. Simpósio Brasileiro de Automação Inteligente - SBAI/SBA, 2003, Bauru, SP. Anais do VI Simpósio Brasileiro de Automação Inteligente",
 	year      = "2003",
 	pages     = "77-81",
+}
+
+@Electronic{CPLEX,
+	title = {{CPLEX}},
+	url = {http://www-01.ibm.com/software/integration/optimization/cplex-optimizer/}
 }

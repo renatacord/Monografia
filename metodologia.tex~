@@ -343,7 +343,15 @@ $ \begin{bmatrix}
 \end{bmatrix}
 \geq  -33.6 $ 
 
+Analisando o hiperplano separador dos padrões A e C é determinado que o ponto representado pelo vetor x ficou localizado do mesmo lado que os pontos do padrão A. Como todos os padrões (A, B e C) já foram analisados e a árvore foi completada, então, finalmente, o vetor x é reconhecido como pertencente ao padrão A.
 
+\begin{center}
+	\includegraphics[scale=0.4]{graficos/arvore_nivel3}
+	\captionof{figure}{Árvore completa}
+	\label{img:Arv_completa}
+\end{center}
+
+A árvore completa é mostrada na figura \ref{img:Arv_completa}, após analisar todos os padrões, e o nó raiz da folha ser preenchido, a etapa de reconhecimento de padrão é completada, e o vetor com padrão inicialmente desconhecido é classificado como pertencente ao padrão que está no nó raíz da árvore.
 
 \section{Etapa de validação}
 Para testar a metodologia utlizada neste trabalho para o reconhecimento de padrões, foi utilizado o método cross validation \cite{Kohavi95Cross} \cite{Baldisserotto05Validacao}. Através dos resultados desse método é possível analisar a acurácia da metodologia de classificação, ou seja, a capacidade de classificar uma instância com o seu padrão correto.

@@ -1,46 +1,46 @@
 \chapter{Introdução}
 
-A programação linear é uma das disciplinas que compõem a programação matemática e constitui um dos pilares da pesquisa operacional. As aplicações da programação linear estão presentes em diversos setores, tais como nas indústrias, nos transportes, na saúde, na educação, na computação, etc. Mas é mais comumente aplicada na engenharia de produção, em problemas que buscam a distribuição eficiente de recursos, minimização de gastos e maximização do lucro. O presente trabalho está focado na utilização da programação linear na computação, mais específicamente no processo de reconhecimento de padrões. Um modelo de programação linear é resolvido através do método simplex, gerando hiperplanos separadores utlizados na classificação de dados em um dos padrões separados pelo hiperplano.
+A programação linear é uma das disciplinas que compõem a programação matemática e constitui um dos pilares da pesquisa operacional. As aplicações da programação linear estão presentes em diversos setores, tais como nas indústrias, nos transportes, na saúde, na educação, na computação, etc. Mas é mais comumente aplicada na engenharia de produção, em problemas que buscam a distribuição eficiente de recursos, minimização de gastos e maximização do lucro. O presente trabalho está focado na utilização da programação linear na computação, mais especificamente no processo de classificação de dados em padrões previamente conhecidos. Utiliza-se um modelo de programação linear que gera um hiperplano no espaço n-dimensional que separa dois conjuntos de pontos, cada conjunto representando um padrão, posteriormente esse hiperplano é utilizado na classificação de um dado em um desses dois padrões. 
 
-O método simplex proposto por \citeonline{Dan} é um dos métodos mais conhecidos e eficientes para resolver problemas de programação linear. Trata-se de um dos poucos algoritmos que foi implantado comercialmente há mais de 40 anos. Atualmente, está presente em softwares comerciais tais como CPLEX\footnote{http://www-01.ibm.com/software/integration/optimization/cplex-optimizer/} e LINGO\footnote{http://www.lindo.com/}. 
+O modelo de programação linear adotado separa dois conjuntos de pontos, porém também pode ser utilizado em problemas onde busca-se a separação de múltiplos padrões. O presente trabalho foca nessa última abordagem, em todos os testes realizados o número de conjuntos de pontos (padrões) é igual ou maior que três.
 
-Um dos focos dos estudos das aplicações da programação linear é na sua utlização na separação de pontos no espaço \textit{n}-dimensional. Na computação esse tipo de aplicação pode ser utilizada em atividades com o objetivo de classificar dados, como por exemplo:
+O método simplex proposto por \citeonline{Dan} é utilizado para a resolução do modelo de programação linear. É um dos métodos mais conhecidos e eficientes para resolver problemas de programação linear. Foi implantado comercialmente há mais de 40 anos e atualmente está presente em softwares comerciais tais como CPLEX e LINGO. 
+
+Um dos focos dos estudos das aplicações da programação linear é na sua utilização na separação de pontos no espaço \textit{n}-dimensional. Na computação esse tipo de aplicação pode ser utilizada em atividades com o objetivo de classificar dados, como por exemplo:
 
 \begin{itemize}
 \item Dígitos escritos manualmente
-\item Expressões facias
+\item Expressões faciais
 \item Espécies de plantas
 \item Gestos manuais
 \end{itemize}
 
-De forma geral, esse tipo de aplicação da programação linear pode ser utilizado em abordagens que permitam a representação das características de cada item do conjunto de dados em forma de vetor númerico. Esse vetor de tamnho n representa um ponto no espaço n-dimensional e é denominado vetor de carcaterística, cada valor do vetor representa uma característica.
+De forma geral, esse tipo de aplicação da programação linear pode ser utilizado em abordagens que permitam a representação dos dados em forma de vetor numérico. Esse vetor de tamanho n representa um ponto no espaço n-dimensional e cada valor do vetor representa uma característica, por isso é denominado vetor de características.
 
-No presente trabalho é utilizada a metodologia para reconhecimento de padrões apresentada em \cite{Feng} e \cite{Guo}. Primeiramente, o modelo de programação linear proposto por \cite{Bennett92robustlinear} é utlizado na geração de hiperplanos, cada hiperplano separa dois padrões e na etapa de teste uma árvore de torneio é utlizada para classificar um dado em um dos padrões.
-
-O modelo proposto separa dois conjuntos de pontos, porém também pode ser utlizado em problemas onde busca-se a separação de múltiplos padrões. O presente trabalho foca nessa última abordagem, em todos os testes realizados o número de conjuntos de pontos é igual ou maior que três.
+No presente trabalho é utilizada a metodologia para classificação de dados em padrões apresentada em \citeonline{Feng} e \citeonline{Guo}. Primeiramente, o modelo de programação linear proposto por \citeonline{Bennett92robustlinear} é utilizado na geração de hiperplanos, cada hiperplano separa dois conjuntos de pontos (padrões). Na etapa de classificação de um dado, com padrão inicialmente desconhecido, uma árvore binária de torneio é utilizada na determinação de qual padrão o dado pertence de acordo com os hiperplanos gerados.
 
 \section{Objetivos e justificativas}
-O objetivo do presente trabalho é o estudo da utilização da programação linear e do método simplex, na metodologia proposta para o reconehcimento de padrões. O modelo de programação linear gera hiperplanos, cada hiperplano separa dois padrões representados por dois conjutos de pontos e uma árvore de torneio realiza a classificação de um dado com padrão inicialmente desconhecido.
+O objetivo do presente trabalho é o estudo da utilização da programação linear e do método simplex, na classificação de dados em padrões. O modelo de programação linear gera hiperplanos, cada hiperplano separa dois padrões representados por dois conjuntos de pontos e uma árvore binária de torneio realiza a classificação de um dado com padrão inicialmente desconhecido.
 
 Através desse estudo deve ser possível verificar a eficiência da programação linear nesse tipo de aplicação. São realizados testes com quatro conjuntos de dados para verificar a eficácia da metodologia utilizada que é composta pelo modelo de programação linear na separação de padrões e uma árvore de torneio para classificação. Três desses conjuntos foram obtidos já na forma de vetores de características, o quarto conjunto foi obtido em forma de imagens e um método de extração de características foi utilizado para obter os vetores.
 
 A programação linear possui aplicações em diversas áreas, como: indústria, produção, saúde e computação gráfica. Porém é um método mais comumente utilizado na engenharia de produção. O presente trabalho justifica-se pelo fato de abordar uma aplicação prática dentro da computação, onde a aplicação da programação linear não é tão explorada quanto na engenharia de produção.
 
 \section{Metodologia}
-Para o cumprimento do obejtivo final, o trabalho é composto pelas seguites etapas:
+Para o cumprimento do objetivo final, o trabalho é composto pelas seguintes etapas:
 
 \begin{itemize} 
 \item O estudo do método simplex revisado, suas características e vantagens do ponto de vista computacional;
 \item Obtenção de dados para testes;
-\item A implementação do modelo do problema de programação linear utilizando a linguagem de programação JAVA juntamente com o software CPLEX;
-\item A implementação da etapa de classificação através da árvore de torneio;
+\item A implementação do modelo de programação linear utilizando a linguagem de programação JAVA juntamente com o software CPLEX;
+\item A implementação da etapa de classificação através da árvore binária de torneio;
 \item Realização de testes e análise dos resultados.
 \end{itemize}
 
 \section{Estrutura do trabalho}
-Este trabalho está estrturado em seis capítulos. Este primeiro capítulo aprsenta a introdução ao tema abordado, os objetivos e justificativas e a metodologia desecrevendo as etapas para o cumprimento do trabalho.
+Este trabalho está estruturado em seis capítulos. O primeiro capítulo apresenta a introdução ao tema abordado, os objetivos e justificativas e a metodologia descrevendo as etapas para o cumprimento do trabalho.
 
-O segundo capítulo é composto pela descrição geral do problema de programação linear, algumas aplicações práticas, uma apresentação de alguns métodos de classificação e métodos de validação, além de alguns trabalhos relacionados ao reconhecimento de padrões.
+O segundo capítulo é composto pela descrição geral do problema de programação linear, algumas aplicações práticas, uma apresentação de alguns métodos de classificação e métodos de validação da metodologia, além de alguns trabalhos relacionados ao reconhecimento de padrões.
 
 O capítulo 3 apresenta de forma detalhada o Método Simplex e outro importante método de solução de problemas de programação linear.
 

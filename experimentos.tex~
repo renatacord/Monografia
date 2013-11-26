@@ -1,7 +1,7 @@
 \chapter{Experimentos Computacionais}
 Para a realização do experimentos computacionais foi necessário, primeiramente, obter os dados para teste e organizá-los para posteriormente submeter ao modelo para geração dos hiperplanos classificadores  e aos testes de classificação. Todos os experimento foram feitos utilizando um notebook com processador Intel Core i3, 2.27 GHz, 3 GB de RAM, sistema operacional Ubuntu 12.04, NetBeans IDE 7.1.2 e o software CPLEX da IBM.
 
-Todo o processo, desde a organização dos dados até a etapa de classificação, foi implementado utilizando a linguagem de programação Java. A implementação foi feita em módulos, organizados da seguinte forma: Módulo organizador de dados, Módulo de geração de classificadores, Módulo de classificação, Módulo validador. No módulo organizador de dados os conjutnos de dados são organizados em subgrupos, cada subgrupo contendo vetores de todos os padrões, essa organização é importante para a etapa de validação do método. No Módulo de geração de classificadores está implementado o modelo de programação linear e são gerados os hiperplanos separadores. Os Módulos de classificação e validador são utlizados na etapa de teste, o primeiro realiza a classificação de de um vetor em um dos padrões separados pelo hiperplano e o segundo realiza a validação do método de reconhecimento de padrões utlizando o método cross validation.
+Todo o processo, desde a organização dos dados até a etapa de classificação, foi implementado utilizando a linguagem de programação Java. A implementação foi feita em módulos, organizados da seguinte forma: Módulo organizador de dados, Módulo de geração de classificadores, Módulo de classificação, Módulo validador. No módulo organizador de dados os conjutnos de dados são organizados em subgrupos, cada subgrupo contendo vetores de todos os padrões, essa organização é importante para a etapa de validação do método. No Módulo de geração de classificadores está implementado o modelo de programação linear e são gerados os hiperplanos separadores. Os Módulos de classificação e validador são utlizados na etapa de teste, o primeiro realiza a classificação de um vetor em um dos padrões separados pelo hiperplano e o segundo realiza a validação do método de reconhecimento de padrões utlizando o método cross validation.
 
 Na figura \ref{img:diagrama_modulos} estão representadas as principais etapas realizadas durante os experimentos computacionais.
 
@@ -144,7 +144,7 @@ Na tabela a seguir são apresentados os resultados dos quatro conjuntos de dados
          ~   & características & vetores  &  ~    & treinamento & classificação & acerto (\%)
         \\  \hline
     	Dígitos    &        16     & 10500  & 1050 & 945   & 105 & 98\\ \hline
-   	LIBRAS     &        90     &   300  &   20 &  18   &   2 & 74\\ \hline
+   	LIBRAS     &        90     &   300  &   20 &  18   &   2 & 72\\ \hline
     	Íris       &         4     &   150  &   50 &  45   &   5 & 87\\ \hline
     	Expressões &       842     &   210  &   30 &  27   &   3 & 34\\ \hline
 	\end{tabular}
@@ -164,8 +164,8 @@ Na tabela a seguir são apresentadas as taxas de acerto em cada ciclo de teste.
         \multicolumn{1}{ |c| }{Conjunto} & \multicolumn{10}{ c| }{Taxas de acertos por ciclo de teste (\%)}
         \\ \cline{2-11}
 	de dados  & C 1 & C 2 & C 3 & C 4 & C 5 & C 6 & C 7 & C 8 & C 9 & C 10 \\ \hline
-    	Dígitos   & 0,98 & 0,98 & 0,98 & 0,98 & 0,98 & 0,98 & 0,98 & 0,97 & 0,97 & 0,97\\ \hline
-   	LIBRAS    & 0,4  & 0,77 & 0,74 & 0,74 & 0,54 & 0,7  & 0,74 & 0,9  & 0,93 & 0,9 \\ \hline
+    	Dígitos   & 0,98 & 0,98 & 0,98 & 0,98 & 0,98 & 0,98 & 0,98 & 0,97 & 0,96 & 0,97\\ \hline
+   	LIBRAS    & 0,4  & 0,77 & 0,74 & 0,7 & 0,63 & 0,7  & 0,63 & 0,83  & 0,93 & 0,9 \\ \hline
     	Íris      & 0,74 & 0,8  & 0,93 & 0,87 & 0,93 & 0,74 & 0,87 & 0,87 & 0,93 & 0,87\\ \hline
     	Expressões& 0,34 & 0,38 & 0,38 & 0,33 & 0,29 & 0,29 & 0,24 & 0,43 & 0,33 & 0,43\\ \hline
 	\end{tabular}
@@ -244,3 +244,4 @@ Em \citeonline{Feng} foi utilizado o conjunto de dados JAFFE \cite{Jaffe}. O mod
 No trabalho de \citeonline{Guo} também foi utilizado o banco JAFFE \cite{Jaffe}. Foram feitas comparações entre aluns métodos de classificação, entre eles: Bayes com taxa de acertos 71,0\%, Support Vector Machine linear e não linear, com taxa de acertos 92,4\% e 91,9\%, respectivamente e uma variação do modelo de programação linear utilizado neste trabalho, com taxa 91,0\%. Em todos os casos foram utilizados mecanismos para seleção das características que seriam utlizadas
  
 Tanto no trabalho de \citeonline{Feng} quanto no trabalho de \citeonline{Guo} foram obtidas taxas consideravelmente mais altas do que a obtida nos experimentos (34,0\%). Essa diferença pode ser atribuída pela falta de pre processamento das imagens, como já comentado anteriormente.
+
