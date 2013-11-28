@@ -27,7 +27,7 @@ Ax\geq  b\\*x\geq 0
 \end{matrix}\right. \label{eq:rest2}
 \end{eqnarray}
 
-Nos Modelos 1 e 2 as equações \ref{eq:obj1} e \ref{eq:obj2} representam as funções objetivo e as equações \ref{eq:rest1} e \ref{eq:rest2} representam as restrições.
+Nos Modelos 1 e 2 as equações \ref{eq:obj1} e \ref{eq:obj2} representam as funções objetivo e as inequações \ref{eq:rest1} e \ref{eq:rest2} representam as restrições.
 Onde, 
 \begin{itemize}
 \item \textbf {$x$} é o vetor com as variáveis do modelo

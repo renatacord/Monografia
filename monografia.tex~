@@ -17,6 +17,8 @@
 \usepackage{array}
 \usepackage{graphicx}
 \usepackage{subfigure}
+\usepackage{geometry}
+\usepackage[fleqn]{amsmath}
 \usepackage{enumerate}
 \usepackage{multirow}
 \usepackage{booktabs}
@@ -25,7 +27,7 @@
 \usepackage{listings} % http://www.atscire.de/index.php?nav=products/listings2 http://linorg.usp.br/CTAN/macros/latex/contrib/listings/listings.pdf
 \usepackage{textcomp}
 \usepackage[usenames,dvipsnames]{xcolor} % http://en.wikibooks.org/wiki/LaTeX/Colors
-\usepackage[portuguese,algoruled,longend]{algorithm2e}
+\usepackage[portugues,algoruled,longend]{algorithm2e}
 \usepackage{mathtools, mhsetup} % fórmulas matemáticas
 \usepackage[usenames,dvipsnames]{pstricks} % gerar os gráficos
 \usepackage{epsfig} % gerar os gráficos
@@ -88,12 +90,12 @@ orientação do Profº. Fermín Alfredo Tang Montané.}
 
 \sumario
 
-\include{introducao}
-\include{referencial_teorico}
+%\include{introducao}
+%\include{referencial_teorico}
 \include{marco_teorico}
-\include{metodologia}
-\include{experimentos}
-\include{conclusao}
+%\include{metodologia}
+%\include{experimentos}
+%\include{conclusao}
 %--------------------------------- Bibliografia --------------------------------
 
 \citeoption{abnt-repeated-author-omit=yes}

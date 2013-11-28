@@ -32,57 +32,363 @@ Esse método mantém a característica do simplex, que é a troca entre a variá
 
 Nesta seção são descritos os passos do algoritmo simplex revisado. O problema considerado é de maximização. A distinção entre matrizes, vetores e escalares foi feita da seguinte forma: letra maiúscula e negrito para matriz (\textbf{MATRIZ}); letra minúscula e negrito para vetor (\textbf{vetor}); letra em itálico para escalar (\textit{escalar}).
 
-Considere o seguinte problema de programação linear:
+Para a resolução do problema através do método simplex revisado, é necessário que o problema de programação linear esteja na forma padrão. Dizemos que um problema de programação linear está na sua forma padrão quando estiver no seguinte formato:
 
 $\\
 Maximizar\ \mathbf{cx} \\
 Sujeito\ a \\
-\mathbf{Ax} \leq \mathbf{b} \\
+\mathbf{Ax} = \mathbf{b} \\
 \mathbf{x} \geq0$
 
-O vetor $\mathbf{c}$, de coeficientes na função objetivo, é dividido em duas componentes: $\mathbf{c{_B}}$ e $\mathbf{c{_N}}$, coeficientes das variáveis básicas e não-básicas, respectivamente. Por analogia, o vetor $\mathbf{x}$, de incógnitas do problema, é subdividido em $\mathbf{x{_B}}$ e $\mathbf{x{_N}}$.  A matriz $\mathbf{A}$, de coeficientes das restrições, é dividida em duas submatrizes: $\mathbf{B}$ e $\mathbf{N}$, coeficientes das variáveis básicas e não-básicas, respectivamente. Os passos do algoritmo são os seguintes.\\
+ou
 
-\begin{algorithm}[H]
-\caption{Algoritmo do método Simplex Revisado}
+$\\
+Minimizar\ \mathbf{cx} \\
+Sujeito\ a \\
+\mathbf{Ax} = \mathbf{b} \\
+\mathbf{x} \geq0$
 
-Passo 1: Calcular o valor das variáveis básicas: \ \ $\mathbf{x_{b}}\ =\ \mathbf{B^{-1}b}\geq0$
+com $\mathbf{b}\geq0$.
 
-Passo 2: Calcular o vetor multiplicador: \ \ $\mathbf{\lambda} \ =\ \mathbf{c{_B}B^{-1}}$
+Um problema de programação linear pode ser tranformado para a forma padrão acrescentando variáveis de folga, como no exemplo abaixo:
 
-Passo 3: Escolher a variável que entra na base: $\mathbf{p}\ =\ \mathbf{c{_N}}-\mathbf{\lambda N}$
+\begin{align*}
+Maximize\ z=3x_{1}+5x_{2}\\ 
+Sujeito\ a \\ 
+1x_{1}\leq 4 \\  
+2x_{2}\leq 12 \\ 
+3x_{1}+2x_{2}\leq 18 \\ 
+ x_{1}\geq 0, x_{2}\geq 0 \\
+\end{align*}
+Adicionando as variáveis de folga:
+\begin{align*}
+Maximize\ z=3x_{1}+5x_{2}\\ 
+Sujeito\ a\\
+1x_{1}+\ \ \ \ \ \ \ x_{3}\ \ \ \ \ \ \ \ \ \ \ \leq 4 \\  
+2x_{2}+\ \ x_{4}\ \ \ \ \leq 12 \\ 
+3x_{1}+2x_{2}+\ \ \ \ \ \ x_{5}\leq 18 \\ 
+ x_{1}\geq 0, x_{2}\geq 0 \\
+\end{align*}
 
-\uSe{Se \ \ $\mathbf{p}\ =\ (\mathbf{c{_N}}-\mathbf{\lambda N})\leq 0$} \ \ PARAR.
+A inserção das variáveis de folga foram uma matriz base na matriz de coeficientes das restrições, as variáveis correspondentes a essa matriz base são denomindas variáveis básicas.
 
-A solução \ \ $\mathbf{x{_B}}$ \ \ já é a solução ótima. 
+O vetor $\mathbf{c}$, de coeficientes na função objetivo, é dividido em duas componentes: $\mathbf{c{_B}}$ e $\mathbf{c{_N}}$, coeficientes das variáveis básicas e não-básicas, respectivamente. Por analogia, o vetor $\mathbf{x}$, de incógnitas do problema, é subdividido em $\mathbf{x{_B}}$ e $\mathbf{x{_N}}$.  A matriz $\mathbf{A}$, de coeficientes das restrições, é dividida em duas submatrizes: $\mathbf{B}$ e $\mathbf{N}$, coeficientes das variáveis básicas e não-básicas, respectivamente. O vetor $\textbf{b}$ são os valores das variavéis básicas. Os passos do algoritmo são os seguintes.\\
 
-Caso contrário, escolher uma coluna de $\mathbf{N}$, coluna $\mathbf{a{_k}}$, tal que $\mathit{p{_k}}\ =\ \mathit{c{_nk}}-\mathbf{\lambda a{_k}}> 0$
+\noindent
+\framebox{
+\begin{minipage}[l]{14,2cm}
+\textbf{Passo 1}: Calcular o vetor multiplicador: \ \ $\mathbf{\lambda} \ =\ \mathbf{B^{-1}c{_B^t}}$
+\\ \\
+\textbf{Passo 2}: Escolher a variável que entra na base: $\mathbf{p}\ =\ \mathbf{c{_N}}-\mathbf{\lambda N}$
+
+Se \ \ $\mathbf{p}\ =\ (\mathbf{c{_N}}-\mathbf{\lambda N})\leq 0$ \ \ PARAR. \\ A solução \ \ $\mathbf{x{_B}}$ \ \ já é a solução ótima. 
+
+Se não, escolher uma coluna de $\mathbf{N}$, coluna $\mathbf{a{_k}}$, tal que $\mathit{p{_k}}\ =\ \mathit{c{_nk}}-\mathbf{\lambda a{_k}}> 0$
 
 Um critério frequente é escolher a coluna $\mathbf{a{_k}}$ que resulte no maior valor de $\mathit{p{_k}}$.
 
 Então, assumindo $\mathit{e} = \mathit{k}$, $\mathit{k}$ representa o índice da coluna, $\mathbf{a{_k}}$ representa a coluna de $\mathbf{A}$ candidata a entrar na base. 
+\\ \\
+\textbf{Passo 3}: Determinar a variável que sai da base: $\mathbf{y}=\mathbf{B^{-1}a{_k}}$
 
-Passo 4: Determinar a variável que sai da base. Para isso, calcula-se: $\mathbf{y}=\mathbf{B^{-1}a{_k}}$
+Se \ \ $\forall i\mathit{\frac{b{_i}}{y{_i}}}\leq 0$ \ \ PARAR, a solução é não-limitada. 
 
-Se \ \ $\forall i\mathit{\frac{b{_i}}{y{_i}}}\leq 0$ \ \ PARAR.
-
-A solução é não-limitada. Caso contrário, calcular:\ \ 
+Senão, calcular:\ \ 
 $\forall i\ \underset{\underset{y{_i}>0}{1\leq i\leq m}}{Min}\begin{Bmatrix}
 \mathit{\frac{b{_i}}{y{_i}}}
 \end{Bmatrix}$ e guardar o índice correspondente a $s = i$. A variável $(x{_b}){_s}$ sai da base.
-
-Passo 5: Criar a matriz $\mathbf{E}$.
+\\ \\
+\textbf{Passo 4}: Criar a matriz $\mathbf{E}$.
 $\mathbf{E}=(\mathbf{e{_1}},\mathbf{e{_2}},...,\mathbf{e{_s-1}},\mathbf{\gamma} , \mathbf{e{_s+1}},...,\mathbf{e{_m}})$
 
 Onde, cada coluna da matriz é um vetor unitário com exceção da coluna $\mathit{s}$, que corresponde ao vetor $\mathbf{\gamma}$, calculado da seguinte maneira: \\
-$\mathbf{\gamma^{t}}=\left( \mathit{\frac{-\alpha {_{1,e}}}{\alpha {_{s,e}}}}\ \mathit{\frac{-\alpha {_{2,e}}}{\alpha {_{s,e}}}}\ ...\ \mathit{\frac{-\alpha {_{s-1,e}}}{\alpha {_{s,e}}}}\ \mathit{\frac{1}{\alpha {_{s,e}}}\ \frac{-\alpha {_{s+1,e}}}{\alpha {_{s,e}}}}\ ...\ \mathit{\frac{-\alpha {_{m,e}}}{\alpha {_{s,e}}}} \right )$
+$\mathbf{\gamma^{t}}=\left( \mathit{\frac{-\mathbf{A} {_{1,e}}}{\mathbf{A} {_{s,e}}}}\ \mathit{\frac{-\mathbf{A} {_{2,e}}}{\mathbf{A} {_{s,e}}}}\ ...\ \mathit{\frac{-\mathbf{A} {_{s-1,e}}}{\mathbf{A} {_{s,e}}}}\ \mathit{\frac{1}{\mathbf{A} {_{s,e}}}\ \frac{-\mathbf{A} {_{s+1,e}}}{\mathbf{A} {_{s,e}}}}\ ...\ \mathit{\frac{-\mathbf{A} {_{m,e}}}{\mathbf{A} {_{s,e}}}} \right )$
+\\ \\
+\textbf{Passo 5}: Calcular nova matriz $\mathbf{B^{-1}}$: $\mathbf{B^{-1}} = \mathbf{EB^{-1}}$
+\\ \\
+\textbf{Passo 6}: Atualizar os vetores $\mathbf{c{_B}}$ e $\mathbf{x{_B}}$.
+\end{minipage}
+}
 
-Onde $\mathit{\alpha{_ie}}$ são os elementos vetor do $\mathbf{y}$.
 
-Passo 6: Calcular nova matriz $\mathbf{B^{-1}}$: $\mathbf{B^{-1}} = \mathbf{EB^{-1}}$
+A seguir, o modelo de programação linear apresentado na seção 2.2 é resolvido através do método Simplex Revisado.
 
-Passo 7: Atualizar os vetores $\mathbf{c{_B}}$ e $\mathbf{x{_B}}$.
-\end{algorithm}
+\noindent
+\framebox{
+\begin{minipage}[l]{14,2cm}
+\begin{align*}
+Maximize\ z=3x_{1}+5x_{2}\\ 
+Sujeito\ a \\ 
+1x_{1}\leq 4 \\  
+2x_{2}\leq 12 \\ 
+3x_{1}+2x_{2}\leq 18 \\ 
+ x_{1}\geq 0, x_{2}\geq 0 \\
+\end{align*}
+Adicionando as variáveis de folga:
+\begin{align*}
+Maximize\ z=3x_{1}+5x_{2}\\ 
+Sujeito\ a\\
+1x_{1}+\ \ \ \ \ \ \ x_{3}\ \ \ \ \ \ \ \ \ \ \ \leq 4 \\  
+2x_{2}+\ \ x_{4}\ \ \ \ \leq 12 \\ 
+3x_{1}+2x_{2}+\ \ \ \ \ \ x_{5}\leq 18 \\ 
+ x_{1}\geq 0, x_{2}\geq 0 \\
+\end{align*}
 
+	\textbf{Inicialização:}\\
+
+ \ \ \ \ \ $\mathbf{x{_N}}=[x{_1}\ \ x{_2}]$ \ \ \ \ \ $\mathbf{x{_B}}=[x{_3}\ \ x{_4}\ \ x{_5}]$
+ \ \ \ \ \ $\mathbf{B}=\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix} = \mathbf{B^{-1}}$
+\\ $\mathbf{x{_B}}=\begin{bmatrix}
+x{_3} \\
+x{_4} \\
+x{_5} 
+\end{bmatrix} = \begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}\begin{bmatrix}
+4 \\
+12 \\
+18 
+\end{bmatrix} = \begin{bmatrix}
+4 \\
+12 \\
+18 
+\end{bmatrix}$ \ \ \ \ \ $\mathbf{c{_B}}=[0\ \ 0\ \ 0]$
+\\$z = \mathbf{c{_B}}\mathbf{x{_B}} = [0\ \ 0\ \ 0]\begin{bmatrix}
+4 \\
+12 \\
+18 
+\end{bmatrix} = 0$
+$\mathbf{c{_N}}=[3\ \ 5]$ \ \ \ \ \ $\mathbf{c{_B}}=[0\ \ 0\ \ 0]$ \ \ \ \ \ $\mathbf{A}=[\ \mathbf{N}\ |\ \mathbf{B}\ ]=\left [ \left.\begin{matrix}
+1 & 0 \\
+0 & 2 \\
+3 & 2 
+\end{matrix}\right|
+\begin{matrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{matrix} \right ]$ \ \ \ \ \ 
+\end{minipage}
+}
+
+\noindent
+\framebox{
+\begin{minipage}[l]{14,2cm}
+\textbf{Iteração 1}
+\\ \\
+\textbf{Passo 1:} Calcular o vetor multiplicador
+\\$\mathbf{\lambda} \ =\ \mathbf{B^{-1}c{_B^t}}$\\
+$\mathbf{\lambda} \ =\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}[0\ \ 0\ \ 0]=[0\ \ 0\ \ 0]$
+\\ \\
+\textbf{Passo 2:} Escolher a variável que entra na base
+$\mathbf{p}\ =\ \mathbf{c{_N}}-\mathbf{\lambda N}$\\
+$\mathbf{p}\ =\ [3\ \ 5]-[0\ \ 0\ \ 0]\begin{bmatrix}
+1 & 0 \\
+0 & 2 \\
+3 & 2 
+\end{bmatrix}=[3\ \ 5]$
+A variável $x_{2}$ entra na base $k=2$.
+\\ \\
+\textbf{Passo 3:}Determinar a variável que sai da base
+$\mathbf{y}=\mathbf{B^{-1}a{_k}}$\\
+$\mathbf{y}=\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}\begin{bmatrix}
+0 \\
+0 \\
+2
+\end{bmatrix}=\begin{bmatrix}
+0 \\
+0 \\
+2
+\end{bmatrix}$
+
+$Min\begin{Bmatrix}
+\frac{4}{0},\frac{12}{2},\frac{18}{2}
+\end{Bmatrix} = \frac{12}{2}$\\
+A variável $x_{4}$ sai da base $s=4$
+\\ \\
+\textbf{Passo 4:} Criar a matriz $\mathbf{E}$.
+\\$\mathbf{E}=\begin{bmatrix}
+1 & 0 & 1\\
+1 & \frac{1}{2} & 1\\
+1 & -1 & 1
+\end{bmatrix}$
+\\ \\
+\textbf{Passo 5:} Calcular nova matriz $\mathbf{B^{-1}}$ 
+\\$\mathbf{B^{-1}} = \mathbf{EB^{-1}}$
+\\$\mathbf{B^{-1}} = \begin{bmatrix}
+1 & 0 & 1\\
+1 & \frac{1}{2} & 1\\
+1 & -1 & 1
+\end{bmatrix}\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}=\begin{bmatrix}
+1 & 0 & 0 \\
+0 & \frac{1}{2} & 0 \\
+0 & -1 & 1
+\end{bmatrix}$
+\\ \\
+\textbf{Passo 6:} Atualizar os vetores $\mathbf{c{_B}}$ e $\mathbf{x{_B}}$.
+\\$\mathbf{c{_B}}=[0\ \ 5\ \ 0]$
+ \ \ \ \ \ 
+$\mathbf{x{_B}}=\begin{bmatrix}
+x{_3} \\
+x{_2} \\
+x{_5} 
+\end{bmatrix} = \begin{bmatrix}
+1 & 0 & 0 \\
+0 & \frac{1}{2} & 0 \\
+0 & -1 & 1
+\end{bmatrix}\begin{bmatrix}
+4 \\
+6 \\
+6 
+\end{bmatrix} = \begin{bmatrix}
+4 \\
+6 \\
+6 
+\end{bmatrix}$
+ \ \ \ \ \ $z = [0\ \ 5\ \ 0]\begin{bmatrix}
+4 \\
+6 \\
+6 
+\end{bmatrix} = 30$
+\end{minipage}
+}
+
+\noindent
+\framebox{
+\begin{minipage}[l]{14,2cm}
+\textbf{Iteração 2}
+\\ \\
+\textbf{Passo 1:} Calcular o vetor multiplicador
+\\$\mathbf{\lambda} \ =\ \mathbf{B^{-1}c{_B^t}}$\\
+$\mathbf{\lambda} \ =\begin{bmatrix}
+1 & 0 & 0 \\
+0 & \frac{1}{2} & 0 \\
+0 & -1 & 1
+\end{bmatrix}[0\ \ 5\ \ 0]=[0\ \ \frac{5}{2}\ \ 0]$
+\\ \\
+\textbf{Passo 2:} Escolher a variável que entra na base
+$\mathbf{p}\ =\ \mathbf{c{_N}}-\mathbf{\lambda N}$\\
+$\mathbf{p}\ =\ [3\ \ 0]-[0\ \ \frac{5}{2}\ \ 0]\begin{bmatrix}
+1 & 0 \\
+0 & 1 \\
+3 & 0 
+\end{bmatrix}=[3\ \ -\frac{5}{2}]$
+A variável $x_{1}$ entra na base $k=1$.
+\\ \\
+\textbf{Passo 3:}Determinar a variável que sai da base
+$\mathbf{y}=\mathbf{B^{-1}a{_k}}$\\
+$\mathbf{y}=\begin{bmatrix}
+1 & 0 & 0 \\
+0 & \frac{1}{2} & 0 \\
+0 & -1 & 1
+\end{bmatrix}\begin{bmatrix}
+1 \\
+0 \\
+3
+\end{bmatrix}=\begin{bmatrix}
+1 \\
+0 \\
+3
+\end{bmatrix}$
+
+$Min\begin{Bmatrix}
+\frac{4}{1},\frac{6}{0},\frac{6}{3}
+\end{Bmatrix} = \frac{6}{3} = 2$\\
+A variável $x_{5}$ sai da base $s=3$
+\\ \\
+\textbf{Passo 4:} Criar a matriz $\mathbf{E}$.
+\\$\mathbf{E}=\begin{bmatrix}
+1 & 1 & -\frac{1}{3}\\
+1 & 1 & 0\\
+1 & 1 & \frac{1}{3}
+\end{bmatrix}$
+\\ \\
+\textbf{Passo 5:} Calcular nova matriz $\mathbf{B^{-1}}$ 
+\\$\mathbf{B^{-1}} = \mathbf{EB^{-1}}$
+\\$\mathbf{B^{-1}} = \begin{bmatrix}
+1 & 1 & -\frac{1}{3}\\
+1 & 1 & 0\\
+1 & 1 & \frac{1}{3}
+\end{bmatrix}\begin{bmatrix}
+1 & 0 & 0 \\
+0 & \frac{1}{2} & 0 \\
+0 & -1 & 1
+\end{bmatrix}=\begin{bmatrix}
+1 & \frac{1}{3} & -\frac{1}{3} \\
+0 & \frac{1}{2} & 0 \\
+0 & -\frac{1}{3} & \frac{1}{3}
+\end{bmatrix}$
+\\ \\
+\textbf{Passo 6:} Atualizar os vetores $\mathbf{c{_B}}$ e $\mathbf{x{_B}}$.
+\\$\mathbf{c{_B}}=[0\ \ 5\ \ 3]$
+ \ \ \ \ \ $\mathbf{x{_B}}=[x{_3}\ \ x{_2}\ \ x{_1}]$
+\\$\begin{bmatrix}
+x{_3} \\
+x{_2} \\
+x{_1} 
+\end{bmatrix} = \begin{bmatrix}
+1 & 1 & -\frac{1}{3}\\
+1 & 1 & 0\\
+1 & 1 & \frac{1}{3}
+\end{bmatrix}\begin{bmatrix}
+4 \\
+12 \\
+18 
+\end{bmatrix} = \begin{bmatrix}
+2 \\
+6 \\
+2 
+\end{bmatrix}$
+ \ \ \ \ \ $z = [0\ \ 5\ \ 3]\begin{bmatrix}
+2 \\
+6 \\
+2 
+\end{bmatrix} = 36$
+\end{minipage}
+}
+
+\noindent
+\framebox{
+\begin{minipage}[l]{14,2cm}
+\textbf{Iteração 3}
+\\ \\
+\textbf{Passo 1:} Calcular o vetor multiplicador
+\\$\mathbf{\lambda} \ =\ \mathbf{B^{-1}c{_B^t}}$\\ \\
+\\$\mathbf{\lambda} \ =\begin{bmatrix}
+1 & \frac{1}{3} & -\frac{1}{3} \\
+0 & \frac{1}{2} & 0 \\
+0 & -\frac{1}{3} & \frac{1}{3}
+\end{bmatrix}[0\ \ 5\ \ 3]=[0\ \ \frac{3}{2}\ \ 1]$
+\\ \\
+\textbf{Passo 2:} Escolher a variável que entra na base
+$\mathbf{p}\ =\ \mathbf{c{_N}}-\mathbf{\lambda N}$\\
+$\mathbf{p}\ =\ [0\ \ 0]-[0\ \ \frac{3}{2}\ \ 1]\begin{bmatrix}
+0 & 0 \\
+0 & 1 \\
+1 & 0 
+\end{bmatrix}=[-1\ \ -\frac{3}{2}]$
+\\Não há valor maior que 0, então chegamos a solução ótima.
+$z=36$
+\end{minipage}
+}
 \section{Método de Pontos Interiores}
 Em 1984, Karmarkar revolucionou a área de programação linear com a publicação de um algoritmo de complexidade polinomial que apresentou bom desempenho quando aplicado a problemas práticos \cite{MaculanPI}. Essa publicação deu origem a um novo campo de pesquisa, chamado de método dos pontos interiores. 
 

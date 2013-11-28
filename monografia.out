@@ -21,7 +21,7 @@
 \BOOKMARK [2][-]{subsection.3.1.1}{Princ\355pio B\341sico do M\351todo}{section.3.1}
 \BOOKMARK [2][-]{subsection.3.1.2}{Descri\347\343o do M\351todo Simplex Revisado}{section.3.1}
 \BOOKMARK [1][-]{section.3.2}{M\351todo de Pontos Interiores}{chapter.3}
-\BOOKMARK [0][-]{chapter.4}{Reconhecimento de padr\365es}{}
+\BOOKMARK [0][-]{chapter.4}{Classifica\347\343o de dados em padr\365es}{}
 \BOOKMARK [1][-]{section.4.1}{Etapa de obten\347\343o de dados}{chapter.4}
 \BOOKMARK [1][-]{section.4.2}{Etapa de treinamento}{chapter.4}
 \BOOKMARK [2][-]{subsection.4.2.1}{O modelo}{section.4.2}
@@ -29,7 +29,7 @@
 \BOOKMARK [2][-]{subsection.4.2.3}{Gera\347\343o de hiperplanos separadores}{section.4.2}
 \BOOKMARK [1][-]{section.4.3}{Etapa de classifica\347\343o}{chapter.4}
 \BOOKMARK [2][-]{subsection.4.3.1}{Classifica\347\343o com base em um hiperplano}{section.4.3}
-\BOOKMARK [2][-]{subsection.4.3.2}{Classifica\347\343o com base na \341rvore bin\341ria de torneio}{section.4.3}
+\BOOKMARK [2][-]{subsection.4.3.2}{Classifica\347\343o utilizando a estrutura da \341rvore bin\341ria de torneio}{section.4.3}
 \BOOKMARK [1][-]{section.4.4}{Etapa de valida\347\343o}{chapter.4}
 \BOOKMARK [0][-]{chapter.5}{Experimentos Computacionais}{}
 \BOOKMARK [1][-]{section.5.1}{Conjuntos de Dados}{chapter.5}
