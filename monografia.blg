@@ -1,5 +1,6 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: monografia.aux
+A level-1 auxiliary file: siglas.aux
 A level-1 auxiliary file: introducao.aux
 A level-1 auxiliary file: referencial_teorico.aux
 A level-1 auxiliary file: marco_teorico.aux
@@ -19,7 +20,7 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 +---------------------------------------------------------+
 You've used 38 entries,
             6522 wiz_defined-function locations,
-            1385 strings with 15274 characters,
+            1386 strings with 15284 characters,
 and the built_in function-call counts, 38831 in all, are:
 = -- 4244
 > -- 792

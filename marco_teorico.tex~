@@ -1,6 +1,6 @@
 \chapter{Métodos de Solução}
 Entre os métodos mais utilizados para a resolução de problemas de programação linear destaca-se o método simplex  e o método de pontos interiores. 
-Depois da apresentação do método simplex,outros métodos com diferentes abordagens foram propostos \cite{Todd}. Porém, dentre os métodos existentes apenas o método de pontos interiores é atualmente competitivo em relação ao método simplex \apud{Bixby}{Munari}. 
+Depois da apresentação do método simplex,outros métodos com diferentes abordagens foram propostos \cite{Todd}. Porém, dentre os métodos existentes apenas o método de pontos interiores é atualmente competitivo em relação ao método simplex \cite{Bixby}. 
 A principal diferença entre esses dois métodos é que o método simplex busca a solução ótima em um dos vértices da região viável, enquanto o método de pontos interiores percorre o interior da região viável definindo um caminho até a solução ótima \cite{MaculanPI}. Além disso, uma outra diferença é que o simplex exige muitas iterações com cálculos simples, enquanto no método de pontos interiores poucas iterações são exigidas, porém com cálculos mais elaborados.
 Apesar das vantagens do método de pontos interiores em relação ao método estudado neste trabalho, o método simplex possui melhor desempenho na resolução de problemas de pequeno e médio porte em relação ao método de pontos interiores.
 
@@ -11,7 +11,7 @@ O método simplex é um dos algoritmos mais conhecidos para a resolução de pro
 
 Com a utilização do método, foi percebido que a cada iteração eram requeridos muitos cálculos sobre valores que nem sempre importavam para a iteração seguinte, fato que do ponto de vista computacional tornaria o método ineficiente. Esse método é chamado de método simplex padrão ou tabular. A partir desse fato foi desenvolvido o método simplex revisado visando a resolução de problemas de programação linear computacionalmente.
 
-\subsection{Princípio Básico do Método}
+\subsection{Princípio básico do método}
 A idéia do método simplex consiste em resolver repetidas vezes um sistema de equações lineares, e assim obter uma sucessão de soluções até encontrar a solução ótima. Ou seja, é um processo onde nos movemos de uma solução viável para outra sempre melhor ou pelo menos não pior.
 
 Um problema de programação linear é sempre constituído de uma função objetivo e várias restrições. Geometricamente, essas restrições resultam em uma forma geométrica, no espaço n-dimensional sendo n o número de variáveis no modelo. E cada vértice dessa forma geométrica é considerado como uma possível solução, retomando o exemplo apresentado na seção 2.2.
@@ -64,20 +64,20 @@ Adicionando as variáveis de folga:
 \begin{align*}
 Maximize\ z=3x_{1}+5x_{2}\\ 
 Sujeito\ a\\
-1x_{1}+\ \ \ \ \ \ \ x_{3}\ \ \ \ \ \ \ \ \ \ \ \leq 4 \\  
-2x_{2}+\ \ x_{4}\ \ \ \ \leq 12 \\ 
-3x_{1}+2x_{2}+\ \ \ \ \ \ x_{5}\leq 18 \\ 
+1x_{1}+\ \ \ \ \ \ \ x_{3}\ \ \ \ \ \ \ \ \ \ \ = 4 \\  
+2x_{2}+\ \ x_{4}\ \ \ \ = 12 \\ 
+3x_{1}+2x_{2}+\ \ \ \ \ \ x_{5}= 18 \\ 
  x_{1}\geq 0, x_{2}\geq 0 \\
 \end{align*}
 
-A inserção das variáveis de folga foram uma matriz base na matriz de coeficientes das restrições, as variáveis correspondentes a essa matriz base são denomindas variáveis básicas.
+A inserção das variáveis de folga formam uma matriz base na matriz de coeficientes das restrições, as variáveis correspondentes a essa matriz base são denomindas variáveis básicas. Inicialmente as variáveis básicas são as variáveis de folga.
 
-O vetor $\mathbf{c}$, de coeficientes na função objetivo, é dividido em duas componentes: $\mathbf{c{_B}}$ e $\mathbf{c{_N}}$, coeficientes das variáveis básicas e não-básicas, respectivamente. Por analogia, o vetor $\mathbf{x}$, de incógnitas do problema, é subdividido em $\mathbf{x{_B}}$ e $\mathbf{x{_N}}$.  A matriz $\mathbf{A}$, de coeficientes das restrições, é dividida em duas submatrizes: $\mathbf{B}$ e $\mathbf{N}$, coeficientes das variáveis básicas e não-básicas, respectivamente. O vetor $\textbf{b}$ são os valores das variavéis básicas. Os passos do algoritmo são os seguintes.\\
+O vetor $\mathbf{c}$, de coeficientes na função objetivo, é dividido em duas componentes: $\mathbf{c{_B}}$ e $\mathbf{c{_N}}$, coeficientes das variáveis básicas e não-básicas, respectivamente. Por analogia, o vetor $\mathbf{x}$, de incógnitas do problema, é subdividido em $\mathbf{x{_B}}$ e $\mathbf{x{_N}}$.  A matriz $\mathbf{A}$, de coeficientes das restrições, é dividida em duas submatrizes: $\mathbf{B}$ e $\mathbf{N}$, coeficientes das variáveis básicas e não-básicas, respectivamente. O vetor $\textbf{b}$ são os valores das restrições. Os passos do algoritmo são os seguintes.\\
 
 \noindent
 \framebox{
 \begin{minipage}[l]{14,2cm}
-\textbf{Passo 1}: Calcular o vetor multiplicador: \ \ $\mathbf{\lambda} \ =\ \mathbf{B^{-1}c{_B^t}}$
+\textbf{Passo 1}: Calcular o vetor multiplicador: \ \ $\mathbf{\lambda} \ =\ \mathbf{c{_B^t}B^{-1}}$
 \\ \\
 \textbf{Passo 2}: Escolher a variável que entra na base: $\mathbf{p}\ =\ \mathbf{c{_N}}-\mathbf{\lambda N}$
 
@@ -95,7 +95,7 @@ Se \ \ $\forall i\mathit{\frac{b{_i}}{y{_i}}}\leq 0$ \ \ PARAR, a solução é n
 
 Senão, calcular:\ \ 
 $\forall i\ \underset{\underset{y{_i}>0}{1\leq i\leq m}}{Min}\begin{Bmatrix}
-\mathit{\frac{b{_i}}{y{_i}}}
+\mathit{\frac{(x{_b}){_i}}{y{_i}}}
 \end{Bmatrix}$ e guardar o índice correspondente a $s = i$. A variável $(x{_b}){_s}$ sai da base.
 \\ \\
 \textbf{Passo 4}: Criar a matriz $\mathbf{E}$.
@@ -128,10 +128,10 @@ Adicionando as variáveis de folga:
 \begin{align*}
 Maximize\ z=3x_{1}+5x_{2}\\ 
 Sujeito\ a\\
-1x_{1}+\ \ \ \ \ \ \ x_{3}\ \ \ \ \ \ \ \ \ \ \ \leq 4 \\  
-2x_{2}+\ \ x_{4}\ \ \ \ \leq 12 \\ 
-3x_{1}+2x_{2}+\ \ \ \ \ \ x_{5}\leq 18 \\ 
- x_{1}\geq 0, x_{2}\geq 0 \\
+1x_{1}+\ \ \ \ \ \ \ x_{3}\ \ \ \ \ \ \ \ \ \ \ = 4 \\  
+2x_{2}+\ \ x_{4}\ \ \ \ = 12 \\ 
+3x_{1}+2x_{2}+\ \ \ \ \ \ x_{5}= 18 \\ 
+ x_{1}\geq 0, x_{2}= 0 \\
 \end{align*}
 
 	\textbf{Inicialização:}\\
@@ -142,7 +142,7 @@ Sujeito\ a\\
 0 & 1 & 0 \\
 0 & 0 & 1
 \end{bmatrix} = \mathbf{B^{-1}}$
-\\ $\mathbf{x{_B}}=\begin{bmatrix}
+\\ $\mathbf{x{_B}}\mathbf{B}=\mathbf{b} \Rightarrow \mathbf{x{_B}}=\mathbf{B^{-1}}\mathbf{b}\Rightarrow\mathbf{x{_B}}=\begin{bmatrix}
 x{_3} \\
 x{_4} \\
 x{_5} 
@@ -158,13 +158,13 @@ x{_5}
 4 \\
 12 \\
 18 
-\end{bmatrix}$ \ \ \ \ \ $\mathbf{c{_B}}=[0\ \ 0\ \ 0]$
-\\$z = \mathbf{c{_B}}\mathbf{x{_B}} = [0\ \ 0\ \ 0]\begin{bmatrix}
+\end{bmatrix}$ \\$\mathbf{c{_B}}=[0\ \ 0\ \ 0]$
+\ \ \ \ \ $z = \mathbf{c{_B}}\mathbf{x{_B}} = [0\ \ 0\ \ 0]\begin{bmatrix}
 4 \\
 12 \\
 18 
 \end{bmatrix} = 0$
-$\mathbf{c{_N}}=[3\ \ 5]$ \ \ \ \ \ $\mathbf{c{_B}}=[0\ \ 0\ \ 0]$ \ \ \ \ \ $\mathbf{A}=[\ \mathbf{N}\ |\ \mathbf{B}\ ]=\left [ \left.\begin{matrix}
+ \ \ \ \ \ $\mathbf{c{_N}}=[3\ \ 5]$ \ \ \ \ \ $\mathbf{c{_B}}=[0\ \ 0\ \ 0]$ \ \ \ \ \ $\mathbf{A}=[\ \mathbf{N}\ |\ \mathbf{B}\ ]=\left [ \left.\begin{matrix}
 1 & 0 \\
 0 & 2 \\
 3 & 2 
@@ -183,7 +183,7 @@ $\mathbf{c{_N}}=[3\ \ 5]$ \ \ \ \ \ $\mathbf{c{_B}}=[0\ \ 0\ \ 0]$ \ \ \ \ \ $\m
 \textbf{Iteração 1}
 \\ \\
 \textbf{Passo 1:} Calcular o vetor multiplicador
-\\$\mathbf{\lambda} \ =\ \mathbf{B^{-1}c{_B^t}}$\\
+\\$\mathbf{\lambda} \ =\ \mathbf{c{_B^t}B^{-1}}$\\
 $\mathbf{\lambda} \ =\begin{bmatrix}
 1 & 0 & 0 \\
 0 & 1 & 0 \\
@@ -197,7 +197,7 @@ $\mathbf{p}\ =\ [3\ \ 5]-[0\ \ 0\ \ 0]\begin{bmatrix}
 0 & 2 \\
 3 & 2 
 \end{bmatrix}=[3\ \ 5]$
-A variável $x_{2}$ entra na base $k=2$.
+\\$k=2$ a variável $(x_{N})_{k}$ entra na base, $(x_{N})_{k} = x_{2}$ .
 \\ \\
 \textbf{Passo 3:}Determinar a variável que sai da base
 $\mathbf{y}=\mathbf{B^{-1}a{_k}}$\\
@@ -218,7 +218,7 @@ $\mathbf{y}=\begin{bmatrix}
 $Min\begin{Bmatrix}
 \frac{4}{0},\frac{12}{2},\frac{18}{2}
 \end{Bmatrix} = \frac{12}{2}$\\
-A variável $x_{4}$ sai da base $s=4$
+$s=2$ a variável $(x_{B})_{s}$ sai da base, $(x_{B})_{s}=x_{4}$ 
 \\ \\
 \textbf{Passo 4:} Criar a matriz $\mathbf{E}$.
 \\$\mathbf{E}=\begin{bmatrix}
@@ -277,7 +277,7 @@ x{_5}
 \textbf{Iteração 2}
 \\ \\
 \textbf{Passo 1:} Calcular o vetor multiplicador
-\\$\mathbf{\lambda} \ =\ \mathbf{B^{-1}c{_B^t}}$\\
+\\$\mathbf{\lambda} \ =\ \mathbf{c{_B^t}B^{-1}}$\\
 $\mathbf{\lambda} \ =\begin{bmatrix}
 1 & 0 & 0 \\
 0 & \frac{1}{2} & 0 \\
@@ -371,8 +371,8 @@ x{_1}
 \textbf{Iteração 3}
 \\ \\
 \textbf{Passo 1:} Calcular o vetor multiplicador
-\\$\mathbf{\lambda} \ =\ \mathbf{B^{-1}c{_B^t}}$\\ \\
-$\mathbf{\lambda} \ =\begin{bmatrix}
+\\$\mathbf{\lambda} \ =\ \mathbf{c{_B^t}B^{-1}}$\\ \\
+\\$\mathbf{\lambda} \ =\begin{bmatrix}
 1 & \frac{1}{3} & -\frac{1}{3} \\
 0 & \frac{1}{2} & 0 \\
 0 & -\frac{1}{3} & \frac{1}{3}

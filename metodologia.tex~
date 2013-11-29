@@ -1,23 +1,24 @@
-\chapter{Classificação de dados em padrões}
-Para a realização da classificação de dados em padrões são necessárias as etapas de organização dos dados, treinamento, que na metologia utilizada nesse trabalho corresponde a geração dos hiperplanos separadores através do modelo de programação linear, e teste, onde é feita a classificação de um dado com padrão inicialmente desconhecido.
+\chapter{Classificação de dados}
+Para a realização da classificação de dados em padrões são necessárias as etapas de obtenção e organização dos dados, treinamento, que na metologia utilizada nesse trabalho corresponde a geração dos hiperplanos separadores através do modelo de programação linear, e teste, onde é feita a classificação de um dado com padrão inicialmente desconhecido.
 Todo o processo, desde a organização dos dados até a etapa de classificação, foi implementado utilizando a linguagem de programação Java. A implementação foi feita em módulos, organizados da seguinte forma: Módulo organizador de dados, Módulo de geração de classificadores, Módulo de classificação, Módulo validador. No módulo organizador de dados os conjuntos de dados são organizados em subgrupos, cada subgrupo contendo vetores de todos os padrões, essa organização é importante para a etapa de validação do método. No Módulo de geração de classificadores está implementado o modelo de programação linear e são gerados os hiperplanos separadores. Os Módulos de classificação e validador são utilizados na etapa de teste, o primeiro realiza a classificação de um vetor em um dos padrões separados pelo hiperplano e o segundo realiza a validação do método de classificação de dados utilizando o método cross validation.
 
 Na figura \ref{img:diagrama_modulos} estão representadas as etapas da metodologia utilizada para a classificação de dados em padrões.
 
 \begin{center}
-	\includegraphics[scale=0.5]{graficos/diagrama_metodologia}
+	\includegraphics[scale=0.5]{graficos/Diagrama_etapas}
 	\captionof{figure}{Diagrama das etapas da metodologia}
 	\label{img:diagrama_modulos}
 \end{center}
 
-Primeiramente os dados foram obtidos já no formato de vetores de características ou  ctraídos de imagens, e depois foram divididos em subgrupos. Em seguida, foram submetidos ao modelo de programação linear, responsável por gerar os classificadores e por último vetores com padrão desconhecido foram classificados. As duas últimas etapas são repetidas a cada ciclo de teste, essas repetições são controladas pelo módulo validador. Nas seções seguintes essas etapas serão apresentadas de forma mais detalhada.
+Primeiramente os dados foram obtidos já no formato de vetores de características ou  extraídos de imagens, e depois foram divididos em subgrupos. Em seguida, foram submetidos ao modelo de programação linear, responsável por gerar os classificadores e por último vetores com padrão desconhecido foram classificados. As duas últimas etapas são repetidas a cada ciclo de teste, essas repetições são controladas pelo módulo validador. Nas seções seguintes essas etapas serão apresentadas de forma mais detalhada.
 
-\section{Etapa de obtenção de dados}
-Nessa etapa inicial é obtido um conjunto de dados com um número de padrões \textit{p}, esse conjunto é composto por vetores contendo \textit{n} características. Para a classificação dos dados, o número \textit{p} de padrões deve ser previamente conhecido, assim como o número de vetores de características para cada padrão. A cada ciclo de teste, alguns dos vetores desse conjunto de dados são utilizados para treinamento enquanto outros serão utilizados para teste. Cada vetor utilizado para teste será classificado em um dos \textit{p} padrões previamente conhecidos.
+\section{Etapa de obtenção e organização de dados}
+Nessa etapa inicial é obtido um conjunto de dados com um número de padrões \textit{p}, esse conjunto é composto por vetores contendo \textit{n} características. Para a classificação dos dados, o número \textit{p} de padrões deve ser previamente conhecido, assim como o número de vetores de características para cada padrão. 
+A organização consiste em dividir o conjunto de dados em subconjuntos. A cada ciclo de treinamento e teste, alguns desses subconjuntos de dados são utilizados para treinamento enquanto um subconjunto será utilizados para teste. Cada vetor utilizado para teste será classificado em um dos \textit{p} padrões previamente conhecidos.
 
 \section{Etapa de treinamento}
-Na tarefa onde o objetivo é a separação de dois ou mais conjuntos de pontos, sendo que cada conjunto representa um padrão, busca-se um método para que essa separação seja obtida com resultado ótimo. Cada padrão é o resultado de um conjunto de pontos e cada ponto é representado por um vetor de características.
-Em \cite{Bennett92robustlinear} é proposto um modelo de programação linear capaz de gerar um hiperplano, que separa dois conjuntos de pontos, minimizando a soma das médias das violações dos pontos que permaneceram do lado "errado" do hiperplano. Dessa forma o modelo é capaz de gerar um hiperplano separador para conjuntos de pontos linearmente separáveis e para conjuntos linearmente inseparáveis, o modelo gera o melhor hiperplano de forma que essa média calculada seja mínima. Na figura abaixo estão ilustrados os casos de dois conjuntos linearmente separáveis e dois conjuntos linearmente inseparáveis.
+Na tarefa onde o objetivo é a separação de dois ou mais conjuntos de pontos, sendo que cada conjunto representa um padrão, busca-se um método para que essa separação seja obtida com resultado ótimo. Cada padrão é representado por de um conjunto de pontos e cada ponto é representado por um vetor de características.
+Em \cite{Bennett92robustlinear} é proposto um modelo de programação linear capaz de gerar um hiperplano, que separa dois conjuntos de pontos, minimizando a soma das médias das violações dos pontos que permaneceram do lado "errado" do hiperplano. Dessa forma o modelo é capaz de gerar um hiperplano separador para conjuntos de pontos linearmente separáveis e para conjuntos linearmente inseparáveis, o modelo gera o melhor hiperplano de forma que essa soma das médias calculada seja mínima. Na figura abaixo estão ilustrados os casos de dois conjuntos linearmente separáveis e dois conjuntos linearmente inseparáveis.
  
 \begin{figure}[!h]
 \centering
@@ -25,16 +26,17 @@ Em \cite{Bennett92robustlinear} é proposto um modelo de programação linear ca
 \qquad
 \subfigure[]{\includegraphics[scale=0.5]{graficos/linear_insepa}\label{fig2}}
 \label{img:linear_sepa}
-\caption{Em \ref{fig1} são apresentados dois conjuntos linearmente separáveis e em \ref{fig2} são apresentados dois conjuntos linearmente inseparáveis}
+\caption{Conjuntos linearmente separáveis e linearmente inseparáveis}
 \end{figure}
 
-É possível observar que na figura \ref{fig1} podem ser tratadas inúmeras retas separando os dois conjuntos de pontos. Já na figura \ref{fig2} o modelo de programação linear poderá definir a melhor reta possível para separar os pontos.
+Em \ref{fig1} são apresentados dois conjuntos linearmente separáveis e em \ref{fig2} são apresentados dois conjuntos linearmente inseparáveis
+É possível observar que na figura \ref{fig1} podem ser traçadas inúmeras retas separando os dois conjuntos de pontos. Já na figura \ref{fig2} o modelo de programação linear poderá definir a melhor reta possível para separar os pontos.
 
 A proposta do modelo é separar dois conjuntos de pontos, porém também pode ser utilizado em problemas onde busca-se a separação de múltiplos padrões. O presente trabalho foca nessa última abordagem, em todos os testes realizados o número de conjuntos de pontos é igual ou maior que três.
 
 \subsection{O modelo}
 Considerando dois conjuntos, no espaço n-dimensional $ R^{n} $, sendo o conjunto A representado pela matriz m x n, e o conjunto B representado pela matriz k x n. Contextualizando, k e m são as quantidades de pontos em cada conjunto, sendo que cada vetor de características é um ponto e n é a quantidade de características. O modelo calcula um hiperplano que procura separar os pontos dos dois conjuntos. De forma que os m pontos do conjunto A fiquem de um lado do hiperplano e os k pontos do conjunto B fiquem do outro lado do hiperplano. Nos casos em que os conjuntos não são separáveis, alguns pontos ficam localizados do lado "errado" do hiperplano. Na figura abaixo o modelo é apresentado. E a seguir é apresentado de forma mais detalhada.
-
+\newpage
 $$\min_{\omega ,\gamma ,y,z}\frac{e^{T}y}{m}+\frac{e^{T}z}{k}$$
 $$s.a.\left\{\begin{matrix}-A\omega +e\gamma+e\leq y\\B\omega -e\gamma+e\leq  z\\ y\geq 0,y\geq 0\end{matrix}\right.$$
 
@@ -56,7 +58,7 @@ Detalhando o modelo de acordo com \citeonline{Eberson10LPseparaPontos}, consider
 
 $1.\ \ (x_{i})_{+} = \max_{i=1,2,...,n}{\left \{x_{i},0  \right \}}$
 
-$2.\ \ \left \| xx \right \|_{1} = \sum_{i=1}^{n}\left | x_{i} \right |$
+$2.\ \ \left \| x \right \|_{1} = \sum_{i=1}^{n}\left | x_{i} \right |$
 
 Podemos escrever o problema de minimização com norma da seguinte forma:
 
@@ -70,16 +72,16 @@ $$\min_{x\in S}\left \| g(x)_{+} \right \|_{1} + \left \| h(x)_{+} \right \|_{1}
 $$\min_{x\in S} e^{t}y + e^{t}z\\$$
 $$ s.a.\left\{\begin{matrix}y\geq g(x)\\ z\geq h(x)\\ y\geq 0, z\geq0\end{matrix}\right.$$
 
-Como $g(x)_{+}\geq g(x)$ e $h(x)_{+}\geq h(x)$ podemos observar que os valores ótimos de y e z podem der dados pelas igualdades $y=g(x)_{+}$ e $z=h(x)_{+}$.
+Como $g(x)_{+}\geq g(x)$ e $h(x)_{+}\geq h(x)$ podemos observar que os valores ótimos de y e z podem ser dados pelas igualdades $y=g(x)_{+}$ e $z=h(x)_{+}$.
 
 A partir do problema de minimização temos o problema de programação linear equivalente:
-\begin{fleqn}
+\begin{eqnarray}
 \min_{\omega ,\gamma ,y,z}\frac{e^{T}y}{m}+\frac{e^{T}z}{k} \label{eq3:obj1}\\
 Sujeito\ a \nonumber\\
 -A\omega +e\gamma+e\leq y\label{eq3:rest1}\\
 B\omega -e\gamma+e\leq  z \label{eq3:rest2}\\ 
 y\geq 0,y\geq 0 \label{eq3:rest3}
-\end{fleqn}
+\end{eqnarray}
 
 \underline{Dados do Modelo}:
 \begin{itemize}
@@ -94,12 +96,12 @@ y\geq 0,y\geq 0 \label{eq3:rest3}
 \begin{itemize}
 \item{$\omega$}: coeficientes do hiperplano que separa os conjuntos de pontos dos dois padrões;
 \item{$\gamma$}: constante do hiperplano que separa os conjuntos de pontos dos dois padrões;
-\item{y}: vetor contendo o quanto um ponto violou, considerando que  ;
-\item{z}: vetor contendo as distâncias de cada imagem do conjunto B ao hiperplano separador mais um.
+\item{y}: vetor contendo o quanto um ponto do conjunto A violou o hiperplano limite;
+\item{z}: vetor contendo o quanto um ponto do conjunto B violou o hiperplano limite;.
 \end{itemize}
 
 \underline{Formulação Matemática}:
-A função objetivo \ref{eq3:obj1} procura minimizar a soma das médias das violações dos pontos de ambos conjuntos. A restrição \ref{eq3:rest1} exige que os pontos se encontrem necessariamente abaixo do hiperplano separador mais uma constante unitária.  A restrição \ref{eq3:rest2} é análoga a restrição \ref{eq3:rest1} aplicada ao segundo padrão. As equações em \ref{eq3:rest3} definem a natureza das variáveis do modelo, como sendo não negativas.
+A função objetivo \ref{eq3:obj1} procura minimizar a soma das médias das violações dos pontos de ambos conjuntos. A restrição \ref{eq3:rest1} exige que os pontos do conjunto A permaneçam do mesmo lado da reta fora da faixa limite definida pelos hiperplanos limite.  A restrição \ref{eq3:rest2} é análoga a restrição \ref{eq3:rest1} aplicada ao conjunto B. As equações em \ref{eq3:rest3} definem a natureza das variáveis do modelo, como sendo não negativas.
 
 \subsection{Exemplo Ilustrativo do Modelo Classificador}
 Para ilustrar o modelo vamos considerar dois exemplos em $R^{2}$ \cite{Bennett92robustlinear} de forma que a ilustração gráfica fique mais facilmente compreensível.
@@ -127,7 +129,7 @@ Como o valor da função objetivo depende dos vetores y e z, podemos notar que o
 	\label{img:ex1}
 \end{center}
 
-A partir da representação gráfica podemos perceber que a reta separadora $-2x + 0y = -7$ se localizou exatamente no meio entre os dois conjuntos com o auxílio das duas retas: $-2x + 0y = -6$ e $-2x + 0y = -8$.
+A partir da representação gráfica podemos perceber que a reta separadora $-2x + 0y = -7$ se localizou exatamente entre os dois conjuntos com o auxílio das duas retas: $-2x + 0y = -6$ e $-2x + 0y = -8$.
 
 \begin{itemize}
 \item Exemplo2:
@@ -167,9 +169,9 @@ A etapa de treinamento consiste em gerar um hiperplano para cada par formado. No
 	\label{img:classificadores}
 \end{center}
 
-Na figura \ref{img:classificadores} é apresentada uma visão geral dos 3 conjuntos de pontos (padrões) e dos 3 hiperplanos separadores. A seguir os hiperplanos são apresentados separadamente, o modelo é resolvido 3 vezes, uma para cada par de padrões e cada resolução calcula um hiperplano separador para o par.
- 
-\begin{figure}[h!]
+Na figura \ref{img:classificadores} é apresentada uma visão geral dos 3 conjuntos de pontos (padrões) e dos 3 hiperplanos separadores. A seguir os hiperplanos são apresentados separadamente, o modelo é resolvido 3 vezes, uma para cada par de padrões e cada resolução o modelo calcula um hiperplano separador para o par.
+\newpage 
+\begin{figure}[!h]
 \centering
 \subfigure[Classificador dos padrões 1 e 2]{\includegraphics[scale=0.5]{graficos/class1e2}\label{fig1_ls}}
 \qquad
@@ -180,46 +182,15 @@ Na figura \ref{img:classificadores} é apresentada uma visão geral dos 3 conjun
 \caption{Hiperplanos para um conjunto de dados com os 3 padrões organizados em pares}
 \end{figure}
 
+Na figura \ref{fig1_ls}, os padrões 1 e 2 foram submetidos ao modelo, e o hiperplano separador foi gerado para esses dois padrões. O mesmo ocorre nas figuras \ref{fig2_ls} e \ref{fig3_ls}, para cada para de padrões submetidos ao modelo, um hiperplano separador foi gerado.
+
 O processo de treinamento corresponde ao módulo de geração de classificadores. Esse módulo foi implementado na linguagem de programação JAVA, utilizada como interface com o software CPLEX da IBM. O modelo é resolvido utilizando o método simplex revisado e toda etapa de resolução é feita pelo software CPLEX
 
-\section{Etapa de classificação}
-No processo de teste, vetores de características são submetidos a estrutura de árvore binária de torneio e classificados em um dos \textit{p} padrões do conjunto de dados.
-A cada teste uma árvore binária de torneio é construída a partir dos nós folhas e um vetor de características é classificado. Na estrutura de árvore binária de torneio os padrões são confrontados aos pares, e o hiperplano que separa os dois padrões do par é utilizado para verificar de qual lado do hiperplano o vetor teste se localiza, o padrão que estiver do mesmo que o vetor teste no hiperplano é elevado ao nível superior da árvore. Para verificar de qual lado do hiperplano o vetor teste de localiza é realizado o seguinte cálculo, considerando o vetor x como o vetor teste:
-
-Se $ \begin{bmatrix}
-\omega _{1} & ... & \omega _{n} 
-\end{bmatrix}
-\begin{bmatrix}
-x_{1}
-\\ 
-.
-\\
-. 
-\\
-. 
-\\
-x_{n}
-\end{bmatrix}
-\geq \gamma $, o padrão A é elevado ao próximo nível da árvore;
-
-Se $ \begin{bmatrix}
-\omega _{1} & ... & \omega _{n} 
-\end{bmatrix}
-\begin{bmatrix}
-x_{1}
-\\ 
-.
-\\
-. 
-\\
-. 
-\\
-x_{n}
-\end{bmatrix}
-\leq  \gamma $, o padrão B é elevado ao próximo nível da árvore.
-
-Após a geração dos classificadores utilizando o modelo de programação linear, é necessário um segundo procedimento onde ocorra de fato a classificação de um vetor com padrão inicialmente desconhecido. Nessa etapa de classificação foi implementada uma estrutura de árvore binária de torneio. Em seus trabalhos \citeonline{Feng} e \citeonline{Guo} utilizaram essa mesma estrutura na etapa de classificação após a utilização do modelo de programação linear para gerar os classificadores.
-A seguir são apresentadas duas figuras para ilustrar o mecanismo da árvore de torneio.
+\section{Etapa de classificação} 
+Após a geração dos classificadores utilizando o modelo de programação linear, é necessário um segundo procedimento onde ocorra de fato a classificação de um vetor com padrão inicialmente desconhecido. Nessa etapa de classificação foi implementada uma estrutura de árvore binária de torneio. Em seus trabalhos, \citeonline{Feng} e \citeonline{Guo} utilizaram essa mesma estrutura na etapa de classificação após a utilização do modelo de programação linear para gerar os classificadores.
+No processo de teste, um vetor de características é submetido a estrutura de árvore binária de torneio e classificado em um dos \textit{p} padrões do conjunto de dados.
+A cada teste uma árvore binária de torneio é construída a partir dos nós folhas e um vetor de características é classificado. Na estrutura de árvore binária de torneio os padrões são confrontados aos pares, o nó pai é obtido com base no hiperplano que separa os padrões que estão no nós filhos.%e o hiperplano que separa os dois padrões do par é utilizado para verificar de qual lado do hiperplano o vetor teste se localiza, o padrão que estiver do mesmo lado do hiperplano que o vetor que está sendo classificado é elevado ao nível superior da árvore.
+A seguir é apresentada uma figura para ilustrar o mecanismo da árvore de torneio.
 
 \begin{center}
 	\includegraphics[scale=0.4]{graficos/ArvTorneio1}
@@ -227,17 +198,12 @@ A seguir são apresentadas duas figuras para ilustrar o mecanismo da árvore de 
 	\label{img:ArvTorneio1}
 \end{center}
 
-\begin{center}
-	\includegraphics[scale=0.4]{graficos/ArvTorneio2}
-	\captionof{figure}{Ilustração de uma árvore de torneio com 6 padrões de acordo com os classificadores}
-	\label{img:ArvTorneio2}
-\end{center}
-Depois de obtidos os hiperplanos separadores, é necessário um mecanismo para que um dado com padrão desconhecido possa ser classificado como pertencente a um dos padrões, ou seja, analisando um vetor é preciso descobrir em qual dos padrões ele se classifica. Para isso, é utilizada uma estrutura chamada árvore binária de torneio \cite{Feng} \cite{Guo}. Por analogia podemos pensar na árvore como a estrutura utilizada em um torneio esportivo e nos padrões como os times do torneio, os times devem se confrontar até que ao final saia o vencedor. Da mesma forma, analisamos os padrões até que ao final se obtenha o padrão ao qual o vetor pertence.
-Na árvore da figura \ref{img:ArvTorneio1}, consideramos 6 padrões e o conjunto desconhecido pertencendo ao padrão 4. A quantidade de nós folhas deve ser a quantidade de padrões e a formação dos pares é arbitrária. Analisando o primeiro par, deve ser analisado em qual dos dois padrões o conjunto desconhecido mais se encaixa, ou seja, deve ser analisado de qual lado do hiperplano (gerado pelo modelo quando foram submetidos os padrões 1 e 2, como ilustrado na figura \ref{img:ArvTorneio2}) o conjunto desconhecido se encontra. Na figura exemplo, o ponto representado pelo vetor de características ficou localizado do mesmo lado do hiperplano que os pontos do padrão 1, por isso esse padrão continuou no próximo nível da árvore e o padrão 2 foi excluído. Esse procedimento ocorre por analogia em todos os pares, até que ao final, quando analisados os padrões 4 e 6, foi definido que o vetor pertence ao padrão 4.
+Por analogia podemos pensar na árvore como a estrutura utilizada em um torneio esportivo e nos padrões como os times do torneio, os times devem se confrontar até que ao final saia o vencedor. Da mesma forma, analisamos os padrões até que ao final se obtenha o padrão ao qual o vetor pertence.
+Na árvore da figura \ref{img:ArvTorneio1}, consideramos 6 padrões e o conjunto desconhecido pertencendo ao padrão 4. A quantidade de nós folhas deve ser a quantidade de padrões e a formação dos pares é arbitrária. Analisando o primeiro par, deve ser analisado em qual dos dois padrões o conjunto desconhecido mais se encaixa, ou seja, deve ser analisado de qual lado do hiperplano (gerado pelo modelo quando foram submetidos os padrões 1 e 2) o conjunto desconhecido se encontra. Na figura exemplo, o ponto representado pelo vetor de características ficou localizado do mesmo lado do hiperplano que os pontos do padrão 1, por isso esse padrão continuou no próximo nível da árvore e o padrão 2 foi excluído. Esse procedimento ocorre por analogia em todos os pares, até que ao final, quando analisados os padrões 4 e 6, foi definido que o vetor pertence ao padrão 4.
 
 \subsection{Classificação com base em um hiperplano}
 Dado um vetor x de características, para determinar a qual padrão esse vetor pertence deve ser analisado de qual lado do hiperplano o ponto dado pelo vetor, se localiza, considerando que 
-Se $ \begin{bmatrix}
+\\Se $ \begin{bmatrix}
 \omega _{1} & ... & \omega _{n} 
 \end{bmatrix}
 \begin{bmatrix}
@@ -306,7 +272,7 @@ Considerando um exemplo com três padrões (A, B e C), e os seguintes hiperplano
 \subitem $\gamma$ = -33.6
 \end{itemize}
 
-Para determinar a qual dos três padrões pertence o vetor $x = [4.8  3.0  1.4  0.3]$, a árvore binária de torneio é montada dinamicamente iniciando pelo nível de maior profundidade, nesse exemplo iniciamos com os padrões A e C.
+Para determinar a qual dos três padrões pertence o vetor $x = [4.8\ \ 3.0\ \ 1.4\ \ 0.3]$, a árvore binária de torneio é montada dinamicamente iniciando pelo nível de maior profundidade, nesse exemplo iniciamos com os padrões A e B.
 
 \begin{center}
 	\includegraphics[scale=0.4]{graficos/arvore_nivel1}
@@ -363,7 +329,7 @@ $ \begin{bmatrix}
 Analisando o hiperplano separador dos padrões A e C é determinado que o ponto representado pelo vetor x ficou localizado do mesmo lado que os pontos do padrão A. Como todos os padrões (A, B e C) já foram analisados e a árvore foi completada, então, finalmente, o vetor x é reconhecido como pertencente ao padrão A.
 
 \begin{center}
-	\includegraphics[scale=0.4]{graficos/arvore_nivel3}
+	\includegraphics[scale=0.4]{graficos/arvore_completa}
 	\captionof{figure}{Árvore completa}
 	\label{img:Arv_completa}
 \end{center}
@@ -372,7 +338,7 @@ A árvore completa é mostrada na figura \ref{img:Arv_completa}, após analisar 
 
 \section{Etapa de validação}
 Para testar a metodologia adotada neste trabalho para a classificação de dados, foi utilizado o método \textit{k-fold cross validation} \cite{Kohavi95Cross} \cite{Baldisserotto05Validacao}. Através dos resultados desse método é possível analisar a acurácia da metodologia de classificação, ou seja, a capacidade de classificar um dado com o seu padrão correto.
-Entre os três métodos de validação apresentados no referencial teórico: \textit{Handout}, \textit{cross validation} e \textit{Leave One Out}. O método \textit{cross validation} foi escolhido como melhor opção já que os teste são feitos com conjuntos de dados com tamanhos variados. Para conjuntos de dados muito grandes o método \textit{Leave One Out} se tornaria computacionalmente custoso e o método \textit{Handout} poderia ter seu resultado comprometido dependendo dos parâmetros escolhidos na separação de dados para teste e de dados para validação. Além disso, o método \textit{cross validation} é de fácil implementação e permite a utilização de todos os dados na etapa de teste e treinamento.
+Entre os três métodos de validação apresentados no referencial teórico: \textit{Handout}, \textit{cross validation} e \textit{Leave One Out}. O método \textit{cross validation} foi escolhido como melhor opção já que os teste são feitos com conjuntos de dados com tamanhos variados. Para conjuntos de dados muito grandes o método \textit{leave one out} se tornaria computacionalmente custoso e o método \textit{handout} poderia ter seu resultado comprometido dependendo dos parâmetros escolhidos na separação de dados para teste e de dados para validação. Além disso, o método \textit{cross validation} é de fácil implementação e permite a utilização de todos os dados na etapa de teste e treinamento.
 Na figura abaixo o método \textit{k-fold cross validation} é ilustrado com o parâmetro 5 \textit{fold}, apesar desse parâmetro não ter sido utilizado em nenhum teste, foi utilizado para um facilitar a ilustração. 
 \begin{center}
 	\includegraphics[scale=1.0]{graficos/cross_validation}

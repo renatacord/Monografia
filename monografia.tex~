@@ -70,7 +70,7 @@
 %\renewcommand*\lstlistlistingname{Lista de Códigos}
 
 %--------------------------------- Informações ---------------------------------
-\newcommand{\meutitulo}{A Programação Linear na classificação de dados em padrões}
+\newcommand{\meutitulo}{A Programação Linear na classificação de dados}
 \begin{document}
 
 \titulo{\meutitulo}
@@ -87,15 +87,16 @@ orientação do Profº. Fermín Alfredo Tang Montané.}
 \graphicspath{{graficos/}}
 \capa
 \folhaderosto
-
+\listoffigures
 \sumario
 
-%\include{introducao}
-%\include{referencial_teorico}
+\include{siglas}
+\include{introducao}
+\include{referencial_teorico}
 \include{marco_teorico}
-%\include{metodologia}
-%\include{experimentos}
-%\include{conclusao}
+\include{metodologia}
+\include{experimentos}
+\include{conclusao}
 %--------------------------------- Bibliografia --------------------------------
 
 \citeoption{abnt-repeated-author-omit=yes}

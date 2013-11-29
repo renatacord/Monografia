@@ -1,1 +1,24 @@
 \select@language {brazil}
+\contentsline {figure}{\numberline {1}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o gr\IeC {\'a}fica do modelo de programa\IeC {\c c}\IeC {\~a}o linear de duas vari\IeC {\'a}veis\relax }}{13}{figure.listoffigures.2.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o gr\IeC {\'a}fica de um modelo de programa\IeC {\c c}\IeC {\~a}o linear\relax }}{24}{figure.listoffigures.3.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Diagrama das etapas da metodologia\relax }}{34}{figure.listoffigures.4.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Conjuntos linearmente separ\IeC {\'a}veis e linearmente insepar\IeC {\'a}veis\relax }}{36}{figure.caption.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{36}{figure.caption.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{36}{figure.caption.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o ilustrativa do exemplo 1\relax }}{41}{figure.listoffigures.4.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Representa\IeC {\c c}\IeC {\~a}o ilustrativa do exemplo 2\relax }}{42}{figure.listoffigures.4.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Hiperplanos para um conjunto de dados com 3 padr\IeC {\~o}es\relax }}{43}{figure.listoffigures.4.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Hiperplanos para um conjunto de dados com os 3 padr\IeC {\~o}es organizados em pares\relax }}{44}{figure.caption.5}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Classificador dos padr\IeC {\~o}es 1 e 2}}}{44}{figure.caption.5}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Classificador dos padr\IeC {\~o}es 1 e 3}}}{44}{figure.caption.5}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Classificador dos padr\IeC {\~o}es 2 e 3}}}{44}{figure.caption.5}
+\contentsline {figure}{\numberline {9}{\ignorespaces Ilustra\IeC {\c c}\IeC {\~a}o de uma \IeC {\'a}rvore de torneio com 6 padr\IeC {\~o}es\relax }}{45}{figure.listoffigures.4.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces N\IeC {\'o}s folhas no n\IeC {\'\i }vel de maior profundidade\relax }}{47}{figure.listoffigures.4.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Padr\IeC {\~a}o A \IeC {\'e} elevado ao pr\IeC {\'o}ximo n\IeC {\'\i }vel da \IeC {\'a}rvore\relax }}{48}{figure.listoffigures.4.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Segundo n\IeC {\'\i }vel da \IeC {\'a}rvore\relax }}{48}{figure.listoffigures.4.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces \IeC {\'A}rvore completa\relax }}{49}{figure.listoffigures.4.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Mecanismo do m\IeC {\'e}todo de valida\IeC {\c c}\IeC {\~a}o 5- \it {fold cross validation}\relax }}{50}{figure.listoffigures.4.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Pre processamento das imagens do banco JAFFE\relax }}{55}{figure.listoffigures.5.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces C\IeC {\'a}lculo do c\IeC {\'o}digo LBP\relax }}{55}{figure.listoffigures.5.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Imagem dividida em blocos e concatena\IeC {\c c}\IeC {\~a}o dos histogramas de cada bloco\relax }}{56}{figure.listoffigures.5.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Gr\IeC {\'a}fico quantidade de vetores X taxa de acerto \relax }}{62}{figure.listoffigures.5.18}

@@ -1,5 +1,5 @@
 \chapter{Experimentos Computacionais}
-Para a realização do experimentos computacionais foi necessário, primeiramente, obter os dados para teste e organizar cada conjunto de dados em subconjuntos, essa organização é necessária para a avaliação da acurácia da metodologia utilizando o método \textit{k-fold cross validation}. Posteriormente os dados selecionados para treinamento são submetidos ao modelo para geração dos hiperplanos separadores e os dados para teste são classificados utilizando a árvore binária de torneio. Todos os experimento foram feitos utilizando um notebook com processador Intel Core i3, 2.27 GHz, 3 GB de RAM, sistema operacional Ubuntu 12.04, NetBeans IDE 7.1.2 e o software CPLEX da IBM.
+Para a realização do experimentos computacionais foi necessário, primeiramente, obter e organizar os dados. Posteriormente os dados selecionados para treinamento são submetidos ao modelo para geração dos hiperplanos separadores e os dados para teste são classificados utilizando a árvore binária de torneio. Todos os experimento foram feitos utilizando um notebook com processador Intel Core i3, 2.27 GHz, 3 GB de RAM, sistema operacional Ubuntu 12.04, NetBeans IDE 7.1.2 e o software CPLEX da IBM.
 
 \section{Conjuntos de Dados}
 Foram realizados testes com quatro conjuntos de dados: dígitos de 0 a 9 escritos manualmente, gestos da Língua Brasileira de Sinais, espécies da planta Iris e expressões faciais . Desses conjuntos, os três primeiros foram obtidos do repositório de dados \citeonline{Repositorio2013} e já estavam representados na forma de vetores de características. O último conjunto foi gerado a partir do conjunto de imagens JAFFE \cite{Jaffe}. Os p padrões de cada conjunto de dados são numerados de 1 a p. Nos quatro conjuntos de dados todos os vetores de características possuem um atributo identificando a qual padrão o vetor pertence, o vetor a seguir, por exemplo, pertence ao conjunto de dados com espécies da planta Iris:
@@ -11,13 +11,13 @@ Na etapa de treinamento esse atributo é retirado do vetor. A seguir são aprese
 
 \begin{itemize}
 \item \textbf{Dígitos de 0 a 9 escritos manualmente \cite{Digitos}}
-Na formação desse conjunto de dados 250 dígitos entre 0 e 9 foram escritos de forma aleatória por 44 pessoas, totalizando 11000 dígitos, porém estão disponíveis 10992 dígitos. Durante a coleta dos dados foram recolhidas, em intervalos fixos de 100 milissegundos, as coordenadas e a pressão da caneta sobre a superfície enquanto o dígito era escrito. No conjunto de dados utilizada foram considerados apenas os valores das coordenadas. Os dados foram reorganizados utilizando interpolação linear, foram utilizados 8 pontos, e obtidos vetores com 16 características.
+Na formação desse conjunto de dados 250 dígitos entre 0 e 9 foram escritos de forma aleatória por 44 pessoas, totalizando 11000 vetores de características, porém estão disponíveis 10992 vetores de características. Durante a coleta dos dados foram recolhidas, em intervalos fixos de 100 milissegundos, as coordenadas e a pressão da caneta sobre a superfície enquanto o dígito era escrito. No conjunto de dados utilizado foram considerados apenas os valores das coordenadas. Os dados foram reorganizados utilizando interpolação linear, foram utilizados 8 pontos, e obtidos vetores com 16 características.
 Cada vetor é composto por 16 atributos que variam entre 0 e 100 e mais um valor variando entre 0 e 9 que representa o classe a qual o vetor pertence.
 Os dados estão distribuídos como na tabela a seguir:
 \begin{center}
 	\begin{tabular}{cc}
         \hline
-        Classe & Quantidade de instâncias \\
+        Classe & Quantidade de vetores \\
         \hline
 		0 & 1143 \\
 		1 & 1143 \\
@@ -32,20 +32,20 @@ Os dados estão distribuídos como na tabela a seguir:
         \hline
 	\end{tabular}
 	\label{tab:tabela_digitos}
-        \captionof{table}{Quantidade de instâncias de cada dígito}
+        \captionof{table}{Quantidade de vetores para cada dígito}
 \end{center}
 
 \item\textbf{Gestos da Língua Brasileira de Sinais (LIBRAS) \cite{Libras}}
-Esse conjunto de dados é composta por 15 classes, ou seja, nela estão presentes 15 sinais da LIBRAS, sendo 24 instâncias de cada classe, totalizando 360 vetores de características. Os dados foram extraídos de vídeos com tempo médio de 7 segundos, em cada vídeo um movimento é executado e depois é representado como uma curva bidimensional. No pre processamento foram selecionados 45 frames de cada vídeo, em cada frame a coordenada do ponto central da mão é encontrado, compondo uma curva com 45 pontos. As coordenadas dos 45 pontos formam o vetor de características com 90 valores, os 45 primeiros valores representam o valor de x e o restante o valor de y.
+Esse conjunto de dados é composta por 15 padrões, ou seja, nela estão presentes 15 sinais da LIBRAS, sendo 24 vetores de características para cada padrão, totalizando 360 vetores de características. Os dados foram extraídos de vídeos com tempo médio de 7 segundos, em cada vídeo um movimento é executado e depois é representado como uma curva bidimensional. No pre processamento foram selecionados 45 frames de cada vídeo, em cada frame a coordenada do ponto central da mão é encontrado, compondo uma curva com 45 pontos. As coordenadas dos 45 pontos formam o vetor de características com 90 valores, os 45 primeiros valores representam os valores de x e o restante os valores de y.
 O vetor de características tem no total 91 valores, sendo que 90 deles caracterizam o movimento e o último valor representa o padrão ao qual o vetor pertence.
 
 \item \textbf{Espécies da planta Iris \cite{Iris}}
-Nesse conjunto de dados são representados três tipos da planta Iris, é composta por 50 instâncias de cada tipo, totalizando 150 vetores. Cada vetor é composto por 4 características: comprimento da sépala, largura da sépala, comprimento da pétala, largura da pétala; e mais um atributo representando a espécie que o vetor representa.
+Nesse conjunto de dados são representados três espécies da planta Iris, é composto por 50 vetores de características de cada espécie, totalizando 150 vetores. Cada vetor é composto por 4 características: comprimento da sépala (parte da flor que dá sustentação às pétalas), largura da sépala, comprimento da pétala, largura da pétala; e mais um atributo representando a espécie que o vetor representa.
 
 \item \textbf{Expressões faciais}
-No caso das expressões faciais, as imagens foram obtidas do conjunto de dados JAFFE \cite{Jaffe} e o pre processamento e a extração e características foram implementados na linguagem de programação Python.
+No caso das expressões faciais, as imagens foram obtidas do conjunto de dados JAFFE \cite{Jaffe} e o pré processamento e a extração e características foram implementados na linguagem de programação Python.
 Inicialmente a proposta do presente trabalho era focar apenas na classificação de expressões faciais utilizando a programação linear. Durante a pesquisa não foi encontrada nenhum conjunto de dados que disponibilizasse os vetores de características da imagens, portanto foi necessária a implementação para a obtenção dos dados. Posteriormente foi verificado que seria necessário um aprofundamento do estudo na área da visão computacional, para que os vetores de características não comprometessem o método classificador. Portanto esses dados foram obtidos através de uma implementação superficial de extração de características.
-Após a obtenção do banco de imagens JAFFE. As imagens foram recortadas a fim de isolar a região da face, utilizando linguagem de programação python, como mostrado na figura
+Após a obtenção do banco de imagens JAFFE. As imagens foram recortadas a fim de isolar a região da face, utilizando a elinguagem de programação python, como mostrado na figura
 
 \begin{center}
 	\includegraphics[scale=0.5]{graficos/jaffe}
@@ -53,12 +53,30 @@ Após a obtenção do banco de imagens JAFFE. As imagens foram recortadas a fim 
 	\label{img:jaffe}
 \end{center}
 
+Na extração dos vetores de características foi utilizado o método Local Binary Patterns (LBP) que é um classificador de texturas. A cada pixel da imagem é atribuído um código, que é gerado a partir dos pixels ao redor. Tomando como referência o pixel central, a cada pixel vizinho é atribuído o valor 0 ou 1: se o valor do pixel vizinho for menor que o valor do pixel central, o valor 0 é atribuído, se for maior, o valor atribuído é 1. A partir daí, é gerado um código binário que é transformado em um valor decimal, esse valor decimal é o código LBP do pixel central \cite{LBPShan2009}. A figura abaixo demonstra como é calculado o código LBP.
+
+\begin{center}
+	\includegraphics[scale=0.5]{graficos/LBP}
+	\captionof{figure}{Cálculo do código LBP}
+	\label{img:LBP}
+\end{center}
+
+Na implementação, primeiramente, a imagem é dividida em blocos, é gerado o histograma dos códigos LBP de cada bloco, por fim, os histogramas são concatenados. Esse resultado final é o descritor de texturas da imagem. A figura \ref{img:LBPHistograma} representa esse processo.
+
+\begin{center}
+	\includegraphics[scale=0.5]{graficos/histograma}
+	\captionof{figure}{Imagem dividida em blocos e concatenação dos histogramas de cada bloco}
+	\label{img:LBPHistograma}
+\end{center}
+
+Para reduzir o tamanho do vetor de características, os códigos LBP de cada pixel são somados e divididos pelo número de imagens do conjunto de dados, quando o resultado é menor do que um valor limiar os códigos desse pixel é excluído em todos os vetores \cite{Feng}. O limiar adotado nesse caso foi 5 \cite{LBPShan2009}. Resultando em vetores de tamanho 843, sendo composto por 842 características mais um dígito identificador do padrão (expressão). 
+
 O banco de imagens JAFFE é composto por 213 imagens, sendo divididas em 7 expressões: tristeza, alegria, desgosto, surpresa, raiva, medo e neutro. Na tabela \ref{tab:tabela_expressoes} é apresentada a quantidade de imagens para cada expressão.
 
 \begin{center}
 	\begin{tabular}{cc}
         \hline
-        Classe & Quantidade de imagens \\
+        Expressão & Quantidade de imagens \\
         \hline
 		Tristeza & 31 \\
 		Alegria & 31 \\
@@ -72,31 +90,13 @@ O banco de imagens JAFFE é composto por 213 imagens, sendo divididas em 7 expre
 	\captionof{table}{Quantidade de imagens para cada expressão}
         \label{tab:tabela_expressoes}
 \end{center}
-
-Na extração dos vetores de características foi utilizado o método Local Binary Patterns (LBP) que é um classificador de texturas. A cada pixel da imagem é atribuído um código, que é gerado a partir dos pixels ao redor. Tomando como referência o pixel central, a cada pixel vizinho é atribuído o valor 0 ou 1: se o valor do pixel vizinho for menor que o valor do pixel central, o valor 0 é atribuído, se for menor, o valor atribuído é 1. A partir daí, é gerado um código binário que é transformado em um valor decimal, esse valor decimal é o código LBP do pixel central \cite{LBPShan2009}. A figura abaixo demonstra como é calculado o código LBP.
-
-\begin{center}
-	\includegraphics[scale=0.5]{graficos/LBP}
-	\captionof{figure}{Cálculo do código LBP}
-	\label{img:LBP}
-\end{center}
-
-Na implementação, primeiramente, a imagem é dividida em blocos, é gerado o histograma dos códigos LBP de cada bloco, por fim, os histogramas são concatenados. Esse resultado final é o descritor de texturas da imagem. A figura \ref{img:LBPHistograma} representa esse processo.
-
-\begin{center}
-	\includegraphics[scale=0.5]{graficos/histograma}
-	\captionof{figure}{Representação da imagem dividida em blocos e da concatenação dos histogramas de cada bloco.}
-	\label{img:LBPHistograma}
-\end{center}
-
-Para reduzir o tamanho do vetor de características os códigos LBP de cada pixel são somados e divididos pelo número de imagens, quando o resultado é menor do que um valor limiar os códigos desse pixel é excluído em todos os vetores \cite{Feng}. O limiar adotado nesse caso foi 5 \cite{LBPShan2009}. Resultando em vetores de tamanho 843, sendo composto por 842 características mais um dígito identificador do padrão. 
 \end{itemize}
 
-Nos vetores de características de todos os conjuntos de dados utilizados, é acrescido um valor informando a classe representada pelo vetor, para as etapas de treinamento e teste esse valor é omitido, ele só é utilizado na etapa de validação para verificar se o vetor foi corretamente classificado.
+Nos vetores de características de todos os conjuntos de dados utilizados, é acrescido um valor informando o padrão representada pelo vetor, para as etapas de treinamento e teste esse valor é omitido, ele só é utilizado na etapa de validação para verificar se o vetor foi corretamente classificado.
 
 \section{Organização dos dados}
 Em todos os testes foi o utilizado o método \textit{k-fold cross validation} com k = 10, em seus trabalhos \citeonline{Baldisserotto05Validacao}, \citeonline{Kohavi95Cross}, \citeonline{Guo} adotaram esse mesmo parâmetro. Os dados foram divididos em 10 subgrupos com mesmo tamanho \cite{Guo} e com a mesma quantidade de vetores para cada classe, por isso não foram em utilizados todos os dados de todos os conjuntos de dados.
-
+\newpage
 \begin{center}
 	\begin{tabular}{|p{2cm}|p{3cm}|p{2cm}|p{2cm}|}
         \hline
@@ -111,27 +111,27 @@ Em todos os testes foi o utilizado o método \textit{k-fold cross validation} co
 	\label{table:org_dados}
 \end{center}
 
-Na tabela \ref{table:org_dados} constam informações dos quatro conjuntos de dados utilizadas como teste nomeadas da seguinte forma: Dígitos, LIBRAS, Íris, Expressões. Na segunda coluna são apresentados quantos vetores compõem o conjunto de dados no total sem distinguir o número de vetores por classe. E na última coluna são apresentados o número de vetores uitlizados nos testes, em todos os casos o número de vetores utilizados é divisível por 10 por ser utilizado o parâmetro k = 10.
+Na tabela \ref{table:org_dados} constam informações dos quatro conjuntos de dados utilizados nos experimentos nomeados da seguinte forma: Dígitos, LIBRAS, Íris, Expressões. Na segunda coluna são apresentados quantos vetores compõem o conjunto de dados no total sem distinguir o número de vetores por padrão. E na última coluna são apresentados o número de vetores uitlizados nos testes, em todos os casos o número de vetores utilizados é divisível por 10 por ser utilizado o parâmetro k = 10 no método \textit{cross validation}.
 
-No conjunto de dados Dígitos, as classes que possuíam menos vetores eram as dos dígitos 3, 5, 8 e 9 com 1055 vetores, e as que possuíam mais vetores eram as dos dígitos 2 e 4 com 1144 vetores como mostrado na tabela \ref{tab:tabela_digitos}. Nessa caso, foram utilizados 1050 vetores de cada classe, totalizando 10500 vetores.
+No conjunto de dados Dígitos, os padrões que possuíam menos vetores eram as dos dígitos 3, 5, 8 e 9 com 1055 vetores, e as que possuíam mais vetores eram as dos dígitos 2 e 4 com 1144 vetores como mostrado na tabela \ref{tab:tabela_digitos}. Nessa caso, foram utilizados 1050 vetores de cada padrão, totalizando 10500 vetores.
 
-No conjunto de dados LIBRAS, cada classe possui 24 vetores, para a distribuição dos vetores entre os 10 subgrupos foram utilizados 20 vetores de cada classe, totalizando 300 vetores.
+No conjunto de dados LIBRAS, cada padrão possui 24 vetores, para a distribuição dos vetores entre os 10 subgrupos foram utilizados 20 vetores de cada um dos 15 padrões, totalizando 300 vetores.
 
-O conjunto de dados Íris possui 50 vetores para cada classe, possibilitando a utilização dos 150 vetores na distribuição entre os 10 subgrupos.
+O conjunto de dados Iris possui 50 vetores para cada padrão, possibilitando a utilização dos 150 vetores na distribuição entre os 10 subgrupos.
 
-No quarto conjunto de dados, Expressões, a classe desgosto possui 29 vetores enquanto as classe restantes possuem 30 ou mais, como mostrado na tabela \ref{tab:tabela_expressoes}. Nesse caso, uma imagem da classe desgosto foi repetida e utilizou-se 30 vetores para cada classe. 
+No quarto conjunto de dados, Expressões, o padrão desgosto possui 29 vetores enquanto as classe restantes possuem 30 ou mais, como mostrado na tabela \ref{tab:tabela_expressoes}. Nesse caso, uma imagem do padrão desgosto foi repetida e utilizou-se 30 vetores para cada padrão. 
 
-Para esse conjunto de dados Expressões, se vetores fossem excluídos em todas as classes, o número de vetores divisível por 10, que é a quantidade de subgrupos, mais próximo é 20, o que acarretaria a exclusão de 9 ou mais imagens por classe, em contrapartida, na solução utilizada apenas 1 ou 2 imagens foram excluídas de cada classe, com exceção da classe desgosto que teve apenas uma imagem repetida. Já no conjunto de dados Dígitos optou-se pela exclusão, pois seria necessário repetir muitos vetores nas classes com o número mais baixo de vetores, o que poderia comprometer o resultado, o mesmo ocorre com o conjunto de dados LIBRAS.
+Para esse conjunto de dados Expressões, se vetores fossem excluídos em todas as classes, o número de vetores divisível por 10, que é a quantidade de subgrupos, mais próximo é 20, o que acarretaria a exclusão de 9 ou mais vetores por padrão, em contrapartida, na solução utilizada apenas 1 ou 2 vetores foram excluídas de cada padrão, com exceção do padrão desgosto que teve apenas uma imagem repetida. Já no conjunto de dados Dígitos optou-se pela exclusão, pois seria necessário repetir muitos vetores nos padrões com o número mais baixo de vetores, o mesmo ocorre com o conjunto de dados LIBRAS.
 
 \section{Resultados}
 Nesta seção são apresentados os resultados encontrados nos testes realizados com os quatro conjuntos de dados anteriormente descritos. 
 
-Na tabela a seguir são apresentados os resultados dos quatro conjuntos de dados após a validação 10-fold cross validation, a taxa de acerto é uma média das taxas obtidas em cada um dos 10 ciclos de teste. 
+Na tabela a seguir são apresentados os resultados dos quatro conjuntos de dados após a validação \textit{10-fold cross validation}, a taxa de acerto é uma média das taxas obtidas em cada um dos 10 ciclos de teste. 
 
 \begin{center}
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
         \cline{1-7}
-        \multicolumn{4}{ |c| }{Conjunto de dados} & \multicolumn{3}{ c| }{Vetores por padrão} \\
+        \multicolumn{3}{ |c| }{Conjunto de dados} & \multicolumn{4}{ c| }{Vetores por padrão} \\
         \hline 
 	Nome & Quantidade de   & Total de & Total & No          & Na & Taxa de\\ 
          ~   & características & vetores  &  ~    & treinamento & classificação & acerto (\%)
@@ -145,9 +145,9 @@ Na tabela a seguir são apresentados os resultados dos quatro conjuntos de dados
 	\label{tab:resultados}
 \end{center}
 
-Na tabela \ref{tab:resultados} é apresentada a quantidade de características presente em cada vetor de cada conjunto da dados, a quantidade de vetores de cada classe utilizados para treinamento e a quantidade de vetores de cada classe utilizados para teste a cada ciclo da validação cruzada. Na última coluna é apresentada a taxa média de classificações corretas ao final da validação.
+Na tabela \ref{tab:resultados} é apresentada a quantidade de características presente em cada vetor de cada conjunto da dados,a quantidade total de vetores, a quantidade de vetores de cada classe utilizados para treinamento e a quantidade de vetores de cada classe utilizados para teste a cada ciclo da validação cruzada. Na última coluna é apresentada a taxa média de classificações corretas ao final da validação.
 
-Nessa tabela é possível observar que as classe com menos características obtiveram as maiores taxas de acertos. Comparando os dois conjuntos com maiores taxas, observamos que o conjunto Dígitos com um número de vetores muito superior a do conjunto Íris obteve a maior taxa de acerto. O conjunto de dados Expressões, apesar de possuir uma quantidade de vetores superior a da classe LIBRAS, a quantidade de características que é um número muito superior e possui a taxa de acerto mais baixa. 
+Nessa tabela é possível observar que as classe com menos características obtiveram as maiores taxas de acertos. Comparando os dois conjuntos com maiores taxas, observamos que o conjunto Dígitos com um número de vetores muito superior a do conjunto Íris obteve a maior taxa de acerto. O conjunto de dados Expressões, apesar de possuir uma quantidade de vetores superior a da classe LIBRAS, possui vetores com a quantidade de características muito superior aos vetores do conjunto LIBRAS e obteve uma taxa de acerto mais baixa. 
 
 Na tabela a seguir são apresentadas as taxas de acerto em cada ciclo de teste.
 
@@ -169,7 +169,7 @@ Na tabela a seguir são apresentadas as taxas de acerto em cada ciclo de teste.
 Na tabela \ref{tab:taxas} pode ser observado que nos dados Dígitos houve menos variação na taxa. Nos dados Íris houve certa variação entre 74\% e 93\%. Os dados LIBRAS e Expressões, que são os que possuem os maiores vetores apresentaram uma maior variação. 
 
 \subsection{Quantidade de vetores X Taxa de acerto}
-Os conjuntos de dados são compostos por mais de um vetor de características de cada classe, e a quantidade de vetores pode influenciar na taxa de acertos final. Para fazer essa análise foi utilizado o banco de dados Dígitos por ser, entre os conjuntos utilizados, o que contém o maior número de vetores por classe.
+Os conjuntos de dados são compostos por mais de um vetor de características de cada padrão, e a quantidade de vetores pode influenciar na taxa de acertos final. Para fazer essa análise foi utilizado o banco de dados Dígitos por ser, entre os conjuntos utilizados, o que contém o maior número de vetores por padrão.
 
 \begin{center}
 	 \begin{tabular}{|c|c|c|c|}
@@ -194,7 +194,7 @@ Os conjuntos de dados são compostos por mais de um vetor de características de
 	\label{tab:vetorxtaxa}
 \end{center}
 
-Na primeira coluna da tabela \ref{tab:vetorxtaxa} estão especificadas as quantidades de vetores de cada classe e nas duas colunas seguintes as quantidades de vetores de cada classe utilizados na etapa de treinamento e na etapa de testes respectivamente. Na última coluna estão especificadas as taxas de acertos em cada teste. 
+Na primeira coluna da tabela \ref{tab:vetorxtaxa} estão especificadas as quantidades de vetores de cada padrão e nas duas colunas seguintes as quantidades de vetores de cada padrão utilizados na etapa de treinamento e na etapa de testes respectivamente. Na última coluna estão especificadas as taxas de acertos em cada teste. 
 
 \begin{center}
 	\includegraphics[scale=0.5]{graficos/grafico}
@@ -202,24 +202,24 @@ Na primeira coluna da tabela \ref{tab:vetorxtaxa} estão especificadas as quanti
 	\label{img:grafico_digitos}
 \end{center}
 
-É possível observar um aumento na taxa de acertos a medida que a quantidade de vetores cresce. Porém esse aumento não é proporcional ao aumento do número de vetores. A variação na taxa de acerto diminui a medida que a quantidade de vetores aumenta, nos teste com 20, 30, 40 e 50 vetores por padrão houve uma variação média de 3,4\% na taxa de acerto, do teste com 50 vetores por classe para o teste com 100, houve uma variação de 2,8\% na taxa de acerto. Já no testes com 200 e 500 a variação na taxa foi de 2\%. E entre o teste com 600 vetores e o teste com quantidade máxima de vetores que é 1050 é observado uma variação bem pequena de 0,02\% na taxa de acerto.
-Como pode ser observado no gráfico da figura \ref{img:grafico_digitos} inicialmente há um aumento na taxa de acerto proporcional ao aumento na quantidade de vetores por padrão, mas há uma estabilização nesse aumento na taxa de acerto a partir dos testes com 300 vetores por padrão.
+É possível observar um aumento na taxa de acerto a medida que a quantidade de vetores cresce. Porém esse aumento não é proporcional ao aumento do número de vetores. A variação na taxa de acerto diminui a medida que a quantidade de vetores aumenta, nos teste com 20, 30, 40 e 50 vetores por padrão houve uma variação média de 3,4\% na taxa de acerto, do teste com 50 vetores por padrão para o teste com 100, houve uma variação de 2,8\% na taxa de acerto. Já no testes com 200 e 500 a variação na taxa foi de 2\%. E entre o teste com 600 vetores e o teste com quantidade máxima de vetores que é 1050 é observada uma variação bem pequena de 0,03\% na taxa de acerto.
+Como pode ser observado no gráfico da figura \ref{img:grafico_digitos} inicialmente há um aumento na taxa de acerto proporcional ao aumento na quantidade de vetores por padrão, mas há uma estabilização desse aumento na taxa de acerto a partir dos testes com 300 vetores por padrão.
 
 \subsection{Tempo computacional}
 A partir dos testes realizados também foram realizadas análises do ponto de vista computacional.
 Os resultados mostrados na tabela a seguir são as médias dos tempos de 5 execuções incluindo a etapa de validação compĺeta, com os dez ciclos .
 
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-\multicolumn{3}{ |c| }{Conjuntos de dados} & \multicolumn{3}{ c| }{Tempo de execução (em segundos)} \\ \hline
-Nome       & Quantidade & Vetores & Gerador de  & Gerador de  & Treinamento  \\ 
-  ~        &     de     &    por  & hiperplanos & hiperplanos &     e        \\
-  ~        &  padrões   &  padrão & por ciclo   & total       & Classificação \\   \hline
-Dígitos    &     10     &  1050   &   2,18      &   21,88     &    30,53 \\ \hline
-Libras     &     15     &    20   &   0,65      &    6,47     &     7,87 \\ \hline
-Iris       &      3     &    50   &   0,04      &    0,41     &     0,65 \\ \hline
-Expressões &      7     &    30   &   0,78      &    7,82     &     8,93 \\ \hline
+\multicolumn{4}{ |c| }{Conjuntos de dados} & \multicolumn{3}{ c| }{Tempo de execução (em segundos)} \\ \hline
+Nome       & Quantidade & Quantidade & Vetores & Gerador de  & Gerador de  & Treinamento  \\ 
+  ~        &     de     &     de     &    por  & hiperplanos & hiperplanos &     e        \\
+  ~        &  padrões   &hiperplanos &  padrão & por ciclo   & total       & Classificação \\   \hline
+Dígitos    &     10     &     45     &  1050   &   2,18      &   21,88     &    30,53 \\ \hline
+Libras     &     15     &    105     &    20   &   0,65      &    6,47     &     7,87 \\ \hline
+Iris       &      3     &      3     &    50   &   0,04      &    0,41     &     0,65 \\ \hline
+Expressões &      7     &     21     &    30   &   0,78      &    7,82     &     8,93 \\ \hline
 
 
 \end{tabular}
@@ -227,21 +227,19 @@ Expressões &      7     &    30   &   0,78      &    7,82     &     8,93 \\ \hl
 	\label{tab:tempocomp}
 \end{center}
 
-Na terceira linha da tabela \ref{tab:tempocomp} estão os tempos de execução apenas do módulo de geração de classificadores, que é o módulo onde o modelo de programação linear é resolvido. É possível constatar um tempo computacional para a geração dos classificadores corresponde a mais de 50\% do tempo computacional total. A quantidade de classificadores gerados deve ser considerada. Na quinta coluna é apresentado o tempo médio para geração dos classificadores a cada ciclo de teste e na segunda linha da tabela são apresentadas as quantidades de classificadores gerados nesse tempo, para três conjuntos de dados esse tempo foi inferior a 1 segundo.
+Nas colunas 5 e 6 da tabela \ref{tab:tempocomp} estão os tempos de execução apenas do módulo de geração de classificadores, que é o módulo onde o MPLHS é resolvido. Na sexta coluna é apresentado o tempo para geração dos classificadores considerando os 10 ciclos de treino e teste, é possível constatar um tempo computacional que corresponde a mais de 50\% do tempo computacional total. A quantidade de classificadores gerados deve ser considerada. Na quita coluna é apresentado o tempo médio para geração dos classificadores a cada ciclo de teste e na terceira coluna da tabela são apresentadas as quantidades de classificadores gerados nesse tempo, para três conjuntos de dados esse tempo foi inferior a 1 segundo.
 
-Na última linha da tabela \ref{tab:tempocomp} são apresentados os tempos totais de execução de cada experimento. Pode-se constatar que esse tempo é proporcional ao tamanho dos vetores do conjunto de dados e a quantidade de classes. O conjunto de dados Íris obteve um tempo computacional menor que 1 segundo sendo um conjunto de dados com 3 classe e 50 vetores para cada classe. Enquanto o conjunto de dados Dígitos obteve o maior tempo computacional apesar de possuir vetores com 16 características é o conjunto de dados com maior número de vetores por classe. 
+Na última coluna da tabela \ref{tab:tempocomp} são apresentados os tempos totais de execução de cada experimento. Pode-se constatar que esse tempo é proporcional ao tamanho dos vetores do conjunto de dados e a quantidade de classes. O conjunto de dados Íris obteve um tempo computacional menor que 1 segundo sendo um conjunto de dados com 3 classe e 50 vetores para cada padrão. Enquanto o conjunto de dados Dígitos obteve o maior tempo computacional apesar de possuir vetores com 16 características é o conjunto de dados com maior número de vetores por classe. 
 
-Comparando os tempos computacionais dos conjuntos Dígitos e Expressões é possível verificar que a quantidade de vetores por classe teve maior influência no tempo de execução, já que a diferença dos tempos de execução das duas classes é bastante alto, proporcional a diferença entre as quantidades de vetores por classe. 
+Comparando os tempos computacionais dos conjuntos Dígitos e Expressões é possível verificar que a quantidade de vetores por classe teve maior influência no tempo de execução do que o tamanho do vetor, já que a diferença dos tempos de execução das duas classes é bastante alto, proporcional a as quantidades de vetores por classe, e inversamente proporcional ao tamanho dos vetores. O conjunto Dígitos possui vetores com 16 atributos, enquanto os vetores do conjunto Expressões possuem  842 atributos.
 
-A mesma observação pode ser feita comparando os tempos dos conjuntos LIBRAS e Expressões, ainda que o número de classe do conjunto LIBRAS seja mais que o dobro do número de classes do conjunto Expressões, cada vetor do conjunto Expressões possui muitas características a mais que os vetores do conjunto LIBRAS e o tempo computacional do conjunto Expressões foi superior ao tempo do conjunto LIBRAS.
+\section{Análise dos resultados}
 
-\section{Análise dos Resultados}
+Juntamente com o conjunto de dados Dígitos \cite{Digitos}, estão disponíveis resultados de testes utilizando como método de classificação k nearest neighbor, a métrica utilizada para medir as distâncias entro os k vizinhos mais próximos foi a distância Euclidiana. O autor testou variando o parâmetro k de 1 à 11 com a taxa de acerto variando entre 97,34\% e 97,80\%. Em relação ao experimentos realizados neste trabalho é possível verificar que utilizando o método proposto foram obtidas taxas de acertos próximas as encontradas em \citeonline{Digitos}.
 
-Juntamente com o conjunto de dados Dígitos \cite{Digitos}, estão disponíveis resultados de testes utilizando como método de classificação K nearest neighbor, a métrica utilizada para medir as distâncias entro os K vizinhos mais próximos foi a distância Euclidiana. O autor testou variando o parâmetro K de 1 à 11 com a taxa de acerto variando entre 97,34\% e 97,80\%. Em relação ao experimentos realizados neste trabalho é possível verificar que utilizando o método proposto foram obtidas taxas de acertos próximas as encontradas em \citeonline{Digitos}.
+Em seu trabalho \citeonline{Swan2012Iris} abordou a classificação de padrões utilizando Redes Neurais e o conjunto de dados Íris. O autor dividiu 75 vetores para treinamento e 75 para teste. Foram realizados 3 testes, variando um parâmetro na configuração da rede neural. As taxas de acertos obtidas variaram entre 83,33\% e 96,66\%. No experimento utilizando o MPLHS a média de acertos obtida foi de 87\%, um taxa que supera a obtida utilizando redes neurais, dependendo da configuração.
 
-Em seu trabalho \citeonline{Swan2012Iris} abordou a classificação de padrões utilizando Redes Neurais e o conjunto de dados Íris. O autor dividiu 75 vetores para treinamento e 75 para teste. Foram realizados 3 testes, variando um parâmetro na configuração da rede neural. As taxas de acertos obtidas variaram entre 83,33\% e 96,66\%. No experimento utilizando o modelo de programação linear a media de acertos obtida foi de 87\%, um taxa que supera a obtida utilizando redes neurais, dependendo da configuração.
-
-Em \citeonline{Feng} foi utilizado o conjunto de dados JAFFE \cite{Jaffe}. O modelo de programação linear proposto em \citeonline{Bennett92robustlinear} é utilizado para gerar os classificadores e na classificação de imagens com expressão desconhecida foi utilizada uma árvore de torneio, assim como nos experimentos deste trabalho. A taxa de acerto foi de 93.8\%.
+Em \citeonline{Feng} foi utilizado o conjunto de dados JAFFE \cite{Jaffe}. O MPLHS proposto em \citeonline{Bennett92robustlinear} é utilizado para gerar os classificadores e na classificação de imagens com expressão desconhecida foi utilizada uma árvore binária de torneio, assim como nos experimentos deste trabalho. A taxa de acerto foi de 93.8\%.
 
 No trabalho de \citeonline{Guo} também foi utilizado o banco JAFFE \cite{Jaffe}. Foram feitas comparações entre aluns métodos de classificação, entre eles: Bayes com taxa de acertos 71,0\%, Support Vector Machine linear e não linear, com taxa de acertos 92,4\% e 91,9\%, respectivamente e uma variação do modelo de programação linear utilizado neste trabalho, com taxa 91,0\%. Em todos os casos foram utilizados mecanismos para seleção das características que seriam utilizadas
  

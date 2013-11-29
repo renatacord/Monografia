@@ -1,42 +1,44 @@
-\BOOKMARK [0][-]{chapter.1}{Introdu\347\343o}{}
-\BOOKMARK [1][-]{section.1.1}{Objetivos e justificativas}{chapter.1}
-\BOOKMARK [1][-]{section.1.2}{Metodologia}{chapter.1}
-\BOOKMARK [1][-]{section.1.3}{Estrutura do trabalho}{chapter.1}
-\BOOKMARK [0][-]{chapter.2}{Referencial Te\363rico}{}
-\BOOKMARK [1][-]{section.2.1}{A programa\347\343o linear}{chapter.2}
-\BOOKMARK [1][-]{section.2.2}{Descri\347\343o do Problema de Programa\347\343o Linear}{chapter.2}
-\BOOKMARK [1][-]{section.2.3}{Aplica\347\365es utilizando programa\347\343o linear}{chapter.2}
-\BOOKMARK [1][-]{section.2.4}{M\351todos de Classifica\347\343o}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.4.1}{Support Vector Machines}{section.2.4}
-\BOOKMARK [2][-]{subsection.2.4.2}{Naive Bayes}{section.2.4}
-\BOOKMARK [2][-]{subsection.2.4.3}{k- nearest neighbor}{section.2.4}
-\BOOKMARK [2][-]{subsection.2.4.4}{Redes Neurais Artificias}{section.2.4}
-\BOOKMARK [1][-]{section.2.5}{Aplica\347\365es em classifica\347\343o de dados}{chapter.2}
-\BOOKMARK [1][-]{section.2.6}{M\351todos de valida\347\343o do modelo}{chapter.2}
-\BOOKMARK [2][-]{subsection.2.6.1}{Handout}{section.2.6}
-\BOOKMARK [2][-]{subsection.2.6.2}{Cross Validation}{section.2.6}
-\BOOKMARK [2][-]{subsection.2.6.3}{Leave-one-out}{section.2.6}
-\BOOKMARK [0][-]{chapter.3}{M\351todos de Solu\347\343o}{}
-\BOOKMARK [1][-]{section.3.1}{M\351todo Simplex}{chapter.3}
-\BOOKMARK [2][-]{subsection.3.1.1}{Princ\355pio B\341sico do M\351todo}{section.3.1}
-\BOOKMARK [2][-]{subsection.3.1.2}{Descri\347\343o do M\351todo Simplex Revisado}{section.3.1}
-\BOOKMARK [1][-]{section.3.2}{M\351todo de Pontos Interiores}{chapter.3}
-\BOOKMARK [0][-]{chapter.4}{Classifica\347\343o de dados em padr\365es}{}
-\BOOKMARK [1][-]{section.4.1}{Etapa de obten\347\343o de dados}{chapter.4}
-\BOOKMARK [1][-]{section.4.2}{Etapa de treinamento}{chapter.4}
-\BOOKMARK [2][-]{subsection.4.2.1}{O modelo}{section.4.2}
-\BOOKMARK [2][-]{subsection.4.2.2}{Exemplo Ilustrativo do Modelo Classificador}{section.4.2}
-\BOOKMARK [2][-]{subsection.4.2.3}{Gera\347\343o de hiperplanos separadores}{section.4.2}
-\BOOKMARK [1][-]{section.4.3}{Etapa de classifica\347\343o}{chapter.4}
-\BOOKMARK [2][-]{subsection.4.3.1}{Classifica\347\343o com base em um hiperplano}{section.4.3}
-\BOOKMARK [2][-]{subsection.4.3.2}{Classifica\347\343o utilizando a estrutura da \341rvore bin\341ria de torneio}{section.4.3}
-\BOOKMARK [1][-]{section.4.4}{Etapa de valida\347\343o}{chapter.4}
-\BOOKMARK [0][-]{chapter.5}{Experimentos Computacionais}{}
-\BOOKMARK [1][-]{section.5.1}{Conjuntos de Dados}{chapter.5}
-\BOOKMARK [1][-]{section.5.2}{Organiza\347\343o dos dados}{chapter.5}
-\BOOKMARK [1][-]{section.5.3}{Resultados}{chapter.5}
-\BOOKMARK [2][-]{subsection.5.3.1}{Quantidade de vetores X Taxa de acerto}{section.5.3}
-\BOOKMARK [2][-]{subsection.5.3.2}{Tempo computacional}{section.5.3}
-\BOOKMARK [1][-]{section.5.4}{An\341lise dos Resultados}{chapter.5}
-\BOOKMARK [0][-]{chapter.6}{Conclus\343o}{}
-\BOOKMARK [0][-]{chapter.6}{Refer\352ncias Bibliogr\341ficas}{}
+\BOOKMARK [0][-]{section*.1}{Lista de Figuras}{}
+\BOOKMARK [0][-]{chapter*.2}{Lista de siglas}{}
+\BOOKMARK [0][-]{chapter.listoffigures.1}{Introdu\347\343o}{}
+\BOOKMARK [1][-]{section.listoffigures.1.1}{Objetivos e justificativas}{chapter.listoffigures.1}
+\BOOKMARK [1][-]{section.listoffigures.1.2}{Metodologia}{chapter.listoffigures.1}
+\BOOKMARK [1][-]{section.listoffigures.1.3}{Estrutura do trabalho}{chapter.listoffigures.1}
+\BOOKMARK [0][-]{chapter.listoffigures.2}{Referencial te\363rico}{}
+\BOOKMARK [1][-]{section.listoffigures.2.1}{A programa\347\343o linear}{chapter.listoffigures.2}
+\BOOKMARK [1][-]{section.listoffigures.2.2}{Descri\347\343o do problema de programa\347\343o linear}{chapter.listoffigures.2}
+\BOOKMARK [1][-]{section.listoffigures.2.3}{Aplica\347\365es utilizando programa\347\343o linear}{chapter.listoffigures.2}
+\BOOKMARK [1][-]{section.listoffigures.2.4}{M\351todos de classifica\347\343o}{chapter.listoffigures.2}
+\BOOKMARK [2][-]{subsection.listoffigures.2.4.1}{Support Vector Machines}{section.listoffigures.2.4}
+\BOOKMARK [2][-]{subsection.listoffigures.2.4.2}{Naive Bayes}{section.listoffigures.2.4}
+\BOOKMARK [2][-]{subsection.listoffigures.2.4.3}{k- nearest neighbor}{section.listoffigures.2.4}
+\BOOKMARK [2][-]{subsection.listoffigures.2.4.4}{Redes Neurais Artificias}{section.listoffigures.2.4}
+\BOOKMARK [1][-]{section.listoffigures.2.5}{Aplica\347\365es em classifica\347\343o de dados}{chapter.listoffigures.2}
+\BOOKMARK [1][-]{section.listoffigures.2.6}{M\351todos de valida\347\343o da metodologia}{chapter.listoffigures.2}
+\BOOKMARK [2][-]{subsection.listoffigures.2.6.1}{Handout}{section.listoffigures.2.6}
+\BOOKMARK [2][-]{subsection.listoffigures.2.6.2}{Cross Validation}{section.listoffigures.2.6}
+\BOOKMARK [2][-]{subsection.listoffigures.2.6.3}{Leave-one-out}{section.listoffigures.2.6}
+\BOOKMARK [0][-]{chapter.listoffigures.3}{M\351todos de Solu\347\343o}{}
+\BOOKMARK [1][-]{section.listoffigures.3.1}{M\351todo Simplex}{chapter.listoffigures.3}
+\BOOKMARK [2][-]{subsection.listoffigures.3.1.1}{Princ\355pio b\341sico do m\351todo}{section.listoffigures.3.1}
+\BOOKMARK [2][-]{subsection.listoffigures.3.1.2}{Descri\347\343o do M\351todo Simplex Revisado}{section.listoffigures.3.1}
+\BOOKMARK [1][-]{section.listoffigures.3.2}{M\351todo de Pontos Interiores}{chapter.listoffigures.3}
+\BOOKMARK [0][-]{chapter.listoffigures.4}{Classifica\347\343o de dados}{}
+\BOOKMARK [1][-]{section.listoffigures.4.1}{Etapa de obten\347\343o e organiza\347\343o de dados}{chapter.listoffigures.4}
+\BOOKMARK [1][-]{section.listoffigures.4.2}{Etapa de treinamento}{chapter.listoffigures.4}
+\BOOKMARK [2][-]{subsection.listoffigures.4.2.1}{O modelo \(MPLHS\)}{section.listoffigures.4.2}
+\BOOKMARK [2][-]{subsection.listoffigures.4.2.2}{Exemplo Ilustrativo do MPLHS}{section.listoffigures.4.2}
+\BOOKMARK [2][-]{subsection.listoffigures.4.2.3}{Gera\347\343o de hiperplanos separadores}{section.listoffigures.4.2}
+\BOOKMARK [1][-]{section.listoffigures.4.3}{Etapa de classifica\347\343o}{chapter.listoffigures.4}
+\BOOKMARK [2][-]{subsection.listoffigures.4.3.1}{Classifica\347\343o com base em um hiperplano}{section.listoffigures.4.3}
+\BOOKMARK [2][-]{subsection.listoffigures.4.3.2}{Classifica\347\343o utilizando a estrutura da \341rvore bin\341ria de torneio}{section.listoffigures.4.3}
+\BOOKMARK [1][-]{section.listoffigures.4.4}{Etapa de valida\347\343o}{chapter.listoffigures.4}
+\BOOKMARK [0][-]{chapter.listoffigures.5}{Experimentos Computacionais}{}
+\BOOKMARK [1][-]{section.listoffigures.5.1}{Conjuntos de Dados}{chapter.listoffigures.5}
+\BOOKMARK [1][-]{section.listoffigures.5.2}{Organiza\347\343o dos dados}{chapter.listoffigures.5}
+\BOOKMARK [1][-]{section.listoffigures.5.3}{Resultados}{chapter.listoffigures.5}
+\BOOKMARK [2][-]{subsection.listoffigures.5.3.1}{Quantidade de vetores X Taxa de acerto}{section.listoffigures.5.3}
+\BOOKMARK [2][-]{subsection.listoffigures.5.3.2}{Tempo computacional}{section.listoffigures.5.3}
+\BOOKMARK [1][-]{section.listoffigures.5.4}{An\341lise dos resultados}{chapter.listoffigures.5}
+\BOOKMARK [0][-]{chapter.listoffigures.6}{Conclus\343o}{}
+\BOOKMARK [0][-]{chapter.listoffigures.6}{Refer\352ncias Bibliogr\341ficas}{}

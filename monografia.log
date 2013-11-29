@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  28 NOV 2013 10:26
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.5.15)  28 NOV 2013 22:47
 entering extended mode
  %&-line parsing enabled.
 **monografia.tex
@@ -1081,8 +1081,9 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: subfigure package is loaded.
 ) (./monografia.aux
-(./introducao.aux) (./referencial_teorico.aux) (./marco_teorico.aux)
-(./metodologia.aux) (./experimentos.aux) (./conclusao.aux))
+(./siglas.aux) (./introducao.aux) (./referencial_teorico.aux)
+(./marco_teorico.aux) (./metodologia.aux) (./experimentos.aux) (./conclusao.aux
+))
 \openout1 = `monografia.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
@@ -1101,8 +1102,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
 LaTeX Font Info:    ... okay on input line 74.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 74.
-
-(/usr/share/texmf-texlive/tex/latex/base/ts1cmr.fd
+ (/usr/share/texmf-texlive/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 74.
@@ -1178,7 +1178,7 @@ Underfull \hbox (badness 1436) in paragraph at lines 89--89
 [1] (./monografia.toc [1
 
 ]
-Overfull \hbox (10.09467pt too wide) in paragraph at lines 33--33
+Overfull \hbox (10.09467pt too wide) in paragraph at lines 35--35
  [][] [] [][]  
  []
 
@@ -1187,43 +1187,70 @@ Overfull \hbox (10.09467pt too wide) in paragraph at lines 33--33
 \openout5 = `monografia.toc'.
 
  [3]
+
+Package hyperref Warning: No destination for bookmark of \addcontentsline,
+(hyperref)                destination is added on input line 91.
+
+(./monografia.lof
+Overfull \hbox (22.5932pt too wide) in paragraph at lines 2--2
+ [][] [] [][]  
+ []
+
+
+Overfull \hbox (56.24146pt too wide) in paragraph at lines 11--11
+ [][] [] [][]  
+ []
+
+
+Overfull \hbox (26.7362pt too wide) in paragraph at lines 23--23
+ [][] [] [][]  
+ []
+
+)
+\tf@lof=\write6
+\openout6 = `monografia.lof'.
+
+ [4
+
+
+]
+\openout2 = `siglas.aux'.
+
+ (./siglas.tex) [5
+
+
+]
 \openout2 = `introducao.aux'.
 
  (./introducao.tex
 Cap\'{\i }tulo 1.
-[4
+[6
 
 
 
-] [5] [6]) [7]
+] [7] [8]) [9]
 \openout2 = `referencial_teorico.aux'.
 
  (./referencial_teorico.tex
 Cap\'{\i }tulo 2.
-[8
+[10
 
 
 
-] [9] [10] [11]
+] [11] [12]
 File: graficos/simplex_graf.eps Graphic file (type eps)
  <graficos/simplex_graf.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 76.
+(caption)                particular \caption on input line 74.
 See the caption package documentation for explanation.
 
-[12] [13] [14] [15]
-Overfull \hbox (37.99306pt too wide) in paragraph at lines 117--118
-\OT1/cmr/m/n/12 ocorr^encias das ca-rac-ter^^S^^Psticas ([][][][], [][][][])([]
-[][][],
- []
-
-[16] [17] [18]) [19] [20]
+[13] [14] [15] [16] [17] [18] [19] [20]) [21]
 \openout2 = `marco_teorico.aux'.
 
  (./marco_teorico.tex
 Cap\'{\i }tulo 3.
-[21
+[22
 
 
 
@@ -1235,12 +1262,12 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 20.
 See the caption package documentation for explanation.
 
-[22] [23] [24]
+[23] [24] [25]
 Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
-[25]
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 111--111
 
  []
@@ -1280,11 +1307,11 @@ Overfull \hbox (0.4086pt too wide) in paragraph at lines 116--179
 [] 
  []
 
-[26]
+[27]
 Overfull \vbox (64.94717pt too high) has occurred while \output is active []
 
 
-[27]
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 272--272
 
  []
@@ -1320,10 +1347,10 @@ Overfull \hbox (0.4086pt too wide) in paragraph at lines 180--273
  []
 
 
-Overfull \vbox (19.60121pt too high) has occurred while \output is active []
+Overfull \vbox (48.1763pt too high) has occurred while \output is active []
 
 
-[28]
+[29]
 Underfull \hbox (badness 10000) in paragraph at lines 366--366
 
  []
@@ -1359,10 +1386,10 @@ Overfull \hbox (0.4086pt too wide) in paragraph at lines 274--367
  []
 
 
-Overfull \vbox (40.37631pt too high) has occurred while \output is active []
+Overfull \vbox (68.9514pt too high) has occurred while \output is active []
 
 
-[29]
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 391--391
 
  []
@@ -1387,23 +1414,23 @@ Overfull \hbox (0.4086pt too wide) in paragraph at lines 368--392
 [] 
  []
 
-) [30] [31]
+) [31] [32]
 \openout2 = `metodologia.aux'.
 
  (./metodologia.tex
 Cap\'{\i }tulo 4.
-File: graficos/diagrama_metodologia.eps Graphic file (type eps)
-<graficos/diagrama_metodologia.eps>
+File: graficos/Diagrama_etapas.eps Graphic file (type eps)
+<graficos/Diagrama_etapas.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 9.
 See the caption package documentation for explanation.
 
-[32
+[33
 
 
 
-] [33]
+] [34]
 File: graficos/linear_sepa.eps Graphic file (type eps)
  <graficos/linear_sepa.eps>
 File: graficos/linear_insepa.eps Graphic file (type eps)
@@ -1411,119 +1438,109 @@ File: graficos/linear_insepa.eps Graphic file (type eps)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[34] [35] [36]
-Overfull \hbox (8.91966pt too wide) in paragraph at lines 86--87
+[35] [36] [37] [38]
+Overfull \hbox (8.91966pt too wide) in paragraph at lines 88--89
 []\OT1/cmr/m/n/12 m: quan-ti-dade de ve-to-res de ca-rac-ter^^S^^Psticas cor-re
 s-pon-dente ao pri-meiro padr~ao; 
  []
 
-[37]
-Overfull \hbox (3.43639pt too wide) in paragraph at lines 87--88
+
+Overfull \hbox (3.43639pt too wide) in paragraph at lines 89--90
 []\OT1/cmr/m/n/12 k: quan-ti-dade de ve-to-res de ca-rac-ter^^S^^Psticas cor-re
 s-pon-dente ao se-gundo padr~ao; 
  []
 
 
-Overfull \hbox (3.2975pt too wide) in paragraph at lines 88--89
+Overfull \hbox (3.2975pt too wide) in paragraph at lines 90--91
 []\OT1/cmr/m/n/12 A: Ma-triz con-tendo o con-junto de ve-to-res de ca-ra-ter^^S
 ^^Psticas do pri-meiro padr~ao; 
  []
 
 
-Overfull \hbox (0.91698pt too wide) in paragraph at lines 89--90
+Overfull \hbox (0.91698pt too wide) in paragraph at lines 91--92
 []\OT1/cmr/m/n/12 B: Ma-triz con-tendo o con-junto de ve-to-res de ca-ra-ter^^S
 ^^Psticas do se-gundo padr~ao; 
  []
 
 
-Overfull \hbox (57.89227pt too wide) in paragraph at lines 105--106
-\OT1/cmr/m/n/12 Para ilus-trar o mo-delo va-mos con-si-de-rar dois exem-plos em
- $\OML/cmm/m/it/12 R[]$ \OT1/cmr/m/n/12 ([][][][],
+Overfull \hbox (62.44789pt too wide) in paragraph at lines 107--108
+\OT1/cmr/m/n/12 Para ilus-trar o MPLHS va-mos con-si-de-rar dois exem-plos em $
+\OML/cmm/m/it/12 R[]$ \OT1/cmr/m/n/12 ([][][][],
  []
 
-[38]
+[39]
 File: graficos/exemplo2.eps Graphic file (type eps)
  <graficos/exemplo2.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 126.
+(caption)                particular \caption on input line 128.
 See the caption package documentation for explanation.
 
-[39] [40]
+[40] [41]
 File: graficos/exemplo1.eps Graphic file (type eps)
  <graficos/exemplo1.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 152.
+(caption)                particular \caption on input line 154.
 See the caption package documentation for explanation.
 
-[41]
+[42]
 File: graficos/class123.eps Graphic file (type eps)
  <graficos/class123.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 166.
+(caption)                particular \caption on input line 168.
 See the caption package documentation for explanation.
 
+[43]
 File: graficos/class1e2.eps Graphic file (type eps)
-<graficos/class1e2.eps>
+ <graficos/class1e2.eps>
 File: graficos/class1e3.eps Graphic file (type eps)
  <graficos/class1e3.eps>
 File: graficos/class2e3.eps Graphic file (type eps)
  <graficos/class2e3.eps>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[42] [43]
+[44]
 File: graficos/ArvTorneio1.eps Graphic file (type eps)
  <graficos/ArvTorneio1.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 226.
+(caption)                particular \caption on input line 197.
 See the caption package documentation for explanation.
 
-File: graficos/ArvTorneio2.eps Graphic file (type eps)
-<graficos/ArvTorneio2.eps>
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 232.
-See the caption package documentation for explanation.
-
-[44] [45] [46]
+[45] [46]
 File: graficos/arvore_nivel1.eps Graphic file (type eps)
  <graficos/arvore_nivel1.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 313.
+(caption)                particular \caption on input line 279.
 See the caption package documentation for explanation.
 
-
-Overfull \hbox (11.22627pt too wide) in paragraph at lines 317--331
+[47]
+Overfull \hbox (11.22627pt too wide) in paragraph at lines 283--297
 \OT1/cmr/m/n/12 A e B o ponto re-pre-sen-tado pelo ve-tor x per-ma-ne-cer^^Sa $
 [] [] \OMS/cmsy/m/n/12 ^^U
  []
 
-[47]
 File: graficos/arvore_nivel2.eps Graphic file (type eps)
- <graficos/arvore_nivel2.eps>
+<graficos/arvore_nivel2.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 336.
+(caption)                particular \caption on input line 302.
 See the caption package documentation for explanation.
 
 File: graficos/arvore_nivel3.eps Graphic file (type eps)
 <graficos/arvore_nivel3.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 344.
+(caption)                particular \caption on input line 310.
 See the caption package documentation for explanation.
 
 [48]
-File: graficos/arvore_nivel3.eps Graphic file (type eps)
- <graficos/arvore_nivel3.eps>
+File: graficos/arvore_completa.eps Graphic file (type eps)
+ <graficos/arvore_completa.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 367.
+(caption)                particular \caption on input line 333.
 See the caption package documentation for explanation.
 
 [49]
@@ -1531,11 +1548,11 @@ File: graficos/cross_validation.eps Graphic file (type eps)
  <graficos/cross_validation.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 379.
+(caption)                particular \caption on input line 345.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (81.61383pt too wide) in paragraph at lines 378--379
+Overfull \hbox (81.61383pt too wide) in paragraph at lines 344--345
  [] 
  []
 
@@ -1568,33 +1585,32 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 52.
 See the caption package documentation for explanation.
 
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 72.
-See the caption package documentation for explanation.
-
-[55]
 File: graficos/LBP.eps Graphic file (type eps)
- <graficos/LBP.eps>
+<graficos/LBP.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 80.
+(caption)                particular \caption on input line 60.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (22.65851pt too wide) in paragraph at lines 79--80
+Overfull \hbox (22.65851pt too wide) in paragraph at lines 59--60
  [] 
  []
 
-[56]
+[55]
 File: graficos/histograma.eps Graphic file (type eps)
  <graficos/histograma.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 88.
+(caption)                particular \caption on input line 68.
 See the caption package documentation for explanation.
 
-[57]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 90.
+See the caption package documentation for explanation.
+
+[56] [57]
 Underfull \hbox (badness 10000) in paragraph at lines 104--104
 []|\OT1/cmr/m/n/12 Vetores
  []
@@ -1645,13 +1661,18 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 226.
 See the caption package documentation for explanation.
 
-[62] [63] [64]
-Overfull \hbox (19.9701pt too wide) in paragraph at lines 246--247
+
+Overfull \hbox (64.87828pt too wide) in paragraph at lines 213--226
+ [] 
+ []
+
+[62] [63]
+Overfull \hbox (19.9701pt too wide) in paragraph at lines 244--245
 []\OT1/cmr/m/n/12 No tra-ba-lho de [][][][] ([][][][]) tamb^^Sem foi uti-li-zad
 o o banco JAFFE ([][][][],
  []
 
-) [65]
+[64]) [65]
 \openout2 = `conclusao.aux'.
 
  (./conclusao.tex
@@ -1688,20 +1709,20 @@ Overfull \hbox (23.78622pt too wide) in paragraph at lines 165--170
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 66.
 See the caption package documentation for explanation.
 
-[70] (./monografia.aux (./introducao.aux) (./referencial_teorico.aux)
-(./marco_teorico.aux) (./metodologia.aux) (./experimentos.aux) (./conclusao.aux
-))
+[70] (./monografia.aux (./siglas.aux) (./introducao.aux)
+(./referencial_teorico.aux) (./marco_teorico.aux) (./metodologia.aux)
+(./experimentos.aux) (./conclusao.aux))
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 14898 strings out of 495042
- 206876 string characters out of 1181920
- 392303 words of memory out of 3000000
- 17704 multiletter control sequences out of 15000+50000
+ 14910 strings out of 495042
+ 207570 string characters out of 1181920
+ 393895 words of memory out of 3000000
+ 17706 multiletter control sequences out of 15000+50000
  19280 words of font info for 68 fonts, out of 3000000 for 9000
  30 hyphenation exceptions out of 8191
- 38i,13n,49p,1061b,565s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,13n,49p,1059b,563s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on monografia.dvi (72 pages, 283092 bytes).
+Output written on monografia.dvi (72 pages, 291812 bytes).
