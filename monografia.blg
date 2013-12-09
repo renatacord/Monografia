@@ -1,5 +1,8 @@
 This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: monografia.aux
+A level-1 auxiliary file: epigrafe.aux
+A level-1 auxiliary file: agradecimentos.aux
+A level-1 auxiliary file: resumo.aux
 A level-1 auxiliary file: siglas.aux
 A level-1 auxiliary file: introducao.aux
 A level-1 auxiliary file: referencial_teorico.aux
@@ -8,6 +11,7 @@ A level-1 auxiliary file: metodologia.aux
 A level-1 auxiliary file: experimentos.aux
 A level-1 auxiliary file: conclusao.aux
 The style file: abnt-alf.bst
+A level-1 auxiliary file: apendice.aux
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: abnt-options.bib
 Database file #2: bibliografia.bib
@@ -20,7 +24,7 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 +---------------------------------------------------------+
 You've used 38 entries,
             6522 wiz_defined-function locations,
-            1386 strings with 15284 characters,
+            1390 strings with 15336 characters,
 and the built_in function-call counts, 38831 in all, are:
 = -- 4244
 > -- 792

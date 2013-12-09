@@ -184,7 +184,7 @@ Na figura \ref{img:classificadores} é apresentada uma visão geral dos 3 conjun
 
 Na figura \ref{fig1_ls}, os padrões 1 e 2 foram submetidos ao MPLHS, e o hiperplano separador foi gerado para esses dois padrões. O mesmo ocorre nas figuras \ref{fig2_ls} e \ref{fig3_ls}, para cada para de padrões submetidos ao MPLHS, um hiperplano separador foi gerado.
 
-O processo de treinamento corresponde ao módulo de geração de classificadores. Esse módulo foi implementado na linguagem de programação JAVA, utilizada como interface com o software CPLEX da IBM. O MPLHS é resolvido utilizando o método simplex revisado e toda etapa de resolução é feita pelo software CPLEX
+O processo de treinamento corresponde ao módulo de geração de classificadores. Esse módulo foi implementado na linguagem de programação JAVA, utilizada como interface com o software CPLEX da IBM. O MPLHS é resolvido utilizando o método simplex revisado e toda etapa de resolução é feita pelo software CPLEX. A implementação desse módulo encontra-se no Apêndice A.
 
 \section{Etapa de classificação} 
 Após a geração dos classificadores utilizando o MPLHS, é necessário um segundo procedimento onde ocorra de fato a classificação de um vetor com padrão inicialmente desconhecido. Nessa etapa de classificação foi implementada uma estrutura de árvore binária de torneio. Em seus trabalhos, \citeonline{Feng} e \citeonline{Guo} utilizaram essa mesma estrutura na etapa de classificação após a utilização do MPLHS para gerar os classificadores.

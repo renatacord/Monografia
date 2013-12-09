@@ -22,7 +22,7 @@
 \usepackage{enumerate}
 \usepackage{multirow}
 \usepackage{booktabs}
-\usepackage[pdfborder={0 0 0}]{hyperref} % http://www.tug.org/applications/hyperref/manual.html
+\usepackage[pdfborder={0 0 0},breaklinks=true]{hyperref} % http://www.tug.org/applications/hyperref/manual.html
 \usepackage[alf]{abntcite}
 \usepackage{listings} % http://www.atscire.de/index.php?nav=products/listings2 http://linorg.usp.br/CTAN/macros/latex/contrib/listings/listings.pdf
 \usepackage{textcomp}
@@ -70,7 +70,7 @@
 %\renewcommand*\lstlistlistingname{Lista de Códigos}
 
 %--------------------------------- Informações ---------------------------------
-\newcommand{\meutitulo}{A Programação Linear na classificação de dados}
+\newcommand{\meutitulo}{Um método de classificação de dados utilizando programação linear}
 \begin{document}
 
 \titulo{\meutitulo}
@@ -87,8 +87,12 @@ orientação do Profº. Fermín Alfredo Tang Montané.}
 \graphicspath{{graficos/}}
 \capa
 \folhaderosto
-\sumario
+\include{epigrafe}
+\include{agradecimentos}
+\include{resumo}
 \listoffigures
+\listoftables
+\sumario
 
 \include{siglas}
 \include{introducao}
@@ -102,6 +106,6 @@ orientação do Profº. Fermín Alfredo Tang Montané.}
 \citeoption{abnt-repeated-author-omit=yes}
 \bibliographystyle{abnt-alf}
 \bibliography{bibliografia}
-
+\include{apendice}
 \end{document}
 
